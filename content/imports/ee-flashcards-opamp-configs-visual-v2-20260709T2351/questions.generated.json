@@ -1,0 +1,266 @@
+{
+  "batch_id": "ee-flashcards-opamp-configs-visual-v2-20260709T2351",
+  "generated_at": "2026-07-09T23:58:51.635Z",
+  "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_opamp_configs_visual_v2.xlsx",
+  "rows": [
+    {
+      "row_number": 2,
+      "slug": "op-amp-configurations-how-do-you-wire-a-voltage-follower-buffer-and-wh",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "dc305bd1616be587",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_opamp_configs_visual_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 2
+      },
+      "question": {
+        "category": "Op-Amp Configurations",
+        "difficulty": "easy",
+        "question_text": "How do you wire a Voltage Follower (Buffer), and what is the gain?",
+        "answer_text": "{{image_1}}\n\nGain = 1",
+        "explanation_text": "Because the gain is 1, the output perfectly mirrors the input voltage. It's used to isolate a weak signal source from a heavy load because it draws zero current from the source.",
+        "bonus_question_text": "How do you derive the gain for a Voltage Follower using nodal analysis?",
+        "bonus_answer_text": "1. The ideal op-amp rule states V- = V+.\n2. Since the input is on V+, we know V- = Vin.\n3. The output is tied directly to the inverting input, so Vout = V-.\n4. Therefore, Vout = Vin, which means the gain (Vout / Vin) = 1.",
+        "main_video_youtube_id": "0",
+        "resource_videos": [],
+        "ltspice_file_needed": "0",
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Schematic of a voltage follower: An op-amp with the output wire tied directly back to the inverting (-) terminal, and the input voltage signal (Vin) entering the non-inverting (+) terminal.",
+          "title": "Voltage follower",
+          "alt": "Schematic of a voltage follower: An op-amp with the output wire tied directly back to the inverting (-) terminal, and the input voltage signal (Vin) entering the non-inverting (+) terminal.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "op_amp_voltage_follower"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-opamp-configs-visual-v2-20260709T2351/op-amp-configurations-how-do-you-wire-a-voltage-follower-buffer-and-wh-image_1.svg"
+        }
+      },
+      "notes": "0"
+    },
+    {
+      "row_number": 3,
+      "slug": "op-amp-configurations-how-do-you-wire-an-inverting-amplifier-and-what",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "ca203d8615cf1bbe",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_opamp_configs_visual_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 3
+      },
+      "question": {
+        "category": "Op-Amp Configurations",
+        "difficulty": "easy",
+        "question_text": "How do you wire an Inverting Amplifier, and what is the gain equation?",
+        "answer_text": "{{image_1}}\n\nGain = -R_f / R_in",
+        "explanation_text": "This amplifies the signal but flips it upside down (180 degrees out of phase). The negative sign in the equation indicates this inversion.",
+        "bonus_question_text": "How do you derive the gain for an Inverting Amplifier using nodal analysis?",
+        "bonus_answer_text": "1. V+ is grounded (0V). Because V- = V+, V- is at a 'virtual ground' (0V).\n2. Apply Kirchhoff's Current Law (KCL) at V-. The current entering through R_in equals the current leaving through R_f.\n3. (Vin - 0) / R_in = (0 - Vout) / R_f\n4. Rearranging gives: Vout / Vin = -R_f / R_in.",
+        "main_video_youtube_id": "0",
+        "resource_videos": [],
+        "ltspice_file_needed": "0",
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Schematic of an Inverting Amplifier: Non-inverting (+) input grounded. Input signal (Vin) goes through resistor R_in to the inverting (-) input. A feedback resistor (R_f) connects the output back to the inverting (-) input.",
+          "title": "Inverting amplifier",
+          "alt": "Schematic of an Inverting Amplifier: Non-inverting (+) input grounded. Input signal (Vin) goes through resistor R_in to the inverting (-) input. A feedback resistor (R_f) connects the output back to the inverting (-) input.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "op_amp_inverting"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-opamp-configs-visual-v2-20260709T2351/op-amp-configurations-how-do-you-wire-an-inverting-amplifier-and-what-image_1.svg"
+        }
+      },
+      "notes": "0"
+    },
+    {
+      "row_number": 4,
+      "slug": "op-amp-configurations-how-do-you-wire-a-non-inverting-amplifier-and-wh",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "be683f83448ab71f",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_opamp_configs_visual_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 4
+      },
+      "question": {
+        "category": "Op-Amp Configurations",
+        "difficulty": "easy",
+        "question_text": "How do you wire a Non-Inverting Amplifier, and what is the gain equation?",
+        "answer_text": "{{image_1}}\n\nGain = 1 + (R_f / R_in)",
+        "explanation_text": "This amplifies the signal while keeping it in the same phase (right-side up). Notice the gain will always be 1 or greater.",
+        "bonus_question_text": "How do you derive the gain for a Non-Inverting Amplifier using nodal analysis?",
+        "bonus_answer_text": "1. The op-amp forces V- = V+, so V- = Vin.\n2. Apply KCL at V-. The sum of currents leaving the node must equal zero.\n3. (Vin - 0) / R_in + (Vin - Vout) / R_f = 0\n4. Move Vout to the other side: Vin / R_in + Vin / R_f = Vout / R_f\n5. Multiply by R_f and factor out Vin: Vout / Vin = 1 + (R_f / R_in).",
+        "main_video_youtube_id": "0",
+        "resource_videos": [],
+        "ltspice_file_needed": "0",
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Schematic of a Non-Inverting Amplifier: Input signal (Vin) to the (+) terminal. Resistor R_in connects from ground to the (-) terminal. Feedback resistor R_f connects from the (-) terminal to the output.",
+          "title": "Non-inverting amplifier",
+          "alt": "Schematic of a Non-Inverting Amplifier: Input signal (Vin) to the (+) terminal. Resistor R_in connects from ground to the (-) terminal. Feedback resistor R_f connects from the (-) terminal to the output.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "op_amp_non_inverting"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-opamp-configs-visual-v2-20260709T2351/op-amp-configurations-how-do-you-wire-a-non-inverting-amplifier-and-wh-image_1.svg"
+        }
+      },
+      "notes": "0"
+    },
+    {
+      "row_number": 5,
+      "slug": "op-amp-configurations-how-do-you-wire-an-open-loop-comparator-and-what",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "fc7db031e34e7077",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_opamp_configs_visual_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 5
+      },
+      "question": {
+        "category": "Op-Amp Configurations",
+        "difficulty": "easy",
+        "question_text": "How do you wire an Open-Loop Comparator, and what happens to the output?",
+        "answer_text": "{{image_1}}\n\nThe output snaps completely to the positive or negative supply rail depending on which input pin has the higher voltage.",
+        "explanation_text": "With no feedback resistors, an op-amp has massive open-loop gain. If the (+) pin is even slightly higher than the (-) pin, the output multiplies that difference and hits the positive maximum.",
+        "bonus_question_text": "Why are dedicated comparator ICs often preferred over using standard op-amps as comparators?",
+        "bonus_answer_text": "Standard op-amps recover very slowly when their outputs are pushed to the rails (saturation). Dedicated comparators are designed to switch instantly between digital logic levels.",
+        "main_video_youtube_id": "0",
+        "resource_videos": [],
+        "ltspice_file_needed": "0",
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Schematic of an open-loop comparator: An op-amp with no resistors. V1 at the (+) pin and V2 at the (-) pin. Beside it, a graph showing an output square wave instantly snapping between +Vcc and -Vee when V1 crosses V2.",
+          "title": "Open-loop comparator",
+          "alt": "Schematic of an open-loop comparator: An op-amp with no resistors. V1 at the (+) pin and V2 at the (-) pin. Beside it, a graph showing an output square wave instantly snapping between +Vcc and -Vee when V1 crosses V2.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "op_amp_comparator"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-opamp-configs-visual-v2-20260709T2351/op-amp-configurations-how-do-you-wire-an-open-loop-comparator-and-what-image_1.svg"
+        }
+      },
+      "notes": "0"
+    },
+    {
+      "row_number": 6,
+      "slug": "op-amp-configurations-how-do-you-wire-a-schmitt-trigger-and-what-probl",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "f8d9421417f861eb",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_opamp_configs_visual_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 6
+      },
+      "question": {
+        "category": "Op-Amp Configurations",
+        "difficulty": "easy",
+        "question_text": "How do you wire a Schmitt Trigger, and what problem does it solve?",
+        "answer_text": "{{image_1}}\n\nIt solves the 'chatter' (rapid flickering) problem caused by noisy signals by using Positive Feedback to create hysteresis.",
+        "explanation_text": "A standard comparator glitches back and forth if a noisy signal hovers near a single threshold. A Schmitt Trigger creates two distinct thresholds. For example, it might turn ON when the input crosses 5V, but won't turn OFF until the input drops back below 4V. If a noisy input fluctuates around 4.5V, the output remains perfectly stable instead of rapidly chattering. {{image_2}}",
+        "bonus_question_text": "How does positive feedback create hysteresis in a Schmitt Trigger?",
+        "bonus_answer_text": "The output state (+Vcc or -Vcc) feeds back into the reference pin (+), actively pulling the reference threshold up or down to reinforce its current state.",
+        "main_video_youtube_id": "0",
+        "resource_videos": [],
+        "ltspice_file_needed": "0",
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Schematic of a Schmitt Trigger (a positive feedback resistor connected from the output directly back to the non-inverting + input).",
+          "title": "Schmitt trigger",
+          "alt": "Schematic of a Schmitt Trigger (a positive feedback resistor connected from the output directly back to the non-inverting + input).",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "op_amp_schmitt_trigger"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-opamp-configs-visual-v2-20260709T2351/op-amp-configurations-how-do-you-wire-a-schmitt-trigger-and-what-probl-image_1.svg"
+        },
+        "image_2": {
+          "prompt": "A graph showing a noisy input signal with two distinct horizontal threshold lines labeled (e.g., Upper = 5V, Lower = 4V). Below it, the resulting output is a clean square wave that ignores the noise flickering between the two thresholds.",
+          "title": "Schmitt trigger hysteresis",
+          "alt": "A graph showing a noisy input signal with two distinct horizontal threshold lines labeled (e.g., Upper = 5V, Lower = 4V). Below it, the resulting output is a clean square wave that ignores the noise flickering between the two thresholds.",
+          "placements": {
+            "explanation_text": true
+          },
+          "render": {
+            "type": "schmitt_hysteresis"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-opamp-configs-visual-v2-20260709T2351/op-amp-configurations-how-do-you-wire-a-schmitt-trigger-and-what-probl-image_2.svg"
+        }
+      },
+      "notes": "0"
+    },
+    {
+      "row_number": 7,
+      "slug": "op-amp-configurations-how-do-you-wire-a-difference-amplifier-and-what",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "adb1f7b01faecc13",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_opamp_configs_visual_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 7
+      },
+      "question": {
+        "category": "Op-Amp Configurations",
+        "difficulty": "easy",
+        "question_text": "How do you wire a Difference Amplifier, and what does it do?",
+        "answer_text": "{{image_1}}\n\nIt subtracts one input voltage from another and amplifies the difference. If all resistors are equal, Vout = V2 - V1.",
+        "explanation_text": "It rejects any voltage that is identical on both inputs (Common Mode Rejection) and only amplifies the difference.",
+        "bonus_question_text": "How do you derive the output voltage for a Difference Amplifier?",
+        "bonus_answer_text": "Use superposition. 1. Ground V1 and calculate the output as a non-inverting amplifier for V2. 2. Ground V2 and calculate the output as an inverting amplifier for V1. 3. Add the two outputs together.",
+        "main_video_youtube_id": "0",
+        "resource_videos": [],
+        "ltspice_file_needed": "0",
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Schematic of a Difference Amplifier: V1 connected to (-) via R1, V2 connected to (+) via R2. A feedback resistor R3 from output to (-), and a resistor R4 from (+) to ground.",
+          "title": "Difference amplifier",
+          "alt": "Schematic of a Difference Amplifier: V1 connected to (-) via R1, V2 connected to (+) via R2. A feedback resistor R3 from output to (-), and a resistor R4 from (+) to ground.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "op_amp_difference"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-opamp-configs-visual-v2-20260709T2351/op-amp-configurations-how-do-you-wire-a-difference-amplifier-and-what-image_1.svg"
+        }
+      },
+      "notes": "0"
+    }
+  ],
+  "rendered_at": "2026-07-09T23:58:51.778Z"
+}

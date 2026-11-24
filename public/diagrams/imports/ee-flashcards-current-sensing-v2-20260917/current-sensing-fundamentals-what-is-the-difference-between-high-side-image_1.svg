@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="490" viewBox="0 0 860 490" role="img" aria-label="High-side vs low-side current sensing">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1d4ed8"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0ea5a5"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="430" y="38" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">High-side vs low-side current sensing</text>
+
+      <rect x="28" y="70" width="392" height="390" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+      <text x="224" y="103" fill="#1d4ed8" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" text-anchor="middle">HIGH-SIDE</text>
+      <text x="120" y="128" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" text-anchor="middle">VBUS</text>
+      <line x1="120" y1="134" x2="120" y2="144" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+      <polyline points="120,144 111,151.75 129,159.5 111,167.25 129,175 111,182.75 129,190.5 111,198.25 120,206" fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="138" y="180" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start">RSHUNT</text>
+      <line x1="120" y1="206" x2="120" y2="238" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+      <rect x="80" y="238" width="80" height="58" rx="1" fill="#f8fafc" stroke="#111827" stroke-width="2"/><text x="120" y="272" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" text-anchor="middle">LOAD</text>
+      <line x1="120" y1="296" x2="120" y2="374" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+
+    <line x1="120" y1="374" x2="120" y2="382" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+    <path d="M108 382 L120 396 L132 382 Z" fill="none" stroke="#111827" stroke-width="2"/>
+
+
+    <path d="M232 286 L232 374 L344 330 Z" fill="#ffffff" stroke="#111827" stroke-width="2.5"/>
+    <text x="250" y="313" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" text-anchor="middle">-</text>
+    <text x="250" y="358" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle">+</text>
+    <text x="286" y="335" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">CSA</text>
+
+      <path d="M120 144 H206 V308 H232" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M120 206 H188 V352 H232" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="344" y1="330" x2="388" y2="330" stroke="#0f766e" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+      <text x="384" y="318" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end">VOUT</text>
+      <text x="224" y="436" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Measures load current; VCM is near VBUS</text>
+
+      <rect x="440" y="70" width="392" height="390" rx="6" fill="#ffffff" stroke="#0f766e" stroke-width="2"/>
+      <text x="636" y="103" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" text-anchor="middle">LOW-SIDE</text>
+      <text x="532" y="128" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" text-anchor="middle">VBUS</text>
+      <line x1="532" y1="134" x2="532" y2="154" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+      <rect x="492" y="154" width="80" height="58" rx="1" fill="#f8fafc" stroke="#111827" stroke-width="2"/><text x="532" y="188" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" text-anchor="middle">LOAD</text>
+      <line x1="532" y1="212" x2="532" y2="274" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+      <polyline points="532,274 523,281.75 541,289.5 523,297.25 541,305 523,312.75 541,320.5 523,328.25 532,336" fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="550" y="310" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start">RSHUNT</text>
+      <line x1="532" y1="336" x2="532" y2="374" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+
+    <line x1="532" y1="374" x2="532" y2="382" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+    <path d="M520 382 L532 396 L544 382 Z" fill="none" stroke="#111827" stroke-width="2"/>
+
+
+    <path d="M644 286 L644 374 L756 330 Z" fill="#ffffff" stroke="#111827" stroke-width="2.5"/>
+    <text x="662" y="313" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" text-anchor="middle">-</text>
+    <text x="662" y="358" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle">+</text>
+    <text x="698" y="335" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">CSA</text>
+
+      <path d="M532 274 H618 V308 H644" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M532 336 H600 V352 H644" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="756" y1="330" x2="800" y2="330" stroke="#0f766e" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+      <text x="796" y="318" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end">VOUT</text>
+      <text x="636" y="436" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Simple input range; load ground is lifted</text>
+
+</svg>

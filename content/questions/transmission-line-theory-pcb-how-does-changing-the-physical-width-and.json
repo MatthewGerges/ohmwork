@@ -1,0 +1,29 @@
+{
+  "slug": "transmission-line-theory-pcb-how-does-changing-the-physical-width-and",
+  "category": "Transmission Line Theory, PCB",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 36,
+  "source_fingerprint": "6ca40d1c7ff73d8e",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 12
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-pcb-how-does-changing-the-physical-width-and-image_1.svg"
+  },
+  "question_text": "<p>How does changing the physical width and length of a PCB trace affect its parasitic Resistance (R), Inductance (L), and Capacitance (C)?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A 3D illustration of a PCB trace. Arrows indicate increasing the width (W) and length (L). Callout boxes summarize the effects: 'Wider Trace = ↑C, ↓L, ↓R' and 'Longer Trace = ↑C, ↑L, ↑R'.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>1) Widening the trace: Increases Capacitance, Decreases Inductance, Decreases Resistance.<br/>2) Lengthening the trace: Increases Capacitance, Increases Inductance, Increases Resistance.</p>",
+  "explanation_text": "<p>Widening a trace gives it more surface area facing the ground plane (increasing C) and provides a wider physical path for current (lowering R and L). Lengthening a trace simply adds more material and area overall, increasing all three parasitics.</p>",
+  "bonus_question_text": "<p>If a PCB trace's characteristic impedance (Z_0 = sqrt(L/C)) is too high, what is the easiest layout adjustment to lower it?</p>",
+  "bonus_answer_text": "<p>Make the trace wider. Widening the trace increases C and decreases L, which significantly lowers the overall Z_0 ratio.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:6ca40d1c7ff73d8e"
+  ],
+  "related_question_ids": []
+}

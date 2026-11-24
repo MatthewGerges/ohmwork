@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>ee-flashcards-opamps-filters-v2-20260916</title>
+  <style>
+    body { margin: 0; padding: 24px; background: #020617; color: #e2e8f0; font-family: Inter, Arial, sans-serif; }
+    h1 { margin: 0 0 20px; font-size: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 18px; }
+    .card { border: 1px solid #334155; border-radius: 10px; padding: 14px; background: #0f172a; }
+    h2 { font-size: 13px; line-height: 1.4; color: #94a3b8; margin: 0 0 8px; word-break: break-word; }
+    p { margin: 8px 0; }
+    span { color: #2dd4bf; font-size: 12px; margin-left: 8px; }
+    img { display: block; width: 100%; height: auto; border-radius: 8px; background: #0f172a; margin-top: 10px; }
+    details { margin-top: 10px; color: #cbd5e1; font-size: 13px; }
+    summary { cursor: pointer; color: #818cf8; }
+    .missing { color: #f87171; }
+  </style>
+</head>
+<body>
+  <h1>ee-flashcards-opamps-filters-v2-20260916</h1>
+  <section class="grid"><article class="card">
+  <h2>op-amps-comparators-and-triggers-draw-an-inverting-schmitt-trigger-cir / image_1</h2>
+  <p><strong>Inverting Schmitt trigger</strong> <span>op_amp_schmitt_inverting</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/op-amps-comparators-and-triggers-draw-an-inverting-schmitt-trigger-cir-image_1.svg" alt="Schematic of an inverting Schmitt trigger. V_in connects to the inverting (-) terminal. V_out connects to a resistor divider (R_1 and R_f) that feeds back into the non-inverting (+) terminal."/>
+  <details><summary>Prompt</summary><p>Schematic of an inverting Schmitt trigger. V_in connects to the inverting (-) terminal. V_out connects to a resistor divider (R_1 and R_f) that feeds back into the non-inverting (+) terminal.</p></details>
+</article>
+<article class="card">
+  <h2>op-amps-comparators-and-triggers-draw-an-inverting-schmitt-trigger-cir / image_2</h2>
+  <p><strong>Schmitt trigger transfer curve</strong> <span>schmitt_transfer</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/op-amps-comparators-and-triggers-draw-an-inverting-schmitt-trigger-cir-image_2.svg" alt="A transfer curve graph. X-axis is V_in, Y-axis is V_out. It shows a rectangular hysteresis loop with arrows indicating direction. The right vertical drop happens at V_TH, and the left vertical rise happens at V_TL."/>
+  <details><summary>Prompt</summary><p>A transfer curve graph. X-axis is V_in, Y-axis is V_out. It shows a rectangular hysteresis loop with arrows indicating direction. The right vertical drop happens at V_TH, and the left vertical rise happens at V_TL.</p></details>
+</article>
+<article class="card">
+  <h2>op-amps-comparators-and-triggers-draw-an-inverting-schmitt-trigger-cir / image_3</h2>
+  <p><strong>Noise rejection with hysteresis</strong> <span>schmitt_noise_comparison</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/op-amps-comparators-and-triggers-draw-an-inverting-schmitt-trigger-cir-image_3.svg" alt="A two-part graph showing the effect of noise. Top: A noisy sine wave crossing a single 4V threshold multiple times, resulting in a glitchy, rapid ON/OFF square wave below it. Bottom: The same noisy sine wave, but with two dashed threshold lines at 3V and 5V. The resulting square wave below it toggles cleanly only once when the wave completely crosses 5V."/>
+  <details><summary>Prompt</summary><p>A two-part graph showing the effect of noise. Top: A noisy sine wave crossing a single 4V threshold multiple times, resulting in a glitchy, rapid ON/OFF square wave below it. Bottom: The same noisy sine wave, but with two dashed threshold lines at 3V and 5V. The resulting square wave below it toggles cleanly only once when the wave completely crosses 5V.</p></details>
+</article>
+<article class="card">
+  <h2>op-amps-comparators-and-triggers-draw-a-non-inverting-schmitt-trigger / image_1</h2>
+  <p><strong>Non-inverting Schmitt trigger</strong> <span>op_amp_schmitt_non_inverting</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/op-amps-comparators-and-triggers-draw-a-non-inverting-schmitt-trigger-image_1.svg" alt="Schematic of a non-inverting Schmitt trigger. V_in passes through a resistor (R_in) into the non-inverting (+) terminal. V_out feeds back through a resistor (R_f) into the exact same (+) terminal. The inverting (-) terminal connects to Ground."/>
+  <details><summary>Prompt</summary><p>Schematic of a non-inverting Schmitt trigger. V_in passes through a resistor (R_in) into the non-inverting (+) terminal. V_out feeds back through a resistor (R_f) into the exact same (+) terminal. The inverting (-) terminal connects to Ground.</p></details>
+</article>
+<article class="card">
+  <h2>filters-passive-rc-draw-an-rc-low-pass-filter-explain-how-to-construct / image_1</h2>
+  <p><strong>RC low-pass filter response</strong> <span>rc_low_pass</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/filters-passive-rc-draw-an-rc-low-pass-filter-explain-how-to-construct-image_1.svg" alt="Left: Schematic showing V_in -&gt; Resistor -&gt; Output node -&gt; Capacitor -&gt; Ground. Right: A Bode plot with a flat magnitude line that bends downward at f_c (-20dB/dec), and a phase line dropping from 0 to -90 degrees."/>
+  <details><summary>Prompt</summary><p>Left: Schematic showing V_in -&gt; Resistor -&gt; Output node -&gt; Capacitor -&gt; Ground. Right: A Bode plot with a flat magnitude line that bends downward at f_c (-20dB/dec), and a phase line dropping from 0 to -90 degrees.</p></details>
+</article>
+<article class="card">
+  <h2>filters-passive-lc-draw-an-lc-low-pass-filter-what-are-its-two-main-ad / image_1</h2>
+  <p><strong>LC low-pass filter response</strong> <span>lc_low_pass</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/filters-passive-lc-draw-an-lc-low-pass-filter-what-are-its-two-main-ad-image_1.svg" alt="Left: Schematic showing V_in -&gt; Inductor -&gt; Output node -&gt; Capacitor -&gt; Ground. Right: A Bode plot with a flat magnitude line, a sharp upward peak at f_c, followed by a steep downward slope (-40dB/dec). The phase plot drops from 0 to -180 degrees."/>
+  <details><summary>Prompt</summary><p>Left: Schematic showing V_in -&gt; Inductor -&gt; Output node -&gt; Capacitor -&gt; Ground. Right: A Bode plot with a flat magnitude line, a sharp upward peak at f_c, followed by a steep downward slope (-40dB/dec). The phase plot drops from 0 to -180 degrees.</p></details>
+</article>
+<article class="card">
+  <h2>filters-passive-lc-draw-an-lc-high-pass-filter-explain-its-bode-plot-s / image_1</h2>
+  <p><strong>LC high-pass filter response</strong> <span>lc_high_pass</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/filters-passive-lc-draw-an-lc-high-pass-filter-explain-its-bode-plot-s-image_1.svg" alt="Left: Schematic showing V_in -&gt; Capacitor -&gt; Output node -&gt; Inductor -&gt; Ground. Right: A Bode plot showing magnitude rising at +40dB/dec with a sharp upward spike exactly at f_c, then flattening out at 0dB. The phase plot drops from +180 to 0 degrees."/>
+  <details><summary>Prompt</summary><p>Left: Schematic showing V_in -&gt; Capacitor -&gt; Output node -&gt; Inductor -&gt; Ground. Right: A Bode plot showing magnitude rising at +40dB/dec with a sharp upward spike exactly at f_c, then flattening out at 0dB. The phase plot drops from +180 to 0 degrees.</p></details>
+</article>
+<article class="card">
+  <h2>filters-passive-rlc-draw-a-series-rlc-band-pass-filter-what-does-its-b / image_1</h2>
+  <p><strong>Series RLC band-pass response</strong> <span>rlc_band_pass</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/filters-passive-rlc-draw-a-series-rlc-band-pass-filter-what-does-its-b-image_1.svg" alt="Left: Schematic showing V_in -&gt; Inductor -&gt; Capacitor -&gt; Resistor -&gt; Ground. The output V_out is measured across the Resistor. Right: A Bode plot showing a bell-curve peak centered exactly at f_0."/>
+  <details><summary>Prompt</summary><p>Left: Schematic showing V_in -&gt; Inductor -&gt; Capacitor -&gt; Resistor -&gt; Ground. The output V_out is measured across the Resistor. Right: A Bode plot showing a bell-curve peak centered exactly at f_0.</p></details>
+</article></section>
+</body>
+</html>

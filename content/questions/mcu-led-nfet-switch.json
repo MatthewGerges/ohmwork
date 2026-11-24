@@ -1,0 +1,26 @@
+{
+  "slug": "mcu-led-nfet-switch",
+  "category": "Thinking",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 20,
+  "images": {
+    "diag1": "public/diagrams/mcu_q2_question.png",
+    "diag2": "public/diagrams/mcu_q2_answer.png"
+  },
+  "question_text": "<p>The MCU below can only source <strong>5 mA per GPIO pin</strong>, but the LED needs <strong>20 mA</strong> to reach its rated brightness. The Vcc rail can supply ample current.</p>\n<p><strong>How do you drive the LED at 20 mA without exceeding the GPIO pin limit?</strong></p>\n<img src=\"{{diag1}}\" alt=\"MCU limited to 5mA, LED needs 20mA\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "answer_text": "<p><strong>Use a low-side N-channel MOSFET (NFET) switch.</strong> The GPIO drives the gate; the Vcc rail supplies the LED current through the resistor and transistor.</p>\n<img src=\"{{diag2}}\" alt=\"Low-side NFET switch: Vcc → R → LED → NFET drain/source → GND, GPIO drives gate\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<details style=\"margin-top:1.25rem;border:1px solid rgba(99,102,241,0.3);border-radius:0.75rem;padding:1rem;background:rgba(99,102,241,0.05);\">\n<summary style=\"cursor:pointer;color:#818cf8;font-size:0.875rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;list-style:none;user-select:none;\">▶ Detailed Explanation</summary>\n<div style=\"margin-top:1rem;color:#cbd5e1;line-height:1.6;\">\n<p>The NFET gate draws essentially <strong>zero DC current</strong> (gate is insulated from channel). The GPIO only has to charge the gate capacitance — a tiny burst, well under 5 mA.</p>\n<p>The LED current path is entirely separate: <strong>Vcc → R → LED → NFET drain → source → GND</strong>. The transistor acts as a voltage-controlled switch.</p>\n<p><strong>Resistor value:</strong> V_R = 3.3V − 2V = 1.3V. At 20 mA: R = 1.3V / 20 mA = 65 Ω → standard value <strong>68 Ω</strong> (gives ≈ 19 mA).</p>\n<p><strong>GPIO HIGH → NFET ON → LED ON.</strong> GPIO LOW → NFET OFF → LED OFF.</p>\n<p>This is called a <strong>low-side switch</strong> because the transistor sits between the load and GND (the low side of the supply).</p>\n</div>\n</details>",
+  "bonus_question_text": "What do you look for when picking the NFET for this circuit?",
+  "bonus_answer_text": "<p><strong>Four things to check on the datasheet:</strong></p>\n\n<h4>1. Gate threshold voltage (Vth)</h4>\n<p>The NFET must turn on fully with your GPIO voltage. Use a <strong>logic-level MOSFET</strong> with Vth ≤ 1.5V so a 3.3V GPIO drives it into full saturation. Standard MOSFETs often need 5–10V on the gate.</p>\n\n<h4>2. Continuous drain current (Id)</h4>\n<p>Must exceed your LED current with margin. For 20 mA, any MOSFET rated ≥ 100 mA is fine — logic-level devices like the 2N7002 (200 mA) are typical choices.</p>\n\n<h4>3. Power dissipation</h4>\n<p>In saturation the MOSFET's on-resistance (Rds_on) is tiny (e.g. 5 Ω). Power = I² × Rds_on = (20 mA)² × 5 Ω = <strong>2 mW</strong> — negligible. Only matters at higher currents.</p>\n\n<h4>4. High-side vs low-side</h4>\n<p>This circuit is <strong>low-side</strong> (NFET between load and GND) — the simplest topology for N-channel FETs since source is at GND, making gate drive straightforward. A high-side N-channel switch needs the gate driven <em>above</em> Vcc, which requires a bootstrap or charge-pump circuit.</p>\n\n<h4>PWM note</h4>\n<p>PWM works exactly the same as with a direct GPIO drive — toggle the gate signal at your target frequency. The NFET switches fast enough (nanoseconds) that it tracks PWM signals up to hundreds of kHz without issue.</p>",
+  "tags": [
+    "MCU",
+    "GPIO",
+    "LED",
+    "NFET",
+    "MOSFET",
+    "low-side switch",
+    "PWM"
+  ],
+  "resource_videos": [],
+  "related_question_ids": []
+}

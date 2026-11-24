@@ -1,0 +1,30 @@
+{
+  "slug": "op-amp-configurations-how-do-you-wire-a-schmitt-trigger-and-what-probl",
+  "category": "Op-Amp Configurations",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 27,
+  "source_fingerprint": "f8d9421417f861eb",
+  "source": {
+    "batch_id": "ee-flashcards-opamp-configs-visual-v2-20260709T2351",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_opamp_configs_visual_v2.xlsx",
+    "row_number": 6
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-opamp-configs-visual-v2-20260709T2351/op-amp-configurations-how-do-you-wire-a-schmitt-trigger-and-what-probl-image_1.svg",
+    "image_2": "public/diagrams/imports/ee-flashcards-opamp-configs-visual-v2-20260709T2351/op-amp-configurations-how-do-you-wire-a-schmitt-trigger-and-what-probl-image_2.svg"
+  },
+  "question_text": "<p>How do you wire a Schmitt Trigger, and what problem does it solve?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Schematic of a Schmitt Trigger (a positive feedback resistor connected from the output directly back to the non-inverting + input).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>It solves the 'chatter' (rapid flickering) problem caused by noisy signals by using Positive Feedback to create hysteresis.</p>",
+  "explanation_text": "<p>A standard comparator glitches back and forth if a noisy signal hovers near a single threshold. A Schmitt Trigger creates two distinct thresholds. For example, it might turn ON when the input crosses 5V, but won't turn OFF until the input drops back below 4V. If a noisy input fluctuates around 4.5V, the output remains perfectly stable instead of rapidly chattering.</p>\n<img src=\"{{image_2}}\" alt=\"A graph showing a noisy input signal with two distinct horizontal threshold lines labeled (e.g., Upper = 5V, Lower = 4V). Below it, the resulting output is a clean square wave that ignores the noise flickering between the two thresholds.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "bonus_question_text": "<p>How does positive feedback create hysteresis in a Schmitt Trigger?</p>",
+  "bonus_answer_text": "<p>The output state (+Vcc or -Vcc) feeds back into the reference pin (+), actively pulling the reference threshold up or down to reinforce its current state.</p>",
+  "main_video_youtube_id": "0",
+  "resource_videos": [],
+  "ltspice_file_needed": "0",
+  "tags": [
+    "source:excel",
+    "import:f8d9421417f861eb"
+  ],
+  "related_question_ids": []
+}

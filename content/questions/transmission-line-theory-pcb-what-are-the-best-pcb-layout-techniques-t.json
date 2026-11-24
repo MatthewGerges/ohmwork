@@ -1,0 +1,29 @@
+{
+  "slug": "transmission-line-theory-pcb-what-are-the-best-pcb-layout-techniques-t",
+  "category": "Transmission Line Theory, PCB",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 40,
+  "source_fingerprint": "97ddd45be03fc299",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 20
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-pcb-what-are-the-best-pcb-layout-techniques-t-image_1.svg"
+  },
+  "question_text": "<p>What are the best PCB layout techniques to minimize capacitive and inductive crosstalk between traces?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A diagram illustrating the 3W rule. Two parallel PCB traces are shown with a width of 'W'. The distance between their centerlines is marked as '3W'.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>1) Increase the spacing between traces (e.g., the &quot;3W rule&quot;).<br/>2) Route adjacent layers perpendicularly (orthogonal routing).</p>",
+  "explanation_text": "<p>Doubling the distance between traces drastically cuts the parasitic electric and magnetic fields. If you must route signals on adjacent internal layers, run them at 90-degree angles to each other to minimize the overlapping parallel length. Also, bringing the reference ground plane closer to the traces tightens the fields, reducing crosstalk.</p>",
+  "bonus_question_text": "<p>What is the &quot;3W Rule&quot; in PCB layout?</p>",
+  "bonus_answer_text": "<p>A best practice stating the distance between the centers of two parallel traces should be at least three times the trace width (3W) to keep crosstalk to an acceptable minimum.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:97ddd45be03fc299"
+  ],
+  "related_question_ids": []
+}

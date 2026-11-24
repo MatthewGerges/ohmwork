@@ -1,0 +1,29 @@
+{
+  "slug": "transmission-line-theory-pcb-what-is-a-differential-signal-pair-and-wh",
+  "category": "Transmission Line Theory, PCB",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 43,
+  "source_fingerprint": "df73ff2052b2eb6d",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 17
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-pcb-what-is-a-differential-signal-pair-and-wh-image_1.svg"
+  },
+  "question_text": "<p>What is a differential signal pair, and why is it preferred over single-ended signals for high-speed routing (like USB or Ethernet)?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A graph showing two equal and opposite signal waveforms (D+ and D-). A spike of noise hits both equally at the same time. A third waveform shows the resulting (D+ minus D-) math, resulting in a perfectly clean signal with the noise removed.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>A differential pair uses two traces to transmit equal and opposite (inverted) signals. The receiver reads the difference between them, making it highly immune to common-mode noise.</p>",
+  "explanation_text": "<p>If external electromagnetic interference (EMI) hits the routing, it couples into both parallel traces equally. Because the receiver only cares about the mathematical difference between the two voltages, this &quot;common-mode&quot; noise gets completely cancelled out.</p>",
+  "bonus_question_text": "<p>Do differential pairs emit less EMI than single-ended traces?</p>",
+  "bonus_answer_text": "<p>Yes. Because the currents on the two traces are equal and opposite, their radiated magnetic fields effectively cancel each other out.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:df73ff2052b2eb6d"
+  ],
+  "related_question_ids": []
+}

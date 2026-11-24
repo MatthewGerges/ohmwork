@@ -1,0 +1,29 @@
+{
+  "slug": "components-what-buck-converter-specification-dictates-the-required-siz",
+  "category": "Components",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 8,
+  "source_fingerprint": "64b32e3c5530e666",
+  "source": {
+    "batch_id": "ee-flashcards-master-simplified-20260709",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+    "row_number": 8
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-buck-converter-specification-dictates-the-required-siz-image_1.svg"
+  },
+  "question_text": "<p>What buck converter specification dictates the required size of the external inductor and capacitors?</p>",
+  "answer_text": "<p>Switching Frequency (f_sw).</p>",
+  "explanation_text": "<p>Higher switching frequencies allow you to use physically smaller inductors and capacitors, but at the cost of higher switching losses and lower efficiency.</p>\n<img src=\"{{image_1}}\" alt=\"Schematic of a synchronous buck converter highlighting the switching node (SW), inductor (L), and output capacitor (Cout), overlayed with a graph of inductor current ripple.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "bonus_question_text": "<p>Why choose a synchronous buck converter over an asynchronous one?</p>",
+  "bonus_answer_text": "<p>It replaces the diode with a low-side MOSFET, reducing conduction losses and improving efficiency.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:64b32e3c5530e666"
+  ],
+  "related_question_ids": []
+}

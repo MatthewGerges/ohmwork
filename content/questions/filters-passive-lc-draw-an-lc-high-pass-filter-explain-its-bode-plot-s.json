@@ -1,0 +1,29 @@
+{
+  "slug": "filters-passive-lc-draw-an-lc-high-pass-filter-explain-its-bode-plot-s",
+  "category": "Filters, Passive LC",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 105,
+  "source_fingerprint": "da2fe7255bc703ad",
+  "source": {
+    "batch_id": "ee-flashcards-opamps-filters-v2-20260916",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_opamps_filters_v2.xlsx",
+    "row_number": 6
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/filters-passive-lc-draw-an-lc-high-pass-filter-explain-its-bode-plot-s-image_1.svg"
+  },
+  "question_text": "<p>Draw an LC High-Pass filter. Explain its Bode plot slopes and the behavior at the cutoff frequency.</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Left: Schematic showing V_in -&gt; Capacitor -&gt; Output node -&gt; Inductor -&gt; Ground. Right: A Bode plot showing magnitude rising at +40dB/dec with a sharp upward spike exactly at f_c, then flattening out at 0dB. The phase plot drops from +180 to 0 degrees.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>A capacitor in series, with an inductor to ground. It passes high frequencies and aggressively blocks low frequencies.</p>",
+  "explanation_text": "<p>Because it is a 2nd-order filter, its magnitude rises at +40 dB/decade at low frequencies until it hits the cutoff frequency (f_c), where it levels out flat at 0 dB to pass the high frequencies.</p>\n<p>Just like the LC Low-Pass, the LC High-Pass suffers from a sharp &quot;resonant peak&quot; exactly at f_c = 1 / (2π√LC). At this specific frequency, the opposing inductive and capacitive reactances cancel each other out, leaving the circuit with almost zero impedance. This causes a massive, unwanted voltage spike unless the circuit is properly damped with a resistor.</p>",
+  "bonus_question_text": "<p>Where might an LC high-pass filter be used in an RF system?</p>",
+  "bonus_answer_text": "<p>To block low-frequency noise (like 60Hz AC hum or DC offsets) from entering a sensitive antenna receiver, while allowing the high-frequency RF signals to pass through.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:da2fe7255bc703ad"
+  ],
+  "related_question_ids": []
+}

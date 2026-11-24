@@ -1,0 +1,27 @@
+{
+  "slug": "transmission-line-theory-pcb-how-does-the-copper-weight-thickness-of-a",
+  "category": "Transmission Line Theory, PCB",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 37,
+  "source_fingerprint": "19c7f2719400517c",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 13
+  },
+  "images": {},
+  "question_text": "<p>How does the copper weight (thickness) of a PCB trace affect its parasitic properties?</p>",
+  "answer_text": "<p>Heavier copper primarily decreases the trace's DC and AC resistance.</p>",
+  "explanation_text": "<p>Using 2 oz copper instead of 1 oz copper doubles the cross-sectional height of the trace. This provides a larger vertical conduit for current to flow, significantly lowering resistance. It has a negligible effect on capacitance and only a very minor effect on inductance.</p>",
+  "bonus_question_text": "<p>What does &quot;1 oz copper&quot; actually mean in physical dimensions?</p>",
+  "bonus_answer_text": "<p>It is the thickness resulting from pressing exactly 1 ounce of copper evenly over 1 square foot of area, which equals roughly 1.37 mils (35 μm) in thickness.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:19c7f2719400517c"
+  ],
+  "related_question_ids": []
+}

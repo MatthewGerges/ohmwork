@@ -1,0 +1,29 @@
+{
+  "slug": "current-sensing-op-amps-when-measuring-a-high-side-shunt-why-is-a-diff",
+  "category": "Current Sensing, Op-Amps",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 116,
+  "source_fingerprint": "554699909ace5d84",
+  "source": {
+    "batch_id": "ee-flashcards-current-sensing-v2-20260917",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+    "row_number": 3
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-op-amps-when-measuring-a-high-side-shunt-why-is-a-diff-image_1.svg"
+  },
+  "question_text": "<p>When measuring a high-side shunt, why is a Difference Amplifier topology an excellent choice compared to a standard Non-Inverting amplifier? How is it wired and what is its equation?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Schematic of an Op-Amp Difference Amplifier. V_in- connects through R_in to the inverting (-) terminal, with R_f connecting the (-) terminal to V_out. V_in+ connects through R_in to the non-inverting (+) terminal, with another resistor R_f connecting the (+) terminal to ground.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>A Difference Amplifier explicitly subtracts the two input voltages, amplifying ONLY the difference between them and rejecting the massive common-mode voltage.</p>",
+  "explanation_text": "<p>If you used a standard non-inverting amplifier referenced to ground on a 12V rail, the op-amp would try to amplify the massive 12V common-mode voltage, instantly saturating the output.</p>\n<p>A Difference Amplifier uses a 4-resistor network (two input resistors, one feedback, one to ground) to actively subtract the inputs. <br/>Equation: V_out = (R_f / R_in) * (V_in+ - V_in-). <br/>If V_in+ is 12.01V and V_in- is 12.00V, it subtracts them and only amplifies the 0.01V difference across the shunt.</p>",
+  "bonus_question_text": "<p>What is the critical hardware requirement for the 4 resistors in a Difference Amplifier to achieve a good Common-Mode Rejection Ratio (CMRR)?</p>",
+  "bonus_answer_text": "<p>They must be perfectly matched in highly precise ratios (R1/R2 = R3/R4). Even a 0.1% tolerance mismatch will severely degrade the CMRR, causing the 12V common-mode voltage to artificially leak into the output reading.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:554699909ace5d84"
+  ],
+  "related_question_ids": []
+}

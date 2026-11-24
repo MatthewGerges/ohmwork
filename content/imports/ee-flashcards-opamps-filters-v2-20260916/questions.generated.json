@@ -1,0 +1,302 @@
+{
+  "batch_id": "ee-flashcards-opamps-filters-v2-20260916",
+  "generated_at": "2026-09-16T18:23:17.799Z",
+  "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_opamps_filters_v2.xlsx",
+  "rows": [
+    {
+      "row_number": 2,
+      "slug": "op-amps-comparators-and-triggers-draw-an-inverting-schmitt-trigger-cir",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "fead3ff458b1cca4",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_opamps_filters_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 2
+      },
+      "question": {
+        "category": "Op-Amps, Comparators & Triggers",
+        "categories": [
+          "Op-Amps",
+          "Comparators & Triggers"
+        ],
+        "difficulty": "medium",
+        "question_text": "Draw an Inverting Schmitt Trigger circuit. Explain why it is needed to solve noise issues, and how its threshold voltages are calculated.",
+        "answer_text": "{{image_1}} {{image_2}} {{image_3}}\n\nIt uses an op-amp with *positive feedback* to create two separate thresholds (V_TH and V_TL). This \"hysteresis\" prevents a noisy input signal from causing rapid, glitchy on/off toggling.",
+        "explanation_text": "Think of hysteresis as a \"dead zone\" that ignores noise. Let's say we set the upper threshold to 5V and the lower threshold to 3V. Because this is an *inverting* Schmitt trigger, the output starts HIGH when the input is 0V.\n\n- As the input rises to 4V, the output stays HIGH.\n- It crosses 5V! The output snaps LOW.\n- Now the input drops to 4V (maybe due to noise). Does it snap back HIGH? No! It is in the dead zone. It completely ignores this change.\n- It won't toggle HIGH again until the input drops all the way below 3V.\n\nThis prevents a noisy signal bouncing around 4V from rapidly flipping the output ON and OFF. \n\nThe Math: Assuming a resistor R_1 goes to ground and R_f is the feedback resistor, the voltage at the (+) terminal is a voltage divider from the output: V_+ = V_out * [R_1 / (R_1 + R_f)]. When output is HIGH, V_TH is set. When output is LOW, V_TL is set.",
+        "bonus_question_text": "Draw the V_in vs V_out transfer curve for an Inverting Schmitt Trigger.",
+        "bonus_answer_text": "It looks like a rectangular loop. V_out is HIGH when V_in is low. As V_in increases past V_TH, V_out snaps LOW. It stays LOW as V_in decreases until it passes V_TL, snapping HIGH again.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Schematic of an inverting Schmitt trigger. V_in connects to the inverting (-) terminal. V_out connects to a resistor divider (R_1 and R_f) that feeds back into the non-inverting (+) terminal.",
+          "title": "Inverting Schmitt trigger",
+          "alt": "Schematic of an inverting Schmitt trigger. V_in connects to the inverting (-) terminal. V_out connects to a resistor divider (R_1 and R_f) that feeds back into the non-inverting (+) terminal.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "op_amp_schmitt_inverting"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/op-amps-comparators-and-triggers-draw-an-inverting-schmitt-trigger-cir-image_1.svg"
+        },
+        "image_2": {
+          "prompt": "A transfer curve graph. X-axis is V_in, Y-axis is V_out. It shows a rectangular hysteresis loop with arrows indicating direction. The right vertical drop happens at V_TH, and the left vertical rise happens at V_TL.",
+          "title": "Schmitt trigger transfer curve",
+          "alt": "A transfer curve graph. X-axis is V_in, Y-axis is V_out. It shows a rectangular hysteresis loop with arrows indicating direction. The right vertical drop happens at V_TH, and the left vertical rise happens at V_TL.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "schmitt_transfer"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/op-amps-comparators-and-triggers-draw-an-inverting-schmitt-trigger-cir-image_2.svg"
+        },
+        "image_3": {
+          "prompt": "A two-part graph showing the effect of noise. Top: A noisy sine wave crossing a single 4V threshold multiple times, resulting in a glitchy, rapid ON/OFF square wave below it. Bottom: The same noisy sine wave, but with two dashed threshold lines at 3V and 5V. The resulting square wave below it toggles cleanly only once when the wave completely crosses 5V.",
+          "title": "Noise rejection with hysteresis",
+          "alt": "A two-part graph showing the effect of noise. Top: A noisy sine wave crossing a single 4V threshold multiple times, resulting in a glitchy, rapid ON/OFF square wave below it. Bottom: The same noisy sine wave, but with two dashed threshold lines at 3V and 5V. The resulting square wave below it toggles cleanly only once when the wave completely crosses 5V.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "schmitt_noise_comparison"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/op-amps-comparators-and-triggers-draw-an-inverting-schmitt-trigger-cir-image_3.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 3,
+      "slug": "op-amps-comparators-and-triggers-draw-a-non-inverting-schmitt-trigger",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "e0ef59c84f9c0aaf",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_opamps_filters_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 3
+      },
+      "question": {
+        "category": "Op-Amps, Comparators & Triggers",
+        "categories": [
+          "Op-Amps",
+          "Comparators & Triggers"
+        ],
+        "difficulty": "hard",
+        "question_text": "Draw a Non-Inverting Schmitt Trigger circuit. Derive the equations for its upper and lower thresholds based on the resistors.",
+        "answer_text": "{{image_1}}\n\nThe input (R_in) and the positive feedback (R_f) both connect to the non-inverting (+) terminal.",
+        "explanation_text": "The inverting (-) terminal is tied to Ground (0V). The op-amp will toggle when the voltage at the (+) terminal crosses 0V. By superposition, the voltage at the (+) terminal is: V_+ = V_in * [R_f / (R_in + R_f)] + V_out * [R_in / (R_in + R_f)].\n\nSetting V_+ to 0V and solving for V_in gives us the threshold equation: V_in = -V_out * (R_in / R_f).\n- When output is LOW (V_OL, a negative voltage), V_in must rise to the upper threshold to switch it: V_TH = -V_OL * (R_in / R_f).\n- When output is HIGH (V_OH, a positive voltage), V_in must fall to the lower threshold: V_TL = -V_OH * (R_in / R_f).",
+        "bonus_question_text": "If the feedback resistor (R_f) is made much larger than the input resistor (R_in), how does this affect the hysteresis band?",
+        "bonus_answer_text": "The hysteresis band (V_TH - V_TL) becomes much narrower. Looking at the derivation, making R_f larger decreases the fraction (R_in / R_f), which brings the V_TH and V_TL threshold voltages closer to 0V.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Schematic of a non-inverting Schmitt trigger. V_in passes through a resistor (R_in) into the non-inverting (+) terminal. V_out feeds back through a resistor (R_f) into the exact same (+) terminal. The inverting (-) terminal connects to Ground.",
+          "title": "Non-inverting Schmitt trigger",
+          "alt": "Schematic of a non-inverting Schmitt trigger. V_in passes through a resistor (R_in) into the non-inverting (+) terminal. V_out feeds back through a resistor (R_f) into the exact same (+) terminal. The inverting (-) terminal connects to Ground.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "op_amp_schmitt_non_inverting"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/op-amps-comparators-and-triggers-draw-a-non-inverting-schmitt-trigger-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 4,
+      "slug": "filters-passive-rc-draw-an-rc-low-pass-filter-explain-how-to-construct",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "a80320fd8a4016b7",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_opamps_filters_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 4
+      },
+      "question": {
+        "category": "Filters, Passive RC",
+        "categories": [
+          "Filters",
+          "Passive RC"
+        ],
+        "difficulty": "easy",
+        "question_text": "Draw an RC Low-Pass filter. Explain how to construct its Bode plot and describe the rule for its slope.",
+        "answer_text": "{{image_1}}\n\nA resistor in series, with a capacitor to ground.",
+        "explanation_text": "Bode plots are drawn based on the order (number of reactive components) of the filter. A 1st-order filter (like this one RC circuit) changes at exactly ±20 dB/decade.\n\nMagnitude Plot: It starts perfectly flat at 0 dB (a gain of 1) because low frequencies pass freely through the resistor. At the cutoff frequency (f_c = 1 / 2πRC), the capacitor's impedance drops to equal the resistor, cutting the signal power in half (-3 dB point). Beyond f_c, the capacitor's impedance continues to drop, shorting the signal to ground. Since it is 1st-order, the plot rolls off linearly downward at -20 dB per decade.\nPhase Plot: Starts at 0°, hits -45° exactly at f_c, and maxes out at -90° at high frequencies.",
+        "bonus_question_text": "What happens to the cutoff frequency if you double both the resistor and capacitor values?",
+        "bonus_answer_text": "The cutoff frequency decreases by a factor of 4 (it becomes 25% of the original frequency).",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Left: Schematic showing V_in -> Resistor -> Output node -> Capacitor -> Ground. Right: A Bode plot with a flat magnitude line that bends downward at f_c (-20dB/dec), and a phase line dropping from 0 to -90 degrees.",
+          "title": "RC low-pass filter response",
+          "alt": "Left: Schematic showing V_in -> Resistor -> Output node -> Capacitor -> Ground. Right: A Bode plot with a flat magnitude line that bends downward at f_c (-20dB/dec), and a phase line dropping from 0 to -90 degrees.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "rc_low_pass"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/filters-passive-rc-draw-an-rc-low-pass-filter-explain-how-to-construct-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 5,
+      "slug": "filters-passive-lc-draw-an-lc-low-pass-filter-what-are-its-two-main-ad",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "6d0f61fcfa3b66e0",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_opamps_filters_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 5
+      },
+      "question": {
+        "category": "Filters, Passive LC",
+        "categories": [
+          "Filters",
+          "Passive LC"
+        ],
+        "difficulty": "medium",
+        "question_text": "Draw an LC Low-Pass filter. What are its two main advantages over an RC filter, and what does its Bode plot slope look like?",
+        "answer_text": "{{image_1}}\n\nAn inductor in series, with a capacitor to ground. It has zero DC power loss and rolls off twice as aggressively.",
+        "explanation_text": "Advantages: Unlike a resistor, an ideal inductor burns no power as heat (I^2*R = 0), making this perfectly suited for high-power applications (like the output of a buck converter).\n\nBode Plot: Because it uses two reactive components (L and C), it is a 2nd-order filter. The rule is ±20 dB/decade *per order*. Therefore, after the cutoff frequency, the magnitude aggressively drops at -40 dB/decade.",
+        "bonus_question_text": "What causes the massive \"resonant peak\" at the cutoff frequency, and how do you fix it?",
+        "bonus_answer_text": "The LC tank resonates. At exactly f_c, the inductive and capacitive reactances cancel out, leaving nearly zero impedance. It is fixed (damped) by adding resistance to the circuit (either utilizing parasitic DCR/ESR or adding an explicit damping resistor) to lower the Q-factor.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Left: Schematic showing V_in -> Inductor -> Output node -> Capacitor -> Ground. Right: A Bode plot with a flat magnitude line, a sharp upward peak at f_c, followed by a steep downward slope (-40dB/dec). The phase plot drops from 0 to -180 degrees.",
+          "title": "LC low-pass filter response",
+          "alt": "Left: Schematic showing V_in -> Inductor -> Output node -> Capacitor -> Ground. Right: A Bode plot with a flat magnitude line, a sharp upward peak at f_c, followed by a steep downward slope (-40dB/dec). The phase plot drops from 0 to -180 degrees.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "lc_low_pass"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/filters-passive-lc-draw-an-lc-low-pass-filter-what-are-its-two-main-ad-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 6,
+      "slug": "filters-passive-lc-draw-an-lc-high-pass-filter-explain-its-bode-plot-s",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "da2fe7255bc703ad",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_opamps_filters_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 6
+      },
+      "question": {
+        "category": "Filters, Passive LC",
+        "categories": [
+          "Filters",
+          "Passive LC"
+        ],
+        "difficulty": "medium",
+        "question_text": "Draw an LC High-Pass filter. Explain its Bode plot slopes and the behavior at the cutoff frequency.",
+        "answer_text": "{{image_1}}\n\nA capacitor in series, with an inductor to ground. It passes high frequencies and aggressively blocks low frequencies.",
+        "explanation_text": "Because it is a 2nd-order filter, its magnitude rises at +40 dB/decade at low frequencies until it hits the cutoff frequency (f_c), where it levels out flat at 0 dB to pass the high frequencies.\n\nJust like the LC Low-Pass, the LC High-Pass suffers from a sharp \"resonant peak\" exactly at f_c = 1 / (2π√LC). At this specific frequency, the opposing inductive and capacitive reactances cancel each other out, leaving the circuit with almost zero impedance. This causes a massive, unwanted voltage spike unless the circuit is properly damped with a resistor.",
+        "bonus_question_text": "Where might an LC high-pass filter be used in an RF system?",
+        "bonus_answer_text": "To block low-frequency noise (like 60Hz AC hum or DC offsets) from entering a sensitive antenna receiver, while allowing the high-frequency RF signals to pass through.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Left: Schematic showing V_in -> Capacitor -> Output node -> Inductor -> Ground. Right: A Bode plot showing magnitude rising at +40dB/dec with a sharp upward spike exactly at f_c, then flattening out at 0dB. The phase plot drops from +180 to 0 degrees.",
+          "title": "LC high-pass filter response",
+          "alt": "Left: Schematic showing V_in -> Capacitor -> Output node -> Inductor -> Ground. Right: A Bode plot showing magnitude rising at +40dB/dec with a sharp upward spike exactly at f_c, then flattening out at 0dB. The phase plot drops from +180 to 0 degrees.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "lc_high_pass"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/filters-passive-lc-draw-an-lc-high-pass-filter-explain-its-bode-plot-s-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 7,
+      "slug": "filters-passive-rlc-draw-a-series-rlc-band-pass-filter-what-does-its-b",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "e6d0bc09af7ef2a5",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_opamps_filters_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 7
+      },
+      "question": {
+        "category": "Filters, Passive RLC",
+        "categories": [
+          "Filters",
+          "Passive RLC"
+        ],
+        "difficulty": "hard",
+        "question_text": "Draw a series RLC Band-Pass filter. What does its Bode plot look like, and what is its primary application?",
+        "answer_text": "{{image_1}}\n\nAn inductor, capacitor, and resistor all in series. The Bode plot looks like a mountain peak (a bell curve). It is used to tune into a specific frequency while blocking all others.",
+        "explanation_text": "To create a band-pass, you measure the output voltage strictly across the resistor. At low frequencies, the capacitor acts like an open circuit and blocks the signal (+20dB/dec slope upward). At high frequencies, the inductor blocks the signal (-20dB/dec slope downward). But at exactly the resonant frequency (f_0 = 1 / (2π√LC)), the inductive and capacitive reactances perfectly cancel each other out (X_L = X_C), leaving only the resistor. The signal passes through unattenuated (0 dB) only at this \"peak.\"",
+        "bonus_question_text": "What determines the \"bandwidth\" (how wide the mountain peak is) of this series RLC filter?",
+        "bonus_answer_text": "The resistor value. A smaller resistor results in less damping and a higher \"Q-factor\" (a sharper, narrower peak). A larger resistor dampens the resonance, creating a wider bandwidth.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Left: Schematic showing V_in -> Inductor -> Capacitor -> Resistor -> Ground. The output V_out is measured across the Resistor. Right: A Bode plot showing a bell-curve peak centered exactly at f_0.",
+          "title": "Series RLC band-pass response",
+          "alt": "Left: Schematic showing V_in -> Inductor -> Capacitor -> Resistor -> Ground. The output V_out is measured across the Resistor. Right: A Bode plot showing a bell-curve peak centered exactly at f_0.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "rlc_band_pass"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/filters-passive-rlc-draw-a-series-rlc-band-pass-filter-what-does-its-b-image_1.svg"
+        }
+      },
+      "notes": null
+    }
+  ],
+  "rendered_at": "2026-09-16T18:25:24.465Z"
+}

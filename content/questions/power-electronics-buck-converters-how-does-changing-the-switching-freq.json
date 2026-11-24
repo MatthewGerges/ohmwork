@@ -1,0 +1,27 @@
+{
+  "slug": "power-electronics-buck-converters-how-does-changing-the-switching-freq",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 60,
+  "source_fingerprint": "56c6af963ee712e8",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 10
+  },
+  "images": {},
+  "question_text": "<p>How does changing the switching frequency (e.g., 100kHz vs 2MHz) impact a buck converter's efficiency and output ripple?</p>",
+  "answer_text": "<p>Higher frequency = lower ripple but lower efficiency. Lower frequency = higher efficiency but higher ripple.</p>",
+  "explanation_text": "<p>If you switch on and off very rapidly (high frequency), the inductor and capacitor don't have enough time to charge or discharge very much between cycles. This keeps the output voltage incredibly smooth and allows you to use physically smaller components.</p>\n<p>However, efficiency drops. There are &quot;conduction losses&quot; (power burned simply because the MOSFET acts like a resistor, R_ds(on)), and there are &quot;switching losses.&quot; Switching losses happen every time the MOSFET transitions. Forcing it to transition millions of times per second wastes a massive amount of energy.</p>",
+  "bonus_question_text": "<p>If space on a PCB is extremely limited, should you choose a low or high switching frequency?</p>",
+  "bonus_answer_text": "<p>High switching frequency. It allows you to use drastically smaller surface-mount inductors and capacitors, saving significant board space.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:56c6af963ee712e8"
+  ],
+  "related_question_ids": []
+}

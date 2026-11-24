@@ -1,0 +1,27 @@
+{
+  "slug": "transmission-line-theory-pcb-in-pcb-design-what-is-crosstalk-and-what",
+  "category": "Transmission Line Theory, PCB",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 39,
+  "source_fingerprint": "fd474d39cd249387",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 19
+  },
+  "images": {},
+  "question_text": "<p>In PCB design, what is &quot;crosstalk,&quot; and what are the two physical mechanisms that cause it between adjacent traces?</p>",
+  "answer_text": "<p>Crosstalk is unwanted noise transferred from an &quot;aggressor&quot; trace to a &quot;victim&quot; trace. It is caused by Capacitive coupling and Inductive coupling.</p>",
+  "explanation_text": "<p>Capacitive coupling happens when the voltage rapidly changes on the aggressor (dV/dt), pushing current into the victim via parasitic fringe capacitance between the traces. Inductive coupling happens when the current rapidly changes on the aggressor (dI/dt), creating a magnetic field that induces a voltage in the victim via mutual inductance.</p>",
+  "bonus_question_text": "<p>Is crosstalk worse when the traces run parallel for a long distance?</p>",
+  "bonus_answer_text": "<p>Yes. The longer the traces run parallel, the larger the mutual capacitance and inductance become, leading to much stronger coupling.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:fd474d39cd249387"
+  ],
+  "related_question_ids": []
+}

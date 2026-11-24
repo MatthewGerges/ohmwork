@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>ee-flashcards-current-sensing-v2-20260917</title>
+  <style>
+    body { margin: 0; padding: 24px; background: #020617; color: #e2e8f0; font-family: Inter, Arial, sans-serif; }
+    h1 { margin: 0 0 20px; font-size: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 18px; }
+    .card { border: 1px solid #334155; border-radius: 10px; padding: 14px; background: #0f172a; }
+    h2 { font-size: 13px; line-height: 1.4; color: #94a3b8; margin: 0 0 8px; word-break: break-word; }
+    p { margin: 8px 0; }
+    span { color: #2dd4bf; font-size: 12px; margin-left: 8px; }
+    img { display: block; width: 100%; height: auto; border-radius: 8px; background: #0f172a; margin-top: 10px; }
+    details { margin-top: 10px; color: #cbd5e1; font-size: 13px; }
+    summary { cursor: pointer; color: #818cf8; }
+    .missing { color: #f87171; }
+  </style>
+</head>
+<body>
+  <h1>ee-flashcards-current-sensing-v2-20260917</h1>
+  <section class="grid"><article class="card">
+  <h2>current-sensing-fundamentals-what-is-the-difference-between-high-side / image_1</h2>
+  <p><strong>High-side vs low-side current sensing</strong> <span>current_sense_high_low</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-fundamentals-what-is-the-difference-between-high-side-image_1.svg" alt="Side-by-side schematics. Left (High-Side): V_in connects to a Shunt Resistor, which connects to the Load, which connects to Ground. The amplifier measures across the shunt. Right (Low-Side): V_in connects to the Load, which connects to a Shunt Resistor, which connects to Ground. The amplifier measures across the shunt."/>
+  <details><summary>Prompt</summary><p>Side-by-side schematics. Left (High-Side): V_in connects to a Shunt Resistor, which connects to the Load, which connects to Ground. The amplifier measures across the shunt. Right (Low-Side): V_in connects to the Load, which connects to a Shunt Resistor, which connects to Ground. The amplifier measures across the shunt.</p></details>
+</article>
+<article class="card">
+  <h2>current-sensing-op-amps-when-measuring-a-high-side-shunt-why-is-a-diff / image_1</h2>
+  <p><strong>Difference amplifier</strong> <span>current_difference_equation</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-op-amps-when-measuring-a-high-side-shunt-why-is-a-diff-image_1.svg" alt="Schematic of an Op-Amp Difference Amplifier. V_in- connects through R_in to the inverting (-) terminal, with R_f connecting the (-) terminal to V_out. V_in+ connects through R_in to the non-inverting (+) terminal, with another resistor R_f connecting the (+) terminal to ground."/>
+  <details><summary>Prompt</summary><p>Schematic of an Op-Amp Difference Amplifier. V_in- connects through R_in to the inverting (-) terminal, with R_f connecting the (-) terminal to V_out. V_in+ connects through R_in to the non-inverting (+) terminal, with another resistor R_f connecting the (+) terminal to ground.</p></details>
+</article>
+<article class="card">
+  <h2>current-sensing-thinking-draw-a-high-side-current-sensing-circuit-why / image_1</h2>
+  <p><strong>Current-shunt resistance tradeoff</strong> <span>current_shunt_tradeoff</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-thinking-draw-a-high-side-current-sensing-circuit-why-image_1.svg" alt="A high-side current sensing schematic. A power supply connects to a variable Shunt Resistor, passing through to a Load. An Op-Amp measures the voltage across the shunt. Two text callouts point to the shunt: 'If R is too big -&gt; Heat &amp; V_drop' and 'If R is too small -&gt; Lost in Op-Amp V_os'."/>
+  <details><summary>Prompt</summary><p>A high-side current sensing schematic. A power supply connects to a variable Shunt Resistor, passing through to a Load. An Op-Amp measures the voltage across the shunt. Two text callouts point to the shunt: 'If R is too big -&gt; Heat &amp; V_drop' and 'If R is too small -&gt; Lost in Op-Amp V_os'.</p></details>
+</article>
+<article class="card">
+  <h2>current-sensing-pcb-design-when-routing-a-pcb-for-a-shunt-resistor-why / image_1</h2>
+  <p><strong>Kelvin shunt connection</strong> <span>kelvin_shunt</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-pcb-design-when-routing-a-pcb-for-a-shunt-resistor-why-image_1.svg" alt="PCB layout diagram. A rectangular shunt resistor has thick, wide copper traces carrying high current connected to its outer edges. Two very thin copper traces tap directly into the inner, center edges of the resistor pads and route away parallel to each other as a differential pair toward the amplifier."/>
+  <details><summary>Prompt</summary><p>PCB layout diagram. A rectangular shunt resistor has thick, wide copper traces carrying high current connected to its outer edges. Two very thin copper traces tap directly into the inner, center edges of the resistor pads and route away parallel to each other as a differential pair toward the amplifier.</p></details>
+</article>
+<article class="card">
+  <h2>current-sensing-amplifier-topologies-draw-a-standard-operational-ampli / image_1</h2>
+  <p><strong>Low-side op-amp current sensing</strong> <span>low_side_opamp_current</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-amplifier-topologies-draw-a-standard-operational-ampli-image_1.svg" alt="Schematic of an Operational Amplifier for current sensing. V_bus connects to a System Load, which goes to R_shunt, then through a parasitic resistance (R_p) to Ground. The op-amp non-inverting (+) input taps above R_shunt. The inverting (-) input connects to a voltage divider (R_f from output, R_g to ground). Text points to R_p stating 'Parasitic impedance to GND introduces error'."/>
+  <details><summary>Prompt</summary><p>Schematic of an Operational Amplifier for current sensing. V_bus connects to a System Load, which goes to R_shunt, then through a parasitic resistance (R_p) to Ground. The op-amp non-inverting (+) input taps above R_shunt. The inverting (-) input connects to a voltage divider (R_f from output, R_g to ground). Text points to R_p stating 'Parasitic impedance to GND introduces error'.</p></details>
+</article>
+<article class="card">
+  <h2>current-sensing-amplifier-topologies-draw-an-instrumentation-amplifier / image_1</h2>
+  <p><strong>Instrumentation-amplifier current sensing</strong> <span>instrumentation_amp_current</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-amplifier-topologies-draw-an-instrumentation-amplifier-image_1.svg" alt="Schematic of an Instrumentation Amplifier. V_bus connects to System Load, then R_shunt, then R_p, then Ground. The IN- and IN+ pins cross over to measure exactly across R_shunt (labeled 'Solves PCB parasitic issue'). Inside the IA block, two input buffers connect via a shared R_g, feeding into a final difference amplifier stage."/>
+  <details><summary>Prompt</summary><p>Schematic of an Instrumentation Amplifier. V_bus connects to System Load, then R_shunt, then R_p, then Ground. The IN- and IN+ pins cross over to measure exactly across R_shunt (labeled 'Solves PCB parasitic issue'). Inside the IA block, two input buffers connect via a shared R_g, feeding into a final difference amplifier stage.</p></details>
+</article>
+<article class="card">
+  <h2>current-sensing-amplifier-topologies-draw-a-difference-amplifier-da-co / image_1</h2>
+  <p><strong>Difference-amplifier current sensing</strong> <span>difference_amp_current</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-amplifier-topologies-draw-a-difference-amplifier-da-co-image_1.svg" alt="Schematic of a Difference Amplifier. V_bus connects to System Load, then R_shunt, then R_p, then Ground. The IN- and IN+ pins cross over to measure exactly across R_shunt. Inside the DA block, internal series resistors connect to the internal op-amp, acting as a divider. It successfully handles V_CM &gt; V_s."/>
+  <details><summary>Prompt</summary><p>Schematic of a Difference Amplifier. V_bus connects to System Load, then R_shunt, then R_p, then Ground. The IN- and IN+ pins cross over to measure exactly across R_shunt. Inside the DA block, internal series resistors connect to the internal op-amp, acting as a divider. It successfully handles V_CM &gt; V_s.</p></details>
+</article>
+<article class="card">
+  <h2>current-sensing-amplifier-topologies-draw-a-dedicated-current-sense-am / image_1</h2>
+  <p><strong>Dedicated current-sense amplifier</strong> <span>current_sense_amp</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-amplifier-topologies-draw-a-dedicated-current-sense-am-image_1.svg" alt="Schematic of a Current Sense Amplifier. Used for High-Side sensing: V_bus -&gt; R_shunt -&gt; System Load -&gt; Ground. The IN- and IN+ pins measure across R_shunt (V_CM = V_bus, and V_CM &gt; V_s). Inside the CSA block, the pins enter a specialized 'Input Bias Stage', which then feeds a difference amplifier with precision integrated resistors."/>
+  <details><summary>Prompt</summary><p>Schematic of a Current Sense Amplifier. Used for High-Side sensing: V_bus -&gt; R_shunt -&gt; System Load -&gt; Ground. The IN- and IN+ pins measure across R_shunt (V_CM = V_bus, and V_CM &gt; V_s). Inside the CSA block, the pins enter a specialized 'Input Bias Stage', which then feeds a difference amplifier with precision integrated resistors.</p></details>
+</article></section>
+</body>
+</html>

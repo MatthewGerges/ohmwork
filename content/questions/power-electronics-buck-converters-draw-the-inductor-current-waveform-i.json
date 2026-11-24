@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-buck-converters-draw-the-inductor-current-waveform-i",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 53,
+  "source_fingerprint": "b05a6d06b98b2b4e",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 9
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-inductor-current-waveform-i-image_1.svg"
+  },
+  "question_text": "<p>Draw the inductor current waveform in a buck converter with reference to the control signal (the MOSFET gate voltage). Why does it look like that?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Two stacked waveform graphs. Top: A square wave representing the MOSFET Gate Control Signal (HIGH / LOW). Bottom: The Inductor Current, showing a diagonal line ramping up exactly during the HIGH period, and ramping down exactly during the LOW period.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>It is a continuous triangle wave. It ramps up diagonally when the gate is HIGH, and ramps down diagonally when the gate is LOW.</p>",
+  "explanation_text": "<p>The physics formula is V = L(di/dt). This simply means that applying a flat, constant voltage to an inductor creates a sloped, diagonal current. When the gate is HIGH, a positive flat voltage (V_in - V_out) is applied, creating a straight upward slope. When the gate is LOW, a negative flat voltage (-V_out) is applied, creating a straight downward slope.</p>",
+  "bonus_question_text": "<p>What dictates how steep that diagonal current line is?</p>",
+  "bonus_answer_text": "<p>The size of the inductor (L) and the voltage applied. A larger inductor (more Henries) resists change more strongly, resulting in a flatter, less steep slope (meaning less ripple!).</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:b05a6d06b98b2b4e"
+  ],
+  "related_question_ids": []
+}

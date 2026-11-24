@@ -1,0 +1,27 @@
+{
+  "slug": "transmission-line-theory-pcb-what-are-the-two-most-critical-pcb-routin",
+  "category": "Transmission Line Theory, PCB",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 41,
+  "source_fingerprint": "ed3a0ee8a182abf8",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 18
+  },
+  "images": {},
+  "question_text": "<p>What are the two most critical PCB routing practices when laying out a high-speed differential pair?</p>",
+  "answer_text": "<p>1) Keep the traces perfectly length-matched.<br/>2) Maintain a constant spacing (coupling) between them.</p>",
+  "explanation_text": "<p>If one trace is longer than the other, the inverted signal arrives late, causing phase skew and destroying the noise-cancellation effect. Constant spacing ensures their differential characteristic impedance (e.g., 90Ω for USB) remains uniform along the whole route. You can verify this using tools like KiCad's built-in length matching and DRC clearance rules.</p>",
+  "bonus_question_text": "<p>How do you fix a length mismatch in a differential pair on a PCB?</p>",
+  "bonus_answer_text": "<p>Add small &quot;tuning meanders&quot; (wiggles) near the source of the mismatch on the shorter trace to artificially equalize the physical length.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:ed3a0ee8a182abf8"
+  ],
+  "related_question_ids": []
+}

@@ -1,0 +1,753 @@
+{
+  "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+  "generated_at": "2026-07-15T22:54:45.755Z",
+  "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+  "rows": [
+    {
+      "row_number": 2,
+      "slug": "transmission-line-theory-what-is-the-formula-for-the-reflection-coeffi",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "524dbb1eb4c2ca75",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 2
+      },
+      "question": {
+        "category": "Transmission Line Theory",
+        "categories": [
+          "Transmission Line Theory"
+        ],
+        "difficulty": "easy",
+        "question_text": "What is the formula for the reflection coefficient (Γ)? What is its approximate value if a 50Ω line connects to a high-impedance (e.g., 1 MΩ) receiver?",
+        "answer_text": "Γ = (Z_L - Z_0) / (Z_L + Z_0). For a 1 MΩ receiver, the value is approximately 1.",
+        "explanation_text": "The reflection coefficient tells you how much of a wave bounces back when it hits a change in impedance. Because 1 MΩ is vastly larger than 50Ω, it acts almost like an open circuit, meaning almost the entire wave bounces back positively.",
+        "bonus_question_text": "What happens to the voltage at the receiver if Γ = 1?",
+        "bonus_answer_text": "The reflected wave adds to the incoming wave, doubling the voltage at the receiver.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 3,
+      "slug": "transmission-line-theory-a-1v-step-is-sent-from-a-20-driver-into-a-50",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "ea425f9f2152fc70",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 3
+      },
+      "question": {
+        "category": "Transmission Line Theory",
+        "categories": [
+          "Transmission Line Theory"
+        ],
+        "difficulty": "medium",
+        "question_text": "A 1V step is sent from a 20Ω driver into a 50Ω transmission line, ending at an open (1 MΩ) receiver. What is the initial voltage wave? When it reaches the receiver, what is the total voltage? Finally, when the reflection reaches the source, what is the voltage of the second reflected wave, and what does the total voltage at the source become?",
+        "answer_text": "{{image_1}}\n\nInitial wave: 0.714V.\nTotal receiver voltage: 1.428V.\nSecond reflected wave: -0.306V.\nTotal source voltage: 1.122V.",
+        "explanation_text": "1) Initial wave: 1V * (50 / (20 + 50)) = 0.714V.\n2) First reflection: The receiver reflection coefficient is Γ_L = (Z_L - Z_0) / (Z_L + Z_0) = (1M - 50) / (1M + 50) ≈ 1. Because Γ = 1, 100% of the incident wave reflects back. The 0.714V incident wave adds to the 0.714V reflected wave, making the total receiver voltage 0.714V + 0.714V = 1.428V.\n3) Second reflection: The 0.714V returning wave hits the 20Ω source. Source Γ_S = (20 - 50) / (20 + 50) = -0.428. The new reflected wave is 0.714V * -0.428 = -0.306V. The total voltage at the source drops to 1.428V - 0.306V = 1.122V.\n\n*Highly Recommended: Visualize this math interactively using this simulator: https://helloworld922.blogspot.com/2013/04/online-transmission-line-simulation.html*",
+        "bonus_question_text": "Why does the voltage \"step up\" and \"step down\" like this?",
+        "bonus_answer_text": "Because the line is improperly terminated at both ends, the energy bounces back and forth (ringing), gradually settling toward its steady-state DC value.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A schematic showing a 1V step voltage source connected to a 20Ω series resistor (driver), feeding into a long transmission line block labeled 'Z0 = 50Ω'. The end of the transmission line is left unconnected, labeled '1 MΩ (Open)'.",
+          "title": "Open load reflection, 20Ω source",
+          "alt": "A schematic showing a 1V step voltage source connected to a 20Ω series resistor (driver), feeding into a long transmission line block labeled 'Z0 = 50Ω'. The end of the transmission line is left unconnected, labeled '1 MΩ (Open)'.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "tl_open_20_source"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-a-1v-step-is-sent-from-a-20-driver-into-a-50-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 4,
+      "slug": "transmission-line-theory-a-1v-step-is-sent-from-a-50-driver-into-a-50",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "dcaffbb02f4cde7f",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 4
+      },
+      "question": {
+        "category": "Transmission Line Theory",
+        "categories": [
+          "Transmission Line Theory"
+        ],
+        "difficulty": "medium",
+        "question_text": "A 1V step is sent from a 50Ω driver into a 50Ω transmission line, ending at an open (1 MΩ) receiver. What is the initial voltage wave? When it reaches the receiver, what is the total voltage? What happens when the reflection reaches the source?",
+        "answer_text": "{{image_1}}\n\nInitial wave: 0.5V.\nTotal receiver voltage: 1.0V.\nNo second reflection occurs (the line stabilizes at 1.0V).",
+        "explanation_text": "1) Initial wave: The matched driver acts as a voltage divider, splitting the 1V step exactly in half: 1V * (50 / (50 + 50)) = 0.5V.\n2) First reflection: The receiver reflection coefficient is Γ_L = (Z_L - Z_0) / (Z_L + Z_0) = (1M - 50) / (1M + 50) ≈ 1. Because Γ = 1, 100% of the wave is reflected. The 0.5V incident wave adds to the 0.5V reflected wave, making the total receiver voltage 1.0V.\n3) Second reflection: When the 0.5V reflected wave hits the 50Ω source, the reflection coefficient is Γ_S = (50 - 50) / (50 + 50) = 0. The wave is fully absorbed (source-terminated), preventing any further ringing.\n\n*Highly Recommended: Visualize this math interactively using this simulator: https://helloworld922.blogspot.com/2013/04/online-transmission-line-simulation.html*",
+        "bonus_question_text": "What is the advantage of using a 50Ω source with a 50Ω transmission line?",
+        "bonus_answer_text": "It guarantees that any reflections bouncing off the receiver are completely absorbed by the source, ensuring signal integrity by eliminating secondary bounces.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A schematic showing a 1V step voltage source connected to a 50Ω series resistor (matched driver), feeding into a transmission line labeled 'Z0 = 50Ω', ending at an open circuit.",
+          "title": "Open load reflection, 50Ω source",
+          "alt": "A schematic showing a 1V step voltage source connected to a 50Ω series resistor (matched driver), feeding into a transmission line labeled 'Z0 = 50Ω', ending at an open circuit.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "tl_open_50_source"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-a-1v-step-is-sent-from-a-50-driver-into-a-50-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 5,
+      "slug": "transmission-line-theory-in-rf-theory-what-do-the-s-parameters-s11-and",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "010206009834fc60",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 5
+      },
+      "question": {
+        "category": "Transmission Line Theory",
+        "categories": [
+          "Transmission Line Theory"
+        ],
+        "difficulty": "easy",
+        "question_text": "In RF theory, what do the S-parameters S11 and S21 represent, and how are they calculated?",
+        "answer_text": "{{image_1}}\n\nS11 is Return Loss. Equation: S11 = V_reflected / V_incident (at Port 1).\nS21 is Insertion Loss. Equation: S21 = V_transmitted_to_Port_2 / V_incident_at_Port_1.",
+        "explanation_text": "Think of Port 1 as the input and Port 2 as the output. S11 measures the echo returning back to the input (you want this to be highly negative in dB to show minimal reflection). S21 measures what successfully travels forward through the line (you want this near 0 dB, meaning no signal was lost).",
+        "bonus_question_text": "How is Return Loss (RL) defined mathematically in decibels (dB)?",
+        "bonus_answer_text": "RL (dB) = -20 * log10(|Γ|)  (where Γ is the reflection coefficient equivalent to S11).",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A two-port network block diagram. Port 1 is on the left, Port 2 on the right. An arrow enters Port 1. S11 is shown as an arrow reflecting back out of Port 1. S21 is shown as an arrow passing straight through the block from Port 1 to Port 2.",
+          "title": "Forward S-parameters",
+          "alt": "A two-port network block diagram. Port 1 is on the left, Port 2 on the right. An arrow enters Port 1. S11 is shown as an arrow reflecting back out of Port 1. S21 is shown as an arrow passing straight through the block from Port 1 to Port 2.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "s_params_forward"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-in-rf-theory-what-do-the-s-parameters-s11-and-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 6,
+      "slug": "transmission-line-theory-what-do-the-s-parameters-s22-and-s12-represen",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "a49e1c19ea9b4e6a",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 6
+      },
+      "question": {
+        "category": "Transmission Line Theory",
+        "categories": [
+          "Transmission Line Theory"
+        ],
+        "difficulty": "easy",
+        "question_text": "What do the S-parameters S22 and S12 represent, and how are they calculated?",
+        "answer_text": "{{image_1}}\n\nS22 is Output Return Loss. Equation: S22 = V_reflected / V_incident (at Port 2).\nS12 is Reverse Isolation. Equation: S12 = V_transmitted_to_Port_1 / V_incident_at_Port_2.",
+        "explanation_text": "These are the exact opposites of S11 and S21. S22 measures how much signal bounces back if you inject a signal directly into the output. S12 measures how much signal leaks backward from the output (Port 2) to the input (Port 1).",
+        "bonus_question_text": "Why is S12 (Reverse Isolation) important in an amplifier?",
+        "bonus_answer_text": "It tells you how well the amplifier prevents signals from traveling backward through it, which is critical to stop unwanted feedback and oscillation.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A two-port network block diagram. An arrow enters Port 2 on the right. S22 is shown as an arrow reflecting back out of Port 2. S12 is shown as an arrow passing backward through the block from Port 2 to Port 1.",
+          "title": "Reverse S-parameters",
+          "alt": "A two-port network block diagram. An arrow enters Port 2 on the right. S22 is shown as an arrow reflecting back out of Port 2. S12 is shown as an arrow passing backward through the block from Port 2 to Port 1.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "s_params_reverse"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-what-do-the-s-parameters-s22-and-s12-represen-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 7,
+      "slug": "transmission-line-theory-pcb-what-exactly-is-a-transmission-line-and-w",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "96f83108bc88d028",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 7
+      },
+      "question": {
+        "category": "Transmission Line Theory, PCB",
+        "categories": [
+          "Transmission Line Theory",
+          "PCB"
+        ],
+        "difficulty": "easy",
+        "question_text": "What exactly is a transmission line, and why is it important in high-speed design?",
+        "answer_text": "A transmission line is any specialized cable or PCB trace designed to carry alternating current of radio frequency, where the wave nature of the signal must be considered.",
+        "explanation_text": "At low speeds, a wire acts like a simple short circuit. But at high speeds, wires start acting like complex networks of inductors and capacitors. If you don't treat them as transmission lines, the high-frequency waves will bounce off the ends, creating reflections that severely degrade or destroy the signal.",
+        "bonus_question_text": "What determines the 'characteristic impedance' (Z_0) of a transmission line?",
+        "bonus_answer_text": "The physical geometry of the trace (width, thickness) and the properties of the dielectric material separating it from the ground plane.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 8,
+      "slug": "transmission-line-theory-pcb-at-what-physical-length-must-you-stop-tre",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "7bce17748fb902ce",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 8
+      },
+      "question": {
+        "category": "Transmission Line Theory, PCB",
+        "categories": [
+          "Transmission Line Theory",
+          "PCB"
+        ],
+        "difficulty": "medium",
+        "question_text": "At what physical length must you stop treating a PCB trace as a simple wire and start treating it as a transmission line?",
+        "answer_text": "When the physical length of the trace is greater than 1/10th to 1/4th of the signal's wavelength (λ/10 to λ/4).",
+        "explanation_text": "Wavelength (λ) is velocity (v) divided by frequency (f). In a vacuum, a wave travels at the speed of light (c = 3 x 10^8 m/s). But inside a PCB, the signal travels through a dielectric material (like FR4). This slows the wave down by a factor of the square root of the material's relative permittivity (ε_r). The formula is v = c / sqrt(ε_r). For typical FR4 (ε_r ≈ 4), the speed is 3 x 10^8 / sqrt(4) = 1.5 x 10^8 m/s, exactly half the speed of light.",
+        "bonus_question_text": "If a signal's frequency is 1 GHz and the wave speed is 1.5 x 10^8 m/s, what trace length becomes critical?",
+        "bonus_answer_text": "λ = v / f = (1.5 x 10^8) / (10^9) = 0.15 meters (15 cm). Following the λ/10 rule, any trace longer than 1.5 cm should be treated as a transmission line.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 9,
+      "slug": "transmission-line-theory-pcb-what-is-the-most-common-technique-used-to",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "70150d076e054c2c",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 9
+      },
+      "question": {
+        "category": "Transmission Line Theory, PCB",
+        "categories": [
+          "Transmission Line Theory",
+          "PCB"
+        ],
+        "difficulty": "medium",
+        "question_text": "What is the most common technique used to mitigate unwanted transmission line reflections on a PCB, and how does it work?",
+        "answer_text": "Impedance Matching (or Termination). By matching the impedance of the source or load to the trace's characteristic impedance (Z_0), the reflection coefficient (Γ) becomes 0.",
+        "explanation_text": "Reflections only happen when there is an impedance mismatch. If a 50Ω trace ends at a 50Ω termination resistor, the wave \"sees\" no change in the environment, so it is completely absorbed into the resistor as heat rather than bouncing back.",
+        "bonus_question_text": "What is the difference between Series (Source) Termination and Parallel (End) Termination?",
+        "bonus_answer_text": "Series termination places a resistor at the driver to absorb returning reflections. Parallel termination places a resistor at the receiver tying the line to ground (or a reference) to absorb the initial wave and prevent reflections from ever happening.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 10,
+      "slug": "transmission-line-theory-pcb-how-do-you-draw-the-lumped-element-electr",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "8eea4ac5155c3c7c",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 10
+      },
+      "question": {
+        "category": "Transmission Line Theory, PCB",
+        "categories": [
+          "Transmission Line Theory",
+          "PCB"
+        ],
+        "difficulty": "easy",
+        "question_text": "How do you draw the lumped-element electrical model for a lossless transmission line?",
+        "answer_text": "{{image_1}}\n\nIt is drawn as a ladder of series inductors (L) and shunt capacitors (C) connected to ground.",
+        "explanation_text": "Even a straight piece of wire has parasitic effects. The wire itself acts as a small inductor (L), and its physical separation from the ground plane underneath it acts as a small capacitor (C).",
+        "bonus_question_text": null,
+        "bonus_answer_text": null,
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A schematic labeled 'Transmission Line' showing a cascaded LC ladder network. It consists of multiple series inductors (L1, L2, L3...) and multiple shunt capacitors (C1, C2, C3...) connecting the nodes between the inductors to ground.",
+          "title": "Transmission-line LC ladder",
+          "alt": "A schematic labeled 'Transmission Line' showing a cascaded LC ladder network. It consists of multiple series inductors (L1, L2, L3...) and multiple shunt capacitors (C1, C2, C3...) connecting the nodes between the inductors to ground.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "tl_lc_ladder"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-pcb-how-do-you-draw-the-lumped-element-electr-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 11,
+      "slug": "transmission-line-theory-what-is-the-characteristic-impedance-z-0-of-a",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "dfae98fd88b43456",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 11
+      },
+      "question": {
+        "category": "Transmission Line Theory",
+        "categories": [
+          "Transmission Line Theory"
+        ],
+        "difficulty": "easy",
+        "question_text": "What is the Characteristic Impedance (Z_0) of a lossless transmission line, and how is it calculated from its lumped-element model?",
+        "answer_text": "Z_0 = sqrt(L / C)  (where L is inductance per unit length, and C is capacitance per unit length).",
+        "explanation_text": "Characteristic impedance is not a DC resistance you can measure with a multimeter. It's the instantaneous ratio of voltage to current (V/I) that a high-frequency wave experiences as it travels down the line. It is determined entirely by the line's parasitic inductance and capacitance.",
+        "bonus_question_text": "Does the length of the transmission line affect its Characteristic Impedance?",
+        "bonus_answer_text": "No. Because Z_0 is determined by the ratio of L and C *per unit length*, a 1-inch 50Ω trace and a 10-foot 50Ω cable have the exact same characteristic impedance.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 12,
+      "slug": "transmission-line-theory-pcb-how-does-changing-the-physical-width-and",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "6ca40d1c7ff73d8e",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 12
+      },
+      "question": {
+        "category": "Transmission Line Theory, PCB",
+        "categories": [
+          "Transmission Line Theory",
+          "PCB"
+        ],
+        "difficulty": "medium",
+        "question_text": "How does changing the physical width and length of a PCB trace affect its parasitic Resistance (R), Inductance (L), and Capacitance (C)?",
+        "answer_text": "{{image_1}}\n\n1) Widening the trace: Increases Capacitance, Decreases Inductance, Decreases Resistance.\n2) Lengthening the trace: Increases Capacitance, Increases Inductance, Increases Resistance.",
+        "explanation_text": "Widening a trace gives it more surface area facing the ground plane (increasing C) and provides a wider physical path for current (lowering R and L). Lengthening a trace simply adds more material and area overall, increasing all three parasitics.",
+        "bonus_question_text": "If a PCB trace's characteristic impedance (Z_0 = sqrt(L/C)) is too high, what is the easiest layout adjustment to lower it?",
+        "bonus_answer_text": "Make the trace wider. Widening the trace increases C and decreases L, which significantly lowers the overall Z_0 ratio.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A 3D illustration of a PCB trace. Arrows indicate increasing the width (W) and length (L). Callout boxes summarize the effects: 'Wider Trace = ↑C, ↓L, ↓R' and 'Longer Trace = ↑C, ↑L, ↑R'.",
+          "title": "PCB trace geometry effects",
+          "alt": "A 3D illustration of a PCB trace. Arrows indicate increasing the width (W) and length (L). Callout boxes summarize the effects: 'Wider Trace = ↑C, ↓L, ↓R' and 'Longer Trace = ↑C, ↑L, ↑R'.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "pcb_trace_geometry"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-pcb-how-does-changing-the-physical-width-and-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 13,
+      "slug": "transmission-line-theory-pcb-how-does-the-copper-weight-thickness-of-a",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "19c7f2719400517c",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 13
+      },
+      "question": {
+        "category": "Transmission Line Theory, PCB",
+        "categories": [
+          "Transmission Line Theory",
+          "PCB"
+        ],
+        "difficulty": "medium",
+        "question_text": "How does the copper weight (thickness) of a PCB trace affect its parasitic properties?",
+        "answer_text": "Heavier copper primarily decreases the trace's DC and AC resistance.",
+        "explanation_text": "Using 2 oz copper instead of 1 oz copper doubles the cross-sectional height of the trace. This provides a larger vertical conduit for current to flow, significantly lowering resistance. It has a negligible effect on capacitance and only a very minor effect on inductance.",
+        "bonus_question_text": "What does \"1 oz copper\" actually mean in physical dimensions?",
+        "bonus_answer_text": "It is the thickness resulting from pressing exactly 1 ounce of copper evenly over 1 square foot of area, which equals roughly 1.37 mils (35 μm) in thickness.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 14,
+      "slug": "transmission-line-theory-pcb-how-does-the-distance-between-a-signal-tr",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "e3047b8660205dee",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 14
+      },
+      "question": {
+        "category": "Transmission Line Theory, PCB",
+        "categories": [
+          "Transmission Line Theory",
+          "PCB"
+        ],
+        "difficulty": "medium",
+        "question_text": "How does the distance between a signal trace and its reference plane (the dielectric thickness) affect the trace's parasitic capacitance?",
+        "answer_text": "{{image_1}}\n\nThicker dielectrics DECREASE capacitance. Thinner dielectrics INCREASE capacitance.",
+        "explanation_text": "This relies on the parallel plate capacitance equation: C = (ε * A) / d. The distance (d) is the dielectric thickness. Because the distance is in the denominator, moving the ground plane further away (increasing thickness) makes the capacitance drop. To get more capacitance, the planes must be brought closer together.",
+        "bonus_question_text": "How does a thicker dielectric affect the Characteristic Impedance (Z_0) of a trace?",
+        "bonus_answer_text": "It increases Z_0. Since capacitance (C) drops, the denominator in the impedance equation (Z_0 = sqrt(L/C)) gets smaller, driving the overall impedance up.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A cross-section of a PCB showing the capacitance equation C = (ε * A) / d. Two scenarios are shown: A trace close to the ground plane (labeled 'High C') and a trace far from the ground plane (labeled 'Low C').",
+          "title": "Trace-to-plane capacitance",
+          "alt": "A cross-section of a PCB showing the capacitance equation C = (ε * A) / d. Two scenarios are shown: A trace close to the ground plane (labeled 'High C') and a trace far from the ground plane (labeled 'Low C').",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "pcb_trace_capacitance"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-pcb-how-does-the-distance-between-a-signal-tr-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 15,
+      "slug": "transmission-line-theory-pcb-why-is-an-unbroken-continuous-ground-refe",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "afc6f9893cafd9f3",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 15
+      },
+      "question": {
+        "category": "Transmission Line Theory, PCB",
+        "categories": [
+          "Transmission Line Theory",
+          "PCB"
+        ],
+        "difficulty": "hard",
+        "question_text": "Why is an unbroken, continuous ground reference plane absolutely critical directly underneath a high-speed signal trace?",
+        "answer_text": "{{image_1}}\n\nIt provides a tight, continuous path for the return current, minimizing loop inductance and maintaining a constant characteristic impedance.",
+        "explanation_text": "High-frequency return currents naturally want to flow directly underneath the signal trace on the reference plane (the path of least inductance). If the plane is split or has a gap, the return current is violently forced to detour around the gap.",
+        "bonus_question_text": "What happens to the signal if the return current is forced to detour around a gap in the plane?",
+        "bonus_answer_text": "The massive loop area creates a huge spike in parasitic inductance, causing an impedance mismatch, severe signal reflections, and radiated EMI (crosstalk).",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Two top-down PCB views. Top: A signal trace cleanly crossing over a solid ground plane, with return current tightly following underneath. Bottom: A signal trace crossing a split in the ground plane, with return current forced to take a massive detour around the gap.",
+          "title": "Reference plane return current",
+          "alt": "Two top-down PCB views. Top: A signal trace cleanly crossing over a solid ground plane, with return current tightly following underneath. Bottom: A signal trace crossing a split in the ground plane, with return current forced to take a massive detour around the gap.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "pcb_return_plane"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-pcb-why-is-an-unbroken-continuous-ground-refe-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 16,
+      "slug": "transmission-line-theory-pcb-when-a-high-speed-signal-transitions-betw",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "9648bcbb7a09e129",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 16
+      },
+      "question": {
+        "category": "Transmission Line Theory, PCB",
+        "categories": [
+          "Transmission Line Theory",
+          "PCB"
+        ],
+        "difficulty": "hard",
+        "question_text": "When a high-speed signal transitions between PCB layers using a via, why must you place a \"ground return via\" right next to it?",
+        "answer_text": "{{image_1}}\n\nTo provide an immediate vertical path for the return current, keeping the loop inductance as small as possible.",
+        "explanation_text": "The return current on the reference plane must follow the signal vertically to the new reference plane. Without a nearby return via, the current wanders the board looking for a path (like a distant decoupling capacitor), creating massive loop inductance and ruining signal integrity.\n\n*Highly Recommended Reading: https://www.allaboutcircuits.com/technical-articles/better-pcb-design-return-paths-impedance/*",
+        "bonus_question_text": "What if the signal transitions from a layer referenced to Ground to a layer referenced to Power?",
+        "bonus_answer_text": "You must place a stitching capacitor near the signal via to allow the high-frequency return current to jump between the Ground plane and the Power plane.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A cross-section of a multi-layer PCB. A signal via drops from Top to Bottom layer. Right next to it, a Ground via connects the internal ground planes, showing the return current loop flowing tightly alongside the signal via.",
+          "title": "Signal via return path",
+          "alt": "A cross-section of a multi-layer PCB. A signal via drops from Top to Bottom layer. Right next to it, a Ground via connects the internal ground planes, showing the return current loop flowing tightly alongside the signal via.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "pcb_return_via"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-pcb-when-a-high-speed-signal-transitions-betw-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 17,
+      "slug": "transmission-line-theory-pcb-what-is-a-differential-signal-pair-and-wh",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "df73ff2052b2eb6d",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 17
+      },
+      "question": {
+        "category": "Transmission Line Theory, PCB",
+        "categories": [
+          "Transmission Line Theory",
+          "PCB"
+        ],
+        "difficulty": "medium",
+        "question_text": "What is a differential signal pair, and why is it preferred over single-ended signals for high-speed routing (like USB or Ethernet)?",
+        "answer_text": "{{image_1}}\n\nA differential pair uses two traces to transmit equal and opposite (inverted) signals. The receiver reads the difference between them, making it highly immune to common-mode noise.",
+        "explanation_text": "If external electromagnetic interference (EMI) hits the routing, it couples into both parallel traces equally. Because the receiver only cares about the mathematical difference between the two voltages, this \"common-mode\" noise gets completely cancelled out.",
+        "bonus_question_text": "Do differential pairs emit less EMI than single-ended traces?",
+        "bonus_answer_text": "Yes. Because the currents on the two traces are equal and opposite, their radiated magnetic fields effectively cancel each other out.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A graph showing two equal and opposite signal waveforms (D+ and D-). A spike of noise hits both equally at the same time. A third waveform shows the resulting (D+ minus D-) math, resulting in a perfectly clean signal with the noise removed.",
+          "title": "Differential noise rejection",
+          "alt": "A graph showing two equal and opposite signal waveforms (D+ and D-). A spike of noise hits both equally at the same time. A third waveform shows the resulting (D+ minus D-) math, resulting in a perfectly clean signal with the noise removed.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "differential_noise_rejection"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-pcb-what-is-a-differential-signal-pair-and-wh-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 18,
+      "slug": "transmission-line-theory-pcb-what-are-the-two-most-critical-pcb-routin",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "ed3a0ee8a182abf8",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 18
+      },
+      "question": {
+        "category": "Transmission Line Theory, PCB",
+        "categories": [
+          "Transmission Line Theory",
+          "PCB"
+        ],
+        "difficulty": "hard",
+        "question_text": "What are the two most critical PCB routing practices when laying out a high-speed differential pair?",
+        "answer_text": "1) Keep the traces perfectly length-matched.\n2) Maintain a constant spacing (coupling) between them.",
+        "explanation_text": "If one trace is longer than the other, the inverted signal arrives late, causing phase skew and destroying the noise-cancellation effect. Constant spacing ensures their differential characteristic impedance (e.g., 90Ω for USB) remains uniform along the whole route. You can verify this using tools like KiCad's built-in length matching and DRC clearance rules.",
+        "bonus_question_text": "How do you fix a length mismatch in a differential pair on a PCB?",
+        "bonus_answer_text": "Add small \"tuning meanders\" (wiggles) near the source of the mismatch on the shorter trace to artificially equalize the physical length.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 19,
+      "slug": "transmission-line-theory-pcb-in-pcb-design-what-is-crosstalk-and-what",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "fd474d39cd249387",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 19
+      },
+      "question": {
+        "category": "Transmission Line Theory, PCB",
+        "categories": [
+          "Transmission Line Theory",
+          "PCB"
+        ],
+        "difficulty": "hard",
+        "question_text": "In PCB design, what is \"crosstalk,\" and what are the two physical mechanisms that cause it between adjacent traces?",
+        "answer_text": "Crosstalk is unwanted noise transferred from an \"aggressor\" trace to a \"victim\" trace. It is caused by Capacitive coupling and Inductive coupling.",
+        "explanation_text": "Capacitive coupling happens when the voltage rapidly changes on the aggressor (dV/dt), pushing current into the victim via parasitic fringe capacitance between the traces. Inductive coupling happens when the current rapidly changes on the aggressor (dI/dt), creating a magnetic field that induces a voltage in the victim via mutual inductance.",
+        "bonus_question_text": "Is crosstalk worse when the traces run parallel for a long distance?",
+        "bonus_answer_text": "Yes. The longer the traces run parallel, the larger the mutual capacitance and inductance become, leading to much stronger coupling.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 20,
+      "slug": "transmission-line-theory-pcb-what-are-the-best-pcb-layout-techniques-t",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "97ddd45be03fc299",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 20
+      },
+      "question": {
+        "category": "Transmission Line Theory, PCB",
+        "categories": [
+          "Transmission Line Theory",
+          "PCB"
+        ],
+        "difficulty": "medium",
+        "question_text": "What are the best PCB layout techniques to minimize capacitive and inductive crosstalk between traces?",
+        "answer_text": "{{image_1}}\n\n1) Increase the spacing between traces (e.g., the \"3W rule\").\n2) Route adjacent layers perpendicularly (orthogonal routing).",
+        "explanation_text": "Doubling the distance between traces drastically cuts the parasitic electric and magnetic fields. If you must route signals on adjacent internal layers, run them at 90-degree angles to each other to minimize the overlapping parallel length. Also, bringing the reference ground plane closer to the traces tightens the fields, reducing crosstalk.",
+        "bonus_question_text": "What is the \"3W Rule\" in PCB layout?",
+        "bonus_answer_text": "A best practice stating the distance between the centers of two parallel traces should be at least three times the trace width (3W) to keep crosstalk to an acceptable minimum.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A diagram illustrating the 3W rule. Two parallel PCB traces are shown with a width of 'W'. The distance between their centerlines is marked as '3W'.",
+          "title": "3W crosstalk spacing rule",
+          "alt": "A diagram illustrating the 3W rule. Two parallel PCB traces are shown with a width of 'W'. The distance between their centerlines is marked as '3W'.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "pcb_3w_rule"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-pcb-what-are-the-best-pcb-layout-techniques-t-image_1.svg"
+        }
+      },
+      "notes": null
+    }
+  ],
+  "rendered_at": "2026-07-16T17:51:39.043Z"
+}

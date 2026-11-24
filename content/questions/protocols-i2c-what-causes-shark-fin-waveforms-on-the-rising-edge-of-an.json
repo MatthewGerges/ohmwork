@@ -1,0 +1,29 @@
+{
+  "slug": "protocols-i2c-what-causes-shark-fin-waveforms-on-the-rising-edge-of-an",
+  "category": "Protocols - I2C",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 22,
+  "source_fingerprint": "d8f6054a662cadb5",
+  "source": {
+    "batch_id": "ee-flashcards-master-simplified-20260709",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+    "row_number": 2
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-master-simplified-20260709/protocols-i2c-what-causes-shark-fin-waveforms-on-the-rising-edge-of-an-image_1.svg"
+  },
+  "question_text": "<p>What causes &quot;shark fin&quot; waveforms on the rising edge of an I2C bus, and how do you fix it?</p>\n<img src=\"{{image_1}}\" alt=\"An oscilloscope waveform comparison. Left: clean square I2C pulse. Right: &quot;shark fin&quot; waveform where the falling edge is steep, but the rising edge is a slow RC curve.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "answer_text": "<p>The RC time constant is too high (too much bus capacitance or weak pull-up resistors). Fix it by: 1) Decreasing the pull-up resistor values, or 2) Lowering the I2C clock speed.</p>",
+  "explanation_text": "<p>I2C is open-drain, relying passively on resistors to pull the line high. High capacitance slows this rise time. Lowering the resistor speeds it up, but draws more current.</p>",
+  "bonus_question_text": "<p>What is the trade-off of using smaller pull-up resistors?</p>",
+  "bonus_answer_text": "<p>Higher power consumption, and the driving IC might struggle to pull the line fully low (below V_IL).</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": "i2c_rc_time_constant.asc",
+  "tags": [
+    "source:excel",
+    "import:d8f6054a662cadb5"
+  ],
+  "related_question_ids": []
+}

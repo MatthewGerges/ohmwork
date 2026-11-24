@@ -1,0 +1,27 @@
+{
+  "slug": "current-sensing-thinking-what-are-three-distinct-physical-methods-for",
+  "category": "Current Sensing, Thinking",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 120,
+  "source_fingerprint": "14f760f866a77893",
+  "source": {
+    "batch_id": "ee-flashcards-current-sensing-v2-20260917",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+    "row_number": 6
+  },
+  "images": {},
+  "question_text": "<p>What are three distinct physical methods for measuring current? Explain how the magnetic probe method works mathematically, and list the pros and cons of each.</p>",
+  "answer_text": "<p>1. Shunt Resistor (Ohmic)<br/>2. Hall Effect Sensor (Magnetic)<br/>3. Current Transformer (AC Magnetic)</p>",
+  "explanation_text": "<p>A Hall Effect sensor probe measures current by detecting the magnetic field generated around the wire. Mathematically, Ampere's Law states B = (μ₀ * I) / (2πr). Intuitively: the magnetic field (B) is directly and linearly proportional to the current (I). The sensor detects this field and outputs a proportional voltage.</p>\n<p>Pros and Cons:<br/>- Shunt Resistor: Very cheap and highly accurate for DC/AC. Con: Burns power as heat and breaks electrical isolation.<br/>- Hall Effect: Zero power loss and physically isolated from the high voltage. Con: Susceptible to external stray magnetic fields, offset drift over temperature, and more expensive.<br/>- Current Transformer: Passive, isolated, and excellent for massive AC power grids. Con: Physically bulky and strictly cannot measure DC current.</p>",
+  "bonus_question_text": "<p>If a DC motor draws a massive 200 Amps at 400 Volts, which current sensing method is the safest and most efficient choice?</p>",
+  "bonus_answer_text": "<p>A Hall Effect sensor. A shunt would burn tremendous power (and require massive cooling), and a Current Transformer cannot measure the DC motor current.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:14f760f866a77893"
+  ],
+  "related_question_ids": []
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "filters-passive-lc-draw-an-lc-low-pass-filter-what-are-its-two-main-ad",
+  "category": "Filters, Passive LC",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 106,
+  "source_fingerprint": "6d0f61fcfa3b66e0",
+  "source": {
+    "batch_id": "ee-flashcards-opamps-filters-v2-20260916",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_opamps_filters_v2.xlsx",
+    "row_number": 5
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/filters-passive-lc-draw-an-lc-low-pass-filter-what-are-its-two-main-ad-image_1.svg"
+  },
+  "question_text": "<p>Draw an LC Low-Pass filter. What are its two main advantages over an RC filter, and what does its Bode plot slope look like?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Left: Schematic showing V_in -&gt; Inductor -&gt; Output node -&gt; Capacitor -&gt; Ground. Right: A Bode plot with a flat magnitude line, a sharp upward peak at f_c, followed by a steep downward slope (-40dB/dec). The phase plot drops from 0 to -180 degrees.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>An inductor in series, with a capacitor to ground. It has zero DC power loss and rolls off twice as aggressively.</p>",
+  "explanation_text": "<p>Advantages: Unlike a resistor, an ideal inductor burns no power as heat (I^2*R = 0), making this perfectly suited for high-power applications (like the output of a buck converter).</p>\n<p>Bode Plot: Because it uses two reactive components (L and C), it is a 2nd-order filter. The rule is ±20 dB/decade *per order*. Therefore, after the cutoff frequency, the magnitude aggressively drops at -40 dB/decade.</p>",
+  "bonus_question_text": "<p>What causes the massive &quot;resonant peak&quot; at the cutoff frequency, and how do you fix it?</p>",
+  "bonus_answer_text": "<p>The LC tank resonates. At exactly f_c, the inductive and capacitive reactances cancel out, leaving nearly zero impedance. It is fixed (damped) by adding resistance to the circuit (either utilizing parasitic DCR/ESR or adding an explicit damping resistor) to lower the Q-factor.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:6d0f61fcfa3b66e0"
+  ],
+  "related_question_ids": []
+}

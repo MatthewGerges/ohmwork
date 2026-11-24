@@ -1,0 +1,29 @@
+{
+  "slug": "passives-capacitors-why-use-multiple-different-values-of-decoupling-ca",
+  "category": "Passives, Capacitors",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 74,
+  "source_fingerprint": "52bb96cdaaed673c",
+  "source": {
+    "batch_id": "ee-flashcards-passives-protocols-v3-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+    "row_number": 3
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/passives-capacitors-why-use-multiple-different-values-of-decoupling-ca-image_1.svg"
+  },
+  "question_text": "<p>Why use multiple different values of decoupling capacitors (e.g., two 4.7µF, one 1µF, and one 0.1µF) in parallel instead of just a single 10µF capacitor?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A graph of Impedance vs. Frequency showing multiple V-shaped SRF curves overlapping. The combined impedance forms a wider, flatter &quot;U&quot; shape at the bottom, labeled &quot;Broadband Low Impedance&quot;.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>It reduces overall Equivalent Series Resistance (ESR) and widens the bandwidth of noise filtering across different frequencies.</p>",
+  "explanation_text": "<p>Large capacitors (4.7µF) act as bulk storage for low-frequency current spikes but have a low Self-Resonant Frequency (SRF), meaning they become inductive (useless) at high frequencies. Small capacitors (0.1µF) hold less charge but have a very high SRF, filtering out high-frequency noise. By placing them in parallel, their individual V-shaped impedance curves overlap, creating a wide, flat band of low impedance across a huge frequency range. Additionally, putting components in parallel divides their ESR and ESL, lowering total impedance.</p>",
+  "bonus_question_text": "<p>What is a risk of placing multiple different capacitor values in parallel?</p>",
+  "bonus_answer_text": "<p>Anti-resonance. The inductive parasitics of the large capacitor can resonate with the capacitive parasitics of the small capacitor at a specific frequency, creating an unwanted high-impedance spike.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:52bb96cdaaed673c"
+  ],
+  "related_question_ids": []
+}

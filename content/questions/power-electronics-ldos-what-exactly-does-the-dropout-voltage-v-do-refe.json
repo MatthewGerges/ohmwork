@@ -1,0 +1,27 @@
+{
+  "slug": "power-electronics-ldos-what-exactly-does-the-dropout-voltage-v-do-refe",
+  "category": "Power Electronics, LDOs",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 83,
+  "source_fingerprint": "dd24beeef03add09",
+  "source": {
+    "batch_id": "ee-flashcards-ldos-v4-20260911",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+    "row_number": 7
+  },
+  "images": {},
+  "question_text": "<p>What exactly does the &quot;dropout voltage&quot; (V_do) refer to in an LDO?</p>",
+  "answer_text": "<p>It is the absolute minimum voltage difference required between V_in and V_out for the LDO to maintain regulation.</p>",
+  "explanation_text": "<p>The internal transistor needs a minimum V_DS to stay in saturation and regulate properly. If an LDO outputs 3.3V and has a dropout voltage of 200mV, V_in must be at least 3.5V. If V_in falls below 3.5V, the LDO &quot;drops out&quot; of regulation, and the output voltage will start sagging directly with the input voltage.</p>",
+  "bonus_question_text": "<p>How does the load current affect the dropout voltage?</p>",
+  "bonus_answer_text": "<p>Dropout voltage increases as load current increases. In dropout, the FET is in the triode region acting as a resistor (R_DS(on)), so the minimum voltage drop required is I_load * R_DS(on).</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:dd24beeef03add09"
+  ],
+  "related_question_ids": []
+}

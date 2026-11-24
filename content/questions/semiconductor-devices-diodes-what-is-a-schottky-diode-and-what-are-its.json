@@ -1,0 +1,27 @@
+{
+  "slug": "semiconductor-devices-diodes-what-is-a-schottky-diode-and-what-are-its",
+  "category": "Semiconductor Devices, Diodes",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 92,
+  "source_fingerprint": "31f5b043b92f7012",
+  "source": {
+    "batch_id": "ee-flashcards-semiconductors-v2-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+    "row_number": 6
+  },
+  "images": {},
+  "question_text": "<p>What is a Schottky diode, and what are its main advantages and disadvantages compared to a standard PN junction diode?</p>",
+  "answer_text": "<p>A Schottky diode uses a metal-semiconductor junction instead of a P-N junction. It is prized for its low forward voltage drop and fast switching speed.</p>",
+  "explanation_text": "<p>Advantages: It has a much lower forward voltage drop (typically 0.2V - 0.3V compared to 0.7V for standard silicon), which heavily reduces conduction power losses (P = I * V). It also has near-zero reverse recovery time, making it excellent for high-frequency switching.<br/>Disadvantages: It suffers from significantly higher reverse leakage current and typically has lower maximum reverse voltage ratings.</p>",
+  "bonus_question_text": "<p>Why did the industry replace Schottky diodes with NMOS transistors in modern synchronous buck converters?</p>",
+  "bonus_answer_text": "<p>Even with a low 0.3V drop, a Schottky diode passing 10A wastes 3 Watts of heat. A modern NMOS has ultra-low R_DS(on), wasting significantly less power (P = I^2 * R).</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:31f5b043b92f7012"
+  ],
+  "related_question_ids": []
+}

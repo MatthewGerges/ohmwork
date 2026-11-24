@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="440" viewBox="0 0 740 440" role="img" aria-label="Noise rejection with hysteresis">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f87171"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#818cf8"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fb923c"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"/>
+  <text x="370" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Noise rejection with hysteresis</text>
+  
+    <rect x="56" y="72" width="628" height="152" rx="8" fill="#111c31" stroke="#475569" stroke-width="2"/>
+    <text x="82" y="101" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" text-anchor="start">Single threshold</text>
+    <line x1="126" y1="112" x2="626" y2="112" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 5"/>
+    <text x="618" y="105" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" text-anchor="end">4 V</text>
+    <path d="M130 160 C214 158 258 142 294 120 C306 112 312 96 320 116 C328 132 336 92 344 110 C352 126 360 94 370 102 C406 76 470 64 612 58" fill="none" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M130 202 H300 V174 H312 V202 H324 V174 H336 V202 H348 V174 H360 V202 H372 V174 H612" fill="none" stroke="#f87171" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="82" y="191" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" text-anchor="start">glitches</text>
+    <rect x="56" y="240" width="628" height="168" rx="8" fill="#111c31" stroke="#475569" stroke-width="2"/>
+    <text x="82" y="268" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" text-anchor="start">Schmitt hysteresis</text>
+    <line x1="126" y1="286" x2="626" y2="286" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 5"/>
+    <line x1="126" y1="334" x2="626" y2="334" stroke="#fb923c" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 5"/>
+    <text x="618" y="280" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" text-anchor="end">5 V upper</text>
+    <text x="618" y="352" fill="#fb923c" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" text-anchor="end">3 V lower</text>
+    <path d="M130 350 C214 348 258 332 294 306 C306 298 312 282 320 302 C328 318 336 278 344 296 C352 312 360 280 370 288 C406 262 470 250 612 246" fill="none" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M130 390 H370 V366 H612" fill="none" stroke="#4ade80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="82" y="389" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" text-anchor="start">clean</text>
+  
+</svg>

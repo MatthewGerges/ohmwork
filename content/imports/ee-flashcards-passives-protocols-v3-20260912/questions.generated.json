@@ -1,0 +1,445 @@
+{
+  "batch_id": "ee-flashcards-passives-protocols-v3-20260912",
+  "generated_at": "2026-09-13T00:15:53.157Z",
+  "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+  "rows": [
+    {
+      "row_number": 2,
+      "slug": "passives-capacitors-draw-the-realistic-circuit-model-parasitics-of-a-c",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "acd29e18b0757840",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 2
+      },
+      "question": {
+        "category": "Passives, Capacitors",
+        "categories": [
+          "Passives",
+          "Capacitors"
+        ],
+        "difficulty": "medium",
+        "question_text": "Draw the realistic circuit model (parasitics) of a capacitor. How does its impedance vary over frequency?",
+        "answer_text": "{{image_1}}\n\nA real capacitor includes an ideal capacitor (C) in series with an Equivalent Series Resistance (ESR) and an Equivalent Series Inductance (ESL), plus a parallel leakage resistance.",
+        "explanation_text": "At low frequencies, the ideal capacitor dominates, and impedance drops as frequency increases. At a specific point called the Self-Resonant Frequency (SRF), the capacitive and inductive reactances perfectly cancel out, leaving only the ESR (the lowest impedance point). Above the SRF, the parasitic ESL dominates, and the capacitor starts acting like an inductor, with its impedance rising as frequency increases.",
+        "bonus_question_text": "What happens to a bypass capacitor's effectiveness if it is operated above its self-resonant frequency?",
+        "bonus_answer_text": "It becomes an inductor, completely failing to shunt high-frequency AC noise to ground.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Left: A circuit model showing an ideal capacitor (C) in series with an ESR resistor and ESL inductor, with a large R_leak resistor in parallel. Right: A V-shaped graph of Impedance vs. Frequency, dipping to a minimum at the SRF.",
+          "title": "Real capacitor model and impedance",
+          "alt": "Left: A circuit model showing an ideal capacitor (C) in series with an ESR resistor and ESL inductor, with a large R_leak resistor in parallel. Right: A V-shaped graph of Impedance vs. Frequency, dipping to a minimum at the SRF.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "capacitor_real_model_srf"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/passives-capacitors-draw-the-realistic-circuit-model-parasitics-of-a-c-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 3,
+      "slug": "passives-capacitors-why-use-multiple-different-values-of-decoupling-ca",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "52bb96cdaaed673c",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 3
+      },
+      "question": {
+        "category": "Passives, Capacitors",
+        "categories": [
+          "Passives",
+          "Capacitors"
+        ],
+        "difficulty": "hard",
+        "question_text": "Why use multiple different values of decoupling capacitors (e.g., two 4.7µF, one 1µF, and one 0.1µF) in parallel instead of just a single 10µF capacitor?",
+        "answer_text": "{{image_1}}\n\nIt reduces overall Equivalent Series Resistance (ESR) and widens the bandwidth of noise filtering across different frequencies.",
+        "explanation_text": "Large capacitors (4.7µF) act as bulk storage for low-frequency current spikes but have a low Self-Resonant Frequency (SRF), meaning they become inductive (useless) at high frequencies. Small capacitors (0.1µF) hold less charge but have a very high SRF, filtering out high-frequency noise. By placing them in parallel, their individual V-shaped impedance curves overlap, creating a wide, flat band of low impedance across a huge frequency range. Additionally, putting components in parallel divides their ESR and ESL, lowering total impedance.",
+        "bonus_question_text": "What is a risk of placing multiple different capacitor values in parallel?",
+        "bonus_answer_text": "Anti-resonance. The inductive parasitics of the large capacitor can resonate with the capacitive parasitics of the small capacitor at a specific frequency, creating an unwanted high-impedance spike.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A graph of Impedance vs. Frequency showing multiple V-shaped SRF curves overlapping. The combined impedance forms a wider, flatter \"U\" shape at the bottom, labeled \"Broadband Low Impedance\".",
+          "title": "Parallel decoupling impedance",
+          "alt": "A graph of Impedance vs. Frequency showing multiple V-shaped SRF curves overlapping. The combined impedance forms a wider, flatter \"U\" shape at the bottom, labeled \"Broadband Low Impedance\".",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "decoupling_parallel_impedance"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/passives-capacitors-why-use-multiple-different-values-of-decoupling-ca-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 4,
+      "slug": "passives-capacitors-when-building-a-decoupling-network-why-do-we-use-c",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "6db426f955014577",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 4
+      },
+      "question": {
+        "category": "Passives, Capacitors",
+        "categories": [
+          "Passives",
+          "Capacitors"
+        ],
+        "difficulty": "hard",
+        "question_text": "When building a decoupling network, why do we use capacitors spaced a \"decade\" apart in value and physical package size (e.g., 1µF in 0402 alongside 0.1µF in 0201)?",
+        "answer_text": "{{image_1}}\n\nSpacing them by a decade in value and shrinking the physical size for the smaller capacitors creates overlapping SRF curves, pushing high-frequency noise filtering much further out.",
+        "explanation_text": "The physical footprint of a capacitor dominates its parasitic Equivalent Series Inductance (ESL). A tiny 0201 package has drastically lower ESL than a larger 0402 package. Because SRF is the point where capacitance and ESL cancel out, lowering the ESL pushes the SRF to much higher frequencies. A 1µF 0402 provides good mid-frequency bulk decoupling, but its larger ESL makes it fail (turn inductive) at high frequencies. Placing an ultra-low ESL 0.1µF 0201 in parallel covers those higher frequencies perfectly.",
+        "bonus_question_text": "On an Impedance vs. Frequency plot, what does the combined impedance of these parallel capacitors look like?",
+        "bonus_answer_text": "Because they are in parallel, the total impedance follows the path of least resistance. The individual V-shaped SRF curves intersect, and the overall impedance \"rides\" the bottom outline of those intersecting curves, forming a broad low-impedance trough.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A graph of Impedance vs Frequency. There are two V-shaped dashed lines: one labeled '1µF 0402' with its SRF dip at a lower frequency, and one labeled '0.1µF 0201' with its SRF dip at a higher frequency. The lines intersect in the middle. A thick, bold blue line traces the lowest outline of both curves combined, labeled 'Overall Parallel Impedance'.",
+          "title": "Decoupling values and package size",
+          "alt": "A graph of Impedance vs Frequency. There are two V-shaped dashed lines: one labeled '1µF 0402' with its SRF dip at a lower frequency, and one labeled '0.1µF 0201' with its SRF dip at a higher frequency. The lines intersect in the middle. A thick, bold blue line traces the lowest outline of both curves combined, labeled 'Overall Parallel Impedance'.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "decoupling_decade_packages"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/passives-capacitors-when-building-a-decoupling-network-why-do-we-use-c-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 5,
+      "slug": "passives-fundamentals-how-do-voltage-and-current-relate-to-each-other",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "1ccb052699aa0c51",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 5
+      },
+      "question": {
+        "category": "Passives, Fundamentals",
+        "categories": [
+          "Passives",
+          "Fundamentals"
+        ],
+        "difficulty": "easy",
+        "question_text": "How do voltage and current relate to each other over time (phase shift) for a purely resistive, capacitive, and inductive load?",
+        "answer_text": "{{image_1}}\n\nResistor: V and I are perfectly in phase. Capacitor: I leads V by 90 degrees. Inductor: V leads I by 90 degrees.",
+        "explanation_text": "Use the classic acronym CIVIL: in a Capacitor, I leads V; in an inductor (L), V leads I. \n\nMathematically, a derivative can change instantaneously, but an integral cannot. Because voltage is the integral of current in a capacitor (V = (1/C)*integral(I dt)), voltage cannot change instantly, but current can (so current leads). Conversely, for an inductor (I = (1/L)*integral(V dt)), current cannot change instantly, but voltage can (so voltage leads).",
+        "bonus_question_text": "What is the impedance formula for an ideal inductor and an ideal capacitor?",
+        "bonus_answer_text": "Inductor: Z = jωL. Capacitor: Z = 1 / (jωC).",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Three stacked graphs of sine waves. Top (Resistor): V and I sine waves perfectly overlapping. Middle (Capacitor): The I sine wave is shifted to the left (leading) the V sine wave by 90 degrees. Bottom (Inductor): The V sine wave is shifted to the left (leading) the I sine wave by 90 degrees.",
+          "title": "Voltage and current phase relationships",
+          "alt": "Three stacked graphs of sine waves. Top (Resistor): V and I sine waves perfectly overlapping. Middle (Capacitor): The I sine wave is shifted to the left (leading) the V sine wave by 90 degrees. Bottom (Inductor): The V sine wave is shifted to the left (leading) the I sine wave by 90 degrees.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "passive_phase_relationships"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/passives-fundamentals-how-do-voltage-and-current-relate-to-each-other-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 6,
+      "slug": "protocols-i2c-explain-the-structure-of-a-standard-i2c-data-frame-how-a",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "2bda5f7f4378bc8e",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 6
+      },
+      "question": {
+        "category": "Protocols, I2C",
+        "categories": [
+          "Protocols",
+          "I2C"
+        ],
+        "difficulty": "medium",
+        "question_text": "Explain the structure of a standard I2C data frame. How are devices addressed, and how many devices can typically sit on one bus?",
+        "answer_text": "{{image_1}}\n\nAn I2C transaction starts with a START condition, a 7-bit slave address, a Read/Write bit, an ACK/NACK, 8 bits of data, another ACK/NACK, and a STOP.",
+        "explanation_text": "I2C typically uses 7-bit addressing, meaning a single bus can theoretically support up to 128 devices (2^7). However, 16 addresses are reserved by the specification, leaving 112 usable addresses. The master dictates the clock (SCL) and sends the address on the data line (SDA). The slave with the matching hardcoded address responds with an Acknowledge (ACK) bit by pulling SDA low.\n\nHighly recommended video that explains everything you need to know about I2C and how it works: https://www.youtube.com/watch?v=CAvawEcxoPU&t=32s&pp=ygUMaTJjIHByb3RvY29s",
+        "bonus_question_text": "If you need to connect two identical sensors that have the exact same hardcoded 7-bit I2C address, how can you do it?",
+        "bonus_answer_text": "You must use an I2C multiplexer (mux) IC, which physically routes the SDA/SCL lines to different isolated hardware channels.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A bit-level timing diagram of an I2C frame: [START] -> [7-bit Address] -> [R/W bit] -> [ACK] -> [8-bit Data] -> [ACK] -> [STOP].",
+          "title": "I2C transaction frame",
+          "alt": "A bit-level timing diagram of an I2C frame: [START] -> [7-bit Address] -> [R/W bit] -> [ACK] -> [8-bit Data] -> [ACK] -> [STOP].",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "i2c_frame"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/protocols-i2c-explain-the-structure-of-a-standard-i2c-data-frame-how-a-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 7,
+      "slug": "protocols-i2c-what-is-i2c-clock-stretching-and-why-is-it-used",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "af3f6e8dc25d0ee8",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 7
+      },
+      "question": {
+        "category": "Protocols, I2C",
+        "categories": [
+          "Protocols",
+          "I2C"
+        ],
+        "difficulty": "hard",
+        "question_text": "What is I2C \"clock stretching\" and why is it used?",
+        "answer_text": "{{image_1}}\n\nClock stretching is a hardware mechanism where a slow *slave* device holds the clock line (SCL) LOW to pause the transaction, forcing the master to wait.",
+        "explanation_text": "Usually, the master exclusively controls the SCL line. However, if a slave needs more time to process data (like an ADC finishing a conversion before sending the result), it can physically pull SCL low. The master tries to release SCL to let the pull-up resistor pull it high, but because I2C is an open-drain bus, the slave keeps it low. The master waits until the slave releases SCL before continuing the clock pulses.",
+        "bonus_question_text": "What is a common bug associated with clock stretching?",
+        "bonus_answer_text": "Many cheap hardware I2C master peripherals (or software bit-banging implementations) do not properly support clock stretching, leading to corrupt data or bus lockups when a slave tries to pause the bus.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A timing diagram showing the Master releasing the SCL line, but the SCL line remaining LOW because the Slave is holding it down (labeled \"Clock Stretching\"). The Master pauses data transmission until the Slave releases SCL.",
+          "title": "I2C clock stretching",
+          "alt": "A timing diagram showing the Master releasing the SCL line, but the SCL line remaining LOW because the Slave is holding it down (labeled \"Clock Stretching\"). The Master pauses data transmission until the Slave releases SCL.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "i2c_clock_stretching"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/protocols-i2c-what-is-i2c-clock-stretching-and-why-is-it-used-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 8,
+      "slug": "protocols-spi-how-does-spi-select-which-device-to-talk-to-and-how-does",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "6a930e22194deb74",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 8
+      },
+      "question": {
+        "category": "Protocols, SPI",
+        "categories": [
+          "Protocols",
+          "SPI"
+        ],
+        "difficulty": "medium",
+        "question_text": "How does SPI select which device to talk to, and how does \"daisy-chaining\" work as a pin-saving alternative?",
+        "answer_text": "{{image_1}}\n\nSPI selects devices using dedicated Chip Select (CS) wires for each slave. Daisy-chaining connects slaves in a series loop to share a single CS pin.",
+        "explanation_text": "In standard SPI, a master needs a separate CS pin for every slave (4 slaves = 4 CS wires). To save MCU pins, some SPI devices support daisy-chaining: they act like a massive shift register. The Master's MOSI goes to Slave 1's MOSI, Slave 1's MISO goes to Slave 2's MOSI, and Slave 2's MISO goes back to the Master. They all share a single CS line.\n\nHighly recommended video that explains everything you need to know about SPI: https://www.youtube.com/watch?v=0nVNwozXsIc&t=15s&pp=ygUMc3BpIHByb3RvY29s",
+        "bonus_question_text": "What is the main drawback of daisy-chaining SPI devices?",
+        "bonus_answer_text": "If one device in the chain fails, the entire communication chain breaks. Additionally, updating a single device requires pushing data through the entire chain, increasing software complexity and latency.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Side-by-side block diagrams. Left: Standard SPI (Master has 3 separate CS lines going to 3 Slaves). Right: Daisy-chained SPI (Master has 1 CS line shared by all 3 Slaves; Master MOSI -> Slave 1 MOSI; Slave 1 MISO -> Slave 2 MOSI; Slave 2 MISO -> Master MISO).",
+          "title": "SPI device selection and daisy chain",
+          "alt": "Side-by-side block diagrams. Left: Standard SPI (Master has 3 separate CS lines going to 3 Slaves). Right: Daisy-chained SPI (Master has 1 CS line shared by all 3 Slaves; Master MOSI -> Slave 1 MOSI; Slave 1 MISO -> Slave 2 MOSI; Slave 2 MISO -> Master MISO).",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "spi_select_daisy_chain"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/protocols-spi-how-does-spi-select-which-device-to-talk-to-and-how-does-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 9,
+      "slug": "protocols-system-architecture-why-does-i2c-require-pull-up-resistors-w",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "427971f800239ba3",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 9
+      },
+      "question": {
+        "category": "Protocols, System Architecture",
+        "categories": [
+          "Protocols",
+          "System Architecture"
+        ],
+        "difficulty": "medium",
+        "question_text": "Why does I2C require pull-up resistors while SPI does not? Explain the difference in their output drivers.",
+        "answer_text": "{{image_1}}\n\nI2C uses \"open-drain\" output drivers, while SPI uses \"push-pull\" output drivers.",
+        "explanation_text": "In I2C, devices can only actively pull the bus LOW (to ground). To send a HIGH (a \"1\"), they just let go, and the external pull-up resistors pull the voltage up. This allows multiple devices to share the exact same wire without causing a short circuit if one sends a 0 and the other sends a 1. SPI uses push-pull drivers, meaning devices actively drive the line HIGH (to Vcc) or LOW. This makes SPI much faster, but requires dedicated CS lines to ensure only one slave drives the MISO line at a time.",
+        "bonus_question_text": "Can a master device use a push-pull driver for an I2C bus?",
+        "bonus_answer_text": "Yes, but strictly for the SCL (clock) line, and only if the system has a single master and NO slave devices that use clock stretching. Driving the clock with a push-pull output is actually a strategy to drastically increase I2C speeds by eliminating the slow RC rise time.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Side-by-side schematics. Left (Open-Drain): A single N-channel MOSFET connected to ground, with an external pull-up resistor to Vcc. Right (Push-Pull): A complementary pair of MOSFETs (PMOS on top connected to Vcc, NMOS on bottom connected to ground) actively driving the output line.",
+          "title": "Open-drain vs push-pull outputs",
+          "alt": "Side-by-side schematics. Left (Open-Drain): A single N-channel MOSFET connected to ground, with an external pull-up resistor to Vcc. Right (Push-Pull): A complementary pair of MOSFETs (PMOS on top connected to Vcc, NMOS on bottom connected to ground) actively driving the output line.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "open_drain_push_pull"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/protocols-system-architecture-why-does-i2c-require-pull-up-resistors-w-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 10,
+      "slug": "protocols-system-architecture-what-causes-shark-fin-waveforms-on-the-r",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "26156c80773145f2",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 10
+      },
+      "question": {
+        "category": "Protocols, System Architecture",
+        "categories": [
+          "Protocols",
+          "System Architecture"
+        ],
+        "difficulty": "medium",
+        "question_text": "What causes \"shark fin\" waveforms on the rising edge of an I2C bus, and what happens if the pull-up resistors are too large?",
+        "answer_text": "{{image_1}}\n\nShark fins occur because the I2C bus relies on passive pull-up resistors to charge the bus capacitance. If the resistor is too large, it takes too long to reach a HIGH state.",
+        "explanation_text": "I2C is an open-drain protocol, so while devices actively pull the bus LOW very quickly, they rely entirely on the RC time constant (T = R * C) of the pull-up resistor and the parasitic bus capacitance to pull the line HIGH. If the resistor is too large (e.g., 100kΩ instead of 2.2kΩ), the rising edge becomes a slow, curved exponential ramp (a \"shark fin\"). This can violate timing requirements, causing data corruption.",
+        "bonus_question_text": "If the pull-up resistors are too small (e.g., 100 ohms), what happens?",
+        "bonus_answer_text": "It wastes a significant amount of current. Every time a device pulls the line LOW to transmit a 0, it creates a direct path from Vcc to ground through that resistor. A very small resistor means excessive, continuously wasted power while the line is low.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "An oscilloscope waveform comparison. Left: Clean square I2C pulse with sharp rising and falling edges. Right: \"Shark fin\" waveform where the falling edge is steep, but the rising edge is a slow, curved RC ramp.",
+          "title": "I2C rise-time limit",
+          "alt": "An oscilloscope waveform comparison. Left: Clean square I2C pulse with sharp rising and falling edges. Right: \"Shark fin\" waveform where the falling edge is steep, but the rising edge is a slow, curved RC ramp.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "waveform_comparison"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/protocols-system-architecture-what-causes-shark-fin-waveforms-on-the-r-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 11,
+      "slug": "protocols-system-architecture-compare-i2c-and-spi-in-terms-of-speed-pi",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "ab755893f8acab6c",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 11
+      },
+      "question": {
+        "category": "Protocols, System Architecture",
+        "categories": [
+          "Protocols",
+          "System Architecture"
+        ],
+        "difficulty": "easy",
+        "question_text": "Compare I2C and SPI in terms of speed, pin count, and communication type (duplex).",
+        "answer_text": "SPI is much faster and full-duplex but requires more pins. I2C is slower and half-duplex but uses only two pins for any number of devices.",
+        "explanation_text": "Speed: SPI frequently hits 10+ MHz. I2C is usually 100 kHz (Standard), 400 kHz (Fast), or 1 MHz (Fast+).\nDuplex: SPI is full-duplex (can send and receive at the exact same time via separate MOSI and MISO lines). I2C is half-duplex (SDA is shared, so it can only send OR receive at one time).\nPins: I2C always uses 2 shared pins (SDA, SCL). SPI uses 3 shared pins (SCLK, MOSI, MISO) plus 1 dedicated CS pin per slave.",
+        "bonus_question_text": "Which protocol has built-in hardware acknowledgment to verify the device actually received the data?",
+        "bonus_answer_text": "I2C. The receiving device must pull the SDA line low (ACK) after every byte. SPI has no hardware acknowledgment; the master blindly clocks out data.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    }
+  ],
+  "rendered_at": "2026-09-13T00:17:20.093Z"
+}

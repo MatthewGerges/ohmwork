@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-buck-converters-draw-the-input-supply-current-and-vo",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 55,
+  "source_fingerprint": "0092890c78b25c1e",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 19
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-input-supply-current-and-vo-image_1.svg"
+  },
+  "question_text": "<p>Draw the input supply current and voltage waveforms at the input capacitor alongside the high-side gate signal.</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Stacked graphs. Top: Gate Signal. Middle: Input Current (0A during OFF, jumping up to a sloped top during ON). Bottom: Input Voltage (a DC horizontal line that dips and rings sharply during the ON periods).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>The input current is a pulsating, choppy trapezoid wave. The input voltage is a DC line with sharp dipping ripples when the switch turns ON.</p>",
+  "explanation_text": "<p>The buck converter draws current in violent, high-frequency pulses every time the switch closes. The current instantly jumps up to match the inductor current, ramps up slightly, and then snaps back to zero when the switch opens. This harsh pulsed current demand (extremely high di/dt) causes the input voltage to dip slightly and ring due to the trace's parasitic inductance.</p>",
+  "bonus_question_text": "<p>How do you mitigate the severe ringing on the input voltage line?</p>",
+  "bonus_answer_text": "<p>By placing high-quality, low-ESR ceramic decoupling capacitors as physically close to the MOSFET drain as possible to supply instantaneous local current.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:0092890c78b25c1e"
+  ],
+  "related_question_ids": []
+}

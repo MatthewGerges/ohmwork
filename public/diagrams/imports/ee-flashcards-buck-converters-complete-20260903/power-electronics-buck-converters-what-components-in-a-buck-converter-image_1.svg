@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="350" viewBox="0 0 760 350" role="img" aria-label="MOSFET switching loss">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"></path>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"></path>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f87171"></path>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#818cf8"></path>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fb923c"></path>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"></path>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"></rect>
+  <text x="380" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">MOSFET switching loss</text>
+
+    <rect x="72" y="82" width="616" height="238" rx="8" fill="#111c31" stroke="#475569" stroke-width="2"></rect>
+    <line x1="112" y1="112" x2="112" y2="276" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="177.75" y1="112" x2="177.75" y2="276" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="243.5" y1="112" x2="243.5" y2="276" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="309.25" y1="112" x2="309.25" y2="276" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="375" y1="112" x2="375" y2="276" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="440.75" y1="112" x2="440.75" y2="276" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="506.5" y1="112" x2="506.5" y2="276" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="572.25" y1="112" x2="572.25" y2="276" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="638" y1="112" x2="638" y2="276" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="112" y1="112" x2="638" y2="112" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="112" y1="153" x2="638" y2="153" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="112" y1="194" x2="638" y2="194" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="112" y1="235" x2="638" y2="235" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="112" y1="276" x2="638" y2="276" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+    <line x1="112" y1="276" x2="638" y2="276" stroke="#e2e8f0" stroke-width="2" stroke-linecap="round"></line>
+    <line x1="112" y1="276" x2="112" y2="106" stroke="#e2e8f0" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"></line>
+    <path d="M120 126 L252 126 C300 128 348 174 396 258 L630 258" fill="none" stroke="#818cf8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M120 258 L252 258 C300 256 348 210 396 126 L630 126" fill="none" stroke="#2dd4bf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M252 274 Q324 104 396 274 Z" fill="#7f1d1d" fill-opacity="0.72" stroke="#f87171" stroke-width="3" transform="translate(23.7 -0.8)"></path>
+    <path d="M284 250 L324 142 L364 250 Z" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linejoin="round" transform="translate(28.4 21.7)"></path>
+    <text x="186" y="116" fill="#818cf8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" text-anchor="middle">VDS</text>
+    <text x="560" y="116" fill="#2dd4bf" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" text-anchor="middle">ID</text>
+    <text x="324" y="188" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle" transform="translate(28 72.3)">PLOSS</text>
+    <text x="638" y="298" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="end">time</text>
+    <text x="84" y="108" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="start">normalized</text>
+    <text x="380" y="310" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500" text-anchor="middle">Shaded P = V x I overlap during MOSFET transition</text>
+
+</svg>

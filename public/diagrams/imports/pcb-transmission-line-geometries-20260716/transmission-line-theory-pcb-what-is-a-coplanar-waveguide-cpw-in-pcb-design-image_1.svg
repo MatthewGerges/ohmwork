@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400" role="img" aria-label="Microstrip vs. Grounded CPW PCB cross-section">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"></path>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"></path>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"></path>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1d4ed8"></path>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0ea5a5"></path>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"></path>
+    </marker>
+    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"></path>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"></rect>
+  <text x="450" y="38" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">Microstrip vs. Grounded CPW PCB cross-section</text>
+  
+    <rect x="46" y="82" width="376" height="286" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"></rect>
+    <text x="234" y="118" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="middle">Standard Microstrip</text>
+    <rect x="86" y="166" width="296" height="124" rx="0" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"></rect>
+    <rect x="158" y="148" width="152" height="20" rx="2" fill="#f97316" stroke="#9a3412" stroke-width="2"></rect>
+    <rect x="106" y="290" width="256" height="24" rx="2" fill="#475569" stroke="#1f2937" stroke-width="2"></rect>
+    <text x="234" y="144" fill="#9a3412" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">signal trace only on top layer</text>
+    <text x="234" y="330" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">bottom reference plane</text>
+    <path d="M186 170 C172 204 160 242 150 288" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"></path>
+    <path d="M234 170 C234 210 234 250 234 288" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"></path>
+    <path d="M282 170 C296 204 308 242 318 288" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"></path>
+    <text x="234" y="358" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Fields spread from trace to plane</text>
+
+    <rect x="478" y="82" width="376" height="286" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"></rect>
+    <text x="666" y="118" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="middle">Grounded CPW</text>
+    <rect x="518" y="166" width="296" height="124" rx="0" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"></rect>
+    <rect x="538" y="148" width="96" height="20" rx="2" fill="#475569" stroke="#1f2937" stroke-width="2"></rect>
+    <rect x="666" y="148" width="96" height="20" rx="2" fill="#475569" stroke="#1f2937" stroke-width="2"></rect>
+    <rect x="638" y="148" width="24" height="20" rx="2" fill="#f97316" stroke="#9a3412" stroke-width="2"></rect>
+    <rect x="538" y="290" width="224" height="24" rx="2" fill="#475569" stroke="#1f2937" stroke-width="2"></rect>
+    <text x="650" y="142" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">same-layer ground pours flank signal</text>
+    <text x="650" y="330" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">solid bottom ground plane</text>
+    <text x="650" y="184" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" transform="translate(-16.3 12.8)">gap</text>
+    <line x1="586" y1="168" x2="586" y2="290" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-dasharray="5 5"></line>
+    <line x1="714" y1="168" x2="714" y2="290" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-dasharray="5 5"></line>
+    <circle cx="586" cy="190" r="5" fill="#475569" stroke="#1f2937" stroke-width="2"></circle>
+    <circle cx="586" cy="266" r="5" fill="#475569" stroke="#1f2937" stroke-width="2"></circle>
+    <circle cx="714" cy="190" r="5" fill="#475569" stroke="#1f2937" stroke-width="2"></circle>
+    <circle cx="714" cy="266" r="5" fill="#475569" stroke="#1f2937" stroke-width="2"></circle>
+    <path d="M638 170 C624 184 610 196 594 210" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"></path>
+    <path d="M662 170 C676 184 690 196 706 210" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"></path>
+    <path d="M650 170 C650 208 650 250 650 288" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"></path>
+    <text x="666" y="358" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Fields are tighter around the surface trace</text>
+  
+</svg>

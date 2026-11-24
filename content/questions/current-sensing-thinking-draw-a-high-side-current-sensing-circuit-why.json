@@ -1,0 +1,29 @@
+{
+  "slug": "current-sensing-thinking-draw-a-high-side-current-sensing-circuit-why",
+  "category": "Current Sensing, Thinking",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 119,
+  "source_fingerprint": "519323f735909867",
+  "source": {
+    "batch_id": "ee-flashcards-current-sensing-v2-20260917",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+    "row_number": 5
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-thinking-draw-a-high-side-current-sensing-circuit-why-image_1.svg"
+  },
+  "question_text": "<p>Draw a high-side current sensing circuit. Why can't we make the shunt resistor incredibly large to get a massive, easy-to-read voltage signal? Conversely, why can't we make it incredibly small to eliminate power loss? What specific Op-Amp datasheet spec dictates this lower limit?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A high-side current sensing schematic. A power supply connects to a variable Shunt Resistor, passing through to a Load. An Op-Amp measures the voltage across the shunt. Two text callouts point to the shunt: 'If R is too big -&gt; Heat &amp; V_drop' and 'If R is too small -&gt; Lost in Op-Amp V_os'.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>Too large causes excessive power loss and load voltage drop. Too small causes the signal to be completely buried by the op-amp's &quot;Input Offset Voltage&quot; (V_os) spec.</p>",
+  "explanation_text": "<p>1. Too Large: The resistor will burn massive heat (P = I^2 * R). Additionally, it causes a significant voltage drop (V = I * R), meaning your load receives less voltage than intended (e.g., a 5V supply dropping to 4V before hitting the load).<br/>2. Too Small: If the resistor is extremely small, the voltage drop might only be 0.5mV. Every op-amp has an imperfection called Input Offset Voltage (V_os)—a tiny artificial DC error voltage (e.g., 1mV to 3mV) inherently built into the input pins. If your real signal is 0.5mV and the op-amp's internal V_os error is 1mV, your current measurement is completely corrupted and useless. You must choose a shunt large enough so the voltage drop completely dominates the V_os spec.</p>",
+  "bonus_question_text": "<p>Aside from Input Offset Voltage, what other environmental factor severely limits how small your shunt resistor can be?</p>",
+  "bonus_answer_text": "<p>Electromagnetic Interference (EMI) and noise. A tiny 0.5mV signal is easily swallowed by background AC noise or switching ripples on the PCB.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:519323f735909867"
+  ],
+  "related_question_ids": []
+}

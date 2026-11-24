@@ -1,0 +1,7 @@
+* Derived from 14-lc-low-pass-step.asc
+V1 VIN 0 PULSE(0 1 100u 1u 1u 10m 20m)
+L1 VOUT VIN 1m
+C1 VOUT 0 1u
+RLOAD VOUT 0 100
+.tran 0 1.2m 0 500n
+.end

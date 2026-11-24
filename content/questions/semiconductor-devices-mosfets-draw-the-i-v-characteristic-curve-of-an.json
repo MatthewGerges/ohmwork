@@ -1,0 +1,29 @@
+{
+  "slug": "semiconductor-devices-mosfets-draw-the-i-v-characteristic-curve-of-an",
+  "category": "Semiconductor Devices, MOSFETs",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 94,
+  "source_fingerprint": "4f2c6789c810490d",
+  "source": {
+    "batch_id": "ee-flashcards-semiconductors-v2-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+    "row_number": 4
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-semiconductors-v2-20260912/semiconductor-devices-mosfets-draw-the-i-v-characteristic-curve-of-an-image_1.svg"
+  },
+  "question_text": "<p>Draw the I-V characteristic curve of an N-channel MOSFET. Label the axes and the three main regions of operation.</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A graph with V_DS on the x-axis and I_D on the y-axis. There are multiple curved lines starting from the origin, representing increasing V_GS values. A dashed parabolic curve separates the steep, linear left side of the graph (labeled &quot;Triode / Ohmic Region&quot;) from the flat, horizontal right side of the graph (labeled &quot;Saturation Region&quot;). The bottom axis at 0A is labeled &quot;Cutoff&quot;.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>The three regions are Cutoff (V_GS &lt; V_TH), Triode/Ohmic (V_DS &lt; V_GS - V_TH), and Saturation (V_DS &gt;= V_GS - V_TH).</p>",
+  "explanation_text": "<p>The x-axis is V_DS (Drain-to-Source Voltage) and the y-axis is I_D (Drain Current).<br/>1. Cutoff: When V_GS is below the threshold, the FET is off (zero current).<br/>2. Triode/Ohmic: As V_DS increases from zero, the current rises steeply and linearly. Here, the FET acts like a variable resistor controlled by the gate.<br/>3. Saturation: As V_DS gets high enough, the channel &quot;pinches off&quot; and the FET acts as a constant current source, flattening the curve into horizontal lines.</p>",
+  "bonus_question_text": "<p>Which region is an LDO's pass transistor typically operating in, versus a switching buck converter's MOSFET?</p>",
+  "bonus_answer_text": "<p>An LDO operates in the Saturation region (acting as a voltage-controlled current source). A buck converter operates entirely in Cutoff (fully off) and Triode (fully on, for the lowest R_DS(on)).</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:4f2c6789c810490d"
+  ],
+  "related_question_ids": []
+}

@@ -1,0 +1,207 @@
+{
+  "batch_id": "ee-flashcards-mixed-topics-v2-20260915",
+  "generated_at": "2026-09-15T16:23:22.158Z",
+  "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_mixed_topics_v2.xlsx",
+  "rows": [
+    {
+      "row_number": 2,
+      "slug": "protocols-uart-what-is-uart-and-how-does-it-synchronize-communication",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "bd2fa94dfcd107b7",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_mixed_topics_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 2
+      },
+      "question": {
+        "category": "Protocols, UART",
+        "categories": [
+          "Protocols",
+          "UART"
+        ],
+        "difficulty": "easy",
+        "question_text": "What is UART, and how does it synchronize communication between two devices without a shared clock line?",
+        "answer_text": "{{image_1}}\n\nUART stands for Universal Asynchronous Receiver-Transmitter. It synchronizes by using a pre-agreed \"baud rate\" (speed) and Start/Stop bits.",
+        "explanation_text": "Because there is no dedicated clock line (SCL), both devices must be independently configured to transmit and read at the exact same speed (common baud rates include 9600, 115200, etc.). The data line idles HIGH. To begin sending, the transmitter sends a START bit (pulling the line LOW). This falling edge triggers the receiver's internal timer to start sampling the next 8 data bits at the agreed-upon baud rate, followed by a STOP bit (HIGH) to reset the bus.",
+        "bonus_question_text": "Why does UART communication typically produce garbage data if the baud rates of the two devices are mismatched by more than a few percent?",
+        "bonus_answer_text": "Without a shared clock to force them in sync, the receiver's sampling points will drift relative to the incoming data bits. By the time it reaches the 7th or 8th bit, it will sample too early or too late, reading the wrong value.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A block diagram of two devices communicating via UART. Device 1 and Device 2 each have a TX (Transmit) and RX (Receive) pin. A wire connects Device 1's TX to Device 2's RX, and another wire connects Device 2's TX to Device 1's RX, illustrating the required crossover wiring.",
+          "title": "UART crossover wiring",
+          "alt": "A block diagram of two devices communicating via UART. Device 1 and Device 2 each have a TX (Transmit) and RX (Receive) pin. A wire connects Device 1's TX to Device 2's RX, and another wire connects Device 2's TX to Device 1's RX, illustrating the required crossover wiring.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "uart_crossover"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-mixed-topics-v2-20260915/protocols-uart-what-is-uart-and-how-does-it-synchronize-communication-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 3,
+      "slug": "pcb-design-signal-integrity-in-pcb-design-what-is-crosstalk-and-what-a",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "8e31a0ea25478f3f",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_mixed_topics_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 3
+      },
+      "question": {
+        "category": "PCB Design, Signal Integrity",
+        "categories": [
+          "PCB Design",
+          "Signal Integrity"
+        ],
+        "difficulty": "medium",
+        "question_text": "In PCB design, what is \"crosstalk,\" and what are the two physical mechanisms that cause it between adjacent traces?",
+        "answer_text": "Crosstalk is unwanted interference transferred between adjacent traces. It is caused by capacitive coupling and inductive coupling.",
+        "explanation_text": "1. Capacitive Coupling: Two parallel traces act like the plates of a capacitor. A rapid voltage change (dv/dt) on the \"aggressor\" trace injects a displacement current directly into the \"victim\" trace.\n2. Inductive Coupling: Two parallel traces act like a transformer. A rapid current change (di/dt) on the aggressor creates a magnetic field that induces a voltage in the victim trace.",
+        "bonus_question_text": "What are two common layout techniques to minimize crosstalk?",
+        "bonus_answer_text": "1. Increase the physical spacing between traces (e.g., using the \"3W rule\" where spacing is 3x the trace width). 2. Route adjacent signal layers perpendicular to each other so they cross at 90-degree angles rather than running parallel.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 4,
+      "slug": "protocols-usb-usb-uses-a-d-and-d-data-line-what-is-this-routing-techni",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "5942187af102e867",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_mixed_topics_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 4
+      },
+      "question": {
+        "category": "Protocols, USB",
+        "categories": [
+          "Protocols",
+          "USB"
+        ],
+        "difficulty": "medium",
+        "question_text": "USB uses a D+ and D- data line. What is this routing technique called, and what is its primary advantage for noise immunity?",
+        "answer_text": "It is called Differential Signaling. Its primary advantage is that it completely rejects \"common-mode\" noise.",
+        "explanation_text": "Instead of sending a single voltage relative to ground, the transmitter sends mirrored signals: when D+ goes high, D- goes equally low. The receiver only looks at the *difference* between the two wires. If external electromagnetic noise (EMI) strikes the cable, it couples equally into both wires (adding the exact same noise voltage to both). Because the receiver subtracts D- from D+, the noise perfectly cancels itself out!",
+        "bonus_question_text": "Why is it critical that D+ and D- traces are routed to be the exact same physical length on a PCB?",
+        "bonus_answer_text": "To prevent \"skew.\" If one trace is longer, its signal arrives a fraction of a nanosecond later. This misalignment destroys the common-mode noise rejection and severely degrades the signal's eye diagram.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 5,
+      "slug": "passives-inductors-and-magnetics-draw-the-b-h-magnetic-hysteresis-curv",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "3aa18efc62df0018",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_mixed_topics_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 5
+      },
+      "question": {
+        "category": "Passives, Inductors & Magnetics",
+        "categories": [
+          "Passives",
+          "Inductors & Magnetics"
+        ],
+        "difficulty": "hard",
+        "question_text": "Draw the B-H (Magnetic Hysteresis) curve for a ferromagnetic core used in an inductor. Explain the hysteresis curve and what it physically relates to, labeling the axes and the saturation point.",
+        "answer_text": "{{image_1}}\n\nThe curve forms a wide \"S\" shaped loop. The X-axis is Magnetic Field Intensity (H), and the Y-axis is Magnetic Flux Density (B). It relates to how a magnetic material retains its magnetization and loses energy as heat.",
+        "explanation_text": "The hysteresis curve relates to the 'memory' or magnetic inertia of a ferromagnetic core. As current (H) increases, the magnetic flux (B) increases linearly at first. Eventually, all the magnetic domains in the core physically align, hitting the \"Saturation\" point where adding more current produces almost no extra flux. When the current is removed, the core retains some magnetism (Remanence), meaning the material remembers its magnetic state. This creates a wide loop rather than a single straight line. The physical area inside this loop represents energy lost as heat (Core Loss) during each AC switching cycle.",
+        "bonus_question_text": "What happens to an inductor's effective inductance when its core saturates?",
+        "bonus_answer_text": "The inductance drops drastically. It stops resisting changes in current and begins acting more like a simple piece of wire, which can cause massive, destructive current spikes in a switching regulator.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A B-H hysteresis curve graph. The x-axis is H (Current / Magnetic Field Strength) and the y-axis is B (Magnetic Flux Density). The curve is a wide, S-shaped loop. The top right and bottom left tips of the 'S' are completely flattened horizontally and labeled \"Saturation Region\".",
+          "title": "B-H magnetic hysteresis curve",
+          "alt": "A B-H hysteresis curve graph. The x-axis is H (Current / Magnetic Field Strength) and the y-axis is B (Magnetic Flux Density). The curve is a wide, S-shaped loop. The top right and bottom left tips of the 'S' are completely flattened horizontally and labeled \"Saturation Region\".",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "bh_hysteresis"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-mixed-topics-v2-20260915/passives-inductors-and-magnetics-draw-the-b-h-magnetic-hysteresis-curv-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 6,
+      "slug": "system-architecture-logic-and-interfaces-draw-and-explain-a-basic-bi-d",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "2a986e980e23880b",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_mixed_topics_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 6
+      },
+      "question": {
+        "category": "System Architecture, Logic & Interfaces",
+        "categories": [
+          "System Architecture",
+          "Logic & Interfaces"
+        ],
+        "difficulty": "hard",
+        "question_text": "Draw and explain a basic bi-directional single-MOSFET level shifter (e.g., translating a 3.3V I2C line to a 5V I2C line). What is its main weakness?",
+        "answer_text": "{{image_1}}\n\nIt uses an NMOS with the gate tied to the lower voltage supply. Its main weakness is a slow RC rise time on the high side.",
+        "explanation_text": "The 3.3V bus connects to the Source, and the 5V bus connects to the Drain. Both sides have pull-up resistors to their respective supplies.\n- When the 3.3V side pulls LOW, V_GS becomes 3.3V, turning the FET ON and pulling the 5V side LOW.\n- When the 5V side pulls LOW, the FET's internal body diode conducts, bringing the Source down to ~0.7V. This makes V_GS = 2.6V, turning the FET ON and pulling the 3.3V side fully LOW.\n- When idle, the FET is OFF, and the pull-up resistors keep both sides HIGH.",
+        "bonus_question_text": "Why do some high-speed level shifters use active push-pull buffers instead of this simple MOSFET design?",
+        "bonus_answer_text": "The simple MOSFET design relies entirely on passive pull-up resistors to charge the bus capacitance to a HIGH state, resulting in a slow \"shark fin\" RC rise time. Active push-pull level shifters use transistors to forcefully drive the line HIGH, achieving the vastly faster rise times required for high-speed protocols like SPI.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A schematic of a MOSFET level shifter. An N-channel MOSFET separates two buses. The Gate is securely connected to the 3.3V supply rail. The Source connects to 'Bus 1' (with a pull-up resistor to 3.3V). The Drain connects to 'Bus 2' (with a pull-up resistor to 5V).",
+          "title": "Bidirectional MOSFET level shifter",
+          "alt": "A schematic of a MOSFET level shifter. An N-channel MOSFET separates two buses. The Gate is securely connected to the 3.3V supply rail. The Source connects to 'Bus 1' (with a pull-up resistor to 3.3V). The Drain connects to 'Bus 2' (with a pull-up resistor to 5V).",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "mosfet_level_shifter"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-mixed-topics-v2-20260915/system-architecture-logic-and-interfaces-draw-and-explain-a-basic-bi-d-image_1.svg"
+        }
+      },
+      "notes": null
+    }
+  ],
+  "rendered_at": "2026-09-15T16:23:22.301Z"
+}

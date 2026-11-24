@@ -1,0 +1,27 @@
+{
+  "slug": "power-electronics-ldos-how-do-you-calculate-the-efficiency-of-an-ldo-a",
+  "category": "Power Electronics, LDOs",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 76,
+  "source_fingerprint": "d1999d9539f5e147",
+  "source": {
+    "batch_id": "ee-flashcards-ldos-v4-20260911",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+    "row_number": 6
+  },
+  "images": {},
+  "question_text": "<p>How do you calculate the efficiency of an LDO, and how does it differ from a buck converter?</p>",
+  "answer_text": "<p>Efficiency ≈ V_out / V_in.</p>",
+  "explanation_text": "<p>Because an LDO doesn't switch, the input current is essentially identical to the output current (ignoring a tiny quiescent ground current). Therefore, the efficiency is simply the ratio of the voltages. If you drop 5V to 3.3V, the efficiency is 3.3 / 5 = 66%. The remaining 34% of the power is burned entirely as heat.</p>",
+  "bonus_question_text": "<p>When can an LDO actually be highly efficient?</p>",
+  "bonus_answer_text": "<p>When the input voltage is very close to the output voltage (e.g., dropping 3.5V to 3.3V yields ~94% efficiency).</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:d1999d9539f5e147"
+  ],
+  "related_question_ids": []
+}

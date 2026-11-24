@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-buck-converters-draw-the-inductor-voltage-and-induct",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 54,
+  "source_fingerprint": "342b10947bc32c38",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 16
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-inductor-voltage-and-induct-image_1.svg"
+  },
+  "question_text": "<p>Draw the inductor voltage and inductor current waveforms alongside the high-side gate control signal. Why do they look like this?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Stacked graphs. Top: Gate Signal. Middle: Inductor Voltage (a positive flat line during ON, dropping to a negative flat line during OFF). Bottom: Inductor Current (ramping up diagonally during ON, ramping down diagonally during OFF).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>The voltage is a square wave alternating between positive and negative. The current is a continuous triangle wave.</p>",
+  "explanation_text": "<p>This perfectly visualizes V = L(di/dt). When the switch is ON, a positive flat voltage (V_in - V_out) is applied across the inductor, causing current to ramp up diagonally. When OFF, the switch node drops to ~0V, so the voltage across the inductor becomes negative (-V_out). This constant negative voltage causes the current to ramp down diagonally.</p>",
+  "bonus_question_text": "<p>In steady-state, what is the average voltage across the inductor over a full switching cycle?</p>",
+  "bonus_answer_text": "<p>Exactly zero volts. This is the principle of Volt-Second Balance.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:342b10947bc32c38"
+  ],
+  "related_question_ids": []
+}

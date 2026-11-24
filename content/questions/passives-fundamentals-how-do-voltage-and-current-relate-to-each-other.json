@@ -1,0 +1,29 @@
+{
+  "slug": "passives-fundamentals-how-do-voltage-and-current-relate-to-each-other",
+  "category": "Passives, Fundamentals",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 75,
+  "source_fingerprint": "1ccb052699aa0c51",
+  "source": {
+    "batch_id": "ee-flashcards-passives-protocols-v3-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+    "row_number": 5
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/passives-fundamentals-how-do-voltage-and-current-relate-to-each-other-image_1.svg"
+  },
+  "question_text": "<p>How do voltage and current relate to each other over time (phase shift) for a purely resistive, capacitive, and inductive load?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Three stacked graphs of sine waves. Top (Resistor): V and I sine waves perfectly overlapping. Middle (Capacitor): The I sine wave is shifted to the left (leading) the V sine wave by 90 degrees. Bottom (Inductor): The V sine wave is shifted to the left (leading) the I sine wave by 90 degrees.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>Resistor: V and I are perfectly in phase. Capacitor: I leads V by 90 degrees. Inductor: V leads I by 90 degrees.</p>",
+  "explanation_text": "<p>Use the classic acronym CIVIL: in a Capacitor, I leads V; in an inductor (L), V leads I.</p>\n<p>Mathematically, a derivative can change instantaneously, but an integral cannot. Because voltage is the integral of current in a capacitor (V = (1/C)*integral(I dt)), voltage cannot change instantly, but current can (so current leads). Conversely, for an inductor (I = (1/L)*integral(V dt)), current cannot change instantly, but voltage can (so voltage leads).</p>",
+  "bonus_question_text": "<p>What is the impedance formula for an ideal inductor and an ideal capacitor?</p>",
+  "bonus_answer_text": "<p>Inductor: Z = jωL. Capacitor: Z = 1 / (jωC).</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:1ccb052699aa0c51"
+  ],
+  "related_question_ids": []
+}

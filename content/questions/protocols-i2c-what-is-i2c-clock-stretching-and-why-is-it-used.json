@@ -1,0 +1,29 @@
+{
+  "slug": "protocols-i2c-what-is-i2c-clock-stretching-and-why-is-it-used",
+  "category": "Protocols, I2C",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 86,
+  "source_fingerprint": "af3f6e8dc25d0ee8",
+  "source": {
+    "batch_id": "ee-flashcards-passives-protocols-v3-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+    "row_number": 7
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/protocols-i2c-what-is-i2c-clock-stretching-and-why-is-it-used-image_1.svg"
+  },
+  "question_text": "<p>What is I2C &quot;clock stretching&quot; and why is it used?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A timing diagram showing the Master releasing the SCL line, but the SCL line remaining LOW because the Slave is holding it down (labeled &quot;Clock Stretching&quot;). The Master pauses data transmission until the Slave releases SCL.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>Clock stretching is a hardware mechanism where a slow *slave* device holds the clock line (SCL) LOW to pause the transaction, forcing the master to wait.</p>",
+  "explanation_text": "<p>Usually, the master exclusively controls the SCL line. However, if a slave needs more time to process data (like an ADC finishing a conversion before sending the result), it can physically pull SCL low. The master tries to release SCL to let the pull-up resistor pull it high, but because I2C is an open-drain bus, the slave keeps it low. The master waits until the slave releases SCL before continuing the clock pulses.</p>",
+  "bonus_question_text": "<p>What is a common bug associated with clock stretching?</p>",
+  "bonus_answer_text": "<p>Many cheap hardware I2C master peripherals (or software bit-banging implementations) do not properly support clock stretching, leading to corrupt data or bus lockups when a slave tries to pause the bus.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:af3f6e8dc25d0ee8"
+  ],
+  "related_question_ids": []
+}

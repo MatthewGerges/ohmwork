@@ -1,0 +1,29 @@
+{
+  "slug": "protocols-system-architecture-how-many-mcu-pins-are-required-to-connec",
+  "category": "Protocols - System Architecture",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 24,
+  "source_fingerprint": "a41f730403951fd1",
+  "source": {
+    "batch_id": "ee-flashcards-master-simplified-20260709",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+    "row_number": 4
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-master-simplified-20260709/protocols-system-architecture-how-many-mcu-pins-are-required-to-connec-image_1.svg"
+  },
+  "question_text": "<p>How many MCU pins are required to connect 4 sensors using a shared I2C bus versus a shared SPI bus?</p>",
+  "answer_text": "<p>I2C requires 2 pins. SPI requires 7 pins.</p>",
+  "explanation_text": "<p>I2C uses hardware addressing over a shared 2-wire bus (SDA, SCL). SPI shares 3 pins (MOSI, MISO, SCK) but requires a unique Chip Select (CS) pin for each device (3 + 4 = 7).</p>\n<img src=\"{{image_1}}\" alt=\"Block diagrams. Left: 1 MCU to 4 slaves via 2-wire I2C. Right: 1 MCU to 4 slaves via SPI, showing 3 shared lines and 4 distinct CS lines.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "bonus_question_text": "<p>How can you reduce the SPI pin count without removing sensors?</p>",
+  "bonus_answer_text": "<p>Daisy-chain the SPI devices or use an external demultiplexer.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:a41f730403951fd1"
+  ],
+  "related_question_ids": []
+}

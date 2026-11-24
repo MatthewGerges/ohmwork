@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-buck-converters-draw-the-diode-current-and-voltage-w",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 52,
+  "source_fingerprint": "8cb687200c5c13a5",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 18
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-diode-current-and-voltage-w-image_1.svg"
+  },
+  "question_text": "<p>Draw the diode current and voltage waveforms in an asynchronous buck converter alongside the high-side gate signal.</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Stacked graphs. Top: Gate Signal. Middle: Diode Current (0A during ON, instantly jumping up and ramping down diagonally during OFF). Bottom: Diode Voltage (A flat line at -V_in during ON, and -0.7V during OFF).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>The diode conducts current (triangle ramp down) only when the gate is LOW. The voltage across it is highly negative when the gate is HIGH.</p>",
+  "explanation_text": "<p>When the high-side FET is ON, the diode is reverse-biased with the full V_in across it (blocking current). When the FET turns OFF, the inductor's flyback pulls the switch node negative, forward-biasing the diode. It then conducts the decaying inductor current until the FET turns ON again.</p>",
+  "bonus_question_text": "<p>Why does a diode get so hot in high-current applications?</p>",
+  "bonus_answer_text": "<p>It drops a relatively fixed voltage (e.g., 0.7V) whenever it conducts. If 10A flows through it during the OFF cycle, it burns 7 Watts of power as pure heat (P = I * V_f).</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:8cb687200c5c13a5"
+  ],
+  "related_question_ids": []
+}

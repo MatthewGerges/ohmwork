@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #020817;
+  color: #f1f5f9;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+.safe-area-x {
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+}
+
+.safe-area-bottom {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+[data-placeholder]:empty::before {
+  content: attr(data-placeholder);
+  color: rgb(100 116 139);
+  pointer-events: none;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* KaTeX — match dark card text */
+.rich-html-content .katex {
+  color: inherit;
+  font-size: 1.05em;
+}
+
+.rich-html-content .katex-display {
+  margin: 0.75em 0;
+  overflow-x: auto;
+}

@@ -1,0 +1,432 @@
+{
+  "batch_id": "ee-flashcards-current-sensing-v2-20260917",
+  "generated_at": "2026-09-17T16:40:44.883Z",
+  "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+  "rows": [
+    {
+      "row_number": 2,
+      "slug": "current-sensing-fundamentals-what-is-the-difference-between-high-side",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "1bc11e9c421d681d",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 2
+      },
+      "question": {
+        "category": "Current Sensing, Fundamentals",
+        "categories": [
+          "Current Sensing",
+          "Fundamentals"
+        ],
+        "difficulty": "medium",
+        "question_text": "What is the difference between High-Side and Low-Side current sensing? Draw a simple block diagram for both.",
+        "answer_text": "{{image_1}}\n\nHigh-side places the shunt resistor between the power supply (V_in) and the load. Low-side places the shunt between the load and Ground.",
+        "explanation_text": "- Low-Side: The shunt is at ground potential. It is very easy to amplify because there is no high common-mode voltage. However, it lifts the load's ground reference slightly above true ground, which can cause severe ground-loop or communication issues if the load connects to other systems.\n- High-Side: The load's ground remains perfectly tied to true ground. However, the amplifier must be able to survive and reject the massive common-mode voltage of the power supply.",
+        "bonus_question_text": "Which topology is strictly required if you need to detect a short-circuit from the load directly to ground?",
+        "bonus_answer_text": "High-side sensing. If a load shorts to ground, the fault current completely bypasses a low-side shunt, making the short undetectable by the amplifier.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Side-by-side schematics. Left (High-Side): V_in connects to a Shunt Resistor, which connects to the Load, which connects to Ground. The amplifier measures across the shunt. Right (Low-Side): V_in connects to the Load, which connects to a Shunt Resistor, which connects to Ground. The amplifier measures across the shunt.",
+          "title": "High-side vs low-side current sensing",
+          "alt": "Side-by-side schematics. Left (High-Side): V_in connects to a Shunt Resistor, which connects to the Load, which connects to Ground. The amplifier measures across the shunt. Right (Low-Side): V_in connects to the Load, which connects to a Shunt Resistor, which connects to Ground. The amplifier measures across the shunt.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "current_sense_high_low"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-fundamentals-what-is-the-difference-between-high-side-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 3,
+      "slug": "current-sensing-op-amps-when-measuring-a-high-side-shunt-why-is-a-diff",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "554699909ace5d84",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 3
+      },
+      "question": {
+        "category": "Current Sensing, Op-Amps",
+        "categories": [
+          "Current Sensing",
+          "Op-Amps"
+        ],
+        "difficulty": "hard",
+        "question_text": "When measuring a high-side shunt, why is a Difference Amplifier topology an excellent choice compared to a standard Non-Inverting amplifier? How is it wired and what is its equation?",
+        "answer_text": "{{image_1}}\n\nA Difference Amplifier explicitly subtracts the two input voltages, amplifying ONLY the difference between them and rejecting the massive common-mode voltage.",
+        "explanation_text": "If you used a standard non-inverting amplifier referenced to ground on a 12V rail, the op-amp would try to amplify the massive 12V common-mode voltage, instantly saturating the output. \n\nA Difference Amplifier uses a 4-resistor network (two input resistors, one feedback, one to ground) to actively subtract the inputs. \nEquation: V_out = (R_f / R_in) * (V_in+ - V_in-). \nIf V_in+ is 12.01V and V_in- is 12.00V, it subtracts them and only amplifies the 0.01V difference across the shunt.",
+        "bonus_question_text": "What is the critical hardware requirement for the 4 resistors in a Difference Amplifier to achieve a good Common-Mode Rejection Ratio (CMRR)?",
+        "bonus_answer_text": "They must be perfectly matched in highly precise ratios (R1/R2 = R3/R4). Even a 0.1% tolerance mismatch will severely degrade the CMRR, causing the 12V common-mode voltage to artificially leak into the output reading.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Schematic of an Op-Amp Difference Amplifier. V_in- connects through R_in to the inverting (-) terminal, with R_f connecting the (-) terminal to V_out. V_in+ connects through R_in to the non-inverting (+) terminal, with another resistor R_f connecting the (+) terminal to ground.",
+          "title": "Difference amplifier",
+          "alt": "Schematic of an Op-Amp Difference Amplifier. V_in- connects through R_in to the inverting (-) terminal, with R_f connecting the (-) terminal to V_out. V_in+ connects through R_in to the non-inverting (+) terminal, with another resistor R_f connecting the (+) terminal to ground.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "current_difference_equation"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-op-amps-when-measuring-a-high-side-shunt-why-is-a-diff-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 4,
+      "slug": "current-sensing-op-amps-why-can-t-you-typically-use-a-generic-off-the",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "d2a574ff18b049ed",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 4
+      },
+      "question": {
+        "category": "Current Sensing, Op-Amps",
+        "categories": [
+          "Current Sensing",
+          "Op-Amps"
+        ],
+        "difficulty": "medium",
+        "question_text": "Why can't you typically use a generic, off-the-shelf Operational Amplifier for High-Side current sensing on a high-voltage rail (e.g., 24V)?",
+        "answer_text": "A standard op-amp will be destroyed because its inputs cannot survive a common-mode voltage that exceeds its own supply voltage.",
+        "explanation_text": "The \"common-mode voltage\" is the average DC voltage present at both input pins. In a high-side 24V system, both ends of the shunt resistor are sitting at roughly 24V. If you power a standard op-amp with a 3.3V or 5V logic supply, pumping 24V directly into its input pins will violate its absolute maximum ratings and instantly fry the silicon. Dedicated Current Sense Amplifiers use specialized input architectures allowing them to survive 60V+ inputs while running on a tiny 3.3V supply.",
+        "bonus_question_text": null,
+        "bonus_answer_text": null,
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 5,
+      "slug": "current-sensing-thinking-draw-a-high-side-current-sensing-circuit-why",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "519323f735909867",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 5
+      },
+      "question": {
+        "category": "Current Sensing, Thinking",
+        "categories": [
+          "Current Sensing",
+          "Thinking"
+        ],
+        "difficulty": "hard",
+        "question_text": "Draw a high-side current sensing circuit. Why can't we make the shunt resistor incredibly large to get a massive, easy-to-read voltage signal? Conversely, why can't we make it incredibly small to eliminate power loss? What specific Op-Amp datasheet spec dictates this lower limit?",
+        "answer_text": "{{image_1}}\n\nToo large causes excessive power loss and load voltage drop. Too small causes the signal to be completely buried by the op-amp's \"Input Offset Voltage\" (V_os) spec.",
+        "explanation_text": "1. Too Large: The resistor will burn massive heat (P = I^2 * R). Additionally, it causes a significant voltage drop (V = I * R), meaning your load receives less voltage than intended (e.g., a 5V supply dropping to 4V before hitting the load).\n2. Too Small: If the resistor is extremely small, the voltage drop might only be 0.5mV. Every op-amp has an imperfection called Input Offset Voltage (V_os)—a tiny artificial DC error voltage (e.g., 1mV to 3mV) inherently built into the input pins. If your real signal is 0.5mV and the op-amp's internal V_os error is 1mV, your current measurement is completely corrupted and useless. You must choose a shunt large enough so the voltage drop completely dominates the V_os spec.",
+        "bonus_question_text": "Aside from Input Offset Voltage, what other environmental factor severely limits how small your shunt resistor can be?",
+        "bonus_answer_text": "Electromagnetic Interference (EMI) and noise. A tiny 0.5mV signal is easily swallowed by background AC noise or switching ripples on the PCB.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A high-side current sensing schematic. A power supply connects to a variable Shunt Resistor, passing through to a Load. An Op-Amp measures the voltage across the shunt. Two text callouts point to the shunt: 'If R is too big -> Heat & V_drop' and 'If R is too small -> Lost in Op-Amp V_os'.",
+          "title": "Current-shunt resistance tradeoff",
+          "alt": "A high-side current sensing schematic. A power supply connects to a variable Shunt Resistor, passing through to a Load. An Op-Amp measures the voltage across the shunt. Two text callouts point to the shunt: 'If R is too big -> Heat & V_drop' and 'If R is too small -> Lost in Op-Amp V_os'.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "current_shunt_tradeoff"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-thinking-draw-a-high-side-current-sensing-circuit-why-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 6,
+      "slug": "current-sensing-thinking-what-are-three-distinct-physical-methods-for",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "14f760f866a77893",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 6
+      },
+      "question": {
+        "category": "Current Sensing, Thinking",
+        "categories": [
+          "Current Sensing",
+          "Thinking"
+        ],
+        "difficulty": "hard",
+        "question_text": "What are three distinct physical methods for measuring current? Explain how the magnetic probe method works mathematically, and list the pros and cons of each.",
+        "answer_text": "1. Shunt Resistor (Ohmic)\n2. Hall Effect Sensor (Magnetic)\n3. Current Transformer (AC Magnetic)",
+        "explanation_text": "A Hall Effect sensor probe measures current by detecting the magnetic field generated around the wire. Mathematically, Ampere's Law states B = (μ₀ * I) / (2πr). Intuitively: the magnetic field (B) is directly and linearly proportional to the current (I). The sensor detects this field and outputs a proportional voltage.\n\nPros and Cons:\n- Shunt Resistor: Very cheap and highly accurate for DC/AC. Con: Burns power as heat and breaks electrical isolation.\n- Hall Effect: Zero power loss and physically isolated from the high voltage. Con: Susceptible to external stray magnetic fields, offset drift over temperature, and more expensive.\n- Current Transformer: Passive, isolated, and excellent for massive AC power grids. Con: Physically bulky and strictly cannot measure DC current.",
+        "bonus_question_text": "If a DC motor draws a massive 200 Amps at 400 Volts, which current sensing method is the safest and most efficient choice?",
+        "bonus_answer_text": "A Hall Effect sensor. A shunt would burn tremendous power (and require massive cooling), and a Current Transformer cannot measure the DC motor current.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 7,
+      "slug": "current-sensing-pcb-design-when-routing-a-pcb-for-a-shunt-resistor-why",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "9e6ad905b1576352",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 7
+      },
+      "question": {
+        "category": "Current Sensing, PCB Design",
+        "categories": [
+          "Current Sensing",
+          "PCB Design"
+        ],
+        "difficulty": "medium",
+        "question_text": "When routing a PCB for a shunt resistor, why must you use a \"Kelvin Connection\" (4-wire sensing)? Draw how it is physically routed.",
+        "answer_text": "{{image_1}}\n\nIt physically separates the high-current path from the voltage-sensing path to eliminate the parasitic resistance of the copper PCB traces.",
+        "explanation_text": "A 10mΩ shunt resistor is extremely small. The thick copper PCB traces leading up to it might accidentally add another 2mΩ of parasitic resistance. If you tap the amplifier inputs outside of the resistor, the amplifier will measure the voltage drop of the trace + the resistor, causing a massive 20% measurement error. A Kelvin connection routes the high current through thick traces directly to the main pads, but taps the sensing traces directly from the *inside* edges of the resistor pads where no load current flows, ensuring a perfectly accurate measurement.",
+        "bonus_question_text": "How should the two sensing traces be routed from the shunt back to the amplifier?",
+        "bonus_answer_text": "They should be routed as a tightly coupled differential pair to ensure any external EMI noise couples equally into both traces (common-mode noise), which the difference amplifier can then easily reject.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "PCB layout diagram. A rectangular shunt resistor has thick, wide copper traces carrying high current connected to its outer edges. Two very thin copper traces tap directly into the inner, center edges of the resistor pads and route away parallel to each other as a differential pair toward the amplifier.",
+          "title": "Kelvin shunt connection",
+          "alt": "PCB layout diagram. A rectangular shunt resistor has thick, wide copper traces carrying high current connected to its outer edges. Two very thin copper traces tap directly into the inner, center edges of the resistor pads and route away parallel to each other as a differential pair toward the amplifier.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "kelvin_shunt"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-pcb-design-when-routing-a-pcb-for-a-shunt-resistor-why-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 8,
+      "slug": "current-sensing-amplifier-topologies-draw-a-standard-operational-ampli",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "ecad1d1c9407b626",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 8
+      },
+      "question": {
+        "category": "Current Sensing, Amplifier Topologies",
+        "categories": [
+          "Current Sensing",
+          "Amplifier Topologies"
+        ],
+        "difficulty": "medium",
+        "question_text": "Draw a standard Operational Amplifier (Op-Amp) configured for current sensing. What are its pros and cons, and what is its major source of error?",
+        "answer_text": "{{image_1}}\n\nPros: Large open-loop gain and often very low cost.\nCons: Low-side sensing only (V_CM ≈ GND), accuracy is set by external components, and single-ended inputs are highly vulnerable to PCB parasitics.",
+        "explanation_text": "A standard op-amp is typically wired in a non-inverting configuration to measure a low-side shunt. Because it uses a single-ended input, any parasitic impedance in the PCB ground trace between the shunt and the true ground gets added directly to the measurement (V_shunt + V_p), causing significant error. Furthermore, because its inputs cannot survive high voltages, it is strictly limited to low-side sensing.",
+        "bonus_question_text": "What is the output voltage equation for this standard Op-Amp configuration?",
+        "bonus_answer_text": "V_O = (V_shunt + V_p) * (1 + R_f / R_g)",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Schematic of an Operational Amplifier for current sensing. V_bus connects to a System Load, which goes to R_shunt, then through a parasitic resistance (R_p) to Ground. The op-amp non-inverting (+) input taps above R_shunt. The inverting (-) input connects to a voltage divider (R_f from output, R_g to ground). Text points to R_p stating 'Parasitic impedance to GND introduces error'.",
+          "title": "Low-side op-amp current sensing",
+          "alt": "Schematic of an Operational Amplifier for current sensing. V_bus connects to a System Load, which goes to R_shunt, then through a parasitic resistance (R_p) to Ground. The op-amp non-inverting (+) input taps above R_shunt. The inverting (-) input connects to a voltage divider (R_f from output, R_g to ground). Text points to R_p stating 'Parasitic impedance to GND introduces error'.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "low_side_opamp_current"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-amplifier-topologies-draw-a-standard-operational-ampli-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 9,
+      "slug": "current-sensing-amplifier-topologies-draw-an-instrumentation-amplifier",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "5c856edd053b78d0",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 9
+      },
+      "question": {
+        "category": "Current Sensing, Amplifier Topologies",
+        "categories": [
+          "Current Sensing",
+          "Amplifier Topologies"
+        ],
+        "difficulty": "medium",
+        "question_text": "Draw an Instrumentation Amplifier (IA) configured for current sensing. What are its pros and cons?",
+        "answer_text": "{{image_1}}\n\nPros: Large input impedance allows measuring very small currents, and gain is easily changed with a single external resistor (R_g).\nCons: Common-mode voltage is limited to the supply voltage (V_CM <= V_s).",
+        "explanation_text": "An Instrumentation Amplifier uses buffered inputs to achieve massive input impedance. It perfectly solves the PCB parasitic error issue by using a differential connection (measuring directly across the top and bottom of the shunt). However, because its internal op-amps are exposed to the input voltage, it cannot survive high common-mode voltages, restricting it primarily to low-side sensing (or very low-voltage high-side sensing).",
+        "bonus_question_text": "What is the output voltage equation for this IA configuration?",
+        "bonus_answer_text": "V_O = V_shunt * Gain",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Schematic of an Instrumentation Amplifier. V_bus connects to System Load, then R_shunt, then R_p, then Ground. The IN- and IN+ pins cross over to measure exactly across R_shunt (labeled 'Solves PCB parasitic issue'). Inside the IA block, two input buffers connect via a shared R_g, feeding into a final difference amplifier stage.",
+          "title": "Instrumentation-amplifier current sensing",
+          "alt": "Schematic of an Instrumentation Amplifier. V_bus connects to System Load, then R_shunt, then R_p, then Ground. The IN- and IN+ pins cross over to measure exactly across R_shunt (labeled 'Solves PCB parasitic issue'). Inside the IA block, two input buffers connect via a shared R_g, feeding into a final difference amplifier stage.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "instrumentation_amp_current"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-amplifier-topologies-draw-an-instrumentation-amplifier-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 10,
+      "slug": "current-sensing-amplifier-topologies-draw-a-difference-amplifier-da-co",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "3e70c92d91466764",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 10
+      },
+      "question": {
+        "category": "Current Sensing, Amplifier Topologies",
+        "categories": [
+          "Current Sensing",
+          "Amplifier Topologies"
+        ],
+        "difficulty": "hard",
+        "question_text": "Draw a Difference Amplifier (DA) configured for current sensing. What are its pros and cons?",
+        "answer_text": "{{image_1}}\n\nPros: Can be used for high or low-side sensing, and can tolerate very large common-mode voltages due to its input resistor divider.\nCons: The resistor network loads the system, requiring the system impedance to be significantly smaller than the DA's input impedance.",
+        "explanation_text": "The Difference Amplifier utilizes a built-in 4-resistor network. This network acts as a voltage divider, stepping down massive high-side common-mode voltages (like a 48V rail) to a safe level before they hit the internal op-amp pins. It solves PCB parasitic issues by measuring differentially across the shunt. However, those same input divider resistors draw current, which lowers the input impedance and \"loads\" the circuit being measured.",
+        "bonus_question_text": "What is the output voltage equation for this DA configuration?",
+        "bonus_answer_text": "V_O = V_shunt * Gain",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Schematic of a Difference Amplifier. V_bus connects to System Load, then R_shunt, then R_p, then Ground. The IN- and IN+ pins cross over to measure exactly across R_shunt. Inside the DA block, internal series resistors connect to the internal op-amp, acting as a divider. It successfully handles V_CM > V_s.",
+          "title": "Difference-amplifier current sensing",
+          "alt": "Schematic of a Difference Amplifier. V_bus connects to System Load, then R_shunt, then R_p, then Ground. The IN- and IN+ pins cross over to measure exactly across R_shunt. Inside the DA block, internal series resistors connect to the internal op-amp, acting as a divider. It successfully handles V_CM > V_s.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "difference_amp_current"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-amplifier-topologies-draw-a-difference-amplifier-da-co-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 11,
+      "slug": "current-sensing-amplifier-topologies-draw-a-dedicated-current-sense-am",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "5c9e7f35b7fba373",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 11
+      },
+      "question": {
+        "category": "Current Sensing, Amplifier Topologies",
+        "categories": [
+          "Current Sensing",
+          "Amplifier Topologies"
+        ],
+        "difficulty": "hard",
+        "question_text": "Draw a dedicated Current Sense Amplifier (CSA) configured for current sensing. What makes it unique, and what are its pros and cons?",
+        "answer_text": "{{image_1}}\n\nPros: A unique floating input stage allows V_CM to be much greater than V_s with large input impedance. A precision integrated gain network maximizes accuracy and minimizes drift.\nCons: Usually only offered at fixed gains, and greater accuracy is achieved at higher currents.",
+        "explanation_text": "A CSA is custom silicon explicitly designed to solve the weaknesses of standard op-amps and difference amplifiers. It is placed on the high-side (before the load). Its specialized \"Input Bias Stage\" acts as a floating buffer, meaning it maintains a massive input impedance (unlike a Difference Amp) while simultaneously surviving massive common-mode voltages (unlike an Instrumentation Amp).",
+        "bonus_question_text": "What is the output voltage equation for this CSA configuration?",
+        "bonus_answer_text": "V_O = V_shunt * Gain",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Schematic of a Current Sense Amplifier. Used for High-Side sensing: V_bus -> R_shunt -> System Load -> Ground. The IN- and IN+ pins measure across R_shunt (V_CM = V_bus, and V_CM > V_s). Inside the CSA block, the pins enter a specialized 'Input Bias Stage', which then feeds a difference amplifier with precision integrated resistors.",
+          "title": "Dedicated current-sense amplifier",
+          "alt": "Schematic of a Current Sense Amplifier. Used for High-Side sensing: V_bus -> R_shunt -> System Load -> Ground. The IN- and IN+ pins measure across R_shunt (V_CM = V_bus, and V_CM > V_s). Inside the CSA block, the pins enter a specialized 'Input Bias Stage', which then feeds a difference amplifier with precision integrated resistors.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "current_sense_amp"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-amplifier-topologies-draw-a-dedicated-current-sense-am-image_1.svg"
+        }
+      },
+      "notes": null
+    }
+  ],
+  "rendered_at": "2026-09-18T18:53:14.473Z"
+}

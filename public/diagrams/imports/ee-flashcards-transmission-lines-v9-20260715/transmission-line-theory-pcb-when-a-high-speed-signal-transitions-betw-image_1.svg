@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="430" viewBox="0 0 820 430" role="img" aria-label="Signal via return path">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"></path>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"></path>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"></path>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1d4ed8"></path>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0ea5a5"></path>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"></path>
+    </marker>
+    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"></path>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"></rect>
+  <text x="410" y="38" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">Signal via return path</text>
+  
+    
+    <rect x="40" y="70" width="740" height="150" rx="6" fill="#ffffff" stroke="#22c55e" stroke-width="2"></rect>
+    <text x="58" y="94" fill="#16a34a" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">Case 1: nearby GND stitching via exists</text>
+    <line x1="86" y1="128" x2="680" y2="128" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round"></line>
+    <line x1="86" y1="178" x2="680" y2="178" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round"></line>
+    <text x="704" y="132" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="start">GND plane A</text>
+    <text x="704" y="182" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="start">GND plane B</text>
+    <path d="M96 108 L330 108 L330 158 L680 158" fill="none" stroke="#f97316" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+    <line x1="330" y1="108" x2="330" y2="158" stroke="#f97316" stroke-width="10" stroke-linecap="round"></line>
+    <text x="352" y="138" fill="#f97316" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="start" transform="translate(0 3.5)">signal via</text>
+  
+    <line x1="258" y1="128" x2="258" y2="178" stroke="#22c55e" stroke-width="8" stroke-linecap="round"></line>
+    <circle cx="258" cy="128" r="7" fill="#22c55e" stroke="#22c55e" stroke-width="2"></circle>
+    <circle cx="258" cy="178" r="7" fill="#22c55e" stroke="#22c55e" stroke-width="2"></circle>
+    <text x="218" y="198" fill="#16a34a" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="start">GND stitching via</text>
+    <path d="M118 128 L238 128 L258 178 L646 178" fill="none" stroke="#0f766e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-teal)"></path>
+    <text x="506" y="202" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="middle">return current crosses planes through the GND via</text>
+
+    
+    <rect x="40" y="250" width="740" height="150" rx="6" fill="#ffffff" stroke="#ef4444" stroke-width="2"></rect>
+    <text x="58" y="274" fill="#dc2626" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">Case 2: no nearby GND stitching via</text>
+    <line x1="86" y1="308" x2="680" y2="308" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round"></line>
+    <line x1="86" y1="358" x2="680" y2="358" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round"></line>
+    <text x="704" y="312" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="start">GND plane A</text>
+    <text x="704" y="362" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="start">GND plane B</text>
+    <path d="M96 288 L330 288 L330 338 L680 338" fill="none" stroke="#f97316" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+    <line x1="330" y1="288" x2="330" y2="338" stroke="#f97316" stroke-width="10" stroke-linecap="round"></line>
+    <text x="352" y="318" fill="#f97316" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="start" transform="translate(0.2 4.5)">signal via</text>
+  
+    <path d="M118 308 L238 308" fill="none" stroke="#0f766e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-teal)"></path>
+    <line x1="222" y1="326" x2="270" y2="374" stroke="#ef4444" stroke-width="5" stroke-linecap="round"></line>
+    <line x1="270" y1="326" x2="222" y2="374" stroke="#ef4444" stroke-width="5" stroke-linecap="round"></line>
+    <text x="246" y="392" fill="#dc2626" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="middle">no return via here</text>
+    <path d="M292 308 C388 248 516 254 650 348" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-red)"></path>
+    <text x="498" y="392" fill="#dc2626" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="middle">return path is interrupted or forced into a large detour</text>
+  
+</svg>

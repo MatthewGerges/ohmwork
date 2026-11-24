@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="380" viewBox="0 0 740 380" role="img" aria-label="Difference amplifier">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"/>
+  <text x="370" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Difference amplifier</text>
+  
+    
+    <path d="M343 124 L343 256 L497 190 Z" fill="#0a1a20" stroke="#2dd4bf" stroke-width="3"/>
+    <text x="370" y="148" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">-</text>
+    <text x="370" y="246" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">+</text>
+    <text x="428" y="196" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">op-amp</text>
+  
+    <line x1="62" y1="157" x2="112" y2="157" stroke="#818cf8" stroke-width="3" stroke-linecap="round"/>
+    
+    <line x1="112" y1="157" x2="134" y2="157" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <rect x="134" y="144" width="100" height="26" rx="5" fill="#101827" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="234" y1="157" x2="256" y2="157" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <text x="184" y="134" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="middle">R1</text>
+  
+    <line x1="256" y1="157" x2="343" y2="157" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <text x="72" y="140" fill="#818cf8" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="500" text-anchor="start">V1</text>
+    <line x1="62" y1="223" x2="112" y2="223" stroke="#4ade80" stroke-width="3" stroke-linecap="round"/>
+    
+    <line x1="112" y1="223" x2="134" y2="223" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <rect x="134" y="210" width="100" height="26" rx="5" fill="#101827" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="234" y1="223" x2="256" y2="223" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <text x="184" y="200" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="middle">R2</text>
+  
+    <line x1="256" y1="223" x2="343" y2="223" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <text x="72" y="206" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="500" text-anchor="start">V2</text>
+    <line x1="343" y1="157" x2="343" y2="102" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    
+    <line x1="343" y1="102" x2="365" y2="102" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <rect x="365" y="89" width="165" height="26" rx="5" fill="#101827" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="530" y1="102" x2="552" y2="102" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <text x="447.5" y="79" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="middle">R3</text>
+  
+    <line x1="552" y1="102" x2="552" y2="190" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    <line x1="300" y1="223" x2="300" y2="250" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    
+    <line x1="300" y1="250" x2="300" y2="260" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <rect x="287" y="260" width="26" height="20" rx="5" fill="#101827" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="300" y1="280" x2="300" y2="290" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <text x="328" y="275" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start">R4</text>
+  
+    
+    <line x1="300" y1="290" x2="300" y2="304" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="280" y1="304" x2="320" y2="304" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="286" y1="314" x2="314" y2="314" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="292" y1="324" x2="308" y2="324" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+  
+    <line x1="497" y1="190" x2="636" y2="190" stroke="#4ade80" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    <circle cx="343" cy="157" r="5" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"/>
+    <circle cx="300" cy="223" r="5" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"/>
+    <circle cx="552" cy="190" r="5" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"/>
+    <text x="628" y="172" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500" text-anchor="end">Vout</text>
+    <text x="382" y="342" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" text-anchor="middle">Matched ratios: Vout = (R3 / R1) * (V2 - V1)</text>
+  
+</svg>

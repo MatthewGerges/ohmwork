@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="340" viewBox="0 0 740 340" role="img" aria-label="SMD resistor package ratings">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"/>
+  <text x="370" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">SMD resistor package ratings</text>
+  
+    <rect x="84" y="132" width="92" height="46" rx="8" fill="#0a1a20" stroke="#2dd4bf" stroke-width="2"/>
+    <rect x="266" y="120" width="126" height="58" rx="8" fill="#0a1a20" stroke="#2dd4bf" stroke-width="2"/>
+    <rect x="492" y="104" width="164" height="74" rx="8" fill="#0a1a20" stroke="#2dd4bf" stroke-width="2"/>
+    <text x="130" y="208" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" text-anchor="middle">0402</text>
+    <text x="329" y="208" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" text-anchor="middle">0603</text>
+    <text x="574" y="208" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" text-anchor="middle">0805</text>
+    <text x="130" y="236" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500" text-anchor="middle">1/16 W</text>
+    <text x="329" y="236" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500" text-anchor="middle">1/10 W</text>
+    <text x="574" y="236" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500" text-anchor="middle">1/8 W</text>
+    <path d="M90 270 L648 270" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="370" y="304" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle">Power rating tracks physical size and heat spreading.</text>
+  
+</svg>

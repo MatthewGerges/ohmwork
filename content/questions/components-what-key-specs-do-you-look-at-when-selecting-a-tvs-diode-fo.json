@@ -1,0 +1,29 @@
+{
+  "slug": "components-what-key-specs-do-you-look-at-when-selecting-a-tvs-diode-fo",
+  "category": "Components",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 13,
+  "source_fingerprint": "3f2de831e7c485ea",
+  "source": {
+    "batch_id": "ee-flashcards-master-simplified-20260709",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+    "row_number": 13
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-a-tvs-diode-fo-image_1.svg"
+  },
+  "question_text": "<p>What key specs do you look at when selecting a TVS diode for ESD protection?</p>",
+  "answer_text": "<p>1. Reverse Standoff Voltage (V_rwm): Max normal working voltage (stays invisible).<br/>2. Breakdown Voltage (V_br): Where it starts conducting.<br/>3. Clamping Voltage (V_c): The actual max voltage allowed through during a surge.<br/>4. Parasitic Capacitance (C_j): Keep &lt;1pF for high-speed lines like USB.</p>",
+  "explanation_text": "<p>TVS diodes stay &quot;invisible&quot; during normal use. When a high-voltage pulse hits, they break down and clamp the voltage, routing the harmful current safely to ground.</p>\n<img src=\"{{image_1}}\" alt=\"I-V curve of a TVS diode marking Reverse Standoff Voltage, Breakdown Voltage knee, and the Clamping Voltage region.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "bonus_question_text": "<p>Where should you place a TVS diode on a PCB?</p>",
+  "bonus_answer_text": "<p>Directly next to the physical external connector to catch surges before they travel into the board.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:3f2de831e7c485ea"
+  ],
+  "related_question_ids": []
+}

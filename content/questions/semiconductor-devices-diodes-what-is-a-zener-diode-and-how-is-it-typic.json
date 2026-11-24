@@ -1,0 +1,27 @@
+{
+  "slug": "semiconductor-devices-diodes-what-is-a-zener-diode-and-how-is-it-typic",
+  "category": "Semiconductor Devices, Diodes",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 93,
+  "source_fingerprint": "132523a3a3896ece",
+  "source": {
+    "batch_id": "ee-flashcards-semiconductors-v2-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+    "row_number": 7
+  },
+  "images": {},
+  "question_text": "<p>What is a Zener diode, and how is it typically used in a circuit?</p>",
+  "answer_text": "<p>A Zener diode is a heavily doped diode specifically engineered to safely operate in its reverse-breakdown region.</p>",
+  "explanation_text": "<p>Unlike standard diodes that are destroyed by reverse breakdown, a Zener is designed to reliably conduct current backwards once a specific &quot;Zener voltage&quot; (V_z) is reached. If you place a 5V Zener diode in reverse parallel with a load, it will clamp the voltage across that load to a maximum of 5V, harmlessly shunting any excess current to ground.</p>",
+  "bonus_question_text": "<p>Does a Zener diode work like a normal diode in forward bias?</p>",
+  "bonus_answer_text": "<p>Yes. If forward-biased, a Zener behaves exactly like a standard PN junction diode, dropping roughly 0.7V.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:132523a3a3896ece"
+  ],
+  "related_question_ids": []
+}

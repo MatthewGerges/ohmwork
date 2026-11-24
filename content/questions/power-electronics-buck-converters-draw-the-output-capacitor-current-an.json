@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-buck-converters-draw-the-output-capacitor-current-an",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 57,
+  "source_fingerprint": "f9f49bff9cf38aac",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 17
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-output-capacitor-current-an-image_1.svg"
+  },
+  "question_text": "<p>Draw the output capacitor current and voltage waveforms alongside the inductor current. Why do they look like this?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Stacked graphs. Top: Inductor Current (triangle wave above 0A). Middle: Capacitor Current (the exact same triangle wave, but shifted down so it is centered at exactly 0A). Bottom: Capacitor Voltage (a flat DC line with a tiny parabolic ripple).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>The capacitor current is an AC triangle wave centered perfectly at 0A. The capacitor voltage is a smooth DC line with tiny parabolic ripples.</p>",
+  "explanation_text": "<p>The inductor provides a DC current with an AC triangle ripple riding on top of it. The load consumes the flat DC portion. By KCL (I_cap = I_L - I_load), the capacitor is forced to absorb only the AC triangle ripple, meaning its current matches the inductor's AC ripple but centered around 0A. Because V = (1/C) * integral(I dt), integrating this triangle current creates a sequence of tiny parabolas (the voltage ripple).</p>",
+  "bonus_question_text": "<p>When does the output voltage reach its absolute maximum peak during the switching cycle?</p>",
+  "bonus_answer_text": "<p>Right in the middle of the OFF state, exactly when the capacitor current crosses 0A going downward (finishing its charging phase).</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:f9f49bff9cf38aac"
+  ],
+  "related_question_ids": []
+}

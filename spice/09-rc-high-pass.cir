@@ -1,0 +1,6 @@
+* Derived from 09-rc-high-pass.asc
+V1 VIN 0 AC 1
+C1 VOUT VIN 100n
+R1 VOUT 0 1k
+.ac dec 200 10 1Meg
+.end

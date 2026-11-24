@@ -1,0 +1,27 @@
+{
+  "slug": "power-electronics-ldos-what-does-ldo-stand-for-and-conceptually-how-do",
+  "category": "Power Electronics, LDOs",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 82,
+  "source_fingerprint": "6857f22771d6f70f",
+  "source": {
+    "batch_id": "ee-flashcards-ldos-v4-20260911",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+    "row_number": 2
+  },
+  "images": {},
+  "question_text": "<p>What does LDO stand for, and conceptually, how does it step down DC voltage?</p>",
+  "answer_text": "<p>LDO stands for Low-Dropout Regulator. It steps down voltage by operating a pass transistor in its active/saturation region to burn off excess voltage as heat.</p>",
+  "explanation_text": "<p>During normal regulation, the LDO's internal MOSFET operates in the saturation region (acting as a voltage-controlled current source). The feedback loop constantly adjusts the gate voltage to supply exactly the load current needed while absorbing the excess voltage (V_in - V_out). Note: The term &quot;linear regulator&quot; is a historical carryover from BJTs, where the current-source region is known as the &quot;linear/active&quot; region!</p>",
+  "bonus_question_text": "<p>What happens to the MOSFET's operating region when the LDO enters &quot;dropout&quot;?</p>",
+  "bonus_answer_text": "<p>It transitions out of saturation and into the triode (ohmic) region. The control loop drives the gate fully ON to minimize resistance (R_DS(on)), acting almost like a closed switch to pass whatever voltage is left.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:6857f22771d6f70f"
+  ],
+  "related_question_ids": []
+}

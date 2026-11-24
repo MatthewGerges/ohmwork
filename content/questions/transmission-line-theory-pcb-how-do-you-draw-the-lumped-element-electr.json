@@ -1,0 +1,29 @@
+{
+  "slug": "transmission-line-theory-pcb-how-do-you-draw-the-lumped-element-electr",
+  "category": "Transmission Line Theory, PCB",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 35,
+  "source_fingerprint": "8eea4ac5155c3c7c",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 10
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-pcb-how-do-you-draw-the-lumped-element-electr-image_1.svg"
+  },
+  "question_text": "<p>How do you draw the lumped-element electrical model for a lossless transmission line?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A schematic labeled 'Transmission Line' showing a cascaded LC ladder network. It consists of multiple series inductors (L1, L2, L3...) and multiple shunt capacitors (C1, C2, C3...) connecting the nodes between the inductors to ground.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>It is drawn as a ladder of series inductors (L) and shunt capacitors (C) connected to ground.</p>",
+  "explanation_text": "<p>Even a straight piece of wire has parasitic effects. The wire itself acts as a small inductor (L), and its physical separation from the ground plane underneath it acts as a small capacitor (C).</p>",
+  "bonus_question_text": null,
+  "bonus_answer_text": null,
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:8eea4ac5155c3c7c"
+  ],
+  "related_question_ids": []
+}

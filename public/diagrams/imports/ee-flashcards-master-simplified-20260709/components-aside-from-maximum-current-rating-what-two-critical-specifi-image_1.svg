@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="340" viewBox="0 0 700 340" role="img" aria-label="LDO thermal path">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"/>
+  <text x="350" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">LDO thermal path</text>
+  
+    <line x1="70" y1="170" x2="238" y2="170" stroke="#4ade80" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    <rect x="238" y="112" width="180" height="116" rx="8" fill="#0a1a20" stroke="#2dd4bf" stroke-width="2"/>
+    <text x="328" y="164" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle">LDO</text>
+    <text x="328" y="196" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="middle">linear regulator</text>
+    <line x1="418" y1="170" x2="594" y2="170" stroke="#4ade80" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    <text x="96" y="152" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500" text-anchor="middle">Vin</text>
+    <text x="570" y="152" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500" text-anchor="middle">Vout</text>
+    <path d="M270 100 C254 82 286 68 270 52" fill="none" stroke="#f87171" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M298 100 C282 82 314 68 298 52" fill="none" stroke="#f87171" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M326 100 C310 82 342 68 326 52" fill="none" stroke="#f87171" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M354 100 C338 82 370 68 354 52" fill="none" stroke="#f87171" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="418" y="96" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start">heat to ambient</text>
+    <text x="330" y="262" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">P_D = (V_in - V_out) * I_load</text>
+    <text x="330" y="296" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle">Check dropout voltage and theta_JA</text>
+  
+</svg>

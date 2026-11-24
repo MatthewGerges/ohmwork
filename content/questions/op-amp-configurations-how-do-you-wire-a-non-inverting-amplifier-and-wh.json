@@ -1,0 +1,29 @@
+{
+  "slug": "op-amp-configurations-how-do-you-wire-a-non-inverting-amplifier-and-wh",
+  "category": "Op-Amp Configurations",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 26,
+  "source_fingerprint": "be683f83448ab71f",
+  "source": {
+    "batch_id": "ee-flashcards-opamp-configs-visual-v2-20260709T2351",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_opamp_configs_visual_v2.xlsx",
+    "row_number": 4
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-opamp-configs-visual-v2-20260709T2351/op-amp-configurations-how-do-you-wire-a-non-inverting-amplifier-and-wh-image_1.svg"
+  },
+  "question_text": "<p>How do you wire a Non-Inverting Amplifier, and what is the gain equation?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Schematic of a Non-Inverting Amplifier: Input signal (Vin) to the (+) terminal. Resistor R_in connects from ground to the (-) terminal. Feedback resistor R_f connects from the (-) terminal to the output.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>Gain = 1 + (R_f / R_in)</p>",
+  "explanation_text": "<p>This amplifies the signal while keeping it in the same phase (right-side up). Notice the gain will always be 1 or greater.</p>",
+  "bonus_question_text": "<p>How do you derive the gain for a Non-Inverting Amplifier using nodal analysis?</p>",
+  "bonus_answer_text": "<p>1. The op-amp forces V- = V+, so V- = Vin.<br/>2. Apply KCL at V-. The sum of currents leaving the node must equal zero.<br/>3. (Vin - 0) / R_in + (Vin - Vout) / R_f = 0<br/>4. Move Vout to the other side: Vin / R_in + Vin / R_f = Vout / R_f<br/>5. Multiply by R_f and factor out Vin: Vout / Vin = 1 + (R_f / R_in).</p>",
+  "main_video_youtube_id": "0",
+  "resource_videos": [],
+  "ltspice_file_needed": "0",
+  "tags": [
+    "source:excel",
+    "import:be683f83448ab71f"
+  ],
+  "related_question_ids": []
+}

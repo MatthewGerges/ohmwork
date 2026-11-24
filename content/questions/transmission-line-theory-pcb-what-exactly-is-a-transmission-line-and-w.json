@@ -1,0 +1,27 @@
+{
+  "slug": "transmission-line-theory-pcb-what-exactly-is-a-transmission-line-and-w",
+  "category": "Transmission Line Theory, PCB",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 42,
+  "source_fingerprint": "96f83108bc88d028",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 7
+  },
+  "images": {},
+  "question_text": "<p>What exactly is a transmission line, and why is it important in high-speed design?</p>",
+  "answer_text": "<p>A transmission line is any specialized cable or PCB trace designed to carry alternating current of radio frequency, where the wave nature of the signal must be considered.</p>",
+  "explanation_text": "<p>At low speeds, a wire acts like a simple short circuit. But at high speeds, wires start acting like complex networks of inductors and capacitors. If you don't treat them as transmission lines, the high-frequency waves will bounce off the ends, creating reflections that severely degrade or destroy the signal.</p>",
+  "bonus_question_text": "<p>What determines the 'characteristic impedance' (Z_0) of a transmission line?</p>",
+  "bonus_answer_text": "<p>The physical geometry of the trace (width, thickness) and the properties of the dielectric material separating it from the ground plane.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:96f83108bc88d028"
+  ],
+  "related_question_ids": []
+}

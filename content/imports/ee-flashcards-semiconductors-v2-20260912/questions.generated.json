@@ -1,0 +1,373 @@
+{
+  "batch_id": "ee-flashcards-semiconductors-v2-20260912",
+  "generated_at": "2026-09-13T00:47:32.580Z",
+  "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+  "rows": [
+    {
+      "row_number": 2,
+      "slug": "semiconductor-devices-mosfets-on-a-very-simple-level-what-is-a-mosfet",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "377896d70ae3baa3",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 2
+      },
+      "question": {
+        "category": "Semiconductor Devices, MOSFETs",
+        "categories": [
+          "Semiconductor Devices",
+          "MOSFETs"
+        ],
+        "difficulty": "easy",
+        "question_text": "On a very simple level, what is a MOSFET and how does it work?",
+        "answer_text": "It is a voltage-controlled switch. When you apply a voltage to the gate, it allows current to pass through.",
+        "explanation_text": "Think of a MOSFET like a garden hose equipped with a spray gun handle. The water pressure waiting in the hose is your voltage, the water flowing out is the current, and your hand squeezing the handle is the gate voltage. When you squeeze the handle (apply gate voltage), the valve opens and water (current) flows. When you let go, it stops.",
+        "bonus_question_text": "What does MOSFET stand for?",
+        "bonus_answer_text": "Metal-Oxide-Semiconductor Field-Effect Transistor.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 3,
+      "slug": "semiconductor-devices-mosfets-draw-the-schematic-symbols-for-an-nmos-a",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "62ac34facd4e8bd6",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 3
+      },
+      "question": {
+        "category": "Semiconductor Devices, MOSFETs",
+        "categories": [
+          "Semiconductor Devices",
+          "MOSFETs"
+        ],
+        "difficulty": "easy",
+        "question_text": "Draw the schematic symbols for an NMOS and a PMOS transistor side by side.",
+        "answer_text": "{{image_1}}\n\nThe NMOS typically has the arrow pointing OUT (or no bubble on the gate). The PMOS typically has the arrow pointing IN, or a tiny inversion bubble on the gate.",
+        "explanation_text": "NMOS transistors are traditionally drawn with the body arrow pointing outward, representing the N-channel. PMOS transistors are drawn with the body arrow pointing inward. In digital logic schematics, you will often see them drawn simply as a line with a gate lead, where the PMOS has a small circle (inversion bubble) on its gate to indicate it is active-LOW.",
+        "bonus_question_text": "Why do hardware designers heavily prefer NMOS over PMOS for high-power or high-efficiency applications?",
+        "bonus_answer_text": "The charge carriers in an NMOS are electrons, while in a PMOS they are \"holes.\" Electrons have much higher mobility than holes, meaning an NMOS has a significantly lower R_DS(on) and switches much faster than a PMOS of the exact same physical silicon size.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Side-by-side schematic symbols for an NMOS and a PMOS. Left (NMOS): The source arrow points OUT, with text indicating it connects to Ground and turns ON when Gate = HIGH. Right (PMOS): The source arrow points IN, with a tiny inversion bubble on the gate, with text indicating it connects to Vcc and turns ON when Gate = LOW.",
+          "title": "NMOS and PMOS symbols",
+          "alt": "Side-by-side schematic symbols for an NMOS and a PMOS. Left (NMOS): The source arrow points OUT, with text indicating it connects to Ground and turns ON when Gate = HIGH. Right (PMOS): The source arrow points IN, with a tiny inversion bubble on the gate, with text indicating it connects to Vcc and turns ON when Gate = LOW.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "mosfet_symbols"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-semiconductors-v2-20260912/semiconductor-devices-mosfets-draw-the-schematic-symbols-for-an-nmos-a-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 4,
+      "slug": "semiconductor-devices-mosfets-draw-the-i-v-characteristic-curve-of-an",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "4f2c6789c810490d",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 4
+      },
+      "question": {
+        "category": "Semiconductor Devices, MOSFETs",
+        "categories": [
+          "Semiconductor Devices",
+          "MOSFETs"
+        ],
+        "difficulty": "hard",
+        "question_text": "Draw the I-V characteristic curve of an N-channel MOSFET. Label the axes and the three main regions of operation.",
+        "answer_text": "{{image_1}}\n\nThe three regions are Cutoff (V_GS < V_TH), Triode/Ohmic (V_DS < V_GS - V_TH), and Saturation (V_DS >= V_GS - V_TH).",
+        "explanation_text": "The x-axis is V_DS (Drain-to-Source Voltage) and the y-axis is I_D (Drain Current).\n1. Cutoff: When V_GS is below the threshold, the FET is off (zero current).\n2. Triode/Ohmic: As V_DS increases from zero, the current rises steeply and linearly. Here, the FET acts like a variable resistor controlled by the gate.\n3. Saturation: As V_DS gets high enough, the channel \"pinches off\" and the FET acts as a constant current source, flattening the curve into horizontal lines.",
+        "bonus_question_text": "Which region is an LDO's pass transistor typically operating in, versus a switching buck converter's MOSFET?",
+        "bonus_answer_text": "An LDO operates in the Saturation region (acting as a voltage-controlled current source). A buck converter operates entirely in Cutoff (fully off) and Triode (fully on, for the lowest R_DS(on)).",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A graph with V_DS on the x-axis and I_D on the y-axis. There are multiple curved lines starting from the origin, representing increasing V_GS values. A dashed parabolic curve separates the steep, linear left side of the graph (labeled \"Triode / Ohmic Region\") from the flat, horizontal right side of the graph (labeled \"Saturation Region\"). The bottom axis at 0A is labeled \"Cutoff\".",
+          "title": "MOSFET output characteristics",
+          "alt": "A graph with V_DS on the x-axis and I_D on the y-axis. There are multiple curved lines starting from the origin, representing increasing V_GS values. A dashed parabolic curve separates the steep, linear left side of the graph (labeled \"Triode / Ohmic Region\") from the flat, horizontal right side of the graph (labeled \"Saturation Region\"). The bottom axis at 0A is labeled \"Cutoff\".",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "mosfet_characteristics"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-semiconductors-v2-20260912/semiconductor-devices-mosfets-draw-the-i-v-characteristic-curve-of-an-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 5,
+      "slug": "semiconductor-devices-diodes-draw-the-i-v-characteristic-curve-for-a-s",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "f02a0dc54a1c68f6",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 5
+      },
+      "question": {
+        "category": "Semiconductor Devices, Diodes",
+        "categories": [
+          "Semiconductor Devices",
+          "Diodes"
+        ],
+        "difficulty": "medium",
+        "question_text": "Draw the I-V characteristic curve for a standard PN junction diode. Label the axes and key operating regions.",
+        "answer_text": "{{image_1}}\n\nThe curve remains at roughly 0A until the forward voltage (V_f) is reached, where current spikes exponentially. In reverse bias, it blocks current until the breakdown voltage.",
+        "explanation_text": "The x-axis is Voltage, and the y-axis is Current. In forward bias (positive V), the diode blocks current until it crosses the threshold (~0.7V for silicon), at which point current shoots up exponentially. In reverse bias (negative V), a tiny leakage current flows until it hits the Reverse Breakdown Voltage (V_br), where current violently spikes in the negative direction.",
+        "bonus_question_text": "What happens if a standard diode enters reverse breakdown?",
+        "bonus_answer_text": "If the current isn't artificially limited by the circuit, the massive power dissipation (P = V * I) will cause the diode to overheat and permanently destroy itself.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A graph with Voltage (V) on the x-axis and Current (I) on the y-axis. The line stays flat at 0A for negative voltages, continues flat past the origin, and then sharply curves upward exponentially at a point labeled \"V_f (~0.7V)\" (Forward Bias). On the far left of the negative x-axis, the line drops straight down vertically at a point labeled \"V_br\" (Reverse Breakdown).",
+          "title": "PN diode I-V characteristic",
+          "alt": "A graph with Voltage (V) on the x-axis and Current (I) on the y-axis. The line stays flat at 0A for negative voltages, continues flat past the origin, and then sharply curves upward exponentially at a point labeled \"V_f (~0.7V)\" (Forward Bias). On the far left of the negative x-axis, the line drops straight down vertically at a point labeled \"V_br\" (Reverse Breakdown).",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "pn_diode_iv"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-semiconductors-v2-20260912/semiconductor-devices-diodes-draw-the-i-v-characteristic-curve-for-a-s-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 6,
+      "slug": "semiconductor-devices-diodes-what-is-a-schottky-diode-and-what-are-its",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "31f5b043b92f7012",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 6
+      },
+      "question": {
+        "category": "Semiconductor Devices, Diodes",
+        "categories": [
+          "Semiconductor Devices",
+          "Diodes"
+        ],
+        "difficulty": "medium",
+        "question_text": "What is a Schottky diode, and what are its main advantages and disadvantages compared to a standard PN junction diode?",
+        "answer_text": "A Schottky diode uses a metal-semiconductor junction instead of a P-N junction. It is prized for its low forward voltage drop and fast switching speed.",
+        "explanation_text": "Advantages: It has a much lower forward voltage drop (typically 0.2V - 0.3V compared to 0.7V for standard silicon), which heavily reduces conduction power losses (P = I * V). It also has near-zero reverse recovery time, making it excellent for high-frequency switching.\nDisadvantages: It suffers from significantly higher reverse leakage current and typically has lower maximum reverse voltage ratings.",
+        "bonus_question_text": "Why did the industry replace Schottky diodes with NMOS transistors in modern synchronous buck converters?",
+        "bonus_answer_text": "Even with a low 0.3V drop, a Schottky diode passing 10A wastes 3 Watts of heat. A modern NMOS has ultra-low R_DS(on), wasting significantly less power (P = I^2 * R).",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 7,
+      "slug": "semiconductor-devices-diodes-what-is-a-zener-diode-and-how-is-it-typic",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "132523a3a3896ece",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 7
+      },
+      "question": {
+        "category": "Semiconductor Devices, Diodes",
+        "categories": [
+          "Semiconductor Devices",
+          "Diodes"
+        ],
+        "difficulty": "easy",
+        "question_text": "What is a Zener diode, and how is it typically used in a circuit?",
+        "answer_text": "A Zener diode is a heavily doped diode specifically engineered to safely operate in its reverse-breakdown region.",
+        "explanation_text": "Unlike standard diodes that are destroyed by reverse breakdown, a Zener is designed to reliably conduct current backwards once a specific \"Zener voltage\" (V_z) is reached. If you place a 5V Zener diode in reverse parallel with a load, it will clamp the voltage across that load to a maximum of 5V, harmlessly shunting any excess current to ground.",
+        "bonus_question_text": "Does a Zener diode work like a normal diode in forward bias?",
+        "bonus_answer_text": "Yes. If forward-biased, a Zener behaves exactly like a standard PN junction diode, dropping roughly 0.7V.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 8,
+      "slug": "thinking-protection-circuits-image-1-a-control-signal-coming-from-a-va",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "fe0629bed93f65b0",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 8
+      },
+      "question": {
+        "category": "Thinking, Protection Circuits",
+        "categories": [
+          "Thinking",
+          "Protection Circuits"
+        ],
+        "difficulty": "medium",
+        "question_text": "{{image_1}}\n\nA control signal coming from a varying upstream supply can swing anywhere from 5V to 12V. It connects to the gate of a sensitive MOSFET with an absolute maximum V_GS rating of 8V. What specific component goes in the \"Black Box\" to ensure the gate never exceeds 5.1V?",
+        "answer_text": "{{image_2}}\n\nA 5.1V Zener diode pointing upwards (cathode to the gate signal, anode to ground).",
+        "explanation_text": "The upstream signal goes through a series resistor (R_1) and then connects to the FET gate. We place a 5.1V Zener diode between the gate and ground, reverse-biased. If the signal is 5V, the Zener does nothing. If the signal spikes to 12V, the Zener hits its breakdown voltage and clamps the gate node at exactly 5.1V. The series resistor (R_1) limits the current so the Zener doesn't burn out while absorbing the excess voltage drop (12V - 5.1V = 6.9V across R_1).",
+        "bonus_question_text": "What would happen if we accidentally put the Zener diode in forward-bias (pointing down to ground)?",
+        "bonus_answer_text": "It would act like a normal diode and clamp the gate to ~0.7V, completely preventing the MOSFET from ever turning on!",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A schematic showing a '5V-12V Signal' entering a resistor (R1). After R1, the line splits: one path goes to a MOSFET gate, and the other path goes into a dashed 'Black Box' connected to ground.",
+          "title": "Gate overvoltage protection challenge",
+          "alt": "A schematic showing a '5V-12V Signal' entering a resistor (R1). After R1, the line splits: one path goes to a MOSFET gate, and the other path goes into a dashed 'Black Box' connected to ground.",
+          "placements": {
+            "question_text": true
+          },
+          "render": {
+            "type": "zener_gate_clamp_question"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-semiconductors-v2-20260912/thinking-protection-circuits-image-1-a-control-signal-coming-from-a-va-image_1.svg"
+        },
+        "image_2": {
+          "prompt": "The same schematic, but the Black Box is replaced with a Zener diode (the flat cathode bar faces up toward the gate line, and the triangle anode points down to ground).",
+          "title": "5.1 V Zener gate clamp",
+          "alt": "The same schematic, but the Black Box is replaced with a Zener diode (the flat cathode bar faces up toward the gate line, and the triangle anode points down to ground).",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "zener_gate_clamp_answer"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-semiconductors-v2-20260912/thinking-protection-circuits-image-1-a-control-signal-coming-from-a-va-image_2.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 9,
+      "slug": "thinking-system-architecture-why-can-t-we-use-an-nfet-as-a-high-side-s",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "bc96a17ef1f961a1",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 9
+      },
+      "question": {
+        "category": "Thinking, System Architecture",
+        "categories": [
+          "Thinking",
+          "System Architecture"
+        ],
+        "difficulty": "hard",
+        "question_text": "Why can't we use an NFET as a high-side switch if V_in and the Enable signal are the same voltage? Similarly, why can't we use a PMOS on the low side?",
+        "answer_text": "An NFET needs its gate voltage to be higher than its source to turn on. A PMOS needs its gate voltage to be lower than its source. If placed improperly, V_GS ends up at 0V, preventing them from turning on.",
+        "explanation_text": "To turn on an NFET, V_GS must be positive. If you put an NFET on the high side, as it turns on, the source voltage rises to match V_in. If your gate signal is also V_in, the difference (V_GS) becomes zero, and the FET pinches itself off. \n\nConversely, a PMOS needs a negative V_GS. If you put it on the low side (source connected to ground), you would need to drive the gate below ground (negative voltage) to turn it on, which standard logic circuits cannot do.",
+        "bonus_question_text": "If we absolutely want to use an NMOS on the high side switch, what must be done?",
+        "bonus_answer_text": "You must use a charge pump or bootstrap circuit to artificially boost the gate control voltage significantly higher than V_in.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 10,
+      "slug": "thinking-system-architecture-you-need-to-use-a-3-3v-mcu-gpio-to-enable",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "10228facf78c101e",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 10
+      },
+      "question": {
+        "category": "Thinking, System Architecture",
+        "categories": [
+          "Thinking",
+          "System Architecture"
+        ],
+        "difficulty": "hard",
+        "question_text": "You need to use a 3.3V MCU GPIO to enable a 12V high-side load using a PMOS. You cannot simply connect the GPIO directly to the PMOS gate with a pull-up resistor. Why not, and how do you arrange FETs to solve this?",
+        "answer_text": "{{image_1}}\n\nA 3.3V GPIO cannot tolerate 12V (it will fry). Furthermore, 3.3V is not high enough to turn the PMOS off. You must use an intermediate low-side NMOS to pull down the PMOS gate.",
+        "explanation_text": "To turn off a high-side PMOS on a 12V rail, its gate must be pulled all the way up to 12V (V_GS = 0V). If you connect that gate to a 3.3V GPIO through a pull-up, 12V will flow backward into the MCU and destroy the pin. Even if the pin survived, driving 3.3V to the PMOS gate leaves V_GS at -8.7V, meaning the PMOS never actually turns off! \n\nSolution: Connect the 3.3V GPIO to the gate of a small low-side NMOS. Connect the drain of the NMOS to the PMOS gate. When the GPIO is HIGH, the NMOS turns ON, pulling the PMOS gate to ground (turning the PMOS ON safely).",
+        "bonus_question_text": "In this NMOS/PMOS configuration, what component is strictly required on the PMOS gate to ensure it turns OFF when the MCU signal is LOW?",
+        "bonus_answer_text": "A pull-up resistor connecting the PMOS gate to the 12V source. When the NMOS is OFF, this resistor pulls the PMOS gate up to 12V, bringing V_GS to 0V and ensuring it is completely OFF.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A schematic showing a 3.3V MCU GPIO driving the gate of a low-side NMOS. The NMOS source is Ground. The NMOS drain connects to the gate of a high-side PMOS. The PMOS source connects to 12V, its drain connects to the Load, and a pull-up resistor connects the PMOS gate to 12V.",
+          "title": "3.3 V control of a 12 V PMOS load switch",
+          "alt": "A schematic showing a 3.3V MCU GPIO driving the gate of a low-side NMOS. The NMOS source is Ground. The NMOS drain connects to the gate of a high-side PMOS. The PMOS source connects to 12V, its drain connects to the Load, and a pull-up resistor connects the PMOS gate to 12V.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "pmos_high_side_driver"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-semiconductors-v2-20260912/thinking-system-architecture-you-need-to-use-a-3-3v-mcu-gpio-to-enable-image_1.svg"
+        }
+      },
+      "notes": null
+    }
+  ],
+  "rendered_at": "2026-09-13T01:14:47.724Z"
+}

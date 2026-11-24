@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="420" viewBox="0 0 740 420" role="img" aria-label="B-H magnetic hysteresis curve">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"></path>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"></path>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f87171"></path>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#818cf8"></path>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fb923c"></path>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"></path>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"></rect>
+  <text x="370" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">B-H magnetic hysteresis curve</text>
+  
+    <line x1="88" y1="230" x2="662" y2="230" stroke="#e2e8f0" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"></line>
+    <line x1="370" y1="354" x2="370" y2="82" stroke="#e2e8f0" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"></line>
+    <path d="M108 326 C174 326 226 312 282 270 C326 238 342 185 370 145 C404 98 474 96 632 96 C554 96 480 109 432 146 C395 175 390 216 370 230 C338 251 302 272 270 295 C226 326 168 326 108 326 Z" fill="none" stroke="#2dd4bf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+    <line x1="250" y1="230" x2="250" y2="295" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"></line>
+    <line x1="370" y1="145" x2="432" y2="145" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"></line>
+    <text x="646" y="252" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" text-anchor="middle">H</text>
+    <text x="390" y="92" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" text-anchor="middle">B</text>
+    <text x="606" y="78" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle">+ saturation</text>
+    <text x="134" y="352" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle">- saturation</text>
+    <text x="442" y="140" fill="#818cf8" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" transform="translate(2.2 15.4)">remanence Br</text>
+    <text x="238" y="218" fill="#818cf8" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="middle">-Hc</text>
+    <text x="370" y="390" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Loop area represents hysteresis energy loss per cycle</text>
+  
+</svg>

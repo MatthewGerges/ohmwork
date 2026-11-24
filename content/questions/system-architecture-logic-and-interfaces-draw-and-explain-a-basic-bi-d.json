@@ -1,0 +1,29 @@
+{
+  "slug": "system-architecture-logic-and-interfaces-draw-and-explain-a-basic-bi-d",
+  "category": "System Architecture, Logic & Interfaces",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 104,
+  "source_fingerprint": "2a986e980e23880b",
+  "source": {
+    "batch_id": "ee-flashcards-mixed-topics-v2-20260915",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_mixed_topics_v2.xlsx",
+    "row_number": 6
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-mixed-topics-v2-20260915/system-architecture-logic-and-interfaces-draw-and-explain-a-basic-bi-d-image_1.svg"
+  },
+  "question_text": "<p>Draw and explain a basic bi-directional single-MOSFET level shifter (e.g., translating a 3.3V I2C line to a 5V I2C line). What is its main weakness?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A schematic of a MOSFET level shifter. An N-channel MOSFET separates two buses. The Gate is securely connected to the 3.3V supply rail. The Source connects to 'Bus 1' (with a pull-up resistor to 3.3V). The Drain connects to 'Bus 2' (with a pull-up resistor to 5V).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>It uses an NMOS with the gate tied to the lower voltage supply. Its main weakness is a slow RC rise time on the high side.</p>",
+  "explanation_text": "<p>The 3.3V bus connects to the Source, and the 5V bus connects to the Drain. Both sides have pull-up resistors to their respective supplies.<br/>- When the 3.3V side pulls LOW, V_GS becomes 3.3V, turning the FET ON and pulling the 5V side LOW.<br/>- When the 5V side pulls LOW, the FET's internal body diode conducts, bringing the Source down to ~0.7V. This makes V_GS = 2.6V, turning the FET ON and pulling the 3.3V side fully LOW.<br/>- When idle, the FET is OFF, and the pull-up resistors keep both sides HIGH.</p>",
+  "bonus_question_text": "<p>Why do some high-speed level shifters use active push-pull buffers instead of this simple MOSFET design?</p>",
+  "bonus_answer_text": "<p>The simple MOSFET design relies entirely on passive pull-up resistors to charge the bus capacitance to a HIGH state, resulting in a slow &quot;shark fin&quot; RC rise time. Active push-pull level shifters use transistors to forcefully drive the line HIGH, achieving the vastly faster rise times required for high-speed protocols like SPI.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:2a986e980e23880b"
+  ],
+  "related_question_ids": []
+}

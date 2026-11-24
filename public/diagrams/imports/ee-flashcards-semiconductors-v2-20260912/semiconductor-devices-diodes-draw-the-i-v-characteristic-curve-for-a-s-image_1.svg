@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="430" viewBox="0 0 780 430" role="img" aria-label="PN diode I-V characteristic">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1d4ed8"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0ea5a5"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="390" y="38" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">PN diode I-V characteristic</text>
+
+    <rect x="58" y="72" width="664" height="326" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <line x1="112" y1="228" x2="686" y2="228" stroke="#111827" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <line x1="430" y1="360" x2="430" y2="96" stroke="#111827" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <text x="684" y="254" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="end">Voltage (V)</text>
+    <text x="448" y="108" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start">Current (I)</text>
+    <path d="M430 228 C500 228 540 226 564 214 C586 202 600 166 614 112" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M430 230 C334 230 254 232 190 234 C166 238 154 276 146 350" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="570" y1="206" x2="570" y2="246" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/>
+    <line x1="150" y1="214" x2="150" y2="362" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/>
+    <text x="570" y="268" fill="#dc2626" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" text-anchor="middle">VF ~ +0.7 V</text>
+    <text x="150" y="204" fill="#2563eb" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" text-anchor="middle">-VBR</text>
+    <text x="526" y="126" fill="#dc2626" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" text-anchor="middle">Forward conduction</text>
+    <text x="188" y="382" fill="#2563eb" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" text-anchor="middle">Reverse breakdown</text>
+    <text x="286" y="218" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="middle">small reverse leakage</text>
+
+</svg>

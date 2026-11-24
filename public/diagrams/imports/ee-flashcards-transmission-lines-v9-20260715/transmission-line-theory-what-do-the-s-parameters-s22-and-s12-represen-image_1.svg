@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="430" viewBox="0 0 820 430" role="img" aria-label="Reverse S-parameters">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"></path>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"></path>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"></path>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1d4ed8"></path>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0ea5a5"></path>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"></path>
+    </marker>
+    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"></path>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"></rect>
+  <text x="410" y="38" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">Reverse S-parameters</text>
+  
+    <rect x="144" y="96" width="532" height="236" rx="0" fill="#4599c8" stroke="#4599c8" stroke-width="2" transform="translate(0 -0.2)"></rect>
+    <line x1="66" y1="142" x2="144" y2="142" stroke="#4599c8" stroke-width="5" stroke-linecap="round"></line>
+    <line x1="66" y1="282" x2="144" y2="282" stroke="#4599c8" stroke-width="5" stroke-linecap="round"></line>
+    <line x1="676" y1="142" x2="754" y2="142" stroke="#4599c8" stroke-width="5" stroke-linecap="round"></line>
+    <line x1="676" y1="282" x2="754" y2="282" stroke="#4599c8" stroke-width="5" stroke-linecap="round"></line>
+    <circle cx="66" cy="142" r="10" fill="#4599c8" stroke="#4599c8" stroke-width="2"></circle>
+    <circle cx="66" cy="282" r="10" fill="#4599c8" stroke="#4599c8" stroke-width="2"></circle>
+    <circle cx="754" cy="142" r="10" fill="#4599c8" stroke="#4599c8" stroke-width="2"></circle>
+    <circle cx="754" cy="282" r="10" fill="#4599c8" stroke="#4599c8" stroke-width="2"></circle>
+    <path d="M14 110 L108 110" fill="none" stroke="#4b5563" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-gray)"></path>
+    <path d="M108 314 L14 314" fill="none" stroke="#4b5563" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-gray)"></path>
+    <path d="M708 110 L802 110" fill="none" stroke="#4b5563" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-gray)"></path>
+    <path d="M802 314 L708 314" fill="none" stroke="#4b5563" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-gray)"></path>
+    <text x="84" y="94" fill="#4b5563" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle">a1</text>
+    <text x="84" y="354" fill="#4b5563" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle">b1</text>
+    <text x="724" y="94" fill="#4b5563" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle">b2</text>
+    <text x="724" y="354" fill="#4b5563" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle">a2</text>
+    <path d="M356 142 L560 142" fill="none" stroke="#0ea5a5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-teal)" transform="translate(-49.7 0)"></path>
+    <text x="460" y="124" fill="#0ea5a5" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800" text-anchor="middle" transform="translate(-65.4 0.1)">S21</text>
+    <path d="M560 282 L356 282" fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-red)" transform="translate(-45.4 0.6)"></path>
+    <text x="460" y="318" fill="#ef4444" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800" text-anchor="middle" transform="translate(-45.5 0.8)">S12</text>
+    <path d="M170 150 C208 176 208 248 170 274" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"></path>
+    <text x="218" y="216" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" text-anchor="middle" transform="translate(11.2 0.2)">S11</text>
+    <path d="M646 150 C608 176 608 248 646 274" fill="none" stroke="#0ea5a5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-teal)"></path>
+    <text x="596" y="216" fill="#0ea5a5" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" text-anchor="middle" transform="translate(-10.1 1.2)">S22</text>
+    <text x="410" y="188" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="500" text-anchor="middle" transform="translate(-65.1 38.1)">[</text>
+    <text x="560" y="188" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="500" text-anchor="middle" transform="translate(-61.7 41.2)">]</text>
+    <text x="458" y="188" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle" transform="translate(-37.6 10.7)">S11   S12</text>
+    <text x="458" y="246" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle" transform="translate(-28.6 -9.2)">S21   S22</text>
+    <text x="410" y="386" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" text-anchor="middle">Reverse view: drive Port 2; S22 reflects, S12 transmits backward.</text>
+  
+</svg>

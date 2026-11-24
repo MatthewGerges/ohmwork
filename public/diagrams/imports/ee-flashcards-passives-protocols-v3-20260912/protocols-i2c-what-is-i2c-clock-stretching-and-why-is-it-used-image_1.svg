@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440" role="img" aria-label="I2C clock stretching">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f87171"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#818cf8"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fb923c"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"/>
+  <text x="450" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">I2C clock stretching</text>
+
+    <rect x="54" y="78" width="792" height="326" rx="6" fill="#0b1528" stroke="#475569" stroke-width="2"/>
+    <text x="82" y="136" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start">Master intent</text>
+    <path d="M200 124 L250 124 L250 174 L300 174 L300 124 L350 124 L350 174 L400 174 L400 124 L450 124 L450 174 L500 174 L500 124 L550 124 L550 174 L600 174 L600 124 L650 124" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+    <text x="82" y="236" fill="#2dd4bf" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" text-anchor="start">Actual SCL</text>
+    <path d="M200 224 L250 224 L250 274 L300 274 L300 224 L350 224 L350 274 L600 274 L600 224 L650 224 L650 274 L700 274" fill="none" stroke="#2dd4bf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="350" y="252" width="250" height="44" rx="4" fill="#3a2510" stroke="#fb923c" stroke-width="2"/>
+    <text x="475" y="280" fill="#fb923c" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" text-anchor="middle">SLAVE HOLDS SCL LOW</text>
+    <line x1="350" y1="104" x2="350" y2="328" stroke="#fb923c" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 5"/>
+    <line x1="600" y1="104" x2="600" y2="328" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 5"/>
+    <text x="350" y="342" fill="#fb923c" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="middle">master releases</text>
+    <text x="600" y="342" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="middle">slave releases</text>
+    <text x="475" y="378" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle">The master waits; data transfer resumes only after SCL can rise.</text>
+
+</svg>

@@ -1,0 +1,29 @@
+{
+  "slug": "components-what-key-specs-do-you-look-at-when-selecting-an-op-amp-and",
+  "category": "Components",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 16,
+  "source_fingerprint": "48e8aca97f066c65",
+  "source": {
+    "batch_id": "ee-flashcards-master-simplified-20260709",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+    "row_number": 9
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-an-op-amp-and-image_1.svg"
+  },
+  "question_text": "<p>What key specs do you look at when selecting an Op-Amp, and what do they mean?</p>",
+  "answer_text": "<p>1. Supply Voltage: Max operating rails.<br/>2. GBWP (Gain-Bandwidth Product): Frequency where gain hits 1.<br/>3. Slew Rate (SR): Max speed of output change.<br/>4. Input Offset Voltage (Vos): Error voltage at the input.<br/>5. Input Bias Current (Ib): Current leaking into input pins.</p>",
+  "explanation_text": "<p>Balancing speed and precision is key. Precision sensors need low Vos to avoid amplifying errors, while RF signals need high GBWP and Slew Rate.</p>\n<img src=\"{{image_1}}\" alt=\"A matrix mapping Op-Amp categories (Precision, High-Speed) to typical parameter ranges (e.g., Precision: Vos &lt; 50μV).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "bonus_question_text": "<p>Why is Input Bias Current critical for high-impedance sensors?</p>",
+  "bonus_answer_text": "<p>Current flowing through a high-impedance source creates a massive voltage drop right at the input, distorting the signal.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:48e8aca97f066c65"
+  ],
+  "related_question_ids": []
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "current-sensing-amplifier-topologies-draw-a-dedicated-current-sense-am",
+  "category": "Current Sensing, Amplifier Topologies",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 111,
+  "source_fingerprint": "5c9e7f35b7fba373",
+  "source": {
+    "batch_id": "ee-flashcards-current-sensing-v2-20260917",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+    "row_number": 11
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-amplifier-topologies-draw-a-dedicated-current-sense-am-image_1.svg"
+  },
+  "question_text": "<p>Draw a dedicated Current Sense Amplifier (CSA) configured for current sensing. What makes it unique, and what are its pros and cons?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Schematic of a Current Sense Amplifier. Used for High-Side sensing: V_bus -&gt; R_shunt -&gt; System Load -&gt; Ground. The IN- and IN+ pins measure across R_shunt (V_CM = V_bus, and V_CM &gt; V_s). Inside the CSA block, the pins enter a specialized 'Input Bias Stage', which then feeds a difference amplifier with precision integrated resistors.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>Pros: A unique floating input stage allows V_CM to be much greater than V_s with large input impedance. A precision integrated gain network maximizes accuracy and minimizes drift.<br/>Cons: Usually only offered at fixed gains, and greater accuracy is achieved at higher currents.</p>",
+  "explanation_text": "<p>A CSA is custom silicon explicitly designed to solve the weaknesses of standard op-amps and difference amplifiers. It is placed on the high-side (before the load). Its specialized &quot;Input Bias Stage&quot; acts as a floating buffer, meaning it maintains a massive input impedance (unlike a Difference Amp) while simultaneously surviving massive common-mode voltages (unlike an Instrumentation Amp).</p>",
+  "bonus_question_text": "<p>What is the output voltage equation for this CSA configuration?</p>",
+  "bonus_answer_text": "<p>V_O = V_shunt * Gain</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:5c9e7f35b7fba373"
+  ],
+  "related_question_ids": []
+}

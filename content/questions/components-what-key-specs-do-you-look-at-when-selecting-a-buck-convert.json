@@ -1,0 +1,29 @@
+{
+  "slug": "components-what-key-specs-do-you-look-at-when-selecting-a-buck-convert",
+  "category": "Components",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 9,
+  "source_fingerprint": "233d269566ee6b0b",
+  "source": {
+    "batch_id": "ee-flashcards-master-simplified-20260709",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+    "row_number": 14
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-a-buck-convert-image_1.svg"
+  },
+  "question_text": "<p>What key specs do you look at when selecting a buck converter, and what are typical ranges?</p>",
+  "answer_text": "<p>1. Input Voltage Range (V_in).<br/>2. Max Output Current (I_out): e.g., 1A to 6A.<br/>3. Switching Frequency (f_sw): Usually 300kHz to 2.5MHz+.<br/>4. Efficiency: Typically 85% to 95%+ depending on load.<br/>5. Topology: Current mode vs constant on-time (COT).</p>",
+  "explanation_text": "<p>High switching frequencies shrink your LC filter components but increase switching losses. A moderate frequency (~1MHz) is usually the sweet spot for efficiency and size.</p>\n<img src=\"{{image_1}}\" alt=\"Block diagram of an integrated synchronous buck IC showing internal high/low-side MOSFETs and external LC filter nodes.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "bonus_question_text": "<p>What is the 'Power Good' (PG) pin used for?</p>",
+  "bonus_answer_text": "<p>It flags when the output voltage is stable. It's used to sequence the startup of other ICs in the system.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:233d269566ee6b0b"
+  ],
+  "related_question_ids": []
+}

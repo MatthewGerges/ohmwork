@@ -1,0 +1,29 @@
+{
+  "slug": "components-aside-from-maximum-current-rating-what-two-critical-specifi",
+  "category": "Components",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 7,
+  "source_fingerprint": "61a2c188e60267a9",
+  "source": {
+    "batch_id": "ee-flashcards-master-simplified-20260709",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+    "row_number": 7
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-master-simplified-20260709/components-aside-from-maximum-current-rating-what-two-critical-specifi-image_1.svg"
+  },
+  "question_text": "<p>Aside from maximum current rating, what two critical specifications must you check to ensure an LDO regulator doesn't fail?</p>",
+  "answer_text": "<p>Power Dissipation (Thermal Resistance) and Dropout Voltage.</p>",
+  "explanation_text": "<p>Dropout Voltage (V_DO) is the minimum headroom needed between Vin and Vout. Thermal Resistance (θ_JA) is critical because LDOs dissipate excess voltage as heat (P = (Vin - Vout) * I).</p>\n<img src=\"{{image_1}}\" alt=\"Thermal block diagram of an LDO package radiating heat. Shows the equation P_d = (Vin - Vout) * I_load, and thermal resistance (θ_JA) from junction to ambient.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "bonus_question_text": "<p>How can you improve LDO thermals on a PCB?</p>",
+  "bonus_answer_text": "<p>Increase the copper pour area connected to the thermal pad and add thermal vias.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:61a2c188e60267a9"
+  ],
+  "related_question_ids": []
+}

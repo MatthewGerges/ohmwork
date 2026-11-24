@@ -1,0 +1,27 @@
+{
+  "slug": "pcb-design-signal-integrity-in-pcb-design-what-is-crosstalk-and-what-a",
+  "category": "PCB Design, Signal Integrity",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 101,
+  "source_fingerprint": "8e31a0ea25478f3f",
+  "source": {
+    "batch_id": "ee-flashcards-mixed-topics-v2-20260915",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_mixed_topics_v2.xlsx",
+    "row_number": 3
+  },
+  "images": {},
+  "question_text": "<p>In PCB design, what is &quot;crosstalk,&quot; and what are the two physical mechanisms that cause it between adjacent traces?</p>",
+  "answer_text": "<p>Crosstalk is unwanted interference transferred between adjacent traces. It is caused by capacitive coupling and inductive coupling.</p>",
+  "explanation_text": "<p>1. Capacitive Coupling: Two parallel traces act like the plates of a capacitor. A rapid voltage change (dv/dt) on the &quot;aggressor&quot; trace injects a displacement current directly into the &quot;victim&quot; trace.<br/>2. Inductive Coupling: Two parallel traces act like a transformer. A rapid current change (di/dt) on the aggressor creates a magnetic field that induces a voltage in the victim trace.</p>",
+  "bonus_question_text": "<p>What are two common layout techniques to minimize crosstalk?</p>",
+  "bonus_answer_text": "<p>1. Increase the physical spacing between traces (e.g., using the &quot;3W rule&quot; where spacing is 3x the trace width). 2. Route adjacent signal layers perpendicular to each other so they cross at 90-degree angles rather than running parallel.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:8e31a0ea25478f3f"
+  ],
+  "related_question_ids": []
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "current-sensing-amplifier-topologies-draw-a-difference-amplifier-da-co",
+  "category": "Current Sensing, Amplifier Topologies",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 112,
+  "source_fingerprint": "3e70c92d91466764",
+  "source": {
+    "batch_id": "ee-flashcards-current-sensing-v2-20260917",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+    "row_number": 10
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-amplifier-topologies-draw-a-difference-amplifier-da-co-image_1.svg"
+  },
+  "question_text": "<p>Draw a Difference Amplifier (DA) configured for current sensing. What are its pros and cons?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Schematic of a Difference Amplifier. V_bus connects to System Load, then R_shunt, then R_p, then Ground. The IN- and IN+ pins cross over to measure exactly across R_shunt. Inside the DA block, internal series resistors connect to the internal op-amp, acting as a divider. It successfully handles V_CM &gt; V_s.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>Pros: Can be used for high or low-side sensing, and can tolerate very large common-mode voltages due to its input resistor divider.<br/>Cons: The resistor network loads the system, requiring the system impedance to be significantly smaller than the DA's input impedance.</p>",
+  "explanation_text": "<p>The Difference Amplifier utilizes a built-in 4-resistor network. This network acts as a voltage divider, stepping down massive high-side common-mode voltages (like a 48V rail) to a safe level before they hit the internal op-amp pins. It solves PCB parasitic issues by measuring differentially across the shunt. However, those same input divider resistors draw current, which lowers the input impedance and &quot;loads&quot; the circuit being measured.</p>",
+  "bonus_question_text": "<p>What is the output voltage equation for this DA configuration?</p>",
+  "bonus_answer_text": "<p>V_O = V_shunt * Gain</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:3e70c92d91466764"
+  ],
+  "related_question_ids": []
+}

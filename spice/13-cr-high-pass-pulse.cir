@@ -1,0 +1,6 @@
+* Derived from 13-cr-high-pass-pulse.asc
+V1 VIN 0 PULSE(0 5 100u 1u 1u 500u 1m)
+C1 VOUT VIN 100n
+R1 VOUT 0 1k
+.tran 0 2.2m 0 1u
+.end

@@ -1,0 +1,11 @@
+* Derived from 05-non-inverting-amplifier.asc
+XU1 VIN VFB VP VN VOUT level2
+VIN_SOURCE VIN 0 SINE(0 0.15 1k)
+RLOAD VOUT 0 10k
+RF VOUT VFB 100k
+RI VFB 0 10k
+VCC VP 0 12
+VEE VN 0 -12
+.include "/Users/matthewgerges/Library/Application Support/LTspice/lib/sub/UniversalOpAmp2.lib"
+.tran 0 5m 0 1u
+.end

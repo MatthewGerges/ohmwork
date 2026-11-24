@@ -1,0 +1,25 @@
+{
+  "slug": "led-current-limiting-resistor",
+  "category": "Thinking",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 18,
+  "images": {
+    "diag1": "public/diagrams/led1_question.png",
+    "diag2": "public/diagrams/led2_explanation.png"
+  },
+  "question_text": "<p>The circuit below shows a 5 V source driving an LED with a forward voltage of 2 V. The target current is 20 mA.</p>\n<p><strong>What resistor value limits the current to 20 mA?</strong></p>\n<img src=\"{{diag1}}\" alt=\"LED resistor circuit\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "answer_text": "<p><strong>R = 150 Ω</strong></p>\n<details style=\"margin-top:1.25rem;border:1px solid rgba(99,102,241,0.3);border-radius:0.75rem;padding:1rem;background:rgba(99,102,241,0.05);\">\n<summary style=\"cursor:pointer;color:#818cf8;font-size:0.875rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;list-style:none;user-select:none;\">▶ Detailed Explanation</summary>\n<div style=\"margin-top:1rem;color:#cbd5e1;line-height:1.6;\">\n<p>Apply KVL (Kirchhoff's Voltage Law) around the loop — the sum of voltage drops must equal the source:</p>\n<p><strong>Vcc = V_R + Vf</strong></p>\n<p>The resistor drops whatever is left after the LED takes its 2 V:</p>\n<p>V_R = 5V − 2V = <strong>3V</strong></p>\n<p>Ohm's Law gives the resistance:</p>\n<p>R = V_R / I = 3V / 20 mA = <strong>150 Ω</strong></p>\n<img src=\"{{diag2}}\" alt=\"KVL derivation diagram\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>150 Ω is a standard E24 value — no rounding needed.</p>\n</div>\n</details>",
+  "bonus_question_text": "Beyond resistance value, what else should you check when specifying this resistor?",
+  "bonus_answer_text": "<p><strong>Two things: power rating and tolerance.</strong></p>\n\n<h4>Power Rating (Wattage)</h4>\n<p>The resistor must dissipate: P = V_R × I = 3V × 20 mA = <strong>60 mW</strong></p>\n<p>A <strong>1/16 W (≈62.5 mW)</strong> resistor is right at the limit — it will run hot and can burn out. Always leave headroom: use at least <strong>1/8 W (125 mW)</strong>, giving a comfortable 2× margin.</p>\n\n<h4>Tolerance</h4>\n<p>A 5% tolerance 150 Ω resistor could be anywhere from 142.5 Ω to 157.5 Ω:</p>\n<ul>\n  <li><strong>−5% → 142.5 Ω:</strong> I = 3V / 142.5 = <strong>21.1 mA</strong> — slightly over, fine for most LEDs</li>\n  <li><strong>+5% → 157.5 Ω:</strong> I = 3V / 157.5 = <strong>19.0 mA</strong> — a hair dimmer, almost unnoticeable</li>\n</ul>\n<p>Standard 5% resistors are fine in practice. Tolerance only matters if the LED's absolute maximum current rating is extremely tight — which is rare.</p>",
+  "tags": [
+    "resistor",
+    "LED",
+    "KVL",
+    "Ohm's law",
+    "power-rating",
+    "tolerance"
+  ],
+  "resource_videos": [],
+  "related_question_ids": []
+}

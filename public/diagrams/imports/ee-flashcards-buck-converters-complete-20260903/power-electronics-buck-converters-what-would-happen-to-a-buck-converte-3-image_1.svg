@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="375" viewBox="0 0 760 375" role="img" aria-label="Buck converter without an output capacitor">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"></path>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"></path>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f87171"></path>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#818cf8"></path>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fb923c"></path>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"></path>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"></rect>
+  <text x="380" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Buck converter without an output capacitor</text>
+
+
+    <rect x="54" y="86" width="306" height="226" rx="6" fill="#08111f" stroke="#2dd4bf" stroke-width="2"></rect>
+    <text x="207" y="116" fill="#2dd4bf" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="middle">With COUT</text>
+    <line x1="88" y1="140" x2="88" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="119.75" y1="140" x2="119.75" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="151.5" y1="140" x2="151.5" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="183.25" y1="140" x2="183.25" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="215" y1="140" x2="215" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="246.75" y1="140" x2="246.75" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="278.5" y1="140" x2="278.5" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="310.25" y1="140" x2="310.25" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="342" y1="140" x2="342" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="88" y1="140" x2="342" y2="140" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="88" y1="175.5" x2="342" y2="175.5" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="88" y1="211" x2="342" y2="211" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="88" y1="246.5" x2="342" y2="246.5" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="88" y1="282" x2="342" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+    <line x1="88" y1="282" x2="342" y2="282" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"></line>
+    <line x1="88" y1="282" x2="88" y2="138" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"></line>
+    <text x="100" y="158" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="start">VOUT</text>
+    <text x="338" y="274" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="end">time</text>
+    <path d="M92 210 Q132 202 172 210 Q212 218 252 210 Q292 202 332 210" fill="none" stroke="#2dd4bf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+
+
+    <rect x="400" y="86" width="306" height="226" rx="6" fill="#08111f" stroke="#f87171" stroke-width="2"></rect>
+    <text x="553" y="116" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="middle">COUT removed</text>
+    <line x1="434" y1="140" x2="434" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="465.75" y1="140" x2="465.75" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="497.5" y1="140" x2="497.5" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="529.25" y1="140" x2="529.25" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="561" y1="140" x2="561" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="592.75" y1="140" x2="592.75" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="624.5" y1="140" x2="624.5" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="656.25" y1="140" x2="656.25" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="688" y1="140" x2="688" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="434" y1="140" x2="688" y2="140" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="434" y1="175.5" x2="688" y2="175.5" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="434" y1="211" x2="688" y2="211" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="434" y1="246.5" x2="688" y2="246.5" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="434" y1="282" x2="688" y2="282" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+    <line x1="434" y1="282" x2="688" y2="282" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"></line>
+    <line x1="434" y1="282" x2="434" y2="138" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"></line>
+    <text x="446" y="158" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" text-anchor="start">VOUT</text>
+    <text x="684" y="274" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="end">time</text>
+    <path d="M428 258 L472 152 L518 258 L564 152 L610 258 L656 152" fill="none" stroke="#f87171" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(10.5 18.9)"></path>
+
+    <text x="207" y="338" fill="#2dd4bf" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">small ripple around DC</text>
+    <text x="553" y="338" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">large triangular switching ripple</text>
+    <line x1="368" y1="112" x2="368" y2="300" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 6"></line>
+
+</svg>

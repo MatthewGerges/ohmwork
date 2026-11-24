@@ -1,0 +1,27 @@
+{
+  "slug": "transmission-line-theory-pcb-what-is-the-most-common-technique-used-to",
+  "category": "Transmission Line Theory, PCB",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 44,
+  "source_fingerprint": "70150d076e054c2c",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 9
+  },
+  "images": {},
+  "question_text": "<p>What is the most common technique used to mitigate unwanted transmission line reflections on a PCB, and how does it work?</p>",
+  "answer_text": "<p>Impedance Matching (or Termination). By matching the impedance of the source or load to the trace's characteristic impedance (Z_0), the reflection coefficient (Γ) becomes 0.</p>",
+  "explanation_text": "<p>Reflections only happen when there is an impedance mismatch. If a 50Ω trace ends at a 50Ω termination resistor, the wave &quot;sees&quot; no change in the environment, so it is completely absorbed into the resistor as heat rather than bouncing back.</p>",
+  "bonus_question_text": "<p>What is the difference between Series (Source) Termination and Parallel (End) Termination?</p>",
+  "bonus_answer_text": "<p>Series termination places a resistor at the driver to absorb returning reflections. Parallel termination places a resistor at the receiver tying the line to ground (or a reference) to absorb the initial wave and prevent reflections from ever happening.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:70150d076e054c2c"
+  ],
+  "related_question_ids": []
+}

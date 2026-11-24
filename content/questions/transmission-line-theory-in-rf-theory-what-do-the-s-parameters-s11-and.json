@@ -1,0 +1,29 @@
+{
+  "slug": "transmission-line-theory-in-rf-theory-what-do-the-s-parameters-s11-and",
+  "category": "Transmission Line Theory",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 33,
+  "source_fingerprint": "010206009834fc60",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 5
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-in-rf-theory-what-do-the-s-parameters-s11-and-image_1.svg"
+  },
+  "question_text": "<p>In RF theory, what do the S-parameters S11 and S21 represent, and how are they calculated?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A two-port network block diagram. Port 1 is on the left, Port 2 on the right. An arrow enters Port 1. S11 is shown as an arrow reflecting back out of Port 1. S21 is shown as an arrow passing straight through the block from Port 1 to Port 2.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>S11 is Return Loss. Equation: S11 = V_reflected / V_incident (at Port 1).<br/>S21 is Insertion Loss. Equation: S21 = V_transmitted_to_Port_2 / V_incident_at_Port_1.</p>",
+  "explanation_text": "<p>Think of Port 1 as the input and Port 2 as the output. S11 measures the echo returning back to the input (you want this to be highly negative in dB to show minimal reflection). S21 measures what successfully travels forward through the line (you want this near 0 dB, meaning no signal was lost).</p>",
+  "bonus_question_text": "<p>How is Return Loss (RL) defined mathematically in decibels (dB)?</p>",
+  "bonus_answer_text": "<p>RL (dB) = -20 * log10(|Γ|)  (where Γ is the reflection coefficient equivalent to S11).</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:010206009834fc60"
+  ],
+  "related_question_ids": []
+}

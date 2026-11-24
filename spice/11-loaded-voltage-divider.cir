@@ -1,0 +1,7 @@
+* Derived from 11-loaded-voltage-divider.asc
+V1 VIN 0 5
+R1 VOUT VIN 10k
+R2 VOUT 0 10k
+RLOAD VOUT 0 100k
+.tran 0 1m 0 1u
+.end

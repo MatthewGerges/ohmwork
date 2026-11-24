@@ -1,0 +1,29 @@
+{
+  "slug": "protocols-system-architecture-why-does-i2c-require-pull-up-resistors-w",
+  "category": "Protocols, System Architecture",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 90,
+  "source_fingerprint": "427971f800239ba3",
+  "source": {
+    "batch_id": "ee-flashcards-passives-protocols-v3-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+    "row_number": 9
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/protocols-system-architecture-why-does-i2c-require-pull-up-resistors-w-image_1.svg"
+  },
+  "question_text": "<p>Why does I2C require pull-up resistors while SPI does not? Explain the difference in their output drivers.</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Side-by-side schematics. Left (Open-Drain): A single N-channel MOSFET connected to ground, with an external pull-up resistor to Vcc. Right (Push-Pull): A complementary pair of MOSFETs (PMOS on top connected to Vcc, NMOS on bottom connected to ground) actively driving the output line.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>I2C uses &quot;open-drain&quot; output drivers, while SPI uses &quot;push-pull&quot; output drivers.</p>",
+  "explanation_text": "<p>In I2C, devices can only actively pull the bus LOW (to ground). To send a HIGH (a &quot;1&quot;), they just let go, and the external pull-up resistors pull the voltage up. This allows multiple devices to share the exact same wire without causing a short circuit if one sends a 0 and the other sends a 1. SPI uses push-pull drivers, meaning devices actively drive the line HIGH (to Vcc) or LOW. This makes SPI much faster, but requires dedicated CS lines to ensure only one slave drives the MISO line at a time.</p>",
+  "bonus_question_text": "<p>Can a master device use a push-pull driver for an I2C bus?</p>",
+  "bonus_answer_text": "<p>Yes, but strictly for the SCL (clock) line, and only if the system has a single master and NO slave devices that use clock stretching. Driving the clock with a push-pull output is actually a strategy to drastically increase I2C speeds by eliminating the slow RC rise time.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:427971f800239ba3"
+  ],
+  "related_question_ids": []
+}

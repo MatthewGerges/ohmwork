@@ -1,0 +1,31 @@
+{
+  "slug": "op-amps-comparators-and-triggers-draw-an-inverting-schmitt-trigger-cir",
+  "category": "Op-Amps, Comparators & Triggers",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 110,
+  "source_fingerprint": "fead3ff458b1cca4",
+  "source": {
+    "batch_id": "ee-flashcards-opamps-filters-v2-20260916",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_opamps_filters_v2.xlsx",
+    "row_number": 2
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/op-amps-comparators-and-triggers-draw-an-inverting-schmitt-trigger-cir-image_1.svg",
+    "image_2": "public/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/op-amps-comparators-and-triggers-draw-an-inverting-schmitt-trigger-cir-image_2.svg",
+    "image_3": "public/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/op-amps-comparators-and-triggers-draw-an-inverting-schmitt-trigger-cir-image_3.svg"
+  },
+  "question_text": "<p>Draw an Inverting Schmitt Trigger circuit. Explain why it is needed to solve noise issues, and how its threshold voltages are calculated.</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Schematic of an inverting Schmitt trigger. V_in connects to the inverting (-) terminal. V_out connects to a resistor divider (R_1 and R_f) that feeds back into the non-inverting (+) terminal.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<img src=\"{{image_2}}\" alt=\"A transfer curve graph. X-axis is V_in, Y-axis is V_out. It shows a rectangular hysteresis loop with arrows indicating direction. The right vertical drop happens at V_TH, and the left vertical rise happens at V_TL.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<img src=\"{{image_3}}\" alt=\"A two-part graph showing the effect of noise. Top: A noisy sine wave crossing a single 4V threshold multiple times, resulting in a glitchy, rapid ON/OFF square wave below it. Bottom: The same noisy sine wave, but with two dashed threshold lines at 3V and 5V. The resulting square wave below it toggles cleanly only once when the wave completely crosses 5V.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>It uses an op-amp with *positive feedback* to create two separate thresholds (V_TH and V_TL). This &quot;hysteresis&quot; prevents a noisy input signal from causing rapid, glitchy on/off toggling.</p>",
+  "explanation_text": "<p>Think of hysteresis as a &quot;dead zone&quot; that ignores noise. Let's say we set the upper threshold to 5V and the lower threshold to 3V. Because this is an *inverting* Schmitt trigger, the output starts HIGH when the input is 0V.</p>\n<p>- As the input rises to 4V, the output stays HIGH.<br/>- It crosses 5V! The output snaps LOW.<br/>- Now the input drops to 4V (maybe due to noise). Does it snap back HIGH? No! It is in the dead zone. It completely ignores this change.<br/>- It won't toggle HIGH again until the input drops all the way below 3V.</p>\n<p>This prevents a noisy signal bouncing around 4V from rapidly flipping the output ON and OFF.</p>\n<p>The Math: Assuming a resistor R_1 goes to ground and R_f is the feedback resistor, the voltage at the (+) terminal is a voltage divider from the output: V_+ = V_out * [R_1 / (R_1 + R_f)]. When output is HIGH, V_TH is set. When output is LOW, V_TL is set.</p>",
+  "bonus_question_text": "<p>Draw the V_in vs V_out transfer curve for an Inverting Schmitt Trigger.</p>",
+  "bonus_answer_text": "<p>It looks like a rectangular loop. V_out is HIGH when V_in is low. As V_in increases past V_TH, V_out snaps LOW. It stays LOW as V_in decreases until it passes V_TL, snapping HIGH again.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:fead3ff458b1cca4"
+  ],
+  "related_question_ids": []
+}

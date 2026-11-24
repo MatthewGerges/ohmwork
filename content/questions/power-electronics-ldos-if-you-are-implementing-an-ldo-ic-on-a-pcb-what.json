@@ -1,0 +1,27 @@
+{
+  "slug": "power-electronics-ldos-if-you-are-implementing-an-ldo-ic-on-a-pcb-what",
+  "category": "Power Electronics, LDOs",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 78,
+  "source_fingerprint": "148284435ee337e3",
+  "source": {
+    "batch_id": "ee-flashcards-ldos-v4-20260911",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+    "row_number": 8
+  },
+  "images": {},
+  "question_text": "<p>If you are implementing an LDO IC on a PCB, what external components are typically required, and why?</p>",
+  "answer_text": "<p>Input and output capacitors. They are critical for stability and transient response.</p>",
+  "explanation_text": "<p>The output capacitor is the most critical. Because an LDO relies on a closed feedback loop to adjust its internal resistance, it requires an output capacitor (often with a specific ESR, or Equivalent Series Resistance) to stabilize that loop and prevent it from high-frequency oscillation. The input capacitor is used to filter out noise from the upstream power supply.</p>",
+  "bonus_question_text": "<p>What happens if the output capacitor's ESR is too low (e.g., using a perfect ceramic cap on an older LDO designed for tantalum caps)?</p>",
+  "bonus_answer_text": "<p>The LDO's control loop can lose its phase margin and become unstable, causing the output voltage to wildly oscillate.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:148284435ee337e3"
+  ],
+  "related_question_ids": []
+}

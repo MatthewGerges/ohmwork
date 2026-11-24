@@ -1,0 +1,29 @@
+{
+  "slug": "transmission-line-theory-pcb-how-does-the-distance-between-a-signal-tr",
+  "category": "Transmission Line Theory, PCB",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 38,
+  "source_fingerprint": "e3047b8660205dee",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 14
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-pcb-how-does-the-distance-between-a-signal-tr-image_1.svg"
+  },
+  "question_text": "<p>How does the distance between a signal trace and its reference plane (the dielectric thickness) affect the trace's parasitic capacitance?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A cross-section of a PCB showing the capacitance equation C = (ε * A) / d. Two scenarios are shown: A trace close to the ground plane (labeled 'High C') and a trace far from the ground plane (labeled 'Low C').\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>Thicker dielectrics DECREASE capacitance. Thinner dielectrics INCREASE capacitance.</p>",
+  "explanation_text": "<p>This relies on the parallel plate capacitance equation: C = (ε * A) / d. The distance (d) is the dielectric thickness. Because the distance is in the denominator, moving the ground plane further away (increasing thickness) makes the capacitance drop. To get more capacitance, the planes must be brought closer together.</p>",
+  "bonus_question_text": "<p>How does a thicker dielectric affect the Characteristic Impedance (Z_0) of a trace?</p>",
+  "bonus_answer_text": "<p>It increases Z_0. Since capacitance (C) drops, the denominator in the impedance equation (Z_0 = sqrt(L/C)) gets smaller, driving the overall impedance up.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:e3047b8660205dee"
+  ],
+  "related_question_ids": []
+}

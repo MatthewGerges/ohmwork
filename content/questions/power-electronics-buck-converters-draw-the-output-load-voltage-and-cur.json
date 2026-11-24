@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-buck-converters-draw-the-output-load-voltage-and-cur",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 58,
+  "source_fingerprint": "b5b2d3404464d056",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 20
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-output-load-voltage-and-cur-image_1.svg"
+  },
+  "question_text": "<p>Draw the output load voltage and current waveforms alongside the high-side gate signal.</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Stacked graphs. Top: Gate Signal. Middle: Load Voltage (Flat horizontal line). Bottom: Load Current (Flat horizontal line).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>They are both perfectly flat, continuous horizontal DC lines (with negligible ripple).</p>",
+  "explanation_text": "<p>The entire purpose of the LC filter (Inductor + Capacitor) is to average out the violent switching action. The inductor smooths the choppy input into a continuous triangle wave, and the capacitor absorbs the AC portion of that triangle wave. What remains for the load is purely the DC average of both voltage and current.</p>",
+  "bonus_question_text": "<p>If the load suddenly demands more current (a load transient), what provides that current instantly before the inductor can react?</p>",
+  "bonus_answer_text": "<p>The output capacitor. It discharges its stored energy to hold the voltage steady until the control loop catches up and increases the duty cycle.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:b5b2d3404464d056"
+  ],
+  "related_question_ids": []
+}

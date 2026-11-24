@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-buck-converters-draw-the-low-side-nfet-current-and-v",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 56,
+  "source_fingerprint": "060ff7d247005d4b",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 21
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-low-side-nfet-current-and-v-image_1.svg"
+  },
+  "question_text": "<p>Draw the low-side NFET current and V_DS voltage waveforms in a synchronous buck converter, alongside the high-side gate signal.</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Stacked graphs. Top: High-Side Gate Signal. Middle: Low-Side NFET Current (0A during ON, jumping up and ramping down diagonally during OFF). Bottom: Low-Side V_DS (V_in during ON, 0V during OFF).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>The low-side FET conducts (triangle ramp down) exactly when the high-side gate is LOW. Its V_DS is equal to V_in when OFF, and ~0V when ON.</p>",
+  "explanation_text": "<p>The low-side NFET replaces the diode. When the high-side FET is ON, the low-side FET is OFF and must block the full input voltage (V_in). When the high-side FET turns OFF, the low-side FET turns ON to carry the freewheeling inductor current. Because its R_DS(on) is so small, its voltage drop is practically 0V while conducting.</p>",
+  "bonus_question_text": "<p>What specification must be extremely low on the low-side FET to prevent switching losses during the dead-time?</p>",
+  "bonus_answer_text": "<p>The reverse-recovery charge (Q_rr) and forward voltage drop (V_f) of its internal body diode.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:060ff7d247005d4b"
+  ],
+  "related_question_ids": []
+}

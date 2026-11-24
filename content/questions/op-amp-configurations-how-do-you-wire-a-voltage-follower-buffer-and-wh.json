@@ -1,0 +1,29 @@
+{
+  "slug": "op-amp-configurations-how-do-you-wire-a-voltage-follower-buffer-and-wh",
+  "category": "Op-Amp Configurations",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 28,
+  "source_fingerprint": "dc305bd1616be587",
+  "source": {
+    "batch_id": "ee-flashcards-opamp-configs-visual-v2-20260709T2351",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_opamp_configs_visual_v2.xlsx",
+    "row_number": 2
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-opamp-configs-visual-v2-20260709T2351/op-amp-configurations-how-do-you-wire-a-voltage-follower-buffer-and-wh-image_1.svg"
+  },
+  "question_text": "<p>How do you wire a Voltage Follower (Buffer), and what is the gain?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Schematic of a voltage follower: An op-amp with the output wire tied directly back to the inverting (-) terminal, and the input voltage signal (Vin) entering the non-inverting (+) terminal.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>Gain = 1</p>",
+  "explanation_text": "<p>Because the gain is 1, the output perfectly mirrors the input voltage. It's used to isolate a weak signal source from a heavy load because it draws zero current from the source.</p>",
+  "bonus_question_text": "<p>How do you derive the gain for a Voltage Follower using nodal analysis?</p>",
+  "bonus_answer_text": "<p>1. The ideal op-amp rule states V- = V+.<br/>2. Since the input is on V+, we know V- = Vin.<br/>3. The output is tied directly to the inverting input, so Vout = V-.<br/>4. Therefore, Vout = Vin, which means the gain (Vout / Vin) = 1.</p>",
+  "main_video_youtube_id": "0",
+  "resource_videos": [],
+  "ltspice_file_needed": "0",
+  "tags": [
+    "source:excel",
+    "import:dc305bd1616be587"
+  ],
+  "related_question_ids": []
+}

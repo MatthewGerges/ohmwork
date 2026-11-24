@@ -1,0 +1,29 @@
+{
+  "slug": "components-what-key-specs-do-you-look-at-when-selecting-a-capacitor-an",
+  "category": "Components",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 10,
+  "source_fingerprint": "8b6b211f2c6a12fe",
+  "source": {
+    "batch_id": "ee-flashcards-master-simplified-20260709",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+    "row_number": 11
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-a-capacitor-an-image_1.svg"
+  },
+  "question_text": "<p>What key specs do you look at when selecting a capacitor, and what are common choices?</p>",
+  "answer_text": "<p>1. Capacitance &amp; Tolerance.<br/>2. Voltage Rating: DC limit (derate by 50% for ceramics).<br/>3. Dielectric: C0G (stable/small), X7R (dense but loses cap under DC bias), Tantalum/Electrolytic (bulk storage).<br/>4. ESR: Equivalent series resistance.<br/>5. Package Size (e.g., 0402, 0603).</p>",
+  "explanation_text": "<p>Class II ceramics (X7R/X5R) lose significant capacitance when voltage is applied across them. A 10μF X7R might drop to 3μF when powered at its rated voltage limit!</p>\n<img src=\"{{image_1}}\" alt=\"Chart comparing X7R vs C0G, showing X7R capacitance dropping significantly as applied DC voltage increases.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "bonus_question_text": "<p>Why choose Tantalum over Aluminum Electrolytic?</p>",
+  "bonus_answer_text": "<p>Tantalum offers much higher density and lower ESR in a tiny surface-mount package.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:8b6b211f2c6a12fe"
+  ],
+  "related_question_ids": []
+}

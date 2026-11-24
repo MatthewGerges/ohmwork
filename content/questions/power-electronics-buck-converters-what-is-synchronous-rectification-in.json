@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-buck-converters-what-is-synchronous-rectification-in",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 65,
+  "source_fingerprint": "e47654c1d1c065e2",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 12
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-what-is-synchronous-rectification-in-image_1.svg"
+  },
+  "question_text": "<p>What is synchronous rectification in a buck converter, and why does it drastically improve efficiency?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A side-by-side comparison of two schematics. Left: An asynchronous buck converter (high-side FET, low-side diode). Right: A synchronous buck converter (high-side FET, low-side FET).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>It replaces the passive low-side freewheeling diode with a second, active low-side MOSFET.</p>",
+  "explanation_text": "<p>A standard diode always drops around 0.3V to 0.7V when conducting. If 10 Amps are flowing, the diode wastes 7 Watts of power just acting as a return path!</p>\n<p>A MOSFET, however, has an incredibly low &quot;ON&quot; resistance (R_ds(on)), often just a few milliohms. Because power loss is calculated as P = I^2 * R_ds(on), the MOSFET burns significantly less energy than the diode, keeping the circuit cooler and much more efficient.</p>",
+  "bonus_question_text": "<p>What is &quot;shoot-through&quot; in a synchronous buck converter, and how do you avoid it?</p>",
+  "bonus_answer_text": "<p>Shoot-through is a catastrophic short circuit from V_in directly to ground that occurs if both the high-side and low-side FETs accidentally turn on at the exact same time. It is avoided by injecting a tiny delay called &quot;dead time&quot; between switching states.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:e47654c1d1c065e2"
+  ],
+  "related_question_ids": []
+}

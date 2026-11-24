@@ -1,0 +1,9 @@
+* Derived from 07-i2c-open-drain-rise-time.asc
+VDD_SOURCE VDD 0 3.3
+RPULLUP VDD SDA 4.7k
+CBUS SDA 0 200p
+S1 SDA 0 CTRL 0 SWOD
+VCTRL CTRL 0 PULSE(5 0 2u 20n 20n 8u 20u)
+.model SWOD SW(Ron=0.1 Roff=1G Vt=2 Vh=0.1)
+.tran 0 40u 0 10n
+.end

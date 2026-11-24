@@ -1,0 +1,29 @@
+{
+  "slug": "semiconductor-devices-diodes-draw-the-i-v-characteristic-curve-for-a-s",
+  "category": "Semiconductor Devices, Diodes",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 91,
+  "source_fingerprint": "f02a0dc54a1c68f6",
+  "source": {
+    "batch_id": "ee-flashcards-semiconductors-v2-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+    "row_number": 5
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-semiconductors-v2-20260912/semiconductor-devices-diodes-draw-the-i-v-characteristic-curve-for-a-s-image_1.svg"
+  },
+  "question_text": "<p>Draw the I-V characteristic curve for a standard PN junction diode. Label the axes and key operating regions.</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A graph with Voltage (V) on the x-axis and Current (I) on the y-axis. The line stays flat at 0A for negative voltages, continues flat past the origin, and then sharply curves upward exponentially at a point labeled &quot;V_f (~0.7V)&quot; (Forward Bias). On the far left of the negative x-axis, the line drops straight down vertically at a point labeled &quot;V_br&quot; (Reverse Breakdown).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>The curve remains at roughly 0A until the forward voltage (V_f) is reached, where current spikes exponentially. In reverse bias, it blocks current until the breakdown voltage.</p>",
+  "explanation_text": "<p>The x-axis is Voltage, and the y-axis is Current. In forward bias (positive V), the diode blocks current until it crosses the threshold (~0.7V for silicon), at which point current shoots up exponentially. In reverse bias (negative V), a tiny leakage current flows until it hits the Reverse Breakdown Voltage (V_br), where current violently spikes in the negative direction.</p>",
+  "bonus_question_text": "<p>What happens if a standard diode enters reverse breakdown?</p>",
+  "bonus_answer_text": "<p>If the current isn't artificially limited by the circuit, the massive power dissipation (P = V * I) will cause the diode to overheat and permanently destroy itself.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:f02a0dc54a1c68f6"
+  ],
+  "related_question_ids": []
+}

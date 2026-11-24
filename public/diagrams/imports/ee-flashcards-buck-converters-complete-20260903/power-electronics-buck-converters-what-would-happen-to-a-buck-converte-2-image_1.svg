@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="450" viewBox="0 0 900 450" role="img" aria-label="Buck converter without a freewheeling diode">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"></path>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"></path>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f87171"></path>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#818cf8"></path>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fb923c"></path>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"></path>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"></rect>
+  <text x="450" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Buck converter without a freewheeling diode</text>
+
+
+    <rect x="40" y="96" width="390" height="232" rx="6" fill="#0b1528" stroke="#475569" stroke-width="2"></rect>
+    <text x="235" y="122" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="middle">WITH FREEWHEEL DIODE</text>
+    <line x1="90" y1="290" x2="400" y2="290" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"></line>
+    <line x1="90" y1="290" x2="90" y2="138" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"></line>
+    <text x="396" y="309" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="end">time</text>
+    <text x="68" y="150" fill="#818cf8" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" text-anchor="middle">VSW</text>
+
+
+    <rect x="470" y="96" width="390" height="232" rx="6" fill="#0b1528" stroke="#475569" stroke-width="2"></rect>
+    <text x="665" y="122" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="middle">NO FREEWHEEL DIODE</text>
+    <line x1="520" y1="290" x2="830" y2="290" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"></line>
+    <line x1="520" y1="290" x2="520" y2="138" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"></line>
+    <text x="826" y="309" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="end">time</text>
+    <text x="498" y="150" fill="#818cf8" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" text-anchor="middle">VSW</text>
+
+
+    <line x1="90" y1="176" x2="400" y2="176" stroke="#475569" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 5"></line>
+    <line x1="90" y1="205" x2="400" y2="205" stroke="#475569" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 5"></line>
+    <path d="M90 176 L165 176 L165 207 L250 207 L250 176 L325 176 L325 207 L400 207" fill="none" stroke="#4ade80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+    <text x="104" y="170" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start">12 V = VIN</text>
+    <text x="176" y="222" fill="#818cf8" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start">-0.7 V diode clamp</text>
+    <text x="96" y="201" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="500" text-anchor="start">0 V</text>
+    <text x="165" y="146" fill="#fb923c" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">QHS turns OFF</text>
+    <line x1="165" y1="154" x2="165" y2="285" stroke="#fb923c" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 5"></line>
+    <text x="245" y="316" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Diode safely carries IL</text>
+
+    <line x1="520" y1="176" x2="860" y2="176" stroke="#475569" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 5"></line>
+    <line x1="520" y1="205" x2="860" y2="205" stroke="#475569" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 5"></line>
+    <line x1="520" y1="273" x2="860" y2="273" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 5"></line>
+    <path d="M520 176 L595 176 L600 285 C610 250 620 190 635 205 C648 218 660 195 672 207 C684 216 694 200 705 205 L705 176 L780 176 L785 285 C795 250 805 190 820 205 C833 218 845 195 857 207" fill="none" stroke="#f87171" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+    <text x="534" y="170" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start">12 V = VIN</text>
+    <text x="526" y="201" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="500" text-anchor="start">0 V</text>
+    <text x="850" y="252" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="end" transform="translate(-72.4 6.5)">VSW = -28 V means VDS = 40 V</text>
+    <text x="610" y="284" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start">-33 V VSW</text>
+    <text x="600" y="150" fill="#fb923c" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">QHS turns OFF</text>
+    <line x1="600" y1="154" x2="600" y2="285" stroke="#fb923c" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 5"></line>
+    <text x="705" y="316" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" transform="translate(-49.8 -5.3)">Negative flyback spike + ringing</text>
+
+    <text x="450" y="367" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle">The inductor forces current to continue when QHS opens.</text>
+    <text x="450" y="393" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="middle">Without a diode path, VSW falls until a parasitic path or device breakdown absorbs the energy.</text>
+    <text x="450" y="419" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Example: VDS = 12 V - (-33 V) = 45 V; the actual spike depends on circuit parasitics.</text>
+
+</svg>

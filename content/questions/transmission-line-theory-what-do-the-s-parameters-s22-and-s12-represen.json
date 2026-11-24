@@ -1,0 +1,29 @@
+{
+  "slug": "transmission-line-theory-what-do-the-s-parameters-s22-and-s12-represen",
+  "category": "Transmission Line Theory",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 47,
+  "source_fingerprint": "a49e1c19ea9b4e6a",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 6
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-what-do-the-s-parameters-s22-and-s12-represen-image_1.svg"
+  },
+  "question_text": "<p>What do the S-parameters S22 and S12 represent, and how are they calculated?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A two-port network block diagram. An arrow enters Port 2 on the right. S22 is shown as an arrow reflecting back out of Port 2. S12 is shown as an arrow passing backward through the block from Port 2 to Port 1.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>S22 is Output Return Loss. Equation: S22 = V_reflected / V_incident (at Port 2).<br/>S12 is Reverse Isolation. Equation: S12 = V_transmitted_to_Port_1 / V_incident_at_Port_2.</p>",
+  "explanation_text": "<p>These are the exact opposites of S11 and S21. S22 measures how much signal bounces back if you inject a signal directly into the output. S12 measures how much signal leaks backward from the output (Port 2) to the input (Port 1).</p>",
+  "bonus_question_text": "<p>Why is S12 (Reverse Isolation) important in an amplifier?</p>",
+  "bonus_answer_text": "<p>It tells you how well the amplifier prevents signals from traveling backward through it, which is critical to stop unwanted feedback and oscillation.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:a49e1c19ea9b4e6a"
+  ],
+  "related_question_ids": []
+}

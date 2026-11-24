@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-buck-converters-what-would-happen-to-a-buck-converte-2",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 68,
+  "source_fingerprint": "9698adb812605aef",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 5
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-what-would-happen-to-a-buck-converte-2-image_1.svg"
+  },
+  "question_text": "<p>What would happen to a buck converter if you completely removed the freewheeling Diode?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Side-by-side switch-node voltage plots. With the diode, VSW alternates between 12 V and -0.7 V. Without the diode, VSW spikes to -33 V and rings, producing 45 V across the high-side MOSFET.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>The MOSFET would be destroyed by a massive high-voltage spike exceeding its V_DS limit.</p>",
+  "explanation_text": "<p>According to V = L(di/dt), inductors strongly resist any instantaneous change in current. When the switch opens, the current tries to stop instantly. To maintain the current flow, the inductor transitions from acting as a load to acting as a source. Its polarity aggressively flips, making the left side of the inductor (the switch node) massively negative. Without a diode to clamp this negative spike, the switch node drops to hundreds of volts below ground. This creates a massive voltage differential across the open MOSFET, violating its maximum V_DS (Drain-to-Source) specification and instantly destroying it. You should really build this on LTspice to see it in action. An LTspice model will be added in the future if deemed necessary.</p>",
+  "bonus_question_text": null,
+  "bonus_answer_text": null,
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:9698adb812605aef"
+  ],
+  "related_question_ids": []
+}

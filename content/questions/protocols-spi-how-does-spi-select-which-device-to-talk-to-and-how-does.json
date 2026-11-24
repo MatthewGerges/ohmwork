@@ -1,0 +1,29 @@
+{
+  "slug": "protocols-spi-how-does-spi-select-which-device-to-talk-to-and-how-does",
+  "category": "Protocols, SPI",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 87,
+  "source_fingerprint": "6a930e22194deb74",
+  "source": {
+    "batch_id": "ee-flashcards-passives-protocols-v3-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+    "row_number": 8
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/protocols-spi-how-does-spi-select-which-device-to-talk-to-and-how-does-image_1.svg"
+  },
+  "question_text": "<p>How does SPI select which device to talk to, and how does &quot;daisy-chaining&quot; work as a pin-saving alternative?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Side-by-side block diagrams. Left: Standard SPI (Master has 3 separate CS lines going to 3 Slaves). Right: Daisy-chained SPI (Master has 1 CS line shared by all 3 Slaves; Master MOSI -&gt; Slave 1 MOSI; Slave 1 MISO -&gt; Slave 2 MOSI; Slave 2 MISO -&gt; Master MISO).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>SPI selects devices using dedicated Chip Select (CS) wires for each slave. Daisy-chaining connects slaves in a series loop to share a single CS pin.</p>",
+  "explanation_text": "<p>In standard SPI, a master needs a separate CS pin for every slave (4 slaves = 4 CS wires). To save MCU pins, some SPI devices support daisy-chaining: they act like a massive shift register. The Master's MOSI goes to Slave 1's MOSI, Slave 1's MISO goes to Slave 2's MOSI, and Slave 2's MISO goes back to the Master. They all share a single CS line.</p>\n<p>Highly recommended video that explains everything you need to know about SPI: https://www.youtube.com/watch?v=0nVNwozXsIc&amp;t=15s&amp;pp=ygUMc3BpIHByb3RvY29s</p>",
+  "bonus_question_text": "<p>What is the main drawback of daisy-chaining SPI devices?</p>",
+  "bonus_answer_text": "<p>If one device in the chain fails, the entire communication chain breaks. Additionally, updating a single device requires pushing data through the entire chain, increasing software complexity and latency.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:6a930e22194deb74"
+  ],
+  "related_question_ids": []
+}

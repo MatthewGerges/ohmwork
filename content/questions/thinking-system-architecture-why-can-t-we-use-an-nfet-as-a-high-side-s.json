@@ -1,0 +1,27 @@
+{
+  "slug": "thinking-system-architecture-why-can-t-we-use-an-nfet-as-a-high-side-s",
+  "category": "Thinking, System Architecture",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 98,
+  "source_fingerprint": "bc96a17ef1f961a1",
+  "source": {
+    "batch_id": "ee-flashcards-semiconductors-v2-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+    "row_number": 9
+  },
+  "images": {},
+  "question_text": "<p>Why can't we use an NFET as a high-side switch if V_in and the Enable signal are the same voltage? Similarly, why can't we use a PMOS on the low side?</p>",
+  "answer_text": "<p>An NFET needs its gate voltage to be higher than its source to turn on. A PMOS needs its gate voltage to be lower than its source. If placed improperly, V_GS ends up at 0V, preventing them from turning on.</p>",
+  "explanation_text": "<p>To turn on an NFET, V_GS must be positive. If you put an NFET on the high side, as it turns on, the source voltage rises to match V_in. If your gate signal is also V_in, the difference (V_GS) becomes zero, and the FET pinches itself off.</p>\n<p>Conversely, a PMOS needs a negative V_GS. If you put it on the low side (source connected to ground), you would need to drive the gate below ground (negative voltage) to turn it on, which standard logic circuits cannot do.</p>",
+  "bonus_question_text": "<p>If we absolutely want to use an NMOS on the high side switch, what must be done?</p>",
+  "bonus_answer_text": "<p>You must use a charge pump or bootstrap circuit to artificially boost the gate control voltage significantly higher than V_in.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:bc96a17ef1f961a1"
+  ],
+  "related_question_ids": []
+}

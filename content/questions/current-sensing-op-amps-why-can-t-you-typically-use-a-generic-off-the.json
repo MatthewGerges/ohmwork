@@ -1,0 +1,27 @@
+{
+  "slug": "current-sensing-op-amps-why-can-t-you-typically-use-a-generic-off-the",
+  "category": "Current Sensing, Op-Amps",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 117,
+  "source_fingerprint": "d2a574ff18b049ed",
+  "source": {
+    "batch_id": "ee-flashcards-current-sensing-v2-20260917",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+    "row_number": 4
+  },
+  "images": {},
+  "question_text": "<p>Why can't you typically use a generic, off-the-shelf Operational Amplifier for High-Side current sensing on a high-voltage rail (e.g., 24V)?</p>",
+  "answer_text": "<p>A standard op-amp will be destroyed because its inputs cannot survive a common-mode voltage that exceeds its own supply voltage.</p>",
+  "explanation_text": "<p>The &quot;common-mode voltage&quot; is the average DC voltage present at both input pins. In a high-side 24V system, both ends of the shunt resistor are sitting at roughly 24V. If you power a standard op-amp with a 3.3V or 5V logic supply, pumping 24V directly into its input pins will violate its absolute maximum ratings and instantly fry the silicon. Dedicated Current Sense Amplifiers use specialized input architectures allowing them to survive 60V+ inputs while running on a tiny 3.3V supply.</p>",
+  "bonus_question_text": null,
+  "bonus_answer_text": null,
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:d2a574ff18b049ed"
+  ],
+  "related_question_ids": []
+}

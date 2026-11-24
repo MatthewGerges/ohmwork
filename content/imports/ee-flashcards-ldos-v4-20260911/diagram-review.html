@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>ee-flashcards-ldos-v4-20260911</title>
+  <style>
+    body { margin: 0; padding: 24px; background: #020617; color: #e2e8f0; font-family: Inter, Arial, sans-serif; }
+    h1 { margin: 0 0 20px; font-size: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 18px; }
+    .card { border: 1px solid #334155; border-radius: 10px; padding: 14px; background: #0f172a; }
+    h2 { font-size: 13px; line-height: 1.4; color: #94a3b8; margin: 0 0 8px; word-break: break-word; }
+    p { margin: 8px 0; }
+    span { color: #2dd4bf; font-size: 12px; margin-left: 8px; }
+    img { display: block; width: 100%; height: auto; border-radius: 8px; background: #0f172a; margin-top: 10px; }
+    details { margin-top: 10px; color: #cbd5e1; font-size: 13px; }
+    summary { cursor: pointer; color: #818cf8; }
+    .missing { color: #f87171; }
+  </style>
+</head>
+<body>
+  <h1>ee-flashcards-ldos-v4-20260911</h1>
+  <section class="grid"><article class="card">
+  <h2>power-electronics-ldos-how-does-an-ldo-s-internal-feedback-loop-active / image_1</h2>
+  <p><strong>PMOS LDO feedback loop</strong> <span>ldo_feedback_pmos</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-ldos-v4-20260911/power-electronics-ldos-how-does-an-ldo-s-internal-feedback-loop-active-image_1.svg" alt="A block diagram of an LDO's feedback loop. V_in connects to a PMOS pass transistor flowing to V_out. A voltage divider (R1 and R2) taps off V_out and feeds V_fb into the positive (+) input of an Error Amplifier. The negative (-) input is connected to a fixed V_ref. The output of the Error Amp connects to the PMOS gate. Callout text traces the logic: &quot;If V_out ↑, then V_fb &gt; V_ref, Gate Voltage ↑, Resistance ↑, V_out ↓&quot;."/>
+  <details><summary>Prompt</summary><p>A block diagram of an LDO's feedback loop. V_in connects to a PMOS pass transistor flowing to V_out. A voltage divider (R1 and R2) taps off V_out and feeds V_fb into the positive (+) input of an Error Amplifier. The negative (-) input is connected to a fixed V_ref. The output of the Error Amp connects to the PMOS gate. Callout text traces the logic: &quot;If V_out ↑, then V_fb &gt; V_ref, Gate Voltage ↑, Resistance ↑, V_out ↓&quot;.</p></details>
+</article>
+<article class="card">
+  <h2>power-electronics-ldos-look-at-the-ldo-block-diagram-in-image-1-if-the / image_1</h2>
+  <p><strong>LDO feedback-loop polarity</strong> <span>ldo_feedback_pmos</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-ldos-v4-20260911/power-electronics-ldos-look-at-the-ldo-block-diagram-in-image-1-if-the-image_1.svg" alt="A block diagram of an LDO. V_in connects to a pass transistor flowing to V_out. A resistor divider taps off V_out and feeds V_fb into the positive (+) input of an Error Amplifier. The negative (-) input is connected to V_ref. The Error Amp output connects to the transistor's gate."/>
+  <details><summary>Prompt</summary><p>A block diagram of an LDO. V_in connects to a pass transistor flowing to V_out. A resistor divider taps off V_out and feeds V_fb into the positive (+) input of an Error Amplifier. The negative (-) input is connected to V_ref. The Error Amp output connects to the transistor's gate.</p></details>
+</article>
+<article class="card">
+  <h2>power-electronics-ldos-look-at-the-ldo-block-diagram-in-image-1-if-the-2 / image_1</h2>
+  <p><strong>LDO feedback-loop polarity</strong> <span>ldo_feedback_nmos</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-ldos-v4-20260911/power-electronics-ldos-look-at-the-ldo-block-diagram-in-image-1-if-the-2-image_1.svg" alt="A block diagram of an LDO. V_in connects to a pass transistor flowing to V_out. A resistor divider taps off V_out and feeds V_fb into the negative (-) input of an Error Amplifier. The positive (+) input is connected to V_ref. The Error Amp output connects to the transistor's gate."/>
+  <details><summary>Prompt</summary><p>A block diagram of an LDO. V_in connects to a pass transistor flowing to V_out. A resistor divider taps off V_out and feeds V_fb into the negative (-) input of an Error Amplifier. The positive (+) input is connected to V_ref. The Error Amp output connects to the transistor's gate.</p></details>
+</article>
+<article class="card">
+  <h2>power-electronics-ldos-what-is-power-supply-rejection-ratio-psrr-in-an / image_1</h2>
+  <p><strong>LDO input ripple rejection</strong> <span>ldo_psrr_iq</span></p>
+  <img src="../../../public/diagrams/imports/ee-flashcards-ldos-v4-20260911/power-electronics-ldos-what-is-power-supply-rejection-ratio-psrr-in-an-image_1.svg" alt="Two sets of stacked waveform graphs comparing a 20 dB PSRR LDO and a 60 dB PSRR LDO. Both receive the exact same noisy input voltage (a DC line with a 100mV jagged buck converter ripple). The 20 dB LDO output shows a visibly reduced 10mV ripple. The 60 dB LDO output shows a perfectly flat, clean DC line, representing a 1000x reduction to a microscopic 0.1mV ripple."/>
+  <details><summary>Prompt</summary><p>Two sets of stacked waveform graphs comparing a 20 dB PSRR LDO and a 60 dB PSRR LDO. Both receive the exact same noisy input voltage (a DC line with a 100mV jagged buck converter ripple). The 20 dB LDO output shows a visibly reduced 10mV ripple. The 60 dB LDO output shows a perfectly flat, clean DC line, representing a 1000x reduction to a microscopic 0.1mV ripple.</p></details>
+</article></section>
+</body>
+</html>

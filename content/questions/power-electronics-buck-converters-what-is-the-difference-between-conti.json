@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-buck-converters-what-is-the-difference-between-conti",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 66,
+  "source_fingerprint": "c49b5b5a84ae9470",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 13
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-what-is-the-difference-between-conti-image_1.svg"
+  },
+  "question_text": "<p>What is the difference between Continuous and Discontinuous Conduction Mode (CCM vs DCM), and when does a buck converter enter DCM?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Two inductor current waveforms side-by-side. Left (CCM): A triangle wave entirely above the 0A horizontal axis. Right (DCM): A triangle wave that ramps down, hits the 0A axis, stays flat at 0A for a short period, and then ramps back up.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>In CCM, the inductor current never reaches zero. In DCM, the inductor completely discharges its energy, hitting zero amps before the next switching cycle begins. Converters naturally enter DCM at light loads.</p>",
+  "explanation_text": "<p>In CCM, the output voltage is strictly defined by the duty cycle (V_out = V_in * D). When the load draws very little current, the entire triangle ripple drops downward. In an asynchronous buck, the diode blocks current from flowing backwards, forcing the inductor current to stay clamped at zero (DCM). In DCM, the simple V_out equation no longer works, and voltage becomes dependent on the load current.</p>",
+  "bonus_question_text": "<p>What is PFM (Pulse Frequency Modulation) and why is it used?</p>",
+  "bonus_answer_text": "<p>Rather than maintaining a constant frequency (PWM), PFM varies the switching frequency and skips cycles during extremely light loads. This drastically reduces dynamic switching losses, significantly boosting light-load efficiency.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:c49b5b5a84ae9470"
+  ],
+  "related_question_ids": []
+}

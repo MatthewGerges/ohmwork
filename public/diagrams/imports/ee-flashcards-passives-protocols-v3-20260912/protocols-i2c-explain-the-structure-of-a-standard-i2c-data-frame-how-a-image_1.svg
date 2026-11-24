@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" role="img" aria-label="I2C transaction frame">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f87171"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#818cf8"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fb923c"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"/>
+  <text x="450" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">I2C transaction frame</text>
+
+    <text x="450" y="104" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="middle">One addressed byte transfer</text>
+
+    <rect x="50" y="152" width="70" height="82" rx="4" fill="#0b1528" stroke="#4ade80" stroke-width="2"/>
+    <text x="85" y="188" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle">START</text>
+    <text x="85" y="214" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle"></text>
+
+    <rect x="120" y="152" width="238" height="82" rx="4" fill="#0b1528" stroke="#818cf8" stroke-width="2"/>
+    <text x="239" y="188" fill="#818cf8" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle">7-bit address</text>
+    <text x="239" y="214" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle">A6 ... A0</text>
+
+    <rect x="358" y="152" width="62" height="82" rx="4" fill="#0b1528" stroke="#fb923c" stroke-width="2"/>
+    <text x="389" y="188" fill="#fb923c" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" text-anchor="middle">R/W</text>
+    <text x="389" y="214" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle">1 bit</text>
+
+    <rect x="420" y="152" width="58" height="82" rx="4" fill="#0b1528" stroke="#fbbf24" stroke-width="2"/>
+    <text x="449" y="188" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" text-anchor="middle">ACK</text>
+    <text x="449" y="214" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle"></text>
+
+    <rect x="478" y="152" width="230" height="82" rx="4" fill="#0b1528" stroke="#2dd4bf" stroke-width="2"/>
+    <text x="593" y="188" fill="#2dd4bf" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle">8-bit data</text>
+    <text x="593" y="214" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle">D7 ... D0</text>
+
+    <rect x="708" y="152" width="58" height="82" rx="4" fill="#0b1528" stroke="#fbbf24" stroke-width="2"/>
+    <text x="737" y="188" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" text-anchor="middle">ACK</text>
+    <text x="737" y="214" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle"></text>
+
+    <rect x="766" y="152" width="82" height="82" rx="4" fill="#0b1528" stroke="#f87171" stroke-width="2"/>
+    <text x="807" y="188" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle">STOP</text>
+    <text x="807" y="214" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle"></text>
+
+    <line x1="50" y1="270" x2="848" y2="270" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"/>
+    <text x="50" y="294" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" text-anchor="start">SDA changes while SCL is LOW; receiver samples while SCL is HIGH.</text>
+    <rect x="170" y="326" width="560" height="58" rx="5" fill="#0a1a20" stroke="#2dd4bf" stroke-width="2"/>
+    <text x="450" y="350" fill="#2dd4bf" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle">7-bit addressing = 128 codes</text>
+    <text x="450" y="374" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" text-anchor="middle">Typically 112 usable device addresses after reserved ranges</text>
+
+</svg>

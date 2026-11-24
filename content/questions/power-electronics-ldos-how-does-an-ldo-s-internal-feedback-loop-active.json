@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-ldos-how-does-an-ldo-s-internal-feedback-loop-active",
+  "category": "Power Electronics, LDOs",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 77,
+  "source_fingerprint": "50c99db10fbd33f0",
+  "source": {
+    "batch_id": "ee-flashcards-ldos-v4-20260911",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+    "row_number": 3
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-ldos-v4-20260911/power-electronics-ldos-how-does-an-ldo-s-internal-feedback-loop-active-image_1.svg"
+  },
+  "question_text": "<p>How does an LDO's internal feedback loop actively regulate the output voltage? Walk through a conceptual example where the output voltage spikes too high.</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A block diagram of an LDO's feedback loop. V_in connects to a PMOS pass transistor flowing to V_out. A voltage divider (R1 and R2) taps off V_out and feeds V_fb into the positive (+) input of an Error Amplifier. The negative (-) input is connected to a fixed V_ref. The output of the Error Amp connects to the PMOS gate. Callout text traces the logic: &quot;If V_out ↑, then V_fb &gt; V_ref, Gate Voltage ↑, Resistance ↑, V_out ↓&quot;.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>The LDO uses an error amplifier to compare a sample of the output voltage against a perfect reference. If the output is too high, it tweaks the MOSFET's gate voltage to increase its resistance, choking the voltage back down.</p>",
+  "explanation_text": "<p>1. A resistor divider at the output creates a feedback voltage (V_fb), which feeds into the positive (+) terminal of an error amplifier (op-amp). The negative (-) terminal receives a stable, fixed reference voltage (V_ref).<br/>2. Imagine the target is 4V, but the load suddenly drops and V_out spikes to 5V.<br/>3. Now, V_fb &gt; V_ref. The error amplifier senses this positive difference and *increases* the voltage at its output, which is connected to the PMOS gate.<br/>4. Because the gate voltage is pushed higher (closer to the source voltage, V_in), the PMOS is driven slightly closer to turning off.<br/>5. This shifts the transistor's operating point in the saturation region. To pass the same current, it now acts with a higher effective resistance (R = V/I).<br/>6. The increased resistance drops more of the input voltage across the MOSFET as heat, perfectly forcing V_out back down to 4V.</p>",
+  "bonus_question_text": "<p>Why is an LDO's response to these spikes not instantaneous?</p>",
+  "bonus_answer_text": "<p>The error amplifier has a limited bandwidth and slew rate (it takes time for the internal circuitry to physically alter the gate voltage), which is why external output capacitors are strictly required to catch the instant transient spikes before the loop can react.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:50c99db10fbd33f0"
+  ],
+  "related_question_ids": []
+}

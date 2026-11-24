@@ -1,0 +1,11 @@
+* Derived from 08-non-inverting-schmitt-trigger.asc
+XU1 VSUM 0 VP VN VOUT level2
+VIN_SOURCE VIN 0 SINE(0 6 200)
+RIN VSUM VIN 10k
+RLOAD VOUT 0 10k
+RF VOUT VSUM 47k
+VCC VP 0 5
+VEE VN 0 -5
+.include "/Users/matthewgerges/Library/Application Support/LTspice/lib/sub/UniversalOpAmp2.lib"
+.tran 0 20m 0 2u
+.end

@@ -1,0 +1,29 @@
+{
+  "slug": "thinking-system-architecture-you-need-to-use-a-3-3v-mcu-gpio-to-enable",
+  "category": "Thinking, System Architecture",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 99,
+  "source_fingerprint": "10228facf78c101e",
+  "source": {
+    "batch_id": "ee-flashcards-semiconductors-v2-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+    "row_number": 10
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-semiconductors-v2-20260912/thinking-system-architecture-you-need-to-use-a-3-3v-mcu-gpio-to-enable-image_1.svg"
+  },
+  "question_text": "<p>You need to use a 3.3V MCU GPIO to enable a 12V high-side load using a PMOS. You cannot simply connect the GPIO directly to the PMOS gate with a pull-up resistor. Why not, and how do you arrange FETs to solve this?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A schematic showing a 3.3V MCU GPIO driving the gate of a low-side NMOS. The NMOS source is Ground. The NMOS drain connects to the gate of a high-side PMOS. The PMOS source connects to 12V, its drain connects to the Load, and a pull-up resistor connects the PMOS gate to 12V.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>A 3.3V GPIO cannot tolerate 12V (it will fry). Furthermore, 3.3V is not high enough to turn the PMOS off. You must use an intermediate low-side NMOS to pull down the PMOS gate.</p>",
+  "explanation_text": "<p>To turn off a high-side PMOS on a 12V rail, its gate must be pulled all the way up to 12V (V_GS = 0V). If you connect that gate to a 3.3V GPIO through a pull-up, 12V will flow backward into the MCU and destroy the pin. Even if the pin survived, driving 3.3V to the PMOS gate leaves V_GS at -8.7V, meaning the PMOS never actually turns off!</p>\n<p>Solution: Connect the 3.3V GPIO to the gate of a small low-side NMOS. Connect the drain of the NMOS to the PMOS gate. When the GPIO is HIGH, the NMOS turns ON, pulling the PMOS gate to ground (turning the PMOS ON safely).</p>",
+  "bonus_question_text": "<p>In this NMOS/PMOS configuration, what component is strictly required on the PMOS gate to ensure it turns OFF when the MCU signal is LOW?</p>",
+  "bonus_answer_text": "<p>A pull-up resistor connecting the PMOS gate to the 12V source. When the NMOS is OFF, this resistor pulls the PMOS gate up to 12V, bringing V_GS to 0V and ensuring it is completely OFF.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:10228facf78c101e"
+  ],
+  "related_question_ids": []
+}

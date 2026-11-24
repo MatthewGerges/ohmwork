@@ -1,0 +1,29 @@
+{
+  "slug": "filters-passive-rc-draw-an-rc-low-pass-filter-explain-how-to-construct",
+  "category": "Filters, Passive RC",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 107,
+  "source_fingerprint": "a80320fd8a4016b7",
+  "source": {
+    "batch_id": "ee-flashcards-opamps-filters-v2-20260916",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_opamps_filters_v2.xlsx",
+    "row_number": 4
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/filters-passive-rc-draw-an-rc-low-pass-filter-explain-how-to-construct-image_1.svg"
+  },
+  "question_text": "<p>Draw an RC Low-Pass filter. Explain how to construct its Bode plot and describe the rule for its slope.</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Left: Schematic showing V_in -&gt; Resistor -&gt; Output node -&gt; Capacitor -&gt; Ground. Right: A Bode plot with a flat magnitude line that bends downward at f_c (-20dB/dec), and a phase line dropping from 0 to -90 degrees.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>A resistor in series, with a capacitor to ground.</p>",
+  "explanation_text": "<p>Bode plots are drawn based on the order (number of reactive components) of the filter. A 1st-order filter (like this one RC circuit) changes at exactly ±20 dB/decade.</p>\n<p>Magnitude Plot: It starts perfectly flat at 0 dB (a gain of 1) because low frequencies pass freely through the resistor. At the cutoff frequency (f_c = 1 / 2πRC), the capacitor's impedance drops to equal the resistor, cutting the signal power in half (-3 dB point). Beyond f_c, the capacitor's impedance continues to drop, shorting the signal to ground. Since it is 1st-order, the plot rolls off linearly downward at -20 dB per decade.<br/>Phase Plot: Starts at 0°, hits -45° exactly at f_c, and maxes out at -90° at high frequencies.</p>",
+  "bonus_question_text": "<p>What happens to the cutoff frequency if you double both the resistor and capacitor values?</p>",
+  "bonus_answer_text": "<p>The cutoff frequency decreases by a factor of 4 (it becomes 25% of the original frequency).</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:a80320fd8a4016b7"
+  ],
+  "related_question_ids": []
+}

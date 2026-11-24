@@ -1,0 +1,29 @@
+{
+  "slug": "semiconductor-devices-mosfets-draw-the-schematic-symbols-for-an-nmos-a",
+  "category": "Semiconductor Devices, MOSFETs",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 95,
+  "source_fingerprint": "62ac34facd4e8bd6",
+  "source": {
+    "batch_id": "ee-flashcards-semiconductors-v2-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+    "row_number": 3
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-semiconductors-v2-20260912/semiconductor-devices-mosfets-draw-the-schematic-symbols-for-an-nmos-a-image_1.svg"
+  },
+  "question_text": "<p>Draw the schematic symbols for an NMOS and a PMOS transistor side by side.</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Side-by-side schematic symbols for an NMOS and a PMOS. Left (NMOS): The source arrow points OUT, with text indicating it connects to Ground and turns ON when Gate = HIGH. Right (PMOS): The source arrow points IN, with a tiny inversion bubble on the gate, with text indicating it connects to Vcc and turns ON when Gate = LOW.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>The NMOS typically has the arrow pointing OUT (or no bubble on the gate). The PMOS typically has the arrow pointing IN, or a tiny inversion bubble on the gate.</p>",
+  "explanation_text": "<p>NMOS transistors are traditionally drawn with the body arrow pointing outward, representing the N-channel. PMOS transistors are drawn with the body arrow pointing inward. In digital logic schematics, you will often see them drawn simply as a line with a gate lead, where the PMOS has a small circle (inversion bubble) on its gate to indicate it is active-LOW.</p>",
+  "bonus_question_text": "<p>Why do hardware designers heavily prefer NMOS over PMOS for high-power or high-efficiency applications?</p>",
+  "bonus_answer_text": "<p>The charge carriers in an NMOS are electrons, while in a PMOS they are &quot;holes.&quot; Electrons have much higher mobility than holes, meaning an NMOS has a significantly lower R_DS(on) and switches much faster than a PMOS of the exact same physical silicon size.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:62ac34facd4e8bd6"
+  ],
+  "related_question_ids": []
+}

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="395" viewBox="0 0 780 395" role="img" aria-label="Buck converter power stage">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f87171"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#818cf8"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fb923c"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"/>
+  <text x="390" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Buck converter power stage</text>
+
+    <text x="70" y="118" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="500" text-anchor="middle">VIN</text>
+    <line x1="70" y1="132" x2="70" y2="174" stroke="#4ade80" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="70" cy="220" r="30" fill="#0a1a20" stroke="#4ade80" stroke-width="3"/>
+    <text x="70" y="214" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" text-anchor="middle">+</text>
+    <text x="70" y="236" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" text-anchor="middle">-</text>
+    <line x1="70" y1="250" x2="70" y2="294" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="70" y1="132" x2="178" y2="132" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="178" y1="132" x2="226" y2="154" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="178" cy="132" r="5" fill="#fbbf24" stroke="#fbbf24" stroke-width="2"/>
+    <circle cx="236" cy="154" r="5" fill="#fbbf24" stroke="#fbbf24" stroke-width="2"/>
+    <text x="204" y="112" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="middle">QHS</text>
+    <line x1="236" y1="154" x2="328" y2="154" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="268" cy="154" r="5" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"/>
+    <path d="M328 154 C344 126 360 182 376 154 C392 126 408 182 424 154 C440 126 456 182 472 154" fill="none" stroke="#2dd4bf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="400" y="120" fill="#2dd4bf" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="middle">L</text>
+    <line x1="472" y1="154" x2="650" y2="154" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <text x="646" y="132" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="500" text-anchor="end">VOUT</text>
+    <line x1="132" y1="132" x2="132" y2="214" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="114" y1="214" x2="150" y2="214" stroke="#818cf8" stroke-width="4" stroke-linecap="round"/>
+    <line x1="114" y1="228" x2="150" y2="228" stroke="#818cf8" stroke-width="4" stroke-linecap="round"/>
+    <line x1="132" y1="228" x2="132" y2="294" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <text x="132" y="260" fill="#818cf8" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" text-anchor="middle">CIN</text>
+    <line x1="268" y1="154" x2="268" y2="194" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="250" y1="204" x2="286" y2="204" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/>
+    <path d="M250 246 L286 246 L268 210 Z" fill="#0a1a20" stroke="#fb923c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="268" y1="246" x2="268" y2="294" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <text x="306" y="230" fill="#fb923c" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" text-anchor="start">Dfreewheel</text>
+    <line x1="532" y1="154" x2="532" y2="214" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="514" y1="214" x2="550" y2="214" stroke="#818cf8" stroke-width="4" stroke-linecap="round"/>
+    <line x1="514" y1="228" x2="550" y2="228" stroke="#818cf8" stroke-width="4" stroke-linecap="round"/>
+    <line x1="532" y1="228" x2="532" y2="294" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <text x="532" y="260" fill="#818cf8" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" text-anchor="middle">COUT</text>
+    <line x1="614" y1="154" x2="614" y2="178" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+
+    <line x1="614" y1="178" x2="614" y2="194.2" stroke="#4ade80" stroke-width="3" stroke-linecap="round"/>
+    <rect x="601" y="194.2" width="26" height="57.6" rx="5" fill="#101827" stroke="#4ade80" stroke-width="2"/>
+    <line x1="614" y1="251.79999999999998" x2="614" y2="268" stroke="#4ade80" stroke-width="3" stroke-linecap="round"/>
+    <text x="642" y="228" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start">RLOAD</text>
+
+    <line x1="614" y1="268" x2="614" y2="294" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="54" y1="294" x2="630" y2="294" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+    <text x="266" y="138" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" text-anchor="middle">SW</text>
+
+    <text x="390" y="344" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle">PWM switch -&gt; LC filter -&gt; regulated DC output</text>
+
+</svg>

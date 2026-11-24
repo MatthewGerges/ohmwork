@@ -1,0 +1,27 @@
+{
+  "slug": "semiconductor-devices-mosfets-on-a-very-simple-level-what-is-a-mosfet",
+  "category": "Semiconductor Devices, MOSFETs",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 96,
+  "source_fingerprint": "377896d70ae3baa3",
+  "source": {
+    "batch_id": "ee-flashcards-semiconductors-v2-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+    "row_number": 2
+  },
+  "images": {},
+  "question_text": "<p>On a very simple level, what is a MOSFET and how does it work?</p>",
+  "answer_text": "<p>It is a voltage-controlled switch. When you apply a voltage to the gate, it allows current to pass through.</p>",
+  "explanation_text": "<p>Think of a MOSFET like a garden hose equipped with a spray gun handle. The water pressure waiting in the hose is your voltage, the water flowing out is the current, and your hand squeezing the handle is the gate voltage. When you squeeze the handle (apply gate voltage), the valve opens and water (current) flows. When you let go, it stops.</p>",
+  "bonus_question_text": "<p>What does MOSFET stand for?</p>",
+  "bonus_answer_text": "<p>Metal-Oxide-Semiconductor Field-Effect Transistor.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:377896d70ae3baa3"
+  ],
+  "related_question_ids": []
+}

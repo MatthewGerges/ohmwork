@@ -1,0 +1,29 @@
+{
+  "slug": "transmission-line-theory-pcb-why-is-an-unbroken-continuous-ground-refe",
+  "category": "Transmission Line Theory, PCB",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 46,
+  "source_fingerprint": "afc6f9893cafd9f3",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 15
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-pcb-why-is-an-unbroken-continuous-ground-refe-image_1.svg"
+  },
+  "question_text": "<p>Why is an unbroken, continuous ground reference plane absolutely critical directly underneath a high-speed signal trace?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Two top-down PCB views. Top: A signal trace cleanly crossing over a solid ground plane, with return current tightly following underneath. Bottom: A signal trace crossing a split in the ground plane, with return current forced to take a massive detour around the gap.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>It provides a tight, continuous path for the return current, minimizing loop inductance and maintaining a constant characteristic impedance.</p>",
+  "explanation_text": "<p>High-frequency return currents naturally want to flow directly underneath the signal trace on the reference plane (the path of least inductance). If the plane is split or has a gap, the return current is violently forced to detour around the gap.</p>",
+  "bonus_question_text": "<p>What happens to the signal if the return current is forced to detour around a gap in the plane?</p>",
+  "bonus_answer_text": "<p>The massive loop area creates a huge spike in parasitic inductance, causing an impedance mismatch, severe signal reflections, and radiated EMI (crosstalk).</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:afc6f9893cafd9f3"
+  ],
+  "related_question_ids": []
+}

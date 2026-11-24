@@ -1,0 +1,27 @@
+{
+  "slug": "power-electronics-buck-converters-what-determines-the-output-voltage-o",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 62,
+  "source_fingerprint": "cb1b7b974df3be3b",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 8
+  },
+  "images": {},
+  "question_text": "<p>What determines the output voltage of an ideal buck converter, and how is the formula mathematically derived using Volt-Second Balance?</p>",
+  "answer_text": "<p>The duty cycle (D). The formula is: V_out = V_in * D.</p>",
+  "explanation_text": "<p>It is derived using &quot;Volt-Second Balance,&quot; which is exactly what you think: energy in = energy out. Specifically, the magnetic energy built up in the inductor during the ON state must perfectly equal the energy released during the OFF state. Put simply, the average voltage across an inductor over a full cycle must be exactly zero.</p>\n<p>*   **ON State:** The inductor sees (V_in - V_out) for a time of t_on.<br/>*   **OFF State:** The inductor sees V_out for a time of t_off.<br/>*   Equating them: (V_in - V_out) * t_on = V_out * t_off.<br/>With basic algebra, this perfectly simplifies to V_out = V_in * (t_on / t_total), which is exactly V_in * Duty Cycle!</p>",
+  "bonus_question_text": "<p>Given V_out = 3.3V and V_in = 12V, what is the ideal duty cycle? What happens at 100% duty cycle?</p>",
+  "bonus_answer_text": "<p>D = 3.3V / 12V = 27.5%. At 100% duty cycle, the high-side switch stays on constantly, and V_out equals V_in.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:cb1b7b974df3be3b"
+  ],
+  "related_question_ids": []
+}

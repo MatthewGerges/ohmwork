@@ -1,0 +1,29 @@
+{
+  "slug": "transmission-line-theory-a-1v-step-is-sent-from-a-20-driver-into-a-50",
+  "category": "Transmission Line Theory",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 31,
+  "source_fingerprint": "ea425f9f2152fc70",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 3
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-a-1v-step-is-sent-from-a-20-driver-into-a-50-image_1.svg"
+  },
+  "question_text": "<p>A 1V step is sent from a 20Ω driver into a 50Ω transmission line, ending at an open (1 MΩ) receiver. What is the initial voltage wave? When it reaches the receiver, what is the total voltage? Finally, when the reflection reaches the source, what is the voltage of the second reflected wave, and what does the total voltage at the source become?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A schematic showing a 1V step voltage source connected to a 20Ω series resistor (driver), feeding into a long transmission line block labeled 'Z0 = 50Ω'. The end of the transmission line is left unconnected, labeled '1 MΩ (Open)'.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>Initial wave: 0.714V.<br/>Total receiver voltage: 1.428V.<br/>Second reflected wave: -0.306V.<br/>Total source voltage: 1.122V.</p>",
+  "explanation_text": "<p>1) Initial wave: 1V * (50 / (20 + 50)) = 0.714V.<br/>2) First reflection: The receiver reflection coefficient is Γ_L = (Z_L - Z_0) / (Z_L + Z_0) = (1M - 50) / (1M + 50) ≈ 1. Because Γ = 1, 100% of the incident wave reflects back. The 0.714V incident wave adds to the 0.714V reflected wave, making the total receiver voltage 0.714V + 0.714V = 1.428V.<br/>3) Second reflection: The 0.714V returning wave hits the 20Ω source. Source Γ_S = (20 - 50) / (20 + 50) = -0.428. The new reflected wave is 0.714V * -0.428 = -0.306V. The total voltage at the source drops to 1.428V - 0.306V = 1.122V.</p>\n<p>*Highly Recommended: Visualize this math interactively using this simulator: https://helloworld922.blogspot.com/2013/04/online-transmission-line-simulation.html*</p>",
+  "bonus_question_text": "<p>Why does the voltage &quot;step up&quot; and &quot;step down&quot; like this?</p>",
+  "bonus_answer_text": "<p>Because the line is improperly terminated at both ends, the energy bounces back and forth (ringing), gradually settling toward its steady-state DC value.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:ea425f9f2152fc70"
+  ],
+  "related_question_ids": []
+}

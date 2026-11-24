@@ -1,0 +1,856 @@
+{
+  "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+  "generated_at": "2026-09-03T21:27:40.508Z",
+  "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+  "rows": [
+    {
+      "row_number": 2,
+      "slug": "power-electronics-buck-converters-what-is-a-buck-converter-and-concept",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "8478d15d0e90abb0",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 2
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "easy",
+        "question_text": "What is a buck converter, and conceptually how does it step down DC voltage?",
+        "answer_text": "{{image_1}}\n\nA buck converter is a DC-DC step-down switching regulator. It uses a high-speed switch (MOSFET), an inductor, a capacitor, and a diode to step down voltage by stepping up the current.",
+        "explanation_text": "Think of the circuit in stages. A switch turns on and off very fast to create a choppy PWM square wave. The inductor smooths that choppy current by storing energy in its magnetic field, and the capacitor smooths the voltage. When the switch opens, the inductor releases its stored energy, and the diode provides a safe return path for that current to keep flowing to the load.\n\nHighly Recommended Videos for Visualization:\nhttps://www.youtube.com/watch?v=rfChSvb8FX0\nhttps://www.youtube.com/watch?v=W6NOV6b8kxs&t=21s\nhttps://www.youtube.com/watch?v=cE2-g4QsKr0&t=35s",
+        "bonus_question_text": "What happens if the load is removed (an open circuit)?",
+        "bonus_answer_text": "The output capacitor has nowhere to drain its energy. In a basic asynchronous buck, the voltage can slowly drift up to V_in due to leakage, or the converter enters Discontinuous Conduction Mode (DCM) to stop pumping energy.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A standard buck converter schematic. A DC source connects to a switch (FET), leading to a switching node. A diode connects from ground to the switching node (pointing up). An inductor connects the switching node to the output. A capacitor connects the output to ground, with a load resistor in parallel.",
+          "title": "Buck converter power stage",
+          "alt": "A standard buck converter schematic. A DC source connects to a switch (FET), leading to a switching node. A diode connects from ground to the switching node (pointing up). An inductor connects the switching node to the output. A capacitor connects the output to ground, with a load resistor in parallel.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_power_stage_basic"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-what-is-a-buck-converter-and-concept-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 3,
+      "slug": "power-electronics-buck-converters-what-is-the-main-advantage-of-a-buck",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "f21e567cfd58db89",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 3
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "easy",
+        "question_text": "What is the main advantage of a buck converter over a linear voltage regulator (like an LDO)? What are the pros and cons of each?",
+        "answer_text": "A buck converter is highly efficient because it converts power. An LDO is inefficient because it steps down voltage by burning the excess power as heat.",
+        "explanation_text": "Pros of a Buck: High efficiency (often >90%), less heat, and can step down large voltage gaps easily. Cons: Complex, requires an external inductor, and generates switching noise/ripple.\nPros of an LDO: Extremely simple, very cheap, zero switching noise (clean output). Cons: Highly inefficient, especially if the voltage drop (V_in - V_out) is large.",
+        "bonus_question_text": "If you need to drop 5V to 3.3V for a highly sensitive RF sensor drawing 10mA, which should you use?",
+        "bonus_answer_text": "An LDO. The power loss is minimal (17mW), and the RF sensor requires a perfectly clean, noise-free supply.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 4,
+      "slug": "power-electronics-buck-converters-what-would-happen-to-a-buck-converte",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "a05aa2c85ada16b5",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 4
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "medium",
+        "question_text": "What would happen to a buck converter if you completely removed the Inductor?",
+        "answer_text": "{{image_1}}\n\nA catastrophic short circuit. The MOSFET would likely be destroyed instantly.",
+        "explanation_text": "The inductor is the only component limiting the rate of current change (di/dt). If you remove it, the high-side switch connects the input voltage directly to the empty output capacitor. This causes an infinite spike of inrush current that will instantly burn out the switch. You should really build this on LTspice to see it in action. An LTspice model will be added in the future if deemed necessary.",
+        "bonus_question_text": null,
+        "bonus_answer_text": null,
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A buck converter schematic with a large red 'X' drawn over the inductor. An arrow points from the switch directly to the capacitor with a label reading 'Massive Inrush Current / Short Circuit'.",
+          "title": "Buck converter without an inductor",
+          "alt": "A buck converter schematic with a large red 'X' drawn over the inductor. An arrow points from the switch directly to the capacitor with a label reading 'Massive Inrush Current / Short Circuit'.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_missing_inductor"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-what-would-happen-to-a-buck-converte-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 5,
+      "slug": "power-electronics-buck-converters-what-would-happen-to-a-buck-converte-2",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "9698adb812605aef",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 5
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "medium",
+        "question_text": "What would happen to a buck converter if you completely removed the freewheeling Diode?",
+        "answer_text": "{{image_1}}\n\nThe MOSFET would be destroyed by a massive high-voltage spike exceeding its V_DS limit.",
+        "explanation_text": "According to V = L(di/dt), inductors strongly resist any instantaneous change in current. When the switch opens, the current tries to stop instantly. To maintain the current flow, the inductor transitions from acting as a load to acting as a source. Its polarity aggressively flips, making the left side of the inductor (the switch node) massively negative. Without a diode to clamp this negative spike, the switch node drops to hundreds of volts below ground. This creates a massive voltage differential across the open MOSFET, violating its maximum V_DS (Drain-to-Source) specification and instantly destroying it. You should really build this on LTspice to see it in action. An LTspice model will be added in the future if deemed necessary.",
+        "bonus_question_text": null,
+        "bonus_answer_text": null,
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Side-by-side switch-node voltage plots. With the diode, VSW alternates between 12 V and -0.7 V. Without the diode, VSW spikes to -33 V and rings, producing 45 V across the high-side MOSFET.",
+          "title": "Buck converter without a freewheeling diode",
+          "alt": "Side-by-side switch-node voltage plots. With the diode, VSW alternates between 12 V and -0.7 V. Without the diode, VSW spikes to -33 V and rings, producing 45 V across the high-side MOSFET.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_missing_diode"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-what-would-happen-to-a-buck-converte-2-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 6,
+      "slug": "power-electronics-buck-converters-what-would-happen-to-a-buck-converte-3",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "828a5cd3dc5e611a",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 6
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "medium",
+        "question_text": "What would happen to a buck converter if you completely removed the Output Capacitor?",
+        "answer_text": "{{image_1}}\n\nThe load would experience massive voltage ripple, turning the output into a jagged waveform instead of DC.",
+        "explanation_text": "The inductor provides a choppy, triangular current. Without the output capacitor to act as a \"bucket\"—absorbing the excess current peaks and filling in the valleys—the load would see that raw, changing current, resulting in massive voltage swings. You should really build this on LTspice to see it in action. An LTspice model will be added in the future if deemed necessary.",
+        "bonus_question_text": null,
+        "bonus_answer_text": null,
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A buck converter schematic with a large red 'X' over the output capacitor. Next to the load resistor, a graph shows a highly jagged triangle wave labeled 'Raw Ripple Voltage'.",
+          "title": "Buck converter without an output capacitor",
+          "alt": "A buck converter schematic with a large red 'X' over the output capacitor. Next to the load resistor, a graph shows a highly jagged triangle wave labeled 'Raw Ripple Voltage'.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_missing_output_capacitor"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-what-would-happen-to-a-buck-converte-3-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 7,
+      "slug": "power-electronics-buck-converters-what-would-happen-to-a-buck-converte-4",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "d060f7c1a650d38c",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 7
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "medium",
+        "question_text": "What would happen to a buck converter if you completely removed the Input Capacitor?",
+        "answer_text": "{{image_1}}\n\nThe input voltage supply would crash and ring violently during every switching cycle.",
+        "explanation_text": "When the MOSFET closes, it instantly demands a massive pulse of current. Power supply traces on the PCB have parasitic inductance, so they cannot deliver current instantly. Without a local input capacitor to instantly supply that burst of energy, the input voltage drops sharply and rings. You should really build this on LTspice to see it in action. An LTspice model will be added in the future if deemed necessary.",
+        "bonus_question_text": null,
+        "bonus_answer_text": null,
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A buck converter schematic with a large red 'X' over the input capacitor. A graph at the input line shows the V_in voltage dipping sharply and ringing every time the switch turns on.",
+          "title": "Buck converter without an input capacitor",
+          "alt": "A buck converter schematic with a large red 'X' over the input capacitor. A graph at the input line shows the V_in voltage dipping sharply and ringing every time the switch turns on.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_missing_input_capacitor"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-what-would-happen-to-a-buck-converte-4-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 8,
+      "slug": "power-electronics-buck-converters-what-determines-the-output-voltage-o",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "cb1b7b974df3be3b",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 8
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "easy",
+        "question_text": "What determines the output voltage of an ideal buck converter, and how is the formula mathematically derived using Volt-Second Balance?",
+        "answer_text": "The duty cycle (D). The formula is: V_out = V_in * D.",
+        "explanation_text": "It is derived using \"Volt-Second Balance,\" which is exactly what you think: energy in = energy out. Specifically, the magnetic energy built up in the inductor during the ON state must perfectly equal the energy released during the OFF state. Put simply, the average voltage across an inductor over a full cycle must be exactly zero.\n\n*   **ON State:** The inductor sees (V_in - V_out) for a time of t_on.\n*   **OFF State:** The inductor sees V_out for a time of t_off.\n*   Equating them: (V_in - V_out) * t_on = V_out * t_off.\nWith basic algebra, this perfectly simplifies to V_out = V_in * (t_on / t_total), which is exactly V_in * Duty Cycle!",
+        "bonus_question_text": "Given V_out = 3.3V and V_in = 12V, what is the ideal duty cycle? What happens at 100% duty cycle?",
+        "bonus_answer_text": "D = 3.3V / 12V = 27.5%. At 100% duty cycle, the high-side switch stays on constantly, and V_out equals V_in.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 9,
+      "slug": "power-electronics-buck-converters-draw-the-inductor-current-waveform-i",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "b05a6d06b98b2b4e",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 9
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "medium",
+        "question_text": "Draw the inductor current waveform in a buck converter with reference to the control signal (the MOSFET gate voltage). Why does it look like that?",
+        "answer_text": "{{image_1}}\n\nIt is a continuous triangle wave. It ramps up diagonally when the gate is HIGH, and ramps down diagonally when the gate is LOW.",
+        "explanation_text": "The physics formula is V = L(di/dt). This simply means that applying a flat, constant voltage to an inductor creates a sloped, diagonal current. When the gate is HIGH, a positive flat voltage (V_in - V_out) is applied, creating a straight upward slope. When the gate is LOW, a negative flat voltage (-V_out) is applied, creating a straight downward slope.",
+        "bonus_question_text": "What dictates how steep that diagonal current line is?",
+        "bonus_answer_text": "The size of the inductor (L) and the voltage applied. A larger inductor (more Henries) resists change more strongly, resulting in a flatter, less steep slope (meaning less ripple!).",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Two stacked waveform graphs. Top: A square wave representing the MOSFET Gate Control Signal (HIGH / LOW). Bottom: The Inductor Current, showing a diagonal line ramping up exactly during the HIGH period, and ramping down exactly during the LOW period.",
+          "title": "Buck gate and inductor current",
+          "alt": "Two stacked waveform graphs. Top: A square wave representing the MOSFET Gate Control Signal (HIGH / LOW). Bottom: The Inductor Current, showing a diagonal line ramping up exactly during the HIGH period, and ramping down exactly during the LOW period.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_gate_inductor_current"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-inductor-current-waveform-i-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 10,
+      "slug": "power-electronics-buck-converters-how-does-changing-the-switching-freq",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "56c6af963ee712e8",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 10
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "medium",
+        "question_text": "How does changing the switching frequency (e.g., 100kHz vs 2MHz) impact a buck converter's efficiency and output ripple?",
+        "answer_text": "Higher frequency = lower ripple but lower efficiency. Lower frequency = higher efficiency but higher ripple.",
+        "explanation_text": "If you switch on and off very rapidly (high frequency), the inductor and capacitor don't have enough time to charge or discharge very much between cycles. This keeps the output voltage incredibly smooth and allows you to use physically smaller components. \n\nHowever, efficiency drops. There are \"conduction losses\" (power burned simply because the MOSFET acts like a resistor, R_ds(on)), and there are \"switching losses.\" Switching losses happen every time the MOSFET transitions. Forcing it to transition millions of times per second wastes a massive amount of energy.",
+        "bonus_question_text": "If space on a PCB is extremely limited, should you choose a low or high switching frequency?",
+        "bonus_answer_text": "High switching frequency. It allows you to use drastically smaller surface-mount inductors and capacitors, saving significant board space.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 11,
+      "slug": "power-electronics-buck-converters-what-components-in-a-buck-converter",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "b2e3054ffa837d45",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 11
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "medium",
+        "question_text": "What components in a buck converter are most responsible for power losses, and how exactly do these losses occur?",
+        "answer_text": "{{image_1}}\n\nThe main losses are in the MOSFETs (conduction and switching), Inductor (DCR and core), and Diode (forward voltage drop).",
+        "explanation_text": "1. Switching Losses (MOSFET): A MOSFET doesn't open or close instantly. As it transitions, voltage drops while current rises. For a split nanosecond, both voltage and current are high, creating a massive spike in wasted heat (P = V * I).\n2. Conduction Losses (MOSFET): When fully ON, the MOSFET acts like a tiny resistor (R_DS(on)), burning power steadily as heat (P = I^2 * R_DS(on)).\n3. DCR Losses (Inductor): The physical copper wire coiled in the inductor has DC Resistance (DCR), which burns power just like any other resistor (P = I^2 * R_DCR).\n4. Core Losses (Inductor): As the magnetic field constantly expands and collapses, energy is lost as heat inside the physical core material due to magnetic hysteresis and eddy currents.",
+        "bonus_question_text": "How is overall efficiency calculated?",
+        "bonus_answer_text": "Efficiency (%) = (Output Power / Input Power) * 100.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A graph showing the V-I crossover during a MOSFET turn-on event. The Voltage trace drops diagonally, the Current trace rises diagonally, and a shaded bell-curve spike in the middle is labeled 'P = V*I (Switching Loss)'.",
+          "title": "MOSFET switching loss",
+          "alt": "A graph showing the V-I crossover during a MOSFET turn-on event. The Voltage trace drops diagonally, the Current trace rises diagonally, and a shaded bell-curve spike in the middle is labeled 'P = V*I (Switching Loss)'.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_switching_loss"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-what-components-in-a-buck-converter-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 12,
+      "slug": "power-electronics-buck-converters-what-is-synchronous-rectification-in",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "e47654c1d1c065e2",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 12
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "medium",
+        "question_text": "What is synchronous rectification in a buck converter, and why does it drastically improve efficiency?",
+        "answer_text": "{{image_1}}\n\nIt replaces the passive low-side freewheeling diode with a second, active low-side MOSFET.",
+        "explanation_text": "A standard diode always drops around 0.3V to 0.7V when conducting. If 10 Amps are flowing, the diode wastes 7 Watts of power just acting as a return path! \n\nA MOSFET, however, has an incredibly low \"ON\" resistance (R_ds(on)), often just a few milliohms. Because power loss is calculated as P = I^2 * R_ds(on), the MOSFET burns significantly less energy than the diode, keeping the circuit cooler and much more efficient.",
+        "bonus_question_text": "What is \"shoot-through\" in a synchronous buck converter, and how do you avoid it?",
+        "bonus_answer_text": "Shoot-through is a catastrophic short circuit from V_in directly to ground that occurs if both the high-side and low-side FETs accidentally turn on at the exact same time. It is avoided by injecting a tiny delay called \"dead time\" between switching states.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A side-by-side comparison of two schematics. Left: An asynchronous buck converter (high-side FET, low-side diode). Right: A synchronous buck converter (high-side FET, low-side FET).",
+          "title": "Asynchronous vs synchronous buck",
+          "alt": "A side-by-side comparison of two schematics. Left: An asynchronous buck converter (high-side FET, low-side diode). Right: A synchronous buck converter (high-side FET, low-side FET).",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_rectification_comparison"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-what-is-synchronous-rectification-in-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 13,
+      "slug": "power-electronics-buck-converters-what-is-the-difference-between-conti",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "c49b5b5a84ae9470",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 13
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "hard",
+        "question_text": "What is the difference between Continuous and Discontinuous Conduction Mode (CCM vs DCM), and when does a buck converter enter DCM?",
+        "answer_text": "{{image_1}}\n\nIn CCM, the inductor current never reaches zero. In DCM, the inductor completely discharges its energy, hitting zero amps before the next switching cycle begins. Converters naturally enter DCM at light loads.",
+        "explanation_text": "In CCM, the output voltage is strictly defined by the duty cycle (V_out = V_in * D). When the load draws very little current, the entire triangle ripple drops downward. In an asynchronous buck, the diode blocks current from flowing backwards, forcing the inductor current to stay clamped at zero (DCM). In DCM, the simple V_out equation no longer works, and voltage becomes dependent on the load current.",
+        "bonus_question_text": "What is PFM (Pulse Frequency Modulation) and why is it used?",
+        "bonus_answer_text": "Rather than maintaining a constant frequency (PWM), PFM varies the switching frequency and skips cycles during extremely light loads. This drastically reduces dynamic switching losses, significantly boosting light-load efficiency.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Two inductor current waveforms side-by-side. Left (CCM): A triangle wave entirely above the 0A horizontal axis. Right (DCM): A triangle wave that ramps down, hits the 0A axis, stays flat at 0A for a short period, and then ramps back up.",
+          "title": "CCM vs DCM inductor current",
+          "alt": "Two inductor current waveforms side-by-side. Left (CCM): A triangle wave entirely above the 0A horizontal axis. Right (DCM): A triangle wave that ramps down, hits the 0A axis, stays flat at 0A for a short period, and then ramps back up.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_ccm_dcm"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-what-is-the-difference-between-conti-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 14,
+      "slug": "power-electronics-buck-converters-what-happens-to-a-buck-converter-at",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "a9668f37362fef07",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 14
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "easy",
+        "question_text": "What happens to a buck converter at exactly 100% and 0% duty cycle?",
+        "answer_text": "At 100%, the high-side switch is always ON (V_out ≈ V_in). At 0%, the switch is always OFF (V_out = 0V).",
+        "explanation_text": "At a 100% duty cycle, no switching occurs. The MOSFET acts as a continuous wire, the inductor saturates (acting as a wire with some DC resistance), and the input is passed directly to the output. At 0%, no energy is ever transferred, and the output capacitor fully discharges its remaining energy into the load.",
+        "bonus_question_text": "What prevents many real-world buck converters from achieving exactly 100% duty cycle?",
+        "bonus_answer_text": "The high-side N-channel MOSFET requires a \"bootstrap\" capacitor to drive its gate voltage higher than V_in. If the switch never turns OFF, the bootstrap capacitor can never recharge, causing the gate drive to fail.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 15,
+      "slug": "power-electronics-buck-converters-draw-the-switch-node-voltage-wavefor",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "daf373466f9742a9",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 15
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "medium",
+        "question_text": "Draw the switch node voltage waveform in an asynchronous buck converter alongside the high-side gate control signal. How does it change if it is synchronous?",
+        "answer_text": "{{image_1}}\n\nWhen the gate is HIGH, the switch node jumps to V_in. When LOW, it drops slightly below ground (-V_f of the diode). In a synchronous buck, it drops exactly to 0V.",
+        "explanation_text": "The switch node toggles between the input voltage and ground. In an async converter, the diode must conduct during the OFF time. To forward-bias the diode, the inductor's flyback pulls the switch node to roughly -0.7V. In a sync converter, the low-side MOSFET turns on and provides a near-zero resistance path, keeping the node perfectly at 0V (aside from a tiny I * R_DS(on) drop).",
+        "bonus_question_text": "What happens at the switch node during the \"dead time\" of a synchronous buck converter?",
+        "bonus_answer_text": "Both FETs are off, so the internal body diode of the low-side FET takes over. The switch node briefly dips to -0.7V just like an asynchronous converter until the low-side FET fully turns on.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Stacked graphs. Top: Gate Signal (square wave). Bottom: Switch Node Voltage, jumping up to V_in when the gate is HIGH, and dropping down to -0.7V when the gate is LOW (Async) or 0V (Sync).",
+          "title": "Buck switch-node voltage",
+          "alt": "Stacked graphs. Top: Gate Signal (square wave). Bottom: Switch Node Voltage, jumping up to V_in when the gate is HIGH, and dropping down to -0.7V when the gate is LOW (Async) or 0V (Sync).",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_switch_node_waveforms"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-switch-node-voltage-wavefor-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 16,
+      "slug": "power-electronics-buck-converters-draw-the-inductor-voltage-and-induct",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "342b10947bc32c38",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 16
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "medium",
+        "question_text": "Draw the inductor voltage and inductor current waveforms alongside the high-side gate control signal. Why do they look like this?",
+        "answer_text": "{{image_1}}\n\nThe voltage is a square wave alternating between positive and negative. The current is a continuous triangle wave.",
+        "explanation_text": "This perfectly visualizes V = L(di/dt). When the switch is ON, a positive flat voltage (V_in - V_out) is applied across the inductor, causing current to ramp up diagonally. When OFF, the switch node drops to ~0V, so the voltage across the inductor becomes negative (-V_out). This constant negative voltage causes the current to ramp down diagonally.",
+        "bonus_question_text": "In steady-state, what is the average voltage across the inductor over a full switching cycle?",
+        "bonus_answer_text": "Exactly zero volts. This is the principle of Volt-Second Balance.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Stacked graphs. Top: Gate Signal. Middle: Inductor Voltage (a positive flat line during ON, dropping to a negative flat line during OFF). Bottom: Inductor Current (ramping up diagonally during ON, ramping down diagonally during OFF).",
+          "title": "Buck inductor voltage and current",
+          "alt": "Stacked graphs. Top: Gate Signal. Middle: Inductor Voltage (a positive flat line during ON, dropping to a negative flat line during OFF). Bottom: Inductor Current (ramping up diagonally during ON, ramping down diagonally during OFF).",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_inductor_waveforms"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-inductor-voltage-and-induct-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 17,
+      "slug": "power-electronics-buck-converters-draw-the-output-capacitor-current-an",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "f9f49bff9cf38aac",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 17
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "hard",
+        "question_text": "Draw the output capacitor current and voltage waveforms alongside the inductor current. Why do they look like this?",
+        "answer_text": "{{image_1}}\n\nThe capacitor current is an AC triangle wave centered perfectly at 0A. The capacitor voltage is a smooth DC line with tiny parabolic ripples.",
+        "explanation_text": "The inductor provides a DC current with an AC triangle ripple riding on top of it. The load consumes the flat DC portion. By KCL (I_cap = I_L - I_load), the capacitor is forced to absorb only the AC triangle ripple, meaning its current matches the inductor's AC ripple but centered around 0A. Because V = (1/C) * integral(I dt), integrating this triangle current creates a sequence of tiny parabolas (the voltage ripple).",
+        "bonus_question_text": "When does the output voltage reach its absolute maximum peak during the switching cycle?",
+        "bonus_answer_text": "Right in the middle of the OFF state, exactly when the capacitor current crosses 0A going downward (finishing its charging phase).",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Stacked graphs. Top: Inductor Current (triangle wave above 0A). Middle: Capacitor Current (the exact same triangle wave, but shifted down so it is centered at exactly 0A). Bottom: Capacitor Voltage (a flat DC line with a tiny parabolic ripple).",
+          "title": "Buck output capacitor waveforms",
+          "alt": "Stacked graphs. Top: Inductor Current (triangle wave above 0A). Middle: Capacitor Current (the exact same triangle wave, but shifted down so it is centered at exactly 0A). Bottom: Capacitor Voltage (a flat DC line with a tiny parabolic ripple).",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_output_capacitor_waveforms"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-output-capacitor-current-an-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 18,
+      "slug": "power-electronics-buck-converters-draw-the-diode-current-and-voltage-w",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "8cb687200c5c13a5",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 18
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "medium",
+        "question_text": "Draw the diode current and voltage waveforms in an asynchronous buck converter alongside the high-side gate signal.",
+        "answer_text": "{{image_1}}\n\nThe diode conducts current (triangle ramp down) only when the gate is LOW. The voltage across it is highly negative when the gate is HIGH.",
+        "explanation_text": "When the high-side FET is ON, the diode is reverse-biased with the full V_in across it (blocking current). When the FET turns OFF, the inductor's flyback pulls the switch node negative, forward-biasing the diode. It then conducts the decaying inductor current until the FET turns ON again.",
+        "bonus_question_text": "Why does a diode get so hot in high-current applications?",
+        "bonus_answer_text": "It drops a relatively fixed voltage (e.g., 0.7V) whenever it conducts. If 10A flows through it during the OFF cycle, it burns 7 Watts of power as pure heat (P = I * V_f).",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Stacked graphs. Top: Gate Signal. Middle: Diode Current (0A during ON, instantly jumping up and ramping down diagonally during OFF). Bottom: Diode Voltage (A flat line at -V_in during ON, and -0.7V during OFF).",
+          "title": "Asynchronous buck diode waveforms",
+          "alt": "Stacked graphs. Top: Gate Signal. Middle: Diode Current (0A during ON, instantly jumping up and ramping down diagonally during OFF). Bottom: Diode Voltage (A flat line at -V_in during ON, and -0.7V during OFF).",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_diode_waveforms"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-diode-current-and-voltage-w-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 19,
+      "slug": "power-electronics-buck-converters-draw-the-input-supply-current-and-vo",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "0092890c78b25c1e",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 19
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "medium",
+        "question_text": "Draw the input supply current and voltage waveforms at the input capacitor alongside the high-side gate signal.",
+        "answer_text": "{{image_1}}\n\nThe input current is a pulsating, choppy trapezoid wave. The input voltage is a DC line with sharp dipping ripples when the switch turns ON.",
+        "explanation_text": "The buck converter draws current in violent, high-frequency pulses every time the switch closes. The current instantly jumps up to match the inductor current, ramps up slightly, and then snaps back to zero when the switch opens. This harsh pulsed current demand (extremely high di/dt) causes the input voltage to dip slightly and ring due to the trace's parasitic inductance.",
+        "bonus_question_text": "How do you mitigate the severe ringing on the input voltage line?",
+        "bonus_answer_text": "By placing high-quality, low-ESR ceramic decoupling capacitors as physically close to the MOSFET drain as possible to supply instantaneous local current.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Stacked graphs. Top: Gate Signal. Middle: Input Current (0A during OFF, jumping up to a sloped top during ON). Bottom: Input Voltage (a DC horizontal line that dips and rings sharply during the ON periods).",
+          "title": "Buck input waveforms",
+          "alt": "Stacked graphs. Top: Gate Signal. Middle: Input Current (0A during OFF, jumping up to a sloped top during ON). Bottom: Input Voltage (a DC horizontal line that dips and rings sharply during the ON periods).",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_input_waveforms"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-input-supply-current-and-vo-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 20,
+      "slug": "power-electronics-buck-converters-draw-the-output-load-voltage-and-cur",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "b5b2d3404464d056",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 20
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "easy",
+        "question_text": "Draw the output load voltage and current waveforms alongside the high-side gate signal.",
+        "answer_text": "{{image_1}}\n\nThey are both perfectly flat, continuous horizontal DC lines (with negligible ripple).",
+        "explanation_text": "The entire purpose of the LC filter (Inductor + Capacitor) is to average out the violent switching action. The inductor smooths the choppy input into a continuous triangle wave, and the capacitor absorbs the AC portion of that triangle wave. What remains for the load is purely the DC average of both voltage and current.",
+        "bonus_question_text": "If the load suddenly demands more current (a load transient), what provides that current instantly before the inductor can react?",
+        "bonus_answer_text": "The output capacitor. It discharges its stored energy to hold the voltage steady until the control loop catches up and increases the duty cycle.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Stacked graphs. Top: Gate Signal. Middle: Load Voltage (Flat horizontal line). Bottom: Load Current (Flat horizontal line).",
+          "title": "Buck output waveforms",
+          "alt": "Stacked graphs. Top: Gate Signal. Middle: Load Voltage (Flat horizontal line). Bottom: Load Current (Flat horizontal line).",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_load_waveforms"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-output-load-voltage-and-cur-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 21,
+      "slug": "power-electronics-buck-converters-draw-the-low-side-nfet-current-and-v",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "060ff7d247005d4b",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 21
+      },
+      "question": {
+        "category": "Power Electronics, Buck Converters",
+        "categories": [
+          "Power Electronics",
+          "Buck Converters"
+        ],
+        "difficulty": "medium",
+        "question_text": "Draw the low-side NFET current and V_DS voltage waveforms in a synchronous buck converter, alongside the high-side gate signal.",
+        "answer_text": "{{image_1}}\n\nThe low-side FET conducts (triangle ramp down) exactly when the high-side gate is LOW. Its V_DS is equal to V_in when OFF, and ~0V when ON.",
+        "explanation_text": "The low-side NFET replaces the diode. When the high-side FET is ON, the low-side FET is OFF and must block the full input voltage (V_in). When the high-side FET turns OFF, the low-side FET turns ON to carry the freewheeling inductor current. Because its R_DS(on) is so small, its voltage drop is practically 0V while conducting.",
+        "bonus_question_text": "What specification must be extremely low on the low-side FET to prevent switching losses during the dead-time?",
+        "bonus_answer_text": "The reverse-recovery charge (Q_rr) and forward voltage drop (V_f) of its internal body diode.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Stacked graphs. Top: High-Side Gate Signal. Middle: Low-Side NFET Current (0A during ON, jumping up and ramping down diagonally during OFF). Bottom: Low-Side V_DS (V_in during ON, 0V during OFF).",
+          "title": "Synchronous buck low-side FET waveforms",
+          "alt": "Stacked graphs. Top: High-Side Gate Signal. Middle: Low-Side NFET Current (0A during ON, jumping up and ramping down diagonally during OFF). Bottom: Low-Side V_DS (V_in during ON, 0V during OFF).",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "buck_low_side_fet_waveforms"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-low-side-nfet-current-and-v-image_1.svg"
+        }
+      },
+      "notes": null
+    }
+  ],
+  "rendered_at": "2026-09-08T20:46:40.955Z"
+}

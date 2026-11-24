@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="565" viewBox="0 0 900 565" role="img" aria-label="Asynchronous buck diode waveforms">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f87171"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#818cf8"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fb923c"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"/>
+  <text x="450" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Asynchronous buck diode waveforms</text>
+
+    <text x="185" y="76" fill="#fb923c" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle">HS FET OFF</text>
+    <text x="260" y="76" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle">HS FET ON</text>
+    <text x="360" y="76" fill="#fb923c" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle">HS FET OFF</text>
+    <text x="460" y="76" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle">HS FET ON</text>
+    <line x1="210" y1="82" x2="210" y2="464" stroke="#fbbf24" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 6"/><line x1="310" y1="82" x2="310" y2="464" stroke="#fbbf24" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 6"/><line x1="410" y1="82" x2="410" y2="464" stroke="#fbbf24" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 6"/><line x1="510" y1="82" x2="510" y2="464" stroke="#fbbf24" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 6"/><line x1="610" y1="82" x2="610" y2="464" stroke="#fbbf24" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 6"/>
+
+    <rect x="138" y="77" width="622" height="76" rx="4" fill="#0b1528" stroke="#475569" stroke-width="2"/>
+    <line x1="158" y1="87" x2="158" y2="143" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="223.25" y1="87" x2="223.25" y2="143" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="288.5" y1="87" x2="288.5" y2="143" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="353.75" y1="87" x2="353.75" y2="143" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="419" y1="87" x2="419" y2="143" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="484.25" y1="87" x2="484.25" y2="143" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="549.5" y1="87" x2="549.5" y2="143" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="614.75" y1="87" x2="614.75" y2="143" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="680" y1="87" x2="680" y2="143" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="87" x2="680" y2="87" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="101" x2="680" y2="101" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="115" x2="680" y2="115" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="129" x2="680" y2="129" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="143" x2="680" y2="143" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+    <line x1="158" y1="143" x2="744" y2="143" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"/>
+    <line x1="158" y1="143" x2="158" y2="83" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"/>
+    <text x="124" y="120" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" text-anchor="end">Gate</text>
+    <text x="742" y="136" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="500" text-anchor="end">time</text>
+
+    <path d="M160 137 L210 137 L210 93 L310 93 L310 137 L410 137 L410 93 L510 93 L510 137 L610 137 L610 93 L680 93" fill="none" stroke="#4ade80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="772" y="97" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="start">HIGH = HS ON</text><line x1="158" y1="137" x2="680" y2="137" stroke="#475569" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 5"/><text x="772" y="141" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="start">LOW = HS OFF</text>
+
+    <rect x="138" y="182" width="622" height="76" rx="4" fill="#0b1528" stroke="#475569" stroke-width="2"/>
+    <line x1="158" y1="192" x2="158" y2="248" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="223.25" y1="192" x2="223.25" y2="248" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="288.5" y1="192" x2="288.5" y2="248" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="353.75" y1="192" x2="353.75" y2="248" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="419" y1="192" x2="419" y2="248" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="484.25" y1="192" x2="484.25" y2="248" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="549.5" y1="192" x2="549.5" y2="248" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="614.75" y1="192" x2="614.75" y2="248" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="680" y1="192" x2="680" y2="248" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="192" x2="680" y2="192" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="206" x2="680" y2="206" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="220" x2="680" y2="220" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="234" x2="680" y2="234" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="248" x2="680" y2="248" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+    <line x1="158" y1="248" x2="744" y2="248" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"/>
+    <line x1="158" y1="248" x2="158" y2="188" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"/>
+    <text x="124" y="225" fill="#2dd4bf" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" text-anchor="end">IL</text>
+    <text x="742" y="241" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="500" text-anchor="end">time</text>
+
+    <path d="M160 218 L210 240 L310 200 L410 240 L510 200 L610 240 L680 218" fill="none" stroke="#2dd4bf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="772" y="204" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="start">IAVG + ΔIL/2</text><line x1="158" y1="220" x2="680" y2="220" stroke="#475569" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 5"/><text x="772" y="224" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="start">IAVG</text><line x1="158" y1="240" x2="680" y2="240" stroke="#475569" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 5"/><text x="772" y="244" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="start">IAVG - ΔIL/2</text>
+
+    <rect x="138" y="287" width="622" height="76" rx="4" fill="#0b1528" stroke="#475569" stroke-width="2"/>
+    <line x1="158" y1="297" x2="158" y2="353" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="223.25" y1="297" x2="223.25" y2="353" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="288.5" y1="297" x2="288.5" y2="353" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="353.75" y1="297" x2="353.75" y2="353" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="419" y1="297" x2="419" y2="353" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="484.25" y1="297" x2="484.25" y2="353" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="549.5" y1="297" x2="549.5" y2="353" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="614.75" y1="297" x2="614.75" y2="353" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="680" y1="297" x2="680" y2="353" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="297" x2="680" y2="297" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="311" x2="680" y2="311" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="325" x2="680" y2="325" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="339" x2="680" y2="339" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="353" x2="680" y2="353" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+    <line x1="158" y1="353" x2="744" y2="353" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"/>
+    <line x1="158" y1="353" x2="158" y2="293" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"/>
+    <text x="124" y="330" fill="#fb923c" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" text-anchor="end">ID</text>
+    <text x="742" y="346" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="500" text-anchor="end">time</text>
+
+    <path d="M160 321 L210 347 L210 349 L310 349 L310 303 L410 345 L410 349 L510 349 L510 303 L610 345 L610 349 L680 349" fill="none" stroke="#fb923c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="772" y="307" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="start">IL during OFF</text><line x1="158" y1="349" x2="680" y2="349" stroke="#475569" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 5"/><text x="772" y="353" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="start">0 A during ON</text>
+
+    <rect x="138" y="392" width="622" height="76" rx="4" fill="#0b1528" stroke="#475569" stroke-width="2"/>
+    <line x1="158" y1="402" x2="158" y2="458" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="223.25" y1="402" x2="223.25" y2="458" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="288.5" y1="402" x2="288.5" y2="458" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="353.75" y1="402" x2="353.75" y2="458" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="419" y1="402" x2="419" y2="458" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="484.25" y1="402" x2="484.25" y2="458" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="549.5" y1="402" x2="549.5" y2="458" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="614.75" y1="402" x2="614.75" y2="458" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="680" y1="402" x2="680" y2="458" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="402" x2="680" y2="402" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="416" x2="680" y2="416" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="430" x2="680" y2="430" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="444" x2="680" y2="444" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="158" y1="458" x2="680" y2="458" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+    <line x1="158" y1="458" x2="744" y2="458" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"/>
+    <line x1="158" y1="458" x2="158" y2="398" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-gray)"/>
+    <text x="124" y="435" fill="#818cf8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" text-anchor="end">VD</text>
+    <text x="742" y="451" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="500" text-anchor="end">time</text>
+
+    <path d="M160 416 L210 416 L210 454 L310 454 L310 416 L410 416 L410 454 L510 454 L510 416 L610 416 L610 454 L680 454" fill="none" stroke="#818cf8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="772" y="420" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="start">-0.7 V (conducting)</text><line x1="158" y1="454" x2="680" y2="454" stroke="#475569" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 5"/><text x="772" y="458" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="start">-VIN (blocking)</text>
+  <text x="450" y="512" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Gate LOW: ID follows the inductor ripple current while VD is about -0.7 V</text><text x="450" y="534" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="middle">Gate HIGH: ID is 0 A and the diode blocks approximately VIN</text>
+</svg>

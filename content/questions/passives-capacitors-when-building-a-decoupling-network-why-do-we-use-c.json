@@ -1,0 +1,29 @@
+{
+  "slug": "passives-capacitors-when-building-a-decoupling-network-why-do-we-use-c",
+  "category": "Passives, Capacitors",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 73,
+  "source_fingerprint": "6db426f955014577",
+  "source": {
+    "batch_id": "ee-flashcards-passives-protocols-v3-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+    "row_number": 4
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/passives-capacitors-when-building-a-decoupling-network-why-do-we-use-c-image_1.svg"
+  },
+  "question_text": "<p>When building a decoupling network, why do we use capacitors spaced a &quot;decade&quot; apart in value and physical package size (e.g., 1µF in 0402 alongside 0.1µF in 0201)?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A graph of Impedance vs Frequency. There are two V-shaped dashed lines: one labeled '1µF 0402' with its SRF dip at a lower frequency, and one labeled '0.1µF 0201' with its SRF dip at a higher frequency. The lines intersect in the middle. A thick, bold blue line traces the lowest outline of both curves combined, labeled 'Overall Parallel Impedance'.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>Spacing them by a decade in value and shrinking the physical size for the smaller capacitors creates overlapping SRF curves, pushing high-frequency noise filtering much further out.</p>",
+  "explanation_text": "<p>The physical footprint of a capacitor dominates its parasitic Equivalent Series Inductance (ESL). A tiny 0201 package has drastically lower ESL than a larger 0402 package. Because SRF is the point where capacitance and ESL cancel out, lowering the ESL pushes the SRF to much higher frequencies. A 1µF 0402 provides good mid-frequency bulk decoupling, but its larger ESL makes it fail (turn inductive) at high frequencies. Placing an ultra-low ESL 0.1µF 0201 in parallel covers those higher frequencies perfectly.</p>",
+  "bonus_question_text": "<p>On an Impedance vs. Frequency plot, what does the combined impedance of these parallel capacitors look like?</p>",
+  "bonus_answer_text": "<p>Because they are in parallel, the total impedance follows the path of least resistance. The individual V-shaped SRF curves intersect, and the overall impedance &quot;rides&quot; the bottom outline of those intersecting curves, forming a broad low-impedance trough.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:6db426f955014577"
+  ],
+  "related_question_ids": []
+}

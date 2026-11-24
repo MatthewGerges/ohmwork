@@ -1,0 +1,27 @@
+{
+  "slug": "transmission-line-theory-what-is-the-formula-for-the-reflection-coeffi",
+  "category": "Transmission Line Theory",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 49,
+  "source_fingerprint": "524dbb1eb4c2ca75",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 2
+  },
+  "images": {},
+  "question_text": "<p>What is the formula for the reflection coefficient (Γ)? What is its approximate value if a 50Ω line connects to a high-impedance (e.g., 1 MΩ) receiver?</p>",
+  "answer_text": "<p>Γ = (Z_L - Z_0) / (Z_L + Z_0). For a 1 MΩ receiver, the value is approximately 1.</p>",
+  "explanation_text": "<p>The reflection coefficient tells you how much of a wave bounces back when it hits a change in impedance. Because 1 MΩ is vastly larger than 50Ω, it acts almost like an open circuit, meaning almost the entire wave bounces back positively.</p>",
+  "bonus_question_text": "<p>What happens to the voltage at the receiver if Γ = 1?</p>",
+  "bonus_answer_text": "<p>The reflected wave adds to the incoming wave, doubling the voltage at the receiver.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:524dbb1eb4c2ca75"
+  ],
+  "related_question_ids": []
+}

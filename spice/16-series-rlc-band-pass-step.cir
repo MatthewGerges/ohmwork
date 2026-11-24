@@ -1,0 +1,7 @@
+* Derived from 16-series-rlc-band-pass-step.asc
+V1 VIN 0 PULSE(0 1 100u 1u 1u 10m 20m)
+L1 VLC VIN 10m
+C1 VOUT VLC 100n
+R1 VOUT 0 100
+.tran 0 1.2m 0 500n
+.end

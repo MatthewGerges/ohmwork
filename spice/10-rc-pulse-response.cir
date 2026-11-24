@@ -1,0 +1,6 @@
+* Derived from 10-rc-pulse-response.asc
+V1 VIN 0 PULSE(0 3.3 1m 1u 1u 1m 2m)
+R1 VOUT VIN 1k
+C1 VOUT 0 100n
+.tran 0 6m 0 1u
+.end

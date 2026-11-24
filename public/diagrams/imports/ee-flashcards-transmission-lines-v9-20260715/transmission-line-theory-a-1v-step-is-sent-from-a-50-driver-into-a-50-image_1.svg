@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="360" viewBox="0 0 740 360" role="img" aria-label="Open load reflection, 50Ω source">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f87171"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#818cf8"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fb923c"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"/>
+  <text x="370" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Open load reflection, 50Ω source</text>
+  
+    <text x="72" y="120" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="500" text-anchor="start">1 V step</text>
+    <line x1="70" y1="150" x2="120" y2="150" stroke="#4ade80" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    
+    <line x1="120" y1="150" x2="138" y2="150" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <rect x="138" y="137" width="64" height="26" rx="5" fill="#101827" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="202" y1="150" x2="220" y2="150" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <text x="170" y="127" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="middle">50Ω</text>
+  
+    <rect x="258" y="104" width="258" height="92" rx="8" fill="#0a1a20" stroke="#2dd4bf" stroke-width="2"/>
+    <text x="387" y="143" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" text-anchor="middle">Transmission line</text>
+    <text x="387" y="170" fill="#2dd4bf" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle">Z0 = 50Ω</text>
+    <line x1="220" y1="150" x2="258" y2="150" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="516" y1="150" x2="610" y2="150" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="610" y1="124" x2="610" y2="176" stroke="#f87171" stroke-width="3" stroke-linecap="round"/>
+    <text x="610" y="106" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500" text-anchor="middle">1 MΩ open</text>
+    <line x1="292" y1="226" x2="486" y2="226" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <text x="389" y="216" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="middle">launch 0.5 V</text>
+    <line x1="486" y1="256" x2="292" y2="256" stroke="#fb923c" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <text x="389" y="282" fill="#fb923c" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="middle">return absorbed</text>
+    <rect x="544" y="214" width="122" height="58" rx="8" fill="#101827" stroke="#f87171" stroke-width="2"/>
+    <text x="605" y="236" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" text-anchor="middle">ΓL ≈ +1</text>
+    <text x="605" y="258" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="middle">Vrx = 1.0 V</text>
+    <rect x="76" y="220" width="134" height="58" rx="8" fill="#101827" stroke="#818cf8" stroke-width="2"/>
+    <text x="143" y="242" fill="#818cf8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" text-anchor="middle">ΓS = 0</text>
+    <text x="143" y="264" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" text-anchor="middle">source 50Ω</text>
+    <text x="370" y="326" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="middle">Source termination absorbs the returning wave and stops secondary ringing.</text>
+  
+</svg>

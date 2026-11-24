@@ -1,0 +1,7 @@
+* Derived from 15-lc-high-pass-step.asc
+V1 VIN 0 PULSE(0 1 100u 1u 1u 10m 20m)
+C1 VOUT VIN 1u
+L1 VOUT 0 1m
+RLOAD VOUT 0 100
+.tran 0 1.2m 0 500n
+.end

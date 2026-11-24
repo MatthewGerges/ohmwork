@@ -1,0 +1,623 @@
+{
+  "batch_id": "ee-flashcards-master-simplified-20260709",
+  "generated_at": "2026-07-09T16:42:59.017Z",
+  "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+  "rows": [
+    {
+      "row_number": 2,
+      "slug": "protocols-i2c-what-causes-shark-fin-waveforms-on-the-rising-edge-of-an",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "d8f6054a662cadb5",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 2
+      },
+      "question": {
+        "category": "Protocols - I2C",
+        "difficulty": "hard",
+        "question_text": "What causes \"shark fin\" waveforms on the rising edge of an I2C bus, and how do you fix it? {{image_1}}",
+        "answer_text": "The RC time constant is too high (too much bus capacitance or weak pull-up resistors). Fix it by: 1) Decreasing the pull-up resistor values, or 2) Lowering the I2C clock speed.",
+        "explanation_text": "I2C is open-drain, relying passively on resistors to pull the line high. High capacitance slows this rise time. Lowering the resistor speeds it up, but draws more current.",
+        "bonus_question_text": "What is the trade-off of using smaller pull-up resistors?",
+        "bonus_answer_text": "Higher power consumption, and the driving IC might struggle to pull the line fully low (below V_IL).",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": "i2c_rc_time_constant.asc",
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "An oscilloscope waveform comparison. Left: clean square I2C pulse. Right: \"shark fin\" waveform where the falling edge is steep, but the rising edge is a slow RC curve.",
+          "title": "I2C rise-time limit",
+          "alt": "An oscilloscope waveform comparison. Left: clean square I2C pulse. Right: \"shark fin\" waveform where the falling edge is steep, but the rising edge is a slow RC curve.",
+          "placements": {
+            "question_text": true
+          },
+          "render": {
+            "type": "waveform_comparison"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-master-simplified-20260709/protocols-i2c-what-causes-shark-fin-waveforms-on-the-rising-edge-of-an-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 3,
+      "slug": "protocols-spi-if-an-spi-sensor-datasheet-states-data-is-sampled-on-the",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "1c25547ace415e30",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 3
+      },
+      "question": {
+        "category": "Protocols - SPI",
+        "difficulty": "medium",
+        "question_text": "If an SPI sensor datasheet states \"data is sampled on the rising edge, and the clock idles high,\" what are the correct CPOL and CPHA settings?",
+        "answer_text": "CPOL = 1, CPHA = 1.",
+        "explanation_text": "CPOL=1 means the clock idles high. Because it idles high, the first edge is falling. CPHA=1 means data is sampled on the second edge (the rising edge). {{image_1}}",
+        "bonus_question_text": "If CPHA was set to 0, when would data be sampled?",
+        "bonus_answer_text": "Data would be sampled on the first edge (the falling edge).",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A timing diagram showing a single SPI clock cycle starting HIGH (idle), falling (first edge), then rising (second edge). A dashed line on the rising edge says \"Sample Data.\"",
+          "title": "SPI mode timing",
+          "alt": "A timing diagram showing a single SPI clock cycle starting HIGH (idle), falling (first edge), then rising (second edge). A dashed line on the rising edge says \"Sample Data.\"",
+          "placements": {
+            "explanation_text": true
+          },
+          "render": {
+            "type": "spi_timing"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-master-simplified-20260709/protocols-spi-if-an-spi-sensor-datasheet-states-data-is-sampled-on-the-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 4,
+      "slug": "protocols-system-architecture-how-many-mcu-pins-are-required-to-connec",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "a41f730403951fd1",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 4
+      },
+      "question": {
+        "category": "Protocols - System Architecture",
+        "difficulty": "medium",
+        "question_text": "How many MCU pins are required to connect 4 sensors using a shared I2C bus versus a shared SPI bus?",
+        "answer_text": "I2C requires 2 pins. SPI requires 7 pins.",
+        "explanation_text": "I2C uses hardware addressing over a shared 2-wire bus (SDA, SCL). SPI shares 3 pins (MOSI, MISO, SCK) but requires a unique Chip Select (CS) pin for each device (3 + 4 = 7). {{image_1}}",
+        "bonus_question_text": "How can you reduce the SPI pin count without removing sensors?",
+        "bonus_answer_text": "Daisy-chain the SPI devices or use an external demultiplexer.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Block diagrams. Left: 1 MCU to 4 slaves via 2-wire I2C. Right: 1 MCU to 4 slaves via SPI, showing 3 shared lines and 4 distinct CS lines.",
+          "title": "I2C vs SPI pin count",
+          "alt": "Block diagrams. Left: 1 MCU to 4 slaves via 2-wire I2C. Right: 1 MCU to 4 slaves via SPI, showing 3 shared lines and 4 distinct CS lines.",
+          "placements": {
+            "explanation_text": true
+          },
+          "render": {
+            "type": "bus_comparison"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-master-simplified-20260709/protocols-system-architecture-how-many-mcu-pins-are-required-to-connec-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 5,
+      "slug": "protocols-i2c-if-you-put-two-identical-sensors-on-the-same-i2c-bus-and",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "8d0b395105dbcf65",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 5
+      },
+      "question": {
+        "category": "Protocols - I2C",
+        "difficulty": "easy",
+        "question_text": "If you put two identical sensors on the same I2C bus and can only communicate with one, what is the likely hardware issue?",
+        "answer_text": "An address conflict. Both share the same default 7-bit I2C address.",
+        "explanation_text": "Identical ICs have identical default addresses. You must physically tie the ADDR pin of one sensor to VCC and the other to GND to give them unique addresses on the bus. {{image_1}}",
+        "bonus_question_text": "What if you need 4 sensors but the IC only has one ADDR pin?",
+        "bonus_answer_text": "Use an I2C multiplexer IC to split the bus.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Schematic of an MCU connected to two identical I2C sensors. Sensor 1's ADDR pin is tied to GND, Sensor 2's ADDR is tied to VCC, with a label showing different hex addresses.",
+          "title": "I2C address selection",
+          "alt": "Schematic of an MCU connected to two identical I2C sensors. Sensor 1's ADDR pin is tied to GND, Sensor 2's ADDR is tied to VCC, with a label showing different hex addresses.",
+          "placements": {
+            "explanation_text": true
+          },
+          "render": {
+            "type": "i2c_address_pins"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-master-simplified-20260709/protocols-i2c-if-you-put-two-identical-sensors-on-the-same-i2c-bus-and-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 6,
+      "slug": "components-what-specification-dictates-an-op-amp-s-maximum-output-volt",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "b9c1bb888cf074d3",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 6
+      },
+      "question": {
+        "category": "Components",
+        "difficulty": "medium",
+        "question_text": "What specification dictates an op-amp's maximum output voltage rate of change, and what happens if you exceed it?",
+        "answer_text": "Slew Rate (SR), measured in V/μs. Exceeding it distorts the output, turning square waves into trapezoids or triangle waves.",
+        "explanation_text": "Slew rate is the physical speed limit of the op-amp charging its internal capacitors. While Gain-Bandwidth Product is for small signals, Slew Rate limits large signals. {{image_1}}",
+        "bonus_question_text": "What is the difference between Slew Rate and Bandwidth?",
+        "bonus_answer_text": "Bandwidth is a small-signal specification (gain drops by 3dB). Slew rate is a large-signal limit on how fast the voltage can physically swing.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Op-amp diagram. Left: a sharp square wave input. Right: distorted output showing a sloped ramp, labeled 'Slew Rate (ΔV/Δt)'.",
+          "title": "Op-amp slew-rate limit",
+          "alt": "Op-amp diagram. Left: a sharp square wave input. Right: distorted output showing a sloped ramp, labeled 'Slew Rate (ΔV/Δt)'.",
+          "placements": {
+            "explanation_text": true
+          },
+          "render": {
+            "type": "op_amp_slew"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-specification-dictates-an-op-amp-s-maximum-output-volt-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 7,
+      "slug": "components-aside-from-maximum-current-rating-what-two-critical-specifi",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "61a2c188e60267a9",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 7
+      },
+      "question": {
+        "category": "Components",
+        "difficulty": "medium",
+        "question_text": "Aside from maximum current rating, what two critical specifications must you check to ensure an LDO regulator doesn't fail?",
+        "answer_text": "Power Dissipation (Thermal Resistance) and Dropout Voltage.",
+        "explanation_text": "Dropout Voltage (V_DO) is the minimum headroom needed between Vin and Vout. Thermal Resistance (θ_JA) is critical because LDOs dissipate excess voltage as heat (P = (Vin - Vout) * I). {{image_1}}",
+        "bonus_question_text": "How can you improve LDO thermals on a PCB?",
+        "bonus_answer_text": "Increase the copper pour area connected to the thermal pad and add thermal vias.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Thermal block diagram of an LDO package radiating heat. Shows the equation P_d = (Vin - Vout) * I_load, and thermal resistance (θ_JA) from junction to ambient.",
+          "title": "LDO thermal path",
+          "alt": "Thermal block diagram of an LDO package radiating heat. Shows the equation P_d = (Vin - Vout) * I_load, and thermal resistance (θ_JA) from junction to ambient.",
+          "placements": {
+            "explanation_text": true
+          },
+          "render": {
+            "type": "ldo_thermal"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-master-simplified-20260709/components-aside-from-maximum-current-rating-what-two-critical-specifi-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 8,
+      "slug": "components-what-buck-converter-specification-dictates-the-required-siz",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "64b32e3c5530e666",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 8
+      },
+      "question": {
+        "category": "Components",
+        "difficulty": "hard",
+        "question_text": "What buck converter specification dictates the required size of the external inductor and capacitors?",
+        "answer_text": "Switching Frequency (f_sw).",
+        "explanation_text": "Higher switching frequencies allow you to use physically smaller inductors and capacitors, but at the cost of higher switching losses and lower efficiency. {{image_1}}",
+        "bonus_question_text": "Why choose a synchronous buck converter over an asynchronous one?",
+        "bonus_answer_text": "It replaces the diode with a low-side MOSFET, reducing conduction losses and improving efficiency.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Schematic of a synchronous buck converter highlighting the switching node (SW), inductor (L), and output capacitor (Cout), overlayed with a graph of inductor current ripple.",
+          "title": "Synchronous buck converter",
+          "alt": "Schematic of a synchronous buck converter highlighting the switching node (SW), inductor (L), and output capacitor (Cout), overlayed with a graph of inductor current ripple.",
+          "placements": {
+            "explanation_text": true
+          },
+          "render": {
+            "type": "buck_power_stage"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-buck-converter-specification-dictates-the-required-siz-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 9,
+      "slug": "components-what-key-specs-do-you-look-at-when-selecting-an-op-amp-and",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "48e8aca97f066c65",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 9
+      },
+      "question": {
+        "category": "Components",
+        "difficulty": "easy",
+        "question_text": "What key specs do you look at when selecting an Op-Amp, and what do they mean?",
+        "answer_text": "1. Supply Voltage: Max operating rails.\n2. GBWP (Gain-Bandwidth Product): Frequency where gain hits 1.\n3. Slew Rate (SR): Max speed of output change.\n4. Input Offset Voltage (Vos): Error voltage at the input.\n5. Input Bias Current (Ib): Current leaking into input pins.",
+        "explanation_text": "Balancing speed and precision is key. Precision sensors need low Vos to avoid amplifying errors, while RF signals need high GBWP and Slew Rate. {{image_1}}",
+        "bonus_question_text": "Why is Input Bias Current critical for high-impedance sensors?",
+        "bonus_answer_text": "Current flowing through a high-impedance source creates a massive voltage drop right at the input, distorting the signal.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A matrix mapping Op-Amp categories (Precision, High-Speed) to typical parameter ranges (e.g., Precision: Vos < 50μV).",
+          "title": "Op-amp selection matrix",
+          "alt": "A matrix mapping Op-Amp categories (Precision, High-Speed) to typical parameter ranges (e.g., Precision: Vos < 50μV).",
+          "placements": {
+            "explanation_text": true
+          },
+          "render": {
+            "type": "op_amp_spec_matrix"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-an-op-amp-and-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 10,
+      "slug": "components-what-key-specs-do-you-look-at-when-selecting-an-ldo-and-wha",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "ecfa0385ccb82e90",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 10
+      },
+      "question": {
+        "category": "Components",
+        "difficulty": "easy",
+        "question_text": "What key specs do you look at when selecting an LDO, and what should you keep in mind?",
+        "answer_text": "1. Max Output Current: Load capacity.\n2. Dropout Voltage (V_do): Min required voltage difference (e.g. 200mV).\n3. PSRR: How well it rejects input noise.\n4. Quiescent Current (I_q): Internal power draw at no load.\n5. Thermal Resistance: Heat dissipation ability.",
+        "explanation_text": "LDOs give clean power but run hot. Prioritize PSRR for analog/RF circuits, and minimize I_q for battery-powered standby modes. {{image_1}}",
+        "bonus_question_text": "What happens if the input voltage drops below V_out + V_do?",
+        "bonus_answer_text": "The LDO falls out of regulation and acts like a resistor, passing input noise directly to the output.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Block diagram of an LDO smoothing input ripple (PSRR), with an arrow showing internal current leaking to ground (Quiescent Current).",
+          "title": "LDO PSRR and quiescent current",
+          "alt": "Block diagram of an LDO smoothing input ripple (PSRR), with an arrow showing internal current leaking to ground (Quiescent Current).",
+          "placements": {
+            "explanation_text": true
+          },
+          "render": {
+            "type": "ldo_psrr_iq"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-an-ldo-and-wha-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 11,
+      "slug": "components-what-key-specs-do-you-look-at-when-selecting-a-capacitor-an",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "8b6b211f2c6a12fe",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 11
+      },
+      "question": {
+        "category": "Components",
+        "difficulty": "medium",
+        "question_text": "What key specs do you look at when selecting a capacitor, and what are common choices?",
+        "answer_text": "1. Capacitance & Tolerance.\n2. Voltage Rating: DC limit (derate by 50% for ceramics).\n3. Dielectric: C0G (stable/small), X7R (dense but loses cap under DC bias), Tantalum/Electrolytic (bulk storage).\n4. ESR: Equivalent series resistance.\n5. Package Size (e.g., 0402, 0603).",
+        "explanation_text": "Class II ceramics (X7R/X5R) lose significant capacitance when voltage is applied across them. A 10μF X7R might drop to 3μF when powered at its rated voltage limit! {{image_1}}",
+        "bonus_question_text": "Why choose Tantalum over Aluminum Electrolytic?",
+        "bonus_answer_text": "Tantalum offers much higher density and lower ESR in a tiny surface-mount package.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Chart comparing X7R vs C0G, showing X7R capacitance dropping significantly as applied DC voltage increases.",
+          "title": "Capacitor DC-bias effect",
+          "alt": "Chart comparing X7R vs C0G, showing X7R capacitance dropping significantly as applied DC voltage increases.",
+          "placements": {
+            "explanation_text": true
+          },
+          "render": {
+            "type": "capacitor_bias_chart"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-a-capacitor-an-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 12,
+      "slug": "components-what-key-specs-do-you-look-at-when-selecting-a-power-induct",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "b00b2e25bd172132",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 12
+      },
+      "question": {
+        "category": "Components",
+        "difficulty": "medium",
+        "question_text": "What key specs do you look at when selecting a power inductor for a switching regulator?",
+        "answer_text": "1. Inductance (L).\n2. DCR (DC Resistance): Internal resistance (keep low for efficiency).\n3. Saturation Current (I_sat): Current level where inductance drops off.\n4. RMS Current (I_rms): Continuous current causing thermal heating.\n5. Shielding: Unshielded vs molded/shielded.",
+        "explanation_text": "Never exceed the Saturation Current. If saturated, inductance plummets, causing massive current spikes that can instantly destroy your regulator. {{image_1}}",
+        "bonus_question_text": "Why use a shielded power inductor?",
+        "bonus_answer_text": "It keeps magnetic flux inside the component, reducing EMI noise affecting nearby analog/digital traces.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Graphs showing Inductance vs DC Current (marking the sharp I_sat drop) and Temperature vs DC Current (marking I_rms limits).",
+          "title": "Power inductor limits",
+          "alt": "Graphs showing Inductance vs DC Current (marking the sharp I_sat drop) and Temperature vs DC Current (marking I_rms limits).",
+          "placements": {
+            "explanation_text": true
+          },
+          "render": {
+            "type": "inductor_limits"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-a-power-induct-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 13,
+      "slug": "components-what-key-specs-do-you-look-at-when-selecting-a-tvs-diode-fo",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "3f2de831e7c485ea",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 13
+      },
+      "question": {
+        "category": "Components",
+        "difficulty": "medium",
+        "question_text": "What key specs do you look at when selecting a TVS diode for ESD protection?",
+        "answer_text": "1. Reverse Standoff Voltage (V_rwm): Max normal working voltage (stays invisible).\n2. Breakdown Voltage (V_br): Where it starts conducting.\n3. Clamping Voltage (V_c): The actual max voltage allowed through during a surge.\n4. Parasitic Capacitance (C_j): Keep <1pF for high-speed lines like USB.",
+        "explanation_text": "TVS diodes stay \"invisible\" during normal use. When a high-voltage pulse hits, they break down and clamp the voltage, routing the harmful current safely to ground. {{image_1}}",
+        "bonus_question_text": "Where should you place a TVS diode on a PCB?",
+        "bonus_answer_text": "Directly next to the physical external connector to catch surges before they travel into the board.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "I-V curve of a TVS diode marking Reverse Standoff Voltage, Breakdown Voltage knee, and the Clamping Voltage region.",
+          "title": "TVS diode I-V curve",
+          "alt": "I-V curve of a TVS diode marking Reverse Standoff Voltage, Breakdown Voltage knee, and the Clamping Voltage region.",
+          "placements": {
+            "explanation_text": true
+          },
+          "render": {
+            "type": "tvs_iv_curve"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-a-tvs-diode-fo-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 14,
+      "slug": "components-what-key-specs-do-you-look-at-when-selecting-a-buck-convert",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "233d269566ee6b0b",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 14
+      },
+      "question": {
+        "category": "Components",
+        "difficulty": "hard",
+        "question_text": "What key specs do you look at when selecting a buck converter, and what are typical ranges?",
+        "answer_text": "1. Input Voltage Range (V_in).\n2. Max Output Current (I_out): e.g., 1A to 6A.\n3. Switching Frequency (f_sw): Usually 300kHz to 2.5MHz+.\n4. Efficiency: Typically 85% to 95%+ depending on load.\n5. Topology: Current mode vs constant on-time (COT).",
+        "explanation_text": "High switching frequencies shrink your LC filter components but increase switching losses. A moderate frequency (~1MHz) is usually the sweet spot for efficiency and size. {{image_1}}",
+        "bonus_question_text": "What is the 'Power Good' (PG) pin used for?",
+        "bonus_answer_text": "It flags when the output voltage is stable. It's used to sequence the startup of other ICs in the system.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Block diagram of an integrated synchronous buck IC showing internal high/low-side MOSFETs and external LC filter nodes.",
+          "title": "Integrated buck block diagram",
+          "alt": "Block diagram of an integrated synchronous buck IC showing internal high/low-side MOSFETs and external LC filter nodes.",
+          "placements": {
+            "explanation_text": true
+          },
+          "render": {
+            "type": "buck_ic_block"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-a-buck-convert-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 15,
+      "slug": "components-what-key-specs-do-you-look-at-when-selecting-a-surface-moun",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "ee501c4d9ec6f297",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 15
+      },
+      "question": {
+        "category": "Components",
+        "difficulty": "easy",
+        "question_text": "What key specs do you look at when selecting a surface-mount resistor beyond its resistance value?",
+        "answer_text": "1. Power Rating (P_max): Tied to physical size (e.g., 0402 = 1/16W, 0805 = 1/8W).\n2. Tolerance: Accuracy margin (e.g., 1% vs 0.1%).\n3. TCR (Temperature Coefficient): How much resistance drifts with heat.\n4. Package Size: Standard dimensions (0402, 0603).",
+        "explanation_text": "Power dissipation is the biggest trap. If you drop 5V directly across a 10Ω 0402 resistor, it will attempt to dissipate 2.5W and instantly burn up (limit is 0.062W). {{image_1}}",
+        "bonus_question_text": "What is the difference between thick-film and thin-film resistors?",
+        "bonus_answer_text": "Thick-film is cheap and good for general use. Thin-film is precise, has lower noise, and is used for critical analog circuits.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Graphic showing standard SMD footprints (0402, 0603, 0805) marked with their maximum wattage limits.",
+          "title": "SMD resistor package ratings",
+          "alt": "Graphic showing standard SMD footprints (0402, 0603, 0805) marked with their maximum wattage limits.",
+          "placements": {
+            "explanation_text": true
+          },
+          "render": {
+            "type": "smd_resistor_packages"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-a-surface-moun-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 16,
+      "slug": "components-what-key-specs-do-you-look-at-when-selecting-an-n-channel-p",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "7a96a1471027ea1d",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 16
+      },
+      "question": {
+        "category": "Components",
+        "difficulty": "medium",
+        "question_text": "What key specs do you look at when selecting an N-channel power MOSFET as a low-side switch?",
+        "answer_text": "1. Drain-Source Breakdown (V_ds): Max voltage when off.\n2. V_gs Threshold: Gate voltage where it starts turning on (Verify it reaches full saturation at logic levels!).\n3. R_ds_on: On-state resistance (keep low to stop heating).\n4. Gate Charge (Q_g): Charge needed to switch states.\n5. Max Continuous Current (I_d).",
+        "explanation_text": "Don't just look at the V_gs threshold! A MOSFET might turn on at 2V, but requires 5V on the gate to fully saturate. Driving it with 3.3V will leave it in the ohmic region, causing it to overheat. {{image_1}}",
+        "bonus_question_text": "What dictates the max power a MOSFET package can dissipate?",
+        "bonus_answer_text": "The Max Junction Temperature limit combined with its Junction-to-Ambient thermal resistance (θ_JA).",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Transistor characteristic curve (Id vs Vds for different Vgs lines), showing the visual boundary between the Ohmic and Saturation regions.",
+          "title": "MOSFET output characteristics",
+          "alt": "Transistor characteristic curve (Id vs Vds for different Vgs lines), showing the visual boundary between the Ohmic and Saturation regions.",
+          "placements": {
+            "explanation_text": true
+          },
+          "render": {
+            "type": "mosfet_characteristics"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-an-n-channel-p-image_1.svg"
+        }
+      },
+      "notes": null
+    }
+  ],
+  "rendered_at": "2026-07-09T17:07:26.463Z"
+}

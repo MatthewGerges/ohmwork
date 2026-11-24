@@ -1,0 +1,29 @@
+{
+  "slug": "current-sensing-amplifier-topologies-draw-a-standard-operational-ampli",
+  "category": "Current Sensing, Amplifier Topologies",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 113,
+  "source_fingerprint": "ecad1d1c9407b626",
+  "source": {
+    "batch_id": "ee-flashcards-current-sensing-v2-20260917",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+    "row_number": 8
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-amplifier-topologies-draw-a-standard-operational-ampli-image_1.svg"
+  },
+  "question_text": "<p>Draw a standard Operational Amplifier (Op-Amp) configured for current sensing. What are its pros and cons, and what is its major source of error?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Schematic of an Operational Amplifier for current sensing. V_bus connects to a System Load, which goes to R_shunt, then through a parasitic resistance (R_p) to Ground. The op-amp non-inverting (+) input taps above R_shunt. The inverting (-) input connects to a voltage divider (R_f from output, R_g to ground). Text points to R_p stating 'Parasitic impedance to GND introduces error'.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>Pros: Large open-loop gain and often very low cost.<br/>Cons: Low-side sensing only (V_CM ≈ GND), accuracy is set by external components, and single-ended inputs are highly vulnerable to PCB parasitics.</p>",
+  "explanation_text": "<p>A standard op-amp is typically wired in a non-inverting configuration to measure a low-side shunt. Because it uses a single-ended input, any parasitic impedance in the PCB ground trace between the shunt and the true ground gets added directly to the measurement (V_shunt + V_p), causing significant error. Furthermore, because its inputs cannot survive high voltages, it is strictly limited to low-side sensing.</p>",
+  "bonus_question_text": "<p>What is the output voltage equation for this standard Op-Amp configuration?</p>",
+  "bonus_answer_text": "<p>V_O = (V_shunt + V_p) * (1 + R_f / R_g)</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:ecad1d1c9407b626"
+  ],
+  "related_question_ids": []
+}

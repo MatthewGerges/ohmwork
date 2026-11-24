@@ -1,0 +1,34 @@
+{
+  "slug": "transmission-line-theory-pcb-what-is-a-coplanar-waveguide-cpw-in-pcb-design",
+  "category": "Transmission Line Theory, PCB",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 50,
+  "source_fingerprint": "manual-coplanar-waveguide-gcpw-20260716",
+  "source": {
+    "batch_id": "pcb-transmission-line-geometries-20260716",
+    "source_file": "manual:pcb-transmission-line-geometries",
+    "row_number": 2
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/pcb-transmission-line-geometries-20260716/transmission-line-theory-pcb-what-is-a-coplanar-waveguide-cpw-in-pcb-design-image_1.svg"
+  },
+  "question_text": "<p>What is a Coplanar Waveguide (CPW) in PCB design, and how does it physically differ from a standard Microstrip?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Cross-section comparing standard microstrip and grounded coplanar waveguide PCB geometry.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>A Coplanar Waveguide (CPW) is routed on the outer surface of the PCB, but unlike a standard Microstrip, it is flanked by ground planes on the exact same layer, running parallel to the signal trace.</p>",
+  "explanation_text": "<p>While a Microstrip relies solely on the ground plane beneath it to form the transmission line, a CPW uses adjacent surface ground pours to confine the electromagnetic fields. This keeps the trace physically accessible on the surface (like a Microstrip) while offering superior high-frequency isolation and shielding (similar to a Stripline). If a CPW also has a solid ground plane beneath it, it is called a Grounded CPW (GCPW).</p>",
+  "bonus_question_text": "<p>What is the main advantage of using a Grounded Coplanar Waveguide (GCPW) for high-frequency RF signals compared to a standard Microstrip?</p>",
+  "bonus_answer_text": "<p>GCPW significantly reduces radiation loss and crosstalk. By placing ground pours immediately adjacent to the signal trace (stitched to the bottom ground plane with vias), the electric fields are tightly confined locally rather than spreading out widely into the surrounding dielectric and air.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "pcb",
+    "transmission-line",
+    "microstrip",
+    "cpw",
+    "gcpw",
+    "source:excel",
+    "import:manual-coplanar-waveguide-gcpw-20260716"
+  ],
+  "related_question_ids": []
+}

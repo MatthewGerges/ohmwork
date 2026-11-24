@@ -1,0 +1,29 @@
+{
+  "slug": "protocols-uart-what-is-uart-and-how-does-it-synchronize-communication",
+  "category": "Protocols, UART",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 102,
+  "source_fingerprint": "bd2fa94dfcd107b7",
+  "source": {
+    "batch_id": "ee-flashcards-mixed-topics-v2-20260915",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_mixed_topics_v2.xlsx",
+    "row_number": 2
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-mixed-topics-v2-20260915/protocols-uart-what-is-uart-and-how-does-it-synchronize-communication-image_1.svg"
+  },
+  "question_text": "<p>What is UART, and how does it synchronize communication between two devices without a shared clock line?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A block diagram of two devices communicating via UART. Device 1 and Device 2 each have a TX (Transmit) and RX (Receive) pin. A wire connects Device 1's TX to Device 2's RX, and another wire connects Device 2's TX to Device 1's RX, illustrating the required crossover wiring.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>UART stands for Universal Asynchronous Receiver-Transmitter. It synchronizes by using a pre-agreed &quot;baud rate&quot; (speed) and Start/Stop bits.</p>",
+  "explanation_text": "<p>Because there is no dedicated clock line (SCL), both devices must be independently configured to transmit and read at the exact same speed (common baud rates include 9600, 115200, etc.). The data line idles HIGH. To begin sending, the transmitter sends a START bit (pulling the line LOW). This falling edge triggers the receiver's internal timer to start sampling the next 8 data bits at the agreed-upon baud rate, followed by a STOP bit (HIGH) to reset the bus.</p>",
+  "bonus_question_text": "<p>Why does UART communication typically produce garbage data if the baud rates of the two devices are mismatched by more than a few percent?</p>",
+  "bonus_answer_text": "<p>Without a shared clock to force them in sync, the receiver's sampling points will drift relative to the incoming data bits. By the time it reaches the 7th or 8th bit, it will sample too early or too late, reading the wrong value.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:bd2fa94dfcd107b7"
+  ],
+  "related_question_ids": []
+}

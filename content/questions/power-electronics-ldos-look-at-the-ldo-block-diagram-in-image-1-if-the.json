@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-ldos-look-at-the-ldo-block-diagram-in-image-1-if-the",
+  "category": "Power Electronics, LDOs",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 80,
+  "source_fingerprint": "d6458b61d66ebb70",
+  "source": {
+    "batch_id": "ee-flashcards-ldos-v4-20260911",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+    "row_number": 4
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-ldos-v4-20260911/power-electronics-ldos-look-at-the-ldo-block-diagram-in-image-1-if-the-image_1.svg"
+  },
+  "question_text": "<p>Look at the LDO block diagram in Image 1. If the reference voltage (V_ref) feeds into the NEGATIVE (-) terminal of the error amplifier, and the measured feedback voltage (V_fb) feeds into the POSITIVE (+) terminal, is the pass transistor a PMOS or an NMOS?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A block diagram of an LDO. V_in connects to a pass transistor flowing to V_out. A resistor divider taps off V_out and feeds V_fb into the positive (+) input of an Error Amplifier. The negative (-) input is connected to V_ref. The Error Amp output connects to the transistor's gate.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>It is a PMOS pass transistor.</p>",
+  "explanation_text": "<p>Here is the logic: If V_out spikes too high, V_fb also goes high. Because V_fb is connected to the positive (+) non-inverting terminal, the error amplifier's output voltage increases. To bring V_out back down, we need the pass transistor to choke the current (increase its resistance). A PMOS transistor turns OFF (increases resistance) as its gate voltage increases toward its source voltage. Therefore, this error amp polarity specifically controls a PMOS!</p>",
+  "bonus_question_text": "<p>What is the main disadvantage of a PMOS LDO compared to an NMOS LDO?</p>",
+  "bonus_answer_text": "<p>PMOS transistors typically have higher ON-resistance (R_DS(on)) and worse conductivity than NMOS transistors for a given physical size. To handle high currents, a PMOS must be physically much larger, taking up more silicon area.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:d6458b61d66ebb70"
+  ],
+  "related_question_ids": []
+}

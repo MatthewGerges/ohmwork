@@ -1,0 +1,29 @@
+{
+  "slug": "components-what-key-specs-do-you-look-at-when-selecting-a-surface-moun",
+  "category": "Components",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 12,
+  "source_fingerprint": "ee501c4d9ec6f297",
+  "source": {
+    "batch_id": "ee-flashcards-master-simplified-20260709",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+    "row_number": 15
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-a-surface-moun-image_1.svg"
+  },
+  "question_text": "<p>What key specs do you look at when selecting a surface-mount resistor beyond its resistance value?</p>",
+  "answer_text": "<p>1. Power Rating (P_max): Tied to physical size (e.g., 0402 = 1/16W, 0805 = 1/8W).<br/>2. Tolerance: Accuracy margin (e.g., 1% vs 0.1%).<br/>3. TCR (Temperature Coefficient): How much resistance drifts with heat.<br/>4. Package Size: Standard dimensions (0402, 0603).</p>",
+  "explanation_text": "<p>Power dissipation is the biggest trap. If you drop 5V directly across a 10Ω 0402 resistor, it will attempt to dissipate 2.5W and instantly burn up (limit is 0.062W).</p>\n<img src=\"{{image_1}}\" alt=\"Graphic showing standard SMD footprints (0402, 0603, 0805) marked with their maximum wattage limits.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "bonus_question_text": "<p>What is the difference between thick-film and thin-film resistors?</p>",
+  "bonus_answer_text": "<p>Thick-film is cheap and good for general use. Thin-film is precise, has lower noise, and is used for critical analog circuits.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:ee501c4d9ec6f297"
+  ],
+  "related_question_ids": []
+}

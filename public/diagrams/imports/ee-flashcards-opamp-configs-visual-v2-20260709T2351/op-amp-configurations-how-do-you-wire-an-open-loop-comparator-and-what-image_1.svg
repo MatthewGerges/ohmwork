@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="730" height="340" viewBox="0 0 730 340" role="img" aria-label="Open-loop comparator">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"/>
+  <text x="365" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Open-loop comparator</text>
+  
+    
+    <path d="M153 118 L153 250 L307 184 Z" fill="#0a1a20" stroke="#2dd4bf" stroke-width="3"/>
+    <text x="180" y="142" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">-</text>
+    <text x="180" y="240" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">+</text>
+    <text x="238" y="190" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle">comp</text>
+  
+    <line x1="54" y1="212" x2="164" y2="212" stroke="#4ade80" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    <line x1="54" y1="156" x2="164" y2="156" stroke="#818cf8" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    <text x="62" y="196" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="500" text-anchor="start">V1</text>
+    <text x="62" y="140" fill="#818cf8" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="500" text-anchor="start">V2</text>
+    <line x1="296" y1="184" x2="360" y2="184" stroke="#4ade80" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    <text x="350" y="168" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="500" text-anchor="end">Vout</text>
+    <text x="230" y="282" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle">no feedback: output saturates</text>
+    <rect x="405" y="94" width="282" height="202" rx="8" fill="#111c31" stroke="#475569" stroke-width="2"/>
+    <line x1="435" y1="126" x2="435" y2="224" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="462.25" y1="126" x2="462.25" y2="224" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="489.5" y1="126" x2="489.5" y2="224" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="516.75" y1="126" x2="516.75" y2="224" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="544" y1="126" x2="544" y2="224" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="571.25" y1="126" x2="571.25" y2="224" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="598.5" y1="126" x2="598.5" y2="224" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="625.75" y1="126" x2="625.75" y2="224" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="653" y1="126" x2="653" y2="224" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="435" y1="126" x2="653" y2="126" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="435" y1="150.5" x2="653" y2="150.5" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="435" y1="175" x2="653" y2="175" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="435" y1="199.5" x2="653" y2="199.5" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+<line x1="435" y1="224" x2="653" y2="224" stroke="#1e293b" stroke-width="1" stroke-linecap="round"/>
+    <path d="M442 198 C488 152 530 156 572 196 C604 224 628 206 648 166" fill="none" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="435" y1="174" x2="654" y2="174" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+    <path d="M442 256 L514 256 L514 228 L590 228 L590 256 L650 256" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="452" y="116" fill="#2dd4bf" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" text-anchor="start">V1 crosses V2</text>
+    <text x="452" y="246" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" text-anchor="start">output snaps</text>
+  
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="350" viewBox="0 0 720 350" role="img" aria-label="Voltage follower">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"/>
+  <text x="360" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Voltage follower</text>
+  
+    
+    <path d="M278 118 L278 250 L432 184 Z" fill="#0a1a20" stroke="#2dd4bf" stroke-width="3"/>
+    <text x="305" y="142" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">-</text>
+    <text x="305" y="240" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">+</text>
+    <text x="363" y="190" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">op-amp</text>
+  
+    <line x1="78" y1="217" x2="278" y2="217" stroke="#4ade80" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    <text x="88" y="201" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500" text-anchor="start">Vin</text>
+    <line x1="432" y1="184" x2="622" y2="184" stroke="#4ade80" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    <text x="620" y="168" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500" text-anchor="end">Vout</text>
+    <line x1="458" y1="184" x2="540" y2="184" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    <line x1="540" y1="184" x2="540" y2="151" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    <line x1="540" y1="151" x2="278" y2="151" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="458" cy="184" r="5" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"/>
+    <text x="438" y="116" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500" text-anchor="middle">direct negative feedback</text>
+    <text x="358" y="306" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">A_v = 1   |   Vout follows Vin</text>
+  
+</svg>

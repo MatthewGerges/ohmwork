@@ -1,0 +1,29 @@
+{
+  "slug": "components-what-key-specs-do-you-look-at-when-selecting-a-power-induct",
+  "category": "Components",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 11,
+  "source_fingerprint": "b00b2e25bd172132",
+  "source": {
+    "batch_id": "ee-flashcards-master-simplified-20260709",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+    "row_number": 12
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-a-power-induct-image_1.svg"
+  },
+  "question_text": "<p>What key specs do you look at when selecting a power inductor for a switching regulator?</p>",
+  "answer_text": "<p>1. Inductance (L).<br/>2. DCR (DC Resistance): Internal resistance (keep low for efficiency).<br/>3. Saturation Current (I_sat): Current level where inductance drops off.<br/>4. RMS Current (I_rms): Continuous current causing thermal heating.<br/>5. Shielding: Unshielded vs molded/shielded.</p>",
+  "explanation_text": "<p>Never exceed the Saturation Current. If saturated, inductance plummets, causing massive current spikes that can instantly destroy your regulator.</p>\n<img src=\"{{image_1}}\" alt=\"Graphs showing Inductance vs DC Current (marking the sharp I_sat drop) and Temperature vs DC Current (marking I_rms limits).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "bonus_question_text": "<p>Why use a shielded power inductor?</p>",
+  "bonus_answer_text": "<p>It keeps magnetic flux inside the component, reducing EMI noise affecting nearby analog/digital traces.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:b00b2e25bd172132"
+  ],
+  "related_question_ids": []
+}

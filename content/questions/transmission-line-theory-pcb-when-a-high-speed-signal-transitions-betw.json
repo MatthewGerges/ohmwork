@@ -1,0 +1,29 @@
+{
+  "slug": "transmission-line-theory-pcb-when-a-high-speed-signal-transitions-betw",
+  "category": "Transmission Line Theory, PCB",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 45,
+  "source_fingerprint": "9648bcbb7a09e129",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 16
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-pcb-when-a-high-speed-signal-transitions-betw-image_1.svg"
+  },
+  "question_text": "<p>When a high-speed signal transitions between PCB layers using a via, why must you place a &quot;ground return via&quot; right next to it?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A cross-section of a multi-layer PCB. A signal via drops from Top to Bottom layer. Right next to it, a Ground via connects the internal ground planes, showing the return current loop flowing tightly alongside the signal via.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>To provide an immediate vertical path for the return current, keeping the loop inductance as small as possible.</p>",
+  "explanation_text": "<p>The return current on the reference plane must follow the signal vertically to the new reference plane. Without a nearby return via, the current wanders the board looking for a path (like a distant decoupling capacitor), creating massive loop inductance and ruining signal integrity.</p>\n<p>*Highly Recommended Reading: https://www.allaboutcircuits.com/technical-articles/better-pcb-design-return-paths-impedance/*</p>",
+  "bonus_question_text": "<p>What if the signal transitions from a layer referenced to Ground to a layer referenced to Power?</p>",
+  "bonus_answer_text": "<p>You must place a stitching capacitor near the signal via to allow the high-frequency return current to jump between the Ground plane and the Power plane.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:9648bcbb7a09e129"
+  ],
+  "related_question_ids": []
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "protocols-i2c-if-you-put-two-identical-sensors-on-the-same-i2c-bus-and",
+  "category": "Protocols - I2C",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 21,
+  "source_fingerprint": "8d0b395105dbcf65",
+  "source": {
+    "batch_id": "ee-flashcards-master-simplified-20260709",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+    "row_number": 5
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-master-simplified-20260709/protocols-i2c-if-you-put-two-identical-sensors-on-the-same-i2c-bus-and-image_1.svg"
+  },
+  "question_text": "<p>If you put two identical sensors on the same I2C bus and can only communicate with one, what is the likely hardware issue?</p>",
+  "answer_text": "<p>An address conflict. Both share the same default 7-bit I2C address.</p>",
+  "explanation_text": "<p>Identical ICs have identical default addresses. You must physically tie the ADDR pin of one sensor to VCC and the other to GND to give them unique addresses on the bus.</p>\n<img src=\"{{image_1}}\" alt=\"Schematic of an MCU connected to two identical I2C sensors. Sensor 1's ADDR pin is tied to GND, Sensor 2's ADDR is tied to VCC, with a label showing different hex addresses.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "bonus_question_text": "<p>What if you need 4 sensors but the IC only has one ADDR pin?</p>",
+  "bonus_answer_text": "<p>Use an I2C multiplexer IC to split the bus.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:8d0b395105dbcf65"
+  ],
+  "related_question_ids": []
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "protocols-i2c-explain-the-structure-of-a-standard-i2c-data-frame-how-a",
+  "category": "Protocols, I2C",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 85,
+  "source_fingerprint": "2bda5f7f4378bc8e",
+  "source": {
+    "batch_id": "ee-flashcards-passives-protocols-v3-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+    "row_number": 6
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/protocols-i2c-explain-the-structure-of-a-standard-i2c-data-frame-how-a-image_1.svg"
+  },
+  "question_text": "<p>Explain the structure of a standard I2C data frame. How are devices addressed, and how many devices can typically sit on one bus?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A bit-level timing diagram of an I2C frame: [START] -&gt; [7-bit Address] -&gt; [R/W bit] -&gt; [ACK] -&gt; [8-bit Data] -&gt; [ACK] -&gt; [STOP].\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>An I2C transaction starts with a START condition, a 7-bit slave address, a Read/Write bit, an ACK/NACK, 8 bits of data, another ACK/NACK, and a STOP.</p>",
+  "explanation_text": "<p>I2C typically uses 7-bit addressing, meaning a single bus can theoretically support up to 128 devices (2^7). However, 16 addresses are reserved by the specification, leaving 112 usable addresses. The master dictates the clock (SCL) and sends the address on the data line (SDA). The slave with the matching hardcoded address responds with an Acknowledge (ACK) bit by pulling SDA low.</p>\n<p>Highly recommended video that explains everything you need to know about I2C and how it works: https://www.youtube.com/watch?v=CAvawEcxoPU&amp;t=32s&amp;pp=ygUMaTJjIHByb3RvY29s</p>",
+  "bonus_question_text": "<p>If you need to connect two identical sensors that have the exact same hardcoded 7-bit I2C address, how can you do it?</p>",
+  "bonus_answer_text": "<p>You must use an I2C multiplexer (mux) IC, which physically routes the SDA/SCL lines to different isolated hardware channels.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:2bda5f7f4378bc8e"
+  ],
+  "related_question_ids": []
+}

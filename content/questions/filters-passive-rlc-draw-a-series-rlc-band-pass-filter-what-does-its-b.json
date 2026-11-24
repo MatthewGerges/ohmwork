@@ -1,0 +1,29 @@
+{
+  "slug": "filters-passive-rlc-draw-a-series-rlc-band-pass-filter-what-does-its-b",
+  "category": "Filters, Passive RLC",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 108,
+  "source_fingerprint": "e6d0bc09af7ef2a5",
+  "source": {
+    "batch_id": "ee-flashcards-opamps-filters-v2-20260916",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_opamps_filters_v2.xlsx",
+    "row_number": 7
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-opamps-filters-v2-20260916/filters-passive-rlc-draw-a-series-rlc-band-pass-filter-what-does-its-b-image_1.svg"
+  },
+  "question_text": "<p>Draw a series RLC Band-Pass filter. What does its Bode plot look like, and what is its primary application?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Left: Schematic showing V_in -&gt; Inductor -&gt; Capacitor -&gt; Resistor -&gt; Ground. The output V_out is measured across the Resistor. Right: A Bode plot showing a bell-curve peak centered exactly at f_0.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>An inductor, capacitor, and resistor all in series. The Bode plot looks like a mountain peak (a bell curve). It is used to tune into a specific frequency while blocking all others.</p>",
+  "explanation_text": "<p>To create a band-pass, you measure the output voltage strictly across the resistor. At low frequencies, the capacitor acts like an open circuit and blocks the signal (+20dB/dec slope upward). At high frequencies, the inductor blocks the signal (-20dB/dec slope downward). But at exactly the resonant frequency (f_0 = 1 / (2π√LC)), the inductive and capacitive reactances perfectly cancel each other out (X_L = X_C), leaving only the resistor. The signal passes through unattenuated (0 dB) only at this &quot;peak.&quot;</p>",
+  "bonus_question_text": "<p>What determines the &quot;bandwidth&quot; (how wide the mountain peak is) of this series RLC filter?</p>",
+  "bonus_answer_text": "<p>The resistor value. A smaller resistor results in less damping and a higher &quot;Q-factor&quot; (a sharper, narrower peak). A larger resistor dampens the resonance, creating a wider bandwidth.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:e6d0bc09af7ef2a5"
+  ],
+  "related_question_ids": []
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "power-electronics-buck-converters-what-is-the-main-advantage-of-a-buck",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 67,
+  "source_fingerprint": "f21e567cfd58db89",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 3
+  },
+  "images": {},
+  "question_text": "<p>What is the main advantage of a buck converter over a linear voltage regulator (like an LDO)? What are the pros and cons of each?</p>",
+  "answer_text": "<p>A buck converter is highly efficient because it converts power. An LDO is inefficient because it steps down voltage by burning the excess power as heat.</p>",
+  "explanation_text": "<p>Pros of a Buck: High efficiency (often &gt;90%), less heat, and can step down large voltage gaps easily. Cons: Complex, requires an external inductor, and generates switching noise/ripple.<br/>Pros of an LDO: Extremely simple, very cheap, zero switching noise (clean output). Cons: Highly inefficient, especially if the voltage drop (V_in - V_out) is large.</p>",
+  "bonus_question_text": "<p>If you need to drop 5V to 3.3V for a highly sensitive RF sensor drawing 10mA, which should you use?</p>",
+  "bonus_answer_text": "<p>An LDO. The power loss is minimal (17mW), and the RF sensor requires a perfectly clean, noise-free supply.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:f21e567cfd58db89"
+  ],
+  "related_question_ids": []
+}

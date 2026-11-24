@@ -1,0 +1,29 @@
+{
+  "slug": "passives-inductors-and-magnetics-draw-the-b-h-magnetic-hysteresis-curv",
+  "category": "Passives, Inductors & Magnetics",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 100,
+  "source_fingerprint": "3aa18efc62df0018",
+  "source": {
+    "batch_id": "ee-flashcards-mixed-topics-v2-20260915",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_mixed_topics_v2.xlsx",
+    "row_number": 5
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-mixed-topics-v2-20260915/passives-inductors-and-magnetics-draw-the-b-h-magnetic-hysteresis-curv-image_1.svg"
+  },
+  "question_text": "<p>Draw the B-H (Magnetic Hysteresis) curve for a ferromagnetic core used in an inductor. Explain the hysteresis curve and what it physically relates to, labeling the axes and the saturation point.</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A B-H hysteresis curve graph. The x-axis is H (Current / Magnetic Field Strength) and the y-axis is B (Magnetic Flux Density). The curve is a wide, S-shaped loop. The top right and bottom left tips of the 'S' are completely flattened horizontally and labeled &quot;Saturation Region&quot;.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>The curve forms a wide &quot;S&quot; shaped loop. The X-axis is Magnetic Field Intensity (H), and the Y-axis is Magnetic Flux Density (B). It relates to how a magnetic material retains its magnetization and loses energy as heat.</p>",
+  "explanation_text": "<p>The hysteresis curve relates to the 'memory' or magnetic inertia of a ferromagnetic core. As current (H) increases, the magnetic flux (B) increases linearly at first. Eventually, all the magnetic domains in the core physically align, hitting the &quot;Saturation&quot; point where adding more current produces almost no extra flux. When the current is removed, the core retains some magnetism (Remanence), meaning the material remembers its magnetic state. This creates a wide loop rather than a single straight line. The physical area inside this loop represents energy lost as heat (Core Loss) during each AC switching cycle.</p>",
+  "bonus_question_text": "<p>What happens to an inductor's effective inductance when its core saturates?</p>",
+  "bonus_answer_text": "<p>The inductance drops drastically. It stops resisting changes in current and begins acting more like a simple piece of wire, which can cause massive, destructive current spikes in a switching regulator.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:3aa18efc62df0018"
+  ],
+  "related_question_ids": []
+}

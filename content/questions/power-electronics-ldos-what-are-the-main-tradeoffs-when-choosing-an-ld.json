@@ -1,0 +1,27 @@
+{
+  "slug": "power-electronics-ldos-what-are-the-main-tradeoffs-when-choosing-an-ld",
+  "category": "Power Electronics, LDOs",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 81,
+  "source_fingerprint": "286f7460a0198563",
+  "source": {
+    "batch_id": "ee-flashcards-ldos-v4-20260911",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+    "row_number": 9
+  },
+  "images": {},
+  "question_text": "<p>What are the main tradeoffs when choosing an LDO over a Buck Converter?</p>",
+  "answer_text": "<p>LDOs provide a perfectly clean output and are cheap/simple, but they are highly inefficient at large voltage drops. Buck converters are highly efficient but noisy and complex.</p>",
+  "explanation_text": "<p>You use a Buck Converter when you need to drop a large voltage at high current (e.g., 12V to 1V at 50A) because it converts power efficiently. You use an LDO when you need a perfectly clean, noise-free supply (like for RF sensors or analog ADCs/DACs), or when the voltage drop is incredibly small, or the load current is so tiny that the heat generated is negligible.</p>",
+  "bonus_question_text": "<p>What is a common power architecture that utilizes both?</p>",
+  "bonus_answer_text": "<p>Using a high-efficiency buck converter to step down a large voltage (e.g., 12V down to 3.5V), followed by an LDO to step that 3.5V down to 3.3V to strip out the buck converter's switching noise and provide a perfectly clean rail.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:286f7460a0198563"
+  ],
+  "related_question_ids": []
+}

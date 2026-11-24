@@ -1,0 +1,27 @@
+{
+  "slug": "transmission-line-theory-pcb-at-what-physical-length-must-you-stop-tre",
+  "category": "Transmission Line Theory, PCB",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 34,
+  "source_fingerprint": "7bce17748fb902ce",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 8
+  },
+  "images": {},
+  "question_text": "<p>At what physical length must you stop treating a PCB trace as a simple wire and start treating it as a transmission line?</p>",
+  "answer_text": "<p>When the physical length of the trace is greater than 1/10th to 1/4th of the signal's wavelength (λ/10 to λ/4).</p>",
+  "explanation_text": "<p>Wavelength (λ) is velocity (v) divided by frequency (f). In a vacuum, a wave travels at the speed of light (c = 3 x 10^8 m/s). But inside a PCB, the signal travels through a dielectric material (like FR4). This slows the wave down by a factor of the square root of the material's relative permittivity (ε_r). The formula is v = c / sqrt(ε_r). For typical FR4 (ε_r ≈ 4), the speed is 3 x 10^8 / sqrt(4) = 1.5 x 10^8 m/s, exactly half the speed of light.</p>",
+  "bonus_question_text": "<p>If a signal's frequency is 1 GHz and the wave speed is 1.5 x 10^8 m/s, what trace length becomes critical?</p>",
+  "bonus_answer_text": "<p>λ = v / f = (1.5 x 10^8) / (10^9) = 0.15 meters (15 cm). Following the λ/10 rule, any trace longer than 1.5 cm should be treated as a transmission line.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:7bce17748fb902ce"
+  ],
+  "related_question_ids": []
+}

@@ -1,0 +1,348 @@
+{
+  "batch_id": "ee-flashcards-ldos-v4-20260911",
+  "generated_at": "2026-09-11T20:51:45.407Z",
+  "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+  "rows": [
+    {
+      "row_number": 2,
+      "slug": "power-electronics-ldos-what-does-ldo-stand-for-and-conceptually-how-do",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "6857f22771d6f70f",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 2
+      },
+      "question": {
+        "category": "Power Electronics, LDOs",
+        "categories": [
+          "Power Electronics",
+          "LDOs"
+        ],
+        "difficulty": "medium",
+        "question_text": "What does LDO stand for, and conceptually, how does it step down DC voltage?",
+        "answer_text": "LDO stands for Low-Dropout Regulator. It steps down voltage by operating a pass transistor in its active/saturation region to burn off excess voltage as heat.",
+        "explanation_text": "During normal regulation, the LDO's internal MOSFET operates in the saturation region (acting as a voltage-controlled current source). The feedback loop constantly adjusts the gate voltage to supply exactly the load current needed while absorbing the excess voltage (V_in - V_out). Note: The term \"linear regulator\" is a historical carryover from BJTs, where the current-source region is known as the \"linear/active\" region!",
+        "bonus_question_text": "What happens to the MOSFET's operating region when the LDO enters \"dropout\"?",
+        "bonus_answer_text": "It transitions out of saturation and into the triode (ohmic) region. The control loop drives the gate fully ON to minimize resistance (R_DS(on)), acting almost like a closed switch to pass whatever voltage is left.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 3,
+      "slug": "power-electronics-ldos-how-does-an-ldo-s-internal-feedback-loop-active",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "50c99db10fbd33f0",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 3
+      },
+      "question": {
+        "category": "Power Electronics, LDOs",
+        "categories": [
+          "Power Electronics",
+          "LDOs"
+        ],
+        "difficulty": "hard",
+        "question_text": "How does an LDO's internal feedback loop actively regulate the output voltage? Walk through a conceptual example where the output voltage spikes too high.",
+        "answer_text": "{{image_1}}\n\nThe LDO uses an error amplifier to compare a sample of the output voltage against a perfect reference. If the output is too high, it tweaks the MOSFET's gate voltage to increase its resistance, choking the voltage back down.",
+        "explanation_text": "1. A resistor divider at the output creates a feedback voltage (V_fb), which feeds into the positive (+) terminal of an error amplifier (op-amp). The negative (-) terminal receives a stable, fixed reference voltage (V_ref).\n2. Imagine the target is 4V, but the load suddenly drops and V_out spikes to 5V.\n3. Now, V_fb > V_ref. The error amplifier senses this positive difference and *increases* the voltage at its output, which is connected to the PMOS gate.\n4. Because the gate voltage is pushed higher (closer to the source voltage, V_in), the PMOS is driven slightly closer to turning off.\n5. This shifts the transistor's operating point in the saturation region. To pass the same current, it now acts with a higher effective resistance (R = V/I).\n6. The increased resistance drops more of the input voltage across the MOSFET as heat, perfectly forcing V_out back down to 4V.",
+        "bonus_question_text": "Why is an LDO's response to these spikes not instantaneous?",
+        "bonus_answer_text": "The error amplifier has a limited bandwidth and slew rate (it takes time for the internal circuitry to physically alter the gate voltage), which is why external output capacitors are strictly required to catch the instant transient spikes before the loop can react.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A block diagram of an LDO's feedback loop. V_in connects to a PMOS pass transistor flowing to V_out. A voltage divider (R1 and R2) taps off V_out and feeds V_fb into the positive (+) input of an Error Amplifier. The negative (-) input is connected to a fixed V_ref. The output of the Error Amp connects to the PMOS gate. Callout text traces the logic: \"If V_out ↑, then V_fb > V_ref, Gate Voltage ↑, Resistance ↑, V_out ↓\".",
+          "title": "PMOS LDO feedback loop",
+          "alt": "A block diagram of an LDO's feedback loop. V_in connects to a PMOS pass transistor flowing to V_out. A voltage divider (R1 and R2) taps off V_out and feeds V_fb into the positive (+) input of an Error Amplifier. The negative (-) input is connected to a fixed V_ref. The output of the Error Amp connects to the PMOS gate. Callout text traces the logic: \"If V_out ↑, then V_fb > V_ref, Gate Voltage ↑, Resistance ↑, V_out ↓\".",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "ldo_feedback_pmos"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-ldos-v4-20260911/power-electronics-ldos-how-does-an-ldo-s-internal-feedback-loop-active-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 4,
+      "slug": "power-electronics-ldos-look-at-the-ldo-block-diagram-in-image-1-if-the",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "d6458b61d66ebb70",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 4
+      },
+      "question": {
+        "category": "Power Electronics, LDOs",
+        "categories": [
+          "Power Electronics",
+          "LDOs"
+        ],
+        "difficulty": "medium",
+        "question_text": "Look at the LDO block diagram in Image 1. If the reference voltage (V_ref) feeds into the NEGATIVE (-) terminal of the error amplifier, and the measured feedback voltage (V_fb) feeds into the POSITIVE (+) terminal, is the pass transistor a PMOS or an NMOS?",
+        "answer_text": "{{image_1}}\n\nIt is a PMOS pass transistor.",
+        "explanation_text": "Here is the logic: If V_out spikes too high, V_fb also goes high. Because V_fb is connected to the positive (+) non-inverting terminal, the error amplifier's output voltage increases. To bring V_out back down, we need the pass transistor to choke the current (increase its resistance). A PMOS transistor turns OFF (increases resistance) as its gate voltage increases toward its source voltage. Therefore, this error amp polarity specifically controls a PMOS!",
+        "bonus_question_text": "What is the main disadvantage of a PMOS LDO compared to an NMOS LDO?",
+        "bonus_answer_text": "PMOS transistors typically have higher ON-resistance (R_DS(on)) and worse conductivity than NMOS transistors for a given physical size. To handle high currents, a PMOS must be physically much larger, taking up more silicon area.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A block diagram of an LDO. V_in connects to a pass transistor flowing to V_out. A resistor divider taps off V_out and feeds V_fb into the positive (+) input of an Error Amplifier. The negative (-) input is connected to V_ref. The Error Amp output connects to the transistor's gate.",
+          "title": "LDO feedback-loop polarity",
+          "alt": "A block diagram of an LDO. V_in connects to a pass transistor flowing to V_out. A resistor divider taps off V_out and feeds V_fb into the positive (+) input of an Error Amplifier. The negative (-) input is connected to V_ref. The Error Amp output connects to the transistor's gate.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "ldo_feedback_pmos"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-ldos-v4-20260911/power-electronics-ldos-look-at-the-ldo-block-diagram-in-image-1-if-the-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 5,
+      "slug": "power-electronics-ldos-look-at-the-ldo-block-diagram-in-image-1-if-the-2",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "e92ebb53393c6177",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 5
+      },
+      "question": {
+        "category": "Power Electronics, LDOs",
+        "categories": [
+          "Power Electronics",
+          "LDOs"
+        ],
+        "difficulty": "medium",
+        "question_text": "Look at the LDO block diagram in Image 1. If the reference voltage (V_ref) feeds into the POSITIVE (+) terminal of the error amplifier, and the measured feedback voltage (V_fb) feeds into the NEGATIVE (-) terminal, is the pass transistor a PMOS or an NMOS?",
+        "answer_text": "{{image_1}}\n\nIt is an NMOS pass transistor.",
+        "explanation_text": "Here is the logic: If V_out spikes too high, V_fb also goes high. Because V_fb is connected to the negative (-) inverting terminal, the error amplifier's output voltage *decreases*. To bring V_out back down, we need the pass transistor to choke the current (increase its resistance). An NMOS transistor turns OFF (increases resistance) as its gate voltage decreases toward ground. Therefore, this inverted polarity specifically controls an NMOS!",
+        "bonus_question_text": "What is a major design challenge when using an NMOS pass transistor for a Low-Dropout (LDO) regulator?",
+        "bonus_answer_text": "To fully turn on an NMOS and achieve a very low dropout voltage, its gate voltage must be driven significantly *higher* than the input voltage (V_in). This usually requires a complex internal charge pump or an external auxiliary bias supply.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "A block diagram of an LDO. V_in connects to a pass transistor flowing to V_out. A resistor divider taps off V_out and feeds V_fb into the negative (-) input of an Error Amplifier. The positive (+) input is connected to V_ref. The Error Amp output connects to the transistor's gate.",
+          "title": "LDO feedback-loop polarity",
+          "alt": "A block diagram of an LDO. V_in connects to a pass transistor flowing to V_out. A resistor divider taps off V_out and feeds V_fb into the negative (-) input of an Error Amplifier. The positive (+) input is connected to V_ref. The Error Amp output connects to the transistor's gate.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "ldo_feedback_nmos"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-ldos-v4-20260911/power-electronics-ldos-look-at-the-ldo-block-diagram-in-image-1-if-the-2-image_1.svg"
+        }
+      },
+      "notes": null
+    },
+    {
+      "row_number": 6,
+      "slug": "power-electronics-ldos-how-do-you-calculate-the-efficiency-of-an-ldo-a",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "d1999d9539f5e147",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 6
+      },
+      "question": {
+        "category": "Power Electronics, LDOs",
+        "categories": [
+          "Power Electronics",
+          "LDOs"
+        ],
+        "difficulty": "easy",
+        "question_text": "How do you calculate the efficiency of an LDO, and how does it differ from a buck converter?",
+        "answer_text": "Efficiency ≈ V_out / V_in.",
+        "explanation_text": "Because an LDO doesn't switch, the input current is essentially identical to the output current (ignoring a tiny quiescent ground current). Therefore, the efficiency is simply the ratio of the voltages. If you drop 5V to 3.3V, the efficiency is 3.3 / 5 = 66%. The remaining 34% of the power is burned entirely as heat.",
+        "bonus_question_text": "When can an LDO actually be highly efficient?",
+        "bonus_answer_text": "When the input voltage is very close to the output voltage (e.g., dropping 3.5V to 3.3V yields ~94% efficiency).",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 7,
+      "slug": "power-electronics-ldos-what-exactly-does-the-dropout-voltage-v-do-refe",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "dd24beeef03add09",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 7
+      },
+      "question": {
+        "category": "Power Electronics, LDOs",
+        "categories": [
+          "Power Electronics",
+          "LDOs"
+        ],
+        "difficulty": "easy",
+        "question_text": "What exactly does the \"dropout voltage\" (V_do) refer to in an LDO?",
+        "answer_text": "It is the absolute minimum voltage difference required between V_in and V_out for the LDO to maintain regulation.",
+        "explanation_text": "The internal transistor needs a minimum V_DS to stay in saturation and regulate properly. If an LDO outputs 3.3V and has a dropout voltage of 200mV, V_in must be at least 3.5V. If V_in falls below 3.5V, the LDO \"drops out\" of regulation, and the output voltage will start sagging directly with the input voltage.",
+        "bonus_question_text": "How does the load current affect the dropout voltage?",
+        "bonus_answer_text": "Dropout voltage increases as load current increases. In dropout, the FET is in the triode region acting as a resistor (R_DS(on)), so the minimum voltage drop required is I_load * R_DS(on).",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 8,
+      "slug": "power-electronics-ldos-if-you-are-implementing-an-ldo-ic-on-a-pcb-what",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "148284435ee337e3",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 8
+      },
+      "question": {
+        "category": "Power Electronics, LDOs",
+        "categories": [
+          "Power Electronics",
+          "LDOs"
+        ],
+        "difficulty": "medium",
+        "question_text": "If you are implementing an LDO IC on a PCB, what external components are typically required, and why?",
+        "answer_text": "Input and output capacitors. They are critical for stability and transient response.",
+        "explanation_text": "The output capacitor is the most critical. Because an LDO relies on a closed feedback loop to adjust its internal resistance, it requires an output capacitor (often with a specific ESR, or Equivalent Series Resistance) to stabilize that loop and prevent it from high-frequency oscillation. The input capacitor is used to filter out noise from the upstream power supply.",
+        "bonus_question_text": "What happens if the output capacitor's ESR is too low (e.g., using a perfect ceramic cap on an older LDO designed for tantalum caps)?",
+        "bonus_answer_text": "The LDO's control loop can lose its phase margin and become unstable, causing the output voltage to wildly oscillate.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 9,
+      "slug": "power-electronics-ldos-what-are-the-main-tradeoffs-when-choosing-an-ld",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "286f7460a0198563",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 9
+      },
+      "question": {
+        "category": "Power Electronics, LDOs",
+        "categories": [
+          "Power Electronics",
+          "LDOs"
+        ],
+        "difficulty": "easy",
+        "question_text": "What are the main tradeoffs when choosing an LDO over a Buck Converter?",
+        "answer_text": "LDOs provide a perfectly clean output and are cheap/simple, but they are highly inefficient at large voltage drops. Buck converters are highly efficient but noisy and complex.",
+        "explanation_text": "You use a Buck Converter when you need to drop a large voltage at high current (e.g., 12V to 1V at 50A) because it converts power efficiently. You use an LDO when you need a perfectly clean, noise-free supply (like for RF sensors or analog ADCs/DACs), or when the voltage drop is incredibly small, or the load current is so tiny that the heat generated is negligible.",
+        "bonus_question_text": "What is a common power architecture that utilizes both?",
+        "bonus_answer_text": "Using a high-efficiency buck converter to step down a large voltage (e.g., 12V down to 3.5V), followed by an LDO to step that 3.5V down to 3.3V to strip out the buck converter's switching noise and provide a perfectly clean rail.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {},
+      "notes": null
+    },
+    {
+      "row_number": 10,
+      "slug": "power-electronics-ldos-what-is-power-supply-rejection-ratio-psrr-in-an",
+      "selected": false,
+      "status": "ready_for_review",
+      "already_materialized_as": null,
+      "source_fingerprint": "5b6c81f90f87c4c0",
+      "source": {
+        "workbook": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+        "worksheet": "first sheet",
+        "row_number": 10
+      },
+      "question": {
+        "category": "Power Electronics, LDOs",
+        "categories": [
+          "Power Electronics",
+          "LDOs"
+        ],
+        "difficulty": "hard",
+        "question_text": "What is Power Supply Rejection Ratio (PSRR) in an LDO, and why is it important?",
+        "answer_text": "{{image_1}}\n\nPSRR is a measure of how well an LDO filters out AC noise and ripple from its input voltage. It is expressed in decibels (dB).",
+        "explanation_text": "If you power an LDO from a noisy buck converter, the input voltage has a jagged AC ripple. To keep the output perfectly flat, the LDO uses its internal feedback loop to rapidly adjust its internal resistance, actively absorbing and canceling out those input variations. PSRR measures this noise reduction using the formula: 20 * log10(Ripple_in / Ripple_out).\n\nIn simple terms:\n20 dB means the ripple is reduced by 10x.\n40 dB means it is reduced by 100x.\n60 dB means a massive 1000x reduction!\n\nOn datasheets, PSRR is always specified at specific frequencies, because it changes based on the noise frequency (e.g., \"60 dB at 1 kHz\" or \"20 dB at 100 kHz\").",
+        "bonus_question_text": "Based on how it's listed on a datasheet, what happens to an LDO's PSRR if the input noise frequency goes way above the specified frequency (e.g., above 1000 kHz)?",
+        "bonus_answer_text": "PSRR severely degrades (gets much worse) at high frequencies. At low frequencies, the LDO's active control loop easily tracks and cancels noise. At high frequencies, the loop is too slow to react, so the LDO relies almost entirely on the external output capacitor to filter the noise.",
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null,
+        "tags": []
+      },
+      "images": {
+        "image_1": {
+          "prompt": "Two sets of stacked waveform graphs comparing a 20 dB PSRR LDO and a 60 dB PSRR LDO. Both receive the exact same noisy input voltage (a DC line with a 100mV jagged buck converter ripple). The 20 dB LDO output shows a visibly reduced 10mV ripple. The 60 dB LDO output shows a perfectly flat, clean DC line, representing a 1000x reduction to a microscopic 0.1mV ripple.",
+          "title": "LDO input ripple rejection",
+          "alt": "Two sets of stacked waveform graphs comparing a 20 dB PSRR LDO and a 60 dB PSRR LDO. Both receive the exact same noisy input voltage (a DC line with a 100mV jagged buck converter ripple). The 20 dB LDO output shows a visibly reduced 10mV ripple. The 60 dB LDO output shows a perfectly flat, clean DC line, representing a 1000x reduction to a microscopic 0.1mV ripple.",
+          "placements": {
+            "answer_text": true
+          },
+          "render": {
+            "type": "ldo_psrr_iq"
+          },
+          "output_path": "/diagrams/imports/ee-flashcards-ldos-v4-20260911/power-electronics-ldos-what-is-power-supply-rejection-ratio-psrr-in-an-image_1.svg"
+        }
+      },
+      "notes": null
+    }
+  ],
+  "rendered_at": "2026-09-11T20:51:45.553Z"
+}

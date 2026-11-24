@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-ldos-what-is-power-supply-rejection-ratio-psrr-in-an",
+  "category": "Power Electronics, LDOs",
+  "difficulty": "hard",
+  "uploaded": true,
+  "supabase_id": 84,
+  "source_fingerprint": "5b6c81f90f87c4c0",
+  "source": {
+    "batch_id": "ee-flashcards-ldos-v4-20260911",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+    "row_number": 10
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-ldos-v4-20260911/power-electronics-ldos-what-is-power-supply-rejection-ratio-psrr-in-an-image_1.svg"
+  },
+  "question_text": "<p>What is Power Supply Rejection Ratio (PSRR) in an LDO, and why is it important?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Two sets of stacked waveform graphs comparing a 20 dB PSRR LDO and a 60 dB PSRR LDO. Both receive the exact same noisy input voltage (a DC line with a 100mV jagged buck converter ripple). The 20 dB LDO output shows a visibly reduced 10mV ripple. The 60 dB LDO output shows a perfectly flat, clean DC line, representing a 1000x reduction to a microscopic 0.1mV ripple.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>PSRR is a measure of how well an LDO filters out AC noise and ripple from its input voltage. It is expressed in decibels (dB).</p>",
+  "explanation_text": "<p>If you power an LDO from a noisy buck converter, the input voltage has a jagged AC ripple. To keep the output perfectly flat, the LDO uses its internal feedback loop to rapidly adjust its internal resistance, actively absorbing and canceling out those input variations. PSRR measures this noise reduction using the formula: 20 * log10(Ripple_in / Ripple_out).</p>\n<p>In simple terms:<br/>20 dB means the ripple is reduced by 10x.<br/>40 dB means it is reduced by 100x.<br/>60 dB means a massive 1000x reduction!</p>\n<p>On datasheets, PSRR is always specified at specific frequencies, because it changes based on the noise frequency (e.g., &quot;60 dB at 1 kHz&quot; or &quot;20 dB at 100 kHz&quot;).</p>",
+  "bonus_question_text": "<p>Based on how it's listed on a datasheet, what happens to an LDO's PSRR if the input noise frequency goes way above the specified frequency (e.g., above 1000 kHz)?</p>",
+  "bonus_answer_text": "<p>PSRR severely degrades (gets much worse) at high frequencies. At low frequencies, the LDO's active control loop easily tracks and cancels noise. At high frequencies, the loop is too slow to react, so the LDO relies almost entirely on the external output capacitor to filter the noise.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:5b6c81f90f87c4c0"
+  ],
+  "related_question_ids": []
+}

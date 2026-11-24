@@ -1,0 +1,7 @@
+* Derived from 02-series-rlc-band-pass.asc
+V1 VIN 0 AC 1
+L1 VLC VIN 10m
+C1 VOUT VLC 100n
+R1 VOUT 0 100
+.ac dec 200 10 1Meg
+.end

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="380" viewBox="0 0 740 380" role="img" aria-label="Bidirectional MOSFET level shifter">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1d4ed8"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0ea5a5"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="370" y="38" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">Bidirectional MOSFET level shifter</text>
+  
+    <text x="180" y="68" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" text-anchor="middle">3.3 V</text>
+    <text x="560" y="68" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" text-anchor="middle">5 V</text>
+    <path d="M174 91 L180 82 L186 91 M180 82 V104" fill="none" stroke="#991b1b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M554 91 L560 82 L566 91 M560 82 V104" fill="none" stroke="#991b1b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M180 104 V116 l-10 8 20 12 -20 12 20 12 -20 12 10 8 V210" fill="none" stroke="#991b1b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M560 104 V116 l-10 8 20 12 -20 12 20 12 -20 12 10 8 V210" fill="none" stroke="#991b1b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="146" y="154" fill="#4b5563" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="middle">R2</text>
+    <text x="146" y="176" fill="#4b5563" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500" text-anchor="middle">10 kΩ</text>
+    <text x="526" y="154" fill="#4b5563" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="middle">R3</text>
+    <text x="526" y="176" fill="#4b5563" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500" text-anchor="middle">10 kΩ</text>
+    <line x1="72" y1="210" x2="326" y2="210" stroke="#166534" stroke-width="4" stroke-linecap="round"/>
+    <line x1="414" y1="210" x2="668" y2="210" stroke="#166534" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="180" cy="210" r="5" fill="#166534" stroke="#166534" stroke-width="2"/>
+    <circle cx="560" cy="210" r="5" fill="#166534" stroke="#166534" stroke-width="2"/>
+    <text x="108" y="201" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">TX - 3.3 V</text>
+    <text x="628" y="201" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">TX - 5 V</text>
+    <line x1="326" y1="210" x2="331" y2="210" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+    <line x1="409" y1="210" x2="414" y2="210" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+    <g transform="translate(370 180) rotate(90)">
+      <g transform="translate(0 0) scale(0.65)">
+    <line x1="46" y1="-60" x2="46" y2="-28" stroke="#111827" stroke-width="3"/>
+    <line x1="16" y1="-28" x2="46" y2="-28" stroke="#111827" stroke-width="3"/>
+    <line x1="46" y1="28" x2="46" y2="60" stroke="#111827" stroke-width="3"/>
+    <line x1="16" y1="28" x2="46" y2="28" stroke="#111827" stroke-width="3"/>
+    <line x1="16" y1="-34" x2="16" y2="-13" stroke="#111827" stroke-width="4"/>
+    <line x1="16" y1="-9" x2="16" y2="9" stroke="#111827" stroke-width="4"/>
+    <line x1="16" y1="13" x2="16" y2="34" stroke="#111827" stroke-width="4"/>
+    <line x1="-8" y1="-38" x2="-8" y2="38" stroke="#111827" stroke-width="3"/>
+    <line x1="-60" y1="0" x2="-14" y2="0" stroke="#111827" stroke-width="3"/>
+    
+    <line x1="16" y1="8" x2="40" y2="8" stroke="#111827" stroke-width="2.5"/>
+    <path d="M40 8 H46 V28" fill="none" stroke="#111827" stroke-width="2.5"/>
+    <polygon points="17,8 29,1 29,15" fill="#2563eb"/>
+    
+  </g>
+    </g>
+    <path d="M338 210 V238 H350 M366 238 H402 V210" fill="none" stroke="#111827" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M350 232 L362 238 L350 244 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="366" y1="230" x2="366" y2="246" stroke="#111827" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M180 104 H300 V136 H370 V141" fill="none" stroke="#166534" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="180" cy="104" r="5" fill="#166534" stroke="#166534" stroke-width="2"/>
+    <text x="307" y="201" fill="#4b5563" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="middle">U1</text>
+    <text x="370" y="264" fill="#4b5563" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" text-anchor="middle">BSS138</text>
+    <text x="370" y="318" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="middle">Either side can pull both buses LOW</text>
+    <text x="370" y="346" fill="#92400e" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle">HIGH transitions are RC-limited by pull-ups and bus capacitance</text>
+  
+</svg>

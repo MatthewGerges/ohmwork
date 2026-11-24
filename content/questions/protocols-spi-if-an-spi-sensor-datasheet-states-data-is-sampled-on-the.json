@@ -1,0 +1,29 @@
+{
+  "slug": "protocols-spi-if-an-spi-sensor-datasheet-states-data-is-sampled-on-the",
+  "category": "Protocols - SPI",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 23,
+  "source_fingerprint": "1c25547ace415e30",
+  "source": {
+    "batch_id": "ee-flashcards-master-simplified-20260709",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+    "row_number": 3
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-master-simplified-20260709/protocols-spi-if-an-spi-sensor-datasheet-states-data-is-sampled-on-the-image_1.svg"
+  },
+  "question_text": "<p>If an SPI sensor datasheet states &quot;data is sampled on the rising edge, and the clock idles high,&quot; what are the correct CPOL and CPHA settings?</p>",
+  "answer_text": "<p>CPOL = 1, CPHA = 1.</p>",
+  "explanation_text": "<p>CPOL=1 means the clock idles high. Because it idles high, the first edge is falling. CPHA=1 means data is sampled on the second edge (the rising edge).</p>\n<img src=\"{{image_1}}\" alt=\"A timing diagram showing a single SPI clock cycle starting HIGH (idle), falling (first edge), then rising (second edge). A dashed line on the rising edge says &quot;Sample Data.&quot;\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "bonus_question_text": "<p>If CPHA was set to 0, when would data be sampled?</p>",
+  "bonus_answer_text": "<p>Data would be sampled on the first edge (the falling edge).</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:1c25547ace415e30"
+  ],
+  "related_question_ids": []
+}

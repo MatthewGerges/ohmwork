@@ -1,0 +1,29 @@
+{
+  "slug": "protocols-system-architecture-what-causes-shark-fin-waveforms-on-the-r",
+  "category": "Protocols, System Architecture",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 89,
+  "source_fingerprint": "26156c80773145f2",
+  "source": {
+    "batch_id": "ee-flashcards-passives-protocols-v3-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+    "row_number": 10
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/protocols-system-architecture-what-causes-shark-fin-waveforms-on-the-r-image_1.svg"
+  },
+  "question_text": "<p>What causes &quot;shark fin&quot; waveforms on the rising edge of an I2C bus, and what happens if the pull-up resistors are too large?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"An oscilloscope waveform comparison. Left: Clean square I2C pulse with sharp rising and falling edges. Right: &quot;Shark fin&quot; waveform where the falling edge is steep, but the rising edge is a slow, curved RC ramp.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>Shark fins occur because the I2C bus relies on passive pull-up resistors to charge the bus capacitance. If the resistor is too large, it takes too long to reach a HIGH state.</p>",
+  "explanation_text": "<p>I2C is an open-drain protocol, so while devices actively pull the bus LOW very quickly, they rely entirely on the RC time constant (T = R * C) of the pull-up resistor and the parasitic bus capacitance to pull the line HIGH. If the resistor is too large (e.g., 100kΩ instead of 2.2kΩ), the rising edge becomes a slow, curved exponential ramp (a &quot;shark fin&quot;). This can violate timing requirements, causing data corruption.</p>",
+  "bonus_question_text": "<p>If the pull-up resistors are too small (e.g., 100 ohms), what happens?</p>",
+  "bonus_answer_text": "<p>It wastes a significant amount of current. Every time a device pulls the line LOW to transmit a 0, it creates a direct path from Vcc to ground through that resistor. A very small resistor means excessive, continuously wasted power while the line is low.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:26156c80773145f2"
+  ],
+  "related_question_ids": []
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "components-what-key-specs-do-you-look-at-when-selecting-an-ldo-and-wha",
+  "category": "Components",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 14,
+  "source_fingerprint": "ecfa0385ccb82e90",
+  "source": {
+    "batch_id": "ee-flashcards-master-simplified-20260709",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+    "row_number": 10
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-an-ldo-and-wha-image_1.svg"
+  },
+  "question_text": "<p>What key specs do you look at when selecting an LDO, and what should you keep in mind?</p>",
+  "answer_text": "<p>1. Max Output Current: Load capacity.<br/>2. Dropout Voltage (V_do): Min required voltage difference (e.g. 200mV).<br/>3. PSRR: How well it rejects input noise.<br/>4. Quiescent Current (I_q): Internal power draw at no load.<br/>5. Thermal Resistance: Heat dissipation ability.</p>",
+  "explanation_text": "<p>LDOs give clean power but run hot. Prioritize PSRR for analog/RF circuits, and minimize I_q for battery-powered standby modes.</p>\n<img src=\"{{image_1}}\" alt=\"Block diagram of an LDO smoothing input ripple (PSRR), with an arrow showing internal current leaking to ground (Quiescent Current).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "bonus_question_text": "<p>What happens if the input voltage drops below V_out + V_do?</p>",
+  "bonus_answer_text": "<p>The LDO falls out of regulation and acts like a resistor, passing input noise directly to the output.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:ecfa0385ccb82e90"
+  ],
+  "related_question_ids": []
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "op-amp-configurations-how-do-you-wire-an-inverting-amplifier-and-what",
+  "category": "Op-Amp Configurations",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 29,
+  "source_fingerprint": "ca203d8615cf1bbe",
+  "source": {
+    "batch_id": "ee-flashcards-opamp-configs-visual-v2-20260709T2351",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_opamp_configs_visual_v2.xlsx",
+    "row_number": 3
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-opamp-configs-visual-v2-20260709T2351/op-amp-configurations-how-do-you-wire-an-inverting-amplifier-and-what-image_1.svg"
+  },
+  "question_text": "<p>How do you wire an Inverting Amplifier, and what is the gain equation?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Schematic of an Inverting Amplifier: Non-inverting (+) input grounded. Input signal (Vin) goes through resistor R_in to the inverting (-) input. A feedback resistor (R_f) connects the output back to the inverting (-) input.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>Gain = -R_f / R_in</p>",
+  "explanation_text": "<p>This amplifies the signal but flips it upside down (180 degrees out of phase). The negative sign in the equation indicates this inversion.</p>",
+  "bonus_question_text": "<p>How do you derive the gain for an Inverting Amplifier using nodal analysis?</p>",
+  "bonus_answer_text": "<p>1. V+ is grounded (0V). Because V- = V+, V- is at a 'virtual ground' (0V).<br/>2. Apply Kirchhoff's Current Law (KCL) at V-. The current entering through R_in equals the current leaving through R_f.<br/>3. (Vin - 0) / R_in = (0 - Vout) / R_f<br/>4. Rearranging gives: Vout / Vin = -R_f / R_in.</p>",
+  "main_video_youtube_id": "0",
+  "resource_videos": [],
+  "ltspice_file_needed": "0",
+  "tags": [
+    "source:excel",
+    "import:ca203d8615cf1bbe"
+  ],
+  "related_question_ids": []
+}

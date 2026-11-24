@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img" aria-label="Non-inverting amplifier">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"/>
+  <text x="360" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Non-inverting amplifier</text>
+  
+    
+    <path d="M327 122 L327 254 L481 188 Z" fill="#0a1a20" stroke="#2dd4bf" stroke-width="3"/>
+    <text x="354" y="146" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">-</text>
+    <text x="354" y="244" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">+</text>
+    <text x="412" y="194" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">op-amp</text>
+  
+    <path d="M70 283 L293 283 L293 221 L327 221" fill="none" stroke="#4ade80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="82" y="265" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500" text-anchor="start">Vin</text>
+    <line x1="327" y1="155" x2="270" y2="155" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="270" y1="155" x2="270" y2="102" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    
+    <line x1="270" y1="102" x2="292" y2="102" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <rect x="292" y="89" width="234" height="26" rx="5" fill="#101827" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="526" y1="102" x2="548" y2="102" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <text x="409" y="79" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="middle">R_f</text>
+  
+    <line x1="548" y1="102" x2="548" y2="188" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    
+    <line x1="270" y1="155" x2="270" y2="165" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <rect x="257" y="165" width="26" height="30" rx="5" fill="#101827" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="270" y1="195" x2="270" y2="205" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <text x="298" y="185" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start">R_in</text>
+  
+    
+    <line x1="270" y1="205" x2="270" y2="219" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="250" y1="219" x2="290" y2="219" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="256" y1="229" x2="284" y2="229" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="262" y1="239" x2="278" y2="239" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+  
+    <line x1="481" y1="188" x2="630" y2="188" stroke="#4ade80" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    <circle cx="270" cy="155" r="5" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"/>
+    <circle cx="548" cy="188" r="5" fill="#fbbf24" stroke="#fbbf24" stroke-width="1"/>
+    <text x="622" y="170" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500" text-anchor="end">Vout</text>
+    <text x="364" y="320" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">Vout / Vin = 1 + R_f / R_in</text>
+  
+</svg>

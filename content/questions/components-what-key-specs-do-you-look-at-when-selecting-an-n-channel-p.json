@@ -1,0 +1,29 @@
+{
+  "slug": "components-what-key-specs-do-you-look-at-when-selecting-an-n-channel-p",
+  "category": "Components",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 15,
+  "source_fingerprint": "7a96a1471027ea1d",
+  "source": {
+    "batch_id": "ee-flashcards-master-simplified-20260709",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+    "row_number": 16
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-key-specs-do-you-look-at-when-selecting-an-n-channel-p-image_1.svg"
+  },
+  "question_text": "<p>What key specs do you look at when selecting an N-channel power MOSFET as a low-side switch?</p>",
+  "answer_text": "<p>1. Drain-Source Breakdown (V_ds): Max voltage when off.<br/>2. V_gs Threshold: Gate voltage where it starts turning on (Verify it reaches full saturation at logic levels!).<br/>3. R_ds_on: On-state resistance (keep low to stop heating).<br/>4. Gate Charge (Q_g): Charge needed to switch states.<br/>5. Max Continuous Current (I_d).</p>",
+  "explanation_text": "<p>Don't just look at the V_gs threshold! A MOSFET might turn on at 2V, but requires 5V on the gate to fully saturate. Driving it with 3.3V will leave it in the ohmic region, causing it to overheat.</p>\n<img src=\"{{image_1}}\" alt=\"Transistor characteristic curve (Id vs Vds for different Vgs lines), showing the visual boundary between the Ohmic and Saturation regions.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "bonus_question_text": "<p>What dictates the max power a MOSFET package can dissipate?</p>",
+  "bonus_answer_text": "<p>The Max Junction Temperature limit combined with its Junction-to-Ambient thermal resistance (θ_JA).</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:7a96a1471027ea1d"
+  ],
+  "related_question_ids": []
+}

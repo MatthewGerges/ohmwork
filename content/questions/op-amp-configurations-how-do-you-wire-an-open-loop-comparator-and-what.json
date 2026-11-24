@@ -1,0 +1,29 @@
+{
+  "slug": "op-amp-configurations-how-do-you-wire-an-open-loop-comparator-and-what",
+  "category": "Op-Amp Configurations",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 30,
+  "source_fingerprint": "fc7db031e34e7077",
+  "source": {
+    "batch_id": "ee-flashcards-opamp-configs-visual-v2-20260709T2351",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_opamp_configs_visual_v2.xlsx",
+    "row_number": 5
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-opamp-configs-visual-v2-20260709T2351/op-amp-configurations-how-do-you-wire-an-open-loop-comparator-and-what-image_1.svg"
+  },
+  "question_text": "<p>How do you wire an Open-Loop Comparator, and what happens to the output?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Schematic of an open-loop comparator: An op-amp with no resistors. V1 at the (+) pin and V2 at the (-) pin. Beside it, a graph showing an output square wave instantly snapping between +Vcc and -Vee when V1 crosses V2.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>The output snaps completely to the positive or negative supply rail depending on which input pin has the higher voltage.</p>",
+  "explanation_text": "<p>With no feedback resistors, an op-amp has massive open-loop gain. If the (+) pin is even slightly higher than the (-) pin, the output multiplies that difference and hits the positive maximum.</p>",
+  "bonus_question_text": "<p>Why are dedicated comparator ICs often preferred over using standard op-amps as comparators?</p>",
+  "bonus_answer_text": "<p>Standard op-amps recover very slowly when their outputs are pushed to the rails (saturation). Dedicated comparators are designed to switch instantly between digital logic levels.</p>",
+  "main_video_youtube_id": "0",
+  "resource_videos": [],
+  "ltspice_file_needed": "0",
+  "tags": [
+    "source:excel",
+    "import:fc7db031e34e7077"
+  ],
+  "related_question_ids": []
+}

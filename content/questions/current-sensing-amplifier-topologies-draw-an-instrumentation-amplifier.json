@@ -1,0 +1,29 @@
+{
+  "slug": "current-sensing-amplifier-topologies-draw-an-instrumentation-amplifier",
+  "category": "Current Sensing, Amplifier Topologies",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 114,
+  "source_fingerprint": "5c856edd053b78d0",
+  "source": {
+    "batch_id": "ee-flashcards-current-sensing-v2-20260917",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+    "row_number": 9
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-amplifier-topologies-draw-an-instrumentation-amplifier-image_1.svg"
+  },
+  "question_text": "<p>Draw an Instrumentation Amplifier (IA) configured for current sensing. What are its pros and cons?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Schematic of an Instrumentation Amplifier. V_bus connects to System Load, then R_shunt, then R_p, then Ground. The IN- and IN+ pins cross over to measure exactly across R_shunt (labeled 'Solves PCB parasitic issue'). Inside the IA block, two input buffers connect via a shared R_g, feeding into a final difference amplifier stage.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>Pros: Large input impedance allows measuring very small currents, and gain is easily changed with a single external resistor (R_g).<br/>Cons: Common-mode voltage is limited to the supply voltage (V_CM &lt;= V_s).</p>",
+  "explanation_text": "<p>An Instrumentation Amplifier uses buffered inputs to achieve massive input impedance. It perfectly solves the PCB parasitic error issue by using a differential connection (measuring directly across the top and bottom of the shunt). However, because its internal op-amps are exposed to the input voltage, it cannot survive high common-mode voltages, restricting it primarily to low-side sensing (or very low-voltage high-side sensing).</p>",
+  "bonus_question_text": "<p>What is the output voltage equation for this IA configuration?</p>",
+  "bonus_answer_text": "<p>V_O = V_shunt * Gain</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:5c856edd053b78d0"
+  ],
+  "related_question_ids": []
+}

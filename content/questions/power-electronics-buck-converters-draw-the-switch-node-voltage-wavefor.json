@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-buck-converters-draw-the-switch-node-voltage-wavefor",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 59,
+  "source_fingerprint": "daf373466f9742a9",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 15
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-draw-the-switch-node-voltage-wavefor-image_1.svg"
+  },
+  "question_text": "<p>Draw the switch node voltage waveform in an asynchronous buck converter alongside the high-side gate control signal. How does it change if it is synchronous?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Stacked graphs. Top: Gate Signal (square wave). Bottom: Switch Node Voltage, jumping up to V_in when the gate is HIGH, and dropping down to -0.7V when the gate is LOW (Async) or 0V (Sync).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>When the gate is HIGH, the switch node jumps to V_in. When LOW, it drops slightly below ground (-V_f of the diode). In a synchronous buck, it drops exactly to 0V.</p>",
+  "explanation_text": "<p>The switch node toggles between the input voltage and ground. In an async converter, the diode must conduct during the OFF time. To forward-bias the diode, the inductor's flyback pulls the switch node to roughly -0.7V. In a sync converter, the low-side MOSFET turns on and provides a near-zero resistance path, keeping the node perfectly at 0V (aside from a tiny I * R_DS(on) drop).</p>",
+  "bonus_question_text": "<p>What happens at the switch node during the &quot;dead time&quot; of a synchronous buck converter?</p>",
+  "bonus_answer_text": "<p>Both FETs are off, so the internal body diode of the low-side FET takes over. The switch node briefly dips to -0.7V just like an asynchronous converter until the low-side FET fully turns on.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:daf373466f9742a9"
+  ],
+  "related_question_ids": []
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "current-sensing-pcb-design-when-routing-a-pcb-for-a-shunt-resistor-why",
+  "category": "Current Sensing, PCB Design",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 118,
+  "source_fingerprint": "9e6ad905b1576352",
+  "source": {
+    "batch_id": "ee-flashcards-current-sensing-v2-20260917",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+    "row_number": 7
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-pcb-design-when-routing-a-pcb-for-a-shunt-resistor-why-image_1.svg"
+  },
+  "question_text": "<p>When routing a PCB for a shunt resistor, why must you use a &quot;Kelvin Connection&quot; (4-wire sensing)? Draw how it is physically routed.</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"PCB layout diagram. A rectangular shunt resistor has thick, wide copper traces carrying high current connected to its outer edges. Two very thin copper traces tap directly into the inner, center edges of the resistor pads and route away parallel to each other as a differential pair toward the amplifier.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>It physically separates the high-current path from the voltage-sensing path to eliminate the parasitic resistance of the copper PCB traces.</p>",
+  "explanation_text": "<p>A 10mΩ shunt resistor is extremely small. The thick copper PCB traces leading up to it might accidentally add another 2mΩ of parasitic resistance. If you tap the amplifier inputs outside of the resistor, the amplifier will measure the voltage drop of the trace + the resistor, causing a massive 20% measurement error. A Kelvin connection routes the high current through thick traces directly to the main pads, but taps the sensing traces directly from the *inside* edges of the resistor pads where no load current flows, ensuring a perfectly accurate measurement.</p>",
+  "bonus_question_text": "<p>How should the two sensing traces be routed from the shunt back to the amplifier?</p>",
+  "bonus_answer_text": "<p>They should be routed as a tightly coupled differential pair to ensure any external EMI noise couples equally into both traces (common-mode noise), which the difference amplifier can then easily reject.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:9e6ad905b1576352"
+  ],
+  "related_question_ids": []
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "protocols-usb-usb-uses-a-d-and-d-data-line-what-is-this-routing-techni",
+  "category": "Protocols, USB",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 103,
+  "source_fingerprint": "5942187af102e867",
+  "source": {
+    "batch_id": "ee-flashcards-mixed-topics-v2-20260915",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_mixed_topics_v2.xlsx",
+    "row_number": 4
+  },
+  "images": {},
+  "question_text": "<p>USB uses a D+ and D- data line. What is this routing technique called, and what is its primary advantage for noise immunity?</p>",
+  "answer_text": "<p>It is called Differential Signaling. Its primary advantage is that it completely rejects &quot;common-mode&quot; noise.</p>",
+  "explanation_text": "<p>Instead of sending a single voltage relative to ground, the transmitter sends mirrored signals: when D+ goes high, D- goes equally low. The receiver only looks at the *difference* between the two wires. If external electromagnetic noise (EMI) strikes the cable, it couples equally into both wires (adding the exact same noise voltage to both). Because the receiver subtracts D- from D+, the noise perfectly cancels itself out!</p>",
+  "bonus_question_text": "<p>Why is it critical that D+ and D- traces are routed to be the exact same physical length on a PCB?</p>",
+  "bonus_answer_text": "<p>To prevent &quot;skew.&quot; If one trace is longer, its signal arrives a fraction of a nanosecond later. This misalignment destroys the common-mode noise rejection and severely degrades the signal's eye diagram.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:5942187af102e867"
+  ],
+  "related_question_ids": []
+}

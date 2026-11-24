@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="475" viewBox="0 0 860 475" role="img" aria-label="Kelvin shunt connection">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1d4ed8"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0ea5a5"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="430" y="38" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">Kelvin shunt connection</text>
+
+    <text x="70" y="142" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" text-anchor="start">CURRENT IN</text>
+    <line x1="70" y1="170" x2="190" y2="170" stroke="#111827" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-gray)"/><line x1="190" y1="170" x2="205" y2="170" stroke="#111827" stroke-width="5" stroke-linecap="round"/>
+
+    <line x1="205" y1="170" x2="324" y2="170" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+    <rect x="324" y="160" width="62" height="20" rx="2" fill="#ffffff" stroke="#7c3aed" stroke-width="3"/>
+    <line x1="386" y1="170" x2="505" y2="170" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+    <text x="355" y="134" fill="#7c3aed" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" text-anchor="middle">4-TERMINAL SHUNT</text>
+
+    <line x1="505" y1="170" x2="620" y2="170" stroke="#111827" stroke-width="5" stroke-linecap="round"/><line x1="620" y1="170" x2="650" y2="170" stroke="#111827" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-gray)"/>
+    <rect x="650" y="138" width="104" height="64" rx="1" fill="#f8fafc" stroke="#111827" stroke-width="2"/><text x="702" y="175" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" text-anchor="middle">LOAD</text>
+    <circle cx="230" cy="170" r="5" fill="#2563eb" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="480" cy="170" r="5" fill="#dc2626" stroke="#dc2626" stroke-width="2"/>
+    <path d="M230 170 V286 H356" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M480 170 V205 H190 V334 H356" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <path d="M356 262 L356 358 L484 310 Z" fill="#ffffff" stroke="#111827" stroke-width="2.5"/>
+    <text x="374" y="291" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" text-anchor="middle">-</text>
+    <text x="374" y="340" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle">+</text>
+    <text x="418" y="315" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">CSA</text>
+
+    <line x1="484" y1="310" x2="640" y2="310" stroke="#0f766e" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+    <text x="630" y="292" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" text-anchor="end">VOUT</text>
+    <text x="355" y="238" fill="#1d4ed8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" text-anchor="middle">Dedicated Kelvin sense traces</text>
+    <text x="430" y="414" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Sense traces touch the resistor terminals, not the high-current copper path</text>
+    <text x="430" y="442" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" text-anchor="middle">This excludes connector, pad, and PCB trace voltage drops</text>
+
+</svg>

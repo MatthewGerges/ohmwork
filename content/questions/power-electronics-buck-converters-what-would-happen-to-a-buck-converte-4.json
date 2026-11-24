@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-buck-converters-what-would-happen-to-a-buck-converte-4",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 70,
+  "source_fingerprint": "d060f7c1a650d38c",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 7
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-what-would-happen-to-a-buck-converte-4-image_1.svg"
+  },
+  "question_text": "<p>What would happen to a buck converter if you completely removed the Input Capacitor?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A buck converter schematic with a large red 'X' over the input capacitor. A graph at the input line shows the V_in voltage dipping sharply and ringing every time the switch turns on.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>The input voltage supply would crash and ring violently during every switching cycle.</p>",
+  "explanation_text": "<p>When the MOSFET closes, it instantly demands a massive pulse of current. Power supply traces on the PCB have parasitic inductance, so they cannot deliver current instantly. Without a local input capacitor to instantly supply that burst of energy, the input voltage drops sharply and rings. You should really build this on LTspice to see it in action. An LTspice model will be added in the future if deemed necessary.</p>",
+  "bonus_question_text": null,
+  "bonus_answer_text": null,
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:d060f7c1a650d38c"
+  ],
+  "related_question_ids": []
+}

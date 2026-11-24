@@ -1,0 +1,33 @@
+{
+  "slug": "transmission-line-theory-pcb-what-is-the-physical-difference-between-a-microstrip-and",
+  "category": "Transmission Line Theory, PCB",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 51,
+  "source_fingerprint": "manual-microstrip-stripline-20260716",
+  "source": {
+    "batch_id": "pcb-transmission-line-geometries-20260716",
+    "source_file": "manual:pcb-transmission-line-geometries",
+    "row_number": 1
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/pcb-transmission-line-geometries-20260716/transmission-line-theory-pcb-what-is-the-physical-difference-between-a-microstrip-and-image_1.svg"
+  },
+  "question_text": "<p>What is the physical difference between a Microstrip and a Stripline in PCB design?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Cross-section comparing microstrip and stripline PCB transmission-line geometry.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>A Microstrip is routed on the outer surface layer of the PCB with a single reference plane below it. A Stripline is routed on an internal layer, completely sandwiched between two solid reference planes.</p>",
+  "explanation_text": "<p>Because a microstrip is on the surface, its electromagnetic fields travel partially through the air and partially through the PCB dielectric. A stripline is fully enclosed within the PCB material, meaning its fields are completely contained between the top and bottom reference planes.</p>",
+  "bonus_question_text": "<p>What are the main advantages and disadvantages of using a Stripline over a Microstrip?</p>",
+  "bonus_answer_text": "<p>Advantages: Striplines offer superior EMI shielding (since they are enclosed by planes) and significantly lower crosstalk. Disadvantages: They require more board layers (increasing cost), the trace routing is more complex, and physical debugging/probing is impossible without adding vias since the trace is buried inside the board.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "pcb",
+    "transmission-line",
+    "microstrip",
+    "stripline",
+    "source:excel",
+    "import:manual-microstrip-stripline-20260716"
+  ],
+  "related_question_ids": []
+}

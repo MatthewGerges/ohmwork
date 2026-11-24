@@ -1,0 +1,29 @@
+{
+  "slug": "current-sensing-fundamentals-what-is-the-difference-between-high-side",
+  "category": "Current Sensing, Fundamentals",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 115,
+  "source_fingerprint": "1bc11e9c421d681d",
+  "source": {
+    "batch_id": "ee-flashcards-current-sensing-v2-20260917",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_current_sensing_v2.xlsx",
+    "row_number": 2
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-current-sensing-v2-20260917/current-sensing-fundamentals-what-is-the-difference-between-high-side-image_1.svg"
+  },
+  "question_text": "<p>What is the difference between High-Side and Low-Side current sensing? Draw a simple block diagram for both.</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Side-by-side schematics. Left (High-Side): V_in connects to a Shunt Resistor, which connects to the Load, which connects to Ground. The amplifier measures across the shunt. Right (Low-Side): V_in connects to the Load, which connects to a Shunt Resistor, which connects to Ground. The amplifier measures across the shunt.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>High-side places the shunt resistor between the power supply (V_in) and the load. Low-side places the shunt between the load and Ground.</p>",
+  "explanation_text": "<p>- Low-Side: The shunt is at ground potential. It is very easy to amplify because there is no high common-mode voltage. However, it lifts the load's ground reference slightly above true ground, which can cause severe ground-loop or communication issues if the load connects to other systems.<br/>- High-Side: The load's ground remains perfectly tied to true ground. However, the amplifier must be able to survive and reject the massive common-mode voltage of the power supply.</p>",
+  "bonus_question_text": "<p>Which topology is strictly required if you need to detect a short-circuit from the load directly to ground?</p>",
+  "bonus_answer_text": "<p>High-side sensing. If a load shorts to ground, the fault current completely bypasses a low-side shunt, making the short undetectable by the amplifier.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:1bc11e9c421d681d"
+  ],
+  "related_question_ids": []
+}

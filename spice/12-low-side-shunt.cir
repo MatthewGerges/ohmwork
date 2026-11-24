@@ -1,0 +1,6 @@
+* Derived from 12-low-side-shunt.asc
+V1 VIN 0 12
+RLOAD VIN VSENSE 100
+RSHUNT VSENSE 0 1
+.tran 0 1m 0 1u
+.end

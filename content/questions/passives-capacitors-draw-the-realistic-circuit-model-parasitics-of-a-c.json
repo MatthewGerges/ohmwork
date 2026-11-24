@@ -1,0 +1,29 @@
+{
+  "slug": "passives-capacitors-draw-the-realistic-circuit-model-parasitics-of-a-c",
+  "category": "Passives, Capacitors",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 72,
+  "source_fingerprint": "acd29e18b0757840",
+  "source": {
+    "batch_id": "ee-flashcards-passives-protocols-v3-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+    "row_number": 2
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-passives-protocols-v3-20260912/passives-capacitors-draw-the-realistic-circuit-model-parasitics-of-a-c-image_1.svg"
+  },
+  "question_text": "<p>Draw the realistic circuit model (parasitics) of a capacitor. How does its impedance vary over frequency?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Left: A circuit model showing an ideal capacitor (C) in series with an ESR resistor and ESL inductor, with a large R_leak resistor in parallel. Right: A V-shaped graph of Impedance vs. Frequency, dipping to a minimum at the SRF.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>A real capacitor includes an ideal capacitor (C) in series with an Equivalent Series Resistance (ESR) and an Equivalent Series Inductance (ESL), plus a parallel leakage resistance.</p>",
+  "explanation_text": "<p>At low frequencies, the ideal capacitor dominates, and impedance drops as frequency increases. At a specific point called the Self-Resonant Frequency (SRF), the capacitive and inductive reactances perfectly cancel out, leaving only the ESR (the lowest impedance point). Above the SRF, the parasitic ESL dominates, and the capacitor starts acting like an inductor, with its impedance rising as frequency increases.</p>",
+  "bonus_question_text": "<p>What happens to a bypass capacitor's effectiveness if it is operated above its self-resonant frequency?</p>",
+  "bonus_answer_text": "<p>It becomes an inductor, completely failing to shunt high-frequency AC noise to ground.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:acd29e18b0757840"
+  ],
+  "related_question_ids": []
+}

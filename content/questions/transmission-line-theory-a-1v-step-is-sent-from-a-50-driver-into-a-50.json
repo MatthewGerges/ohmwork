@@ -1,0 +1,29 @@
+{
+  "slug": "transmission-line-theory-a-1v-step-is-sent-from-a-50-driver-into-a-50",
+  "category": "Transmission Line Theory",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 32,
+  "source_fingerprint": "dcaffbb02f4cde7f",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 4
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-transmission-lines-v9-20260715/transmission-line-theory-a-1v-step-is-sent-from-a-50-driver-into-a-50-image_1.svg"
+  },
+  "question_text": "<p>A 1V step is sent from a 50Ω driver into a 50Ω transmission line, ending at an open (1 MΩ) receiver. What is the initial voltage wave? When it reaches the receiver, what is the total voltage? What happens when the reflection reaches the source?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A schematic showing a 1V step voltage source connected to a 50Ω series resistor (matched driver), feeding into a transmission line labeled 'Z0 = 50Ω', ending at an open circuit.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>Initial wave: 0.5V.<br/>Total receiver voltage: 1.0V.<br/>No second reflection occurs (the line stabilizes at 1.0V).</p>",
+  "explanation_text": "<p>1) Initial wave: The matched driver acts as a voltage divider, splitting the 1V step exactly in half: 1V * (50 / (50 + 50)) = 0.5V.<br/>2) First reflection: The receiver reflection coefficient is Γ_L = (Z_L - Z_0) / (Z_L + Z_0) = (1M - 50) / (1M + 50) ≈ 1. Because Γ = 1, 100% of the wave is reflected. The 0.5V incident wave adds to the 0.5V reflected wave, making the total receiver voltage 1.0V.<br/>3) Second reflection: When the 0.5V reflected wave hits the 50Ω source, the reflection coefficient is Γ_S = (50 - 50) / (50 + 50) = 0. The wave is fully absorbed (source-terminated), preventing any further ringing.</p>\n<p>*Highly Recommended: Visualize this math interactively using this simulator: https://helloworld922.blogspot.com/2013/04/online-transmission-line-simulation.html*</p>",
+  "bonus_question_text": "<p>What is the advantage of using a 50Ω source with a 50Ω transmission line?</p>",
+  "bonus_answer_text": "<p>It guarantees that any reflections bouncing off the receiver are completely absorbed by the source, ensuring signal integrity by eliminating secondary bounces.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:dcaffbb02f4cde7f"
+  ],
+  "related_question_ids": []
+}

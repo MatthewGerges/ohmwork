@@ -1,0 +1,27 @@
+{
+  "slug": "transmission-line-theory-what-is-the-characteristic-impedance-z-0-of-a",
+  "category": "Transmission Line Theory",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 48,
+  "source_fingerprint": "dfae98fd88b43456",
+  "source": {
+    "batch_id": "ee-flashcards-transmission-lines-v9-20260715",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_transmission_lines_v9.xlsx",
+    "row_number": 11
+  },
+  "images": {},
+  "question_text": "<p>What is the Characteristic Impedance (Z_0) of a lossless transmission line, and how is it calculated from its lumped-element model?</p>",
+  "answer_text": "<p>Z_0 = sqrt(L / C)  (where L is inductance per unit length, and C is capacitance per unit length).</p>",
+  "explanation_text": "<p>Characteristic impedance is not a DC resistance you can measure with a multimeter. It's the instantaneous ratio of voltage to current (V/I) that a high-frequency wave experiences as it travels down the line. It is determined entirely by the line's parasitic inductance and capacitance.</p>",
+  "bonus_question_text": "<p>Does the length of the transmission line affect its Characteristic Impedance?</p>",
+  "bonus_answer_text": "<p>No. Because Z_0 is determined by the ratio of L and C *per unit length*, a 1-inch 50Ω trace and a 10-foot 50Ω cable have the exact same characteristic impedance.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:dfae98fd88b43456"
+  ],
+  "related_question_ids": []
+}

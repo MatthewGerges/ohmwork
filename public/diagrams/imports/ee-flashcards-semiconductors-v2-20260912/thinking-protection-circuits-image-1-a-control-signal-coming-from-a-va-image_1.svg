@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="420" viewBox="0 0 820 420" role="img" aria-label="Gate overvoltage protection challenge">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1d4ed8"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0ea5a5"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="410" y="38" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">Gate overvoltage protection challenge</text>
+
+    <text x="68" y="166" fill="#2563eb" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">5-12 V signal</text>
+    <line x1="68" y1="190" x2="150" y2="190" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+    <polyline points="150,190 162.5,181 175,199 187.5,181 200,199 212.5,181 225,199 237.5,181 250,190" fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="200" y="220" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">R1 limits IZ</text>
+    <line x1="250" y1="190" x2="630" y2="190" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="462" cy="190" r="5" fill="#0f766e" stroke="#0f766e" stroke-width="2"/>
+    <text x="474" y="174" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" text-anchor="start">gate node</text>
+    <g transform="translate(690 190) scale(1)">
+    <line x1="46" y1="-60" x2="46" y2="-28" stroke="#111827" stroke-width="3"/>
+    <line x1="16" y1="-28" x2="46" y2="-28" stroke="#111827" stroke-width="3"/>
+    <line x1="46" y1="28" x2="46" y2="60" stroke="#111827" stroke-width="3"/>
+    <line x1="16" y1="28" x2="46" y2="28" stroke="#111827" stroke-width="3"/>
+    <line x1="16" y1="-34" x2="16" y2="-13" stroke="#111827" stroke-width="4"/>
+    <line x1="16" y1="-9" x2="16" y2="9" stroke="#111827" stroke-width="4"/>
+    <line x1="16" y1="13" x2="16" y2="34" stroke="#111827" stroke-width="4"/>
+    <line x1="-8" y1="-38" x2="-8" y2="38" stroke="#111827" stroke-width="3"/>
+    <line x1="-60" y1="0" x2="-14" y2="0" stroke="#111827" stroke-width="3"/>
+
+    <line x1="16" y1="8" x2="40" y2="8" stroke="#111827" stroke-width="2.5"/>
+    <polygon points="39,8 27,1 27,15" fill="#2563eb"/>
+    <text x="57" y="-45" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">D</text>
+    <text x="57" y="52" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">S</text>
+    <text x="-70" y="-8" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">G</text>
+  </g>
+    <line x1="736" y1="250" x2="736" y2="270" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+
+    <line x1="736" y1="270" x2="736" y2="278" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+    <path d="M724 278 L736 292 L748 278 Z" fill="none" stroke="#111827" stroke-width="2"/>
+
+    <text x="744" y="120" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">D to controlled load</text>
+    <text x="690" y="324" fill="#dc2626" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" text-anchor="middle">Sensitive NMOS: |VGS|max = 8 V</text>
+
+    <line x1="462" y1="190" x2="462" y2="212" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+    <rect x="394" y="212" width="136" height="82" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="462" y="248" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" text-anchor="middle">BLACK BOX</text>
+    <text x="462" y="272" fill="#dc2626" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle">?</text>
+    <line x1="462" y1="294" x2="462" y2="304" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+
+
+    <line x1="462" y1="304" x2="462" y2="312" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+    <path d="M450 312 L462 326 L474 312 Z" fill="none" stroke="#111827" stroke-width="2"/>
+
+    <text x="390" y="374" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Choose a component that protects the 8 V maximum gate rating</text>
+
+</svg>

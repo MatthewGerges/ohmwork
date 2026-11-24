@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="370" viewBox="0 0 740 370" role="img" aria-label="Differential noise rejection">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"></path>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"></path>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f87171"></path>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#818cf8"></path>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fb923c"></path>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"></path>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"></rect>
+  <text x="370" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Differential noise rejection</text>
+  
+    <rect x="56" y="86" width="628" height="236" rx="8" fill="#111c31" stroke="#475569" stroke-width="2"></rect>
+    <line x1="118" y1="120" x2="118" y2="252" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="180.5" y1="120" x2="180.5" y2="252" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="243" y1="120" x2="243" y2="252" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="305.5" y1="120" x2="305.5" y2="252" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="368" y1="120" x2="368" y2="252" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="430.5" y1="120" x2="430.5" y2="252" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="493" y1="120" x2="493" y2="252" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="555.5" y1="120" x2="555.5" y2="252" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="618" y1="120" x2="618" y2="252" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="118" y1="120" x2="618" y2="120" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="118" y1="153" x2="618" y2="153" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="118" y1="186" x2="618" y2="186" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="118" y1="219" x2="618" y2="219" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+<line x1="118" y1="252" x2="618" y2="252" stroke="#1e293b" stroke-width="1" stroke-linecap="round"></line>
+    <path d="M126 184 C166 132 206 132 246 184 C286 236 326 236 366 184 C406 132 446 132 486 184 C526 236 566 236 606 184" fill="none" stroke="#4ade80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M126 184 C166 236 206 236 246 184 C286 132 326 132 366 184 C406 236 446 236 486 184 C526 132 566 132 606 184" fill="none" stroke="#818cf8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M330 122 L350 252" fill="none" stroke="#f87171" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M348 122 L368 252" fill="none" stroke="#f87171" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <text x="190" y="112" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500" text-anchor="middle">D+</text>
+    <text x="190" y="270" fill="#818cf8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500" text-anchor="middle">D-</text>
+    <text x="360" y="112" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500" text-anchor="middle">common noise</text>
+    <line x1="174" y1="300" x2="548" y2="300" stroke="#fbbf24" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"></line>
+    <text x="360" y="338" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" transform="translate(17.8 6.4)">Receiver subtracts D+ - D-; common noise cancels</text>
+  
+</svg>

@@ -1,0 +1,25 @@
+{
+  "slug": "mcu-led-direct-drive",
+  "category": "Thinking",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 19,
+  "images": {
+    "diag1": "public/diagrams/mcu_q1_question.png",
+    "diag2": "public/diagrams/mcu_q1_answer.png"
+  },
+  "question_text": "<p>The MCU below has a GPIO pin that can source up to 20 mA. You want to drive an LED (Vf = 2V) that needs at least 1 mA to light up. Vcc = 3.3V.</p>\n<p><strong>What is the minimum circuit between the GPIO pin and the LED?</strong></p>\n<img src=\"{{diag1}}\" alt=\"MCU and LED with question mark\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "answer_text": "<p><strong>A current-limiting resistor in series.</strong> Wire GPIO → R → LED → GND.</p>\n<img src=\"{{diag2}}\" alt=\"GPIO drives 150Ω resistor then LED to GND\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<details style=\"margin-top:1.25rem;border:1px solid rgba(99,102,241,0.3);border-radius:0.75rem;padding:1rem;background:rgba(99,102,241,0.05);\">\n<summary style=\"cursor:pointer;color:#818cf8;font-size:0.875rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;list-style:none;user-select:none;\">▶ Detailed Explanation</summary>\n<div style=\"margin-top:1rem;color:#cbd5e1;line-height:1.6;\">\n<p>When the GPIO goes HIGH it acts as a 3.3V source. Apply KVL:</p>\n<p><strong>Vcc = V_R + Vf</strong> → V_R = 3.3V − 2V = <strong>1.3V</strong></p>\n<p>Pick a target current — 10 mA is a comfortable brightness well under the 20 mA pin limit:</p>\n<p>R = V_R / I = 1.3V / 10 mA = <strong>130 Ω</strong> → nearest standard value: <strong>150 Ω</strong> (gives ≈ 9 mA)</p>\n<p>Going lower (e.g. 68 Ω → 19 mA) is fine too, as long as you stay under 20 mA. Going higher dims the LED.</p>\n<p><strong>Why not connect the LED directly?</strong> Without a resistor the LED's forward voltage alone sets the operating point. A tiny voltage overshoot drives exponentially more current — the LED burns out and the GPIO pin is damaged.</p>\n</div>\n</details>",
+  "bonus_question_text": "The LED is on but you want to control its brightness in software. How?",
+  "bonus_answer_text": "<p><strong>PWM — Pulse-Width Modulation.</strong></p>\n<p>Toggle the GPIO HIGH/LOW at a fixed frequency (e.g. 1 kHz). Your eyes low-pass-filter the flicker and perceive an average brightness proportional to the <strong>duty cycle</strong> (fraction of time the signal is HIGH).</p>\n<ul>\n  <li>50% duty cycle → LED appears at half brightness</li>\n  <li>10% duty cycle → LED appears at ~10% brightness</li>\n  <li>100% duty cycle → full brightness (same as DC HIGH)</li>\n</ul>\n<p>Most MCUs have dedicated PWM hardware peripherals so the CPU doesn't have to bit-bang the pin. The resistor value stays the same — PWM controls time, not peak current.</p>",
+  "tags": [
+    "MCU",
+    "GPIO",
+    "LED",
+    "resistor",
+    "KVL",
+    "PWM"
+  ],
+  "resource_videos": [],
+  "related_question_ids": []
+}

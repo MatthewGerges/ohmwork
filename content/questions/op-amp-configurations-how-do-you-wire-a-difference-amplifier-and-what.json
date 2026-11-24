@@ -1,0 +1,29 @@
+{
+  "slug": "op-amp-configurations-how-do-you-wire-a-difference-amplifier-and-what",
+  "category": "Op-Amp Configurations",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 25,
+  "source_fingerprint": "adb1f7b01faecc13",
+  "source": {
+    "batch_id": "ee-flashcards-opamp-configs-visual-v2-20260709T2351",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_opamp_configs_visual_v2.xlsx",
+    "row_number": 7
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-opamp-configs-visual-v2-20260709T2351/op-amp-configurations-how-do-you-wire-a-difference-amplifier-and-what-image_1.svg"
+  },
+  "question_text": "<p>How do you wire a Difference Amplifier, and what does it do?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"Schematic of a Difference Amplifier: V1 connected to (-) via R1, V2 connected to (+) via R2. A feedback resistor R3 from output to (-), and a resistor R4 from (+) to ground.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>It subtracts one input voltage from another and amplifies the difference. If all resistors are equal, Vout = V2 - V1.</p>",
+  "explanation_text": "<p>It rejects any voltage that is identical on both inputs (Common Mode Rejection) and only amplifies the difference.</p>",
+  "bonus_question_text": "<p>How do you derive the output voltage for a Difference Amplifier?</p>",
+  "bonus_answer_text": "<p>Use superposition. 1. Ground V1 and calculate the output as a non-inverting amplifier for V2. 2. Ground V2 and calculate the output as an inverting amplifier for V1. 3. Add the two outputs together.</p>",
+  "main_video_youtube_id": "0",
+  "resource_videos": [],
+  "ltspice_file_needed": "0",
+  "tags": [
+    "source:excel",
+    "import:adb1f7b01faecc13"
+  ],
+  "related_question_ids": []
+}

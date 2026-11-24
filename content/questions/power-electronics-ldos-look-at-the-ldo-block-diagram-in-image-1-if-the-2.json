@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-ldos-look-at-the-ldo-block-diagram-in-image-1-if-the-2",
+  "category": "Power Electronics, LDOs",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 79,
+  "source_fingerprint": "e92ebb53393c6177",
+  "source": {
+    "batch_id": "ee-flashcards-ldos-v4-20260911",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_ldos_v4.xlsx",
+    "row_number": 5
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-ldos-v4-20260911/power-electronics-ldos-look-at-the-ldo-block-diagram-in-image-1-if-the-2-image_1.svg"
+  },
+  "question_text": "<p>Look at the LDO block diagram in Image 1. If the reference voltage (V_ref) feeds into the POSITIVE (+) terminal of the error amplifier, and the measured feedback voltage (V_fb) feeds into the NEGATIVE (-) terminal, is the pass transistor a PMOS or an NMOS?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A block diagram of an LDO. V_in connects to a pass transistor flowing to V_out. A resistor divider taps off V_out and feeds V_fb into the negative (-) input of an Error Amplifier. The positive (+) input is connected to V_ref. The Error Amp output connects to the transistor's gate.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>It is an NMOS pass transistor.</p>",
+  "explanation_text": "<p>Here is the logic: If V_out spikes too high, V_fb also goes high. Because V_fb is connected to the negative (-) inverting terminal, the error amplifier's output voltage *decreases*. To bring V_out back down, we need the pass transistor to choke the current (increase its resistance). An NMOS transistor turns OFF (increases resistance) as its gate voltage decreases toward ground. Therefore, this inverted polarity specifically controls an NMOS!</p>",
+  "bonus_question_text": "<p>What is a major design challenge when using an NMOS pass transistor for a Low-Dropout (LDO) regulator?</p>",
+  "bonus_answer_text": "<p>To fully turn on an NMOS and achieve a very low dropout voltage, its gate voltage must be driven significantly *higher* than the input voltage (V_in). This usually requires a complex internal charge pump or an external auxiliary bias supply.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:e92ebb53393c6177"
+  ],
+  "related_question_ids": []
+}

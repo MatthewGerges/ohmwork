@@ -1,0 +1,6 @@
+* Derived from 01-rc-low-pass.asc
+V1 VIN 0 AC 1
+R1 VOUT VIN 1k
+C1 VOUT 0 100n
+.ac dec 200 10 1Meg
+.end

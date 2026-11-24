@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" role="img" aria-label="LDO input ripple rejection">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2dd4bf"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f87171"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#818cf8"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fb923c"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#0f172a"/>
+  <text x="450" y="42" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">LDO input ripple rejection</text>
+
+
+    <rect x="34" y="82" width="390" height="318" rx="6" fill="#0b1528" stroke="#475569" stroke-width="2"/>
+    <text x="229" y="112" fill="#fb923c" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" text-anchor="middle">LOWER REJECTION</text>
+    <text x="229" y="138" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" text-anchor="middle">20 dB attenuation</text>
+    <line x1="88" y1="224" x2="384" y2="224" stroke="#475569" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 5"/>
+    <path d="M88 224 C106 188 124 260 142 224 C160 188 178 260 196 224 C214 188 232 260 250 224 C268 188 286 260 304 224 C322 188 340 260 358 224 C370 202 378 212 384 224" fill="none" stroke="#f87171" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="92" y="178" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start">VIN ripple: 100 mVpp</text>
+    <line x1="88" y1="326" x2="384" y2="326" stroke="#475569" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 5"/>
+    <path d="M88 326 C112 314 136 338 160 326 C184 314 208 338 232 326 C256 314 280 338 304 326 C328 314 360 338 384 326" fill="none" stroke="#fb923c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="92" y="286" fill="#fb923c" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start">VOUT ripple: 10 mVpp</text>
+    <text x="229" y="376" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">100 mV / 10 = 10 mVpp</text>
+
+
+    <rect x="476" y="82" width="390" height="318" rx="6" fill="#0b1528" stroke="#475569" stroke-width="2"/>
+    <text x="671" y="112" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" text-anchor="middle">HIGHER REJECTION</text>
+    <text x="671" y="138" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" text-anchor="middle">60 dB attenuation</text>
+    <line x1="530" y1="224" x2="826" y2="224" stroke="#475569" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 5"/>
+    <path d="M530 224 C548 188 566 260 584 224 C602 188 620 260 638 224 C656 188 674 260 692 224 C710 188 728 260 746 224 C764 188 782 260 800 224 C812 202 820 212 826 224" fill="none" stroke="#f87171" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="534" y="178" fill="#f87171" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start">VIN ripple: 100 mVpp</text>
+    <line x1="530" y1="326" x2="826" y2="326" stroke="#475569" stroke-width="1" stroke-linecap="round" stroke-dasharray="5 5"/>
+    <path d="M530 326 C554 325 578 327 602 326 C626 325 650 327 674 326 C698 325 722 327 746 326 C770 325 802 327 826 326" fill="none" stroke="#4ade80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="534" y="286" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start">VOUT ripple: 0.1 mVpp</text>
+    <text x="671" y="376" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">100 mV / 1000 = 0.1 mVpp</text>
+
+    <text x="450" y="442" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle">PSRR = 20 log10(VIN ripple / VOUT ripple)</text>
+
+</svg>

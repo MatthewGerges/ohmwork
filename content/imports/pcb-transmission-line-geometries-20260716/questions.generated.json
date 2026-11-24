@@ -1,0 +1,81 @@
+{
+  "batch_id": "pcb-transmission-line-geometries-20260716",
+  "source_file": "manual:pcb-transmission-line-geometries",
+  "generated_at": "2026-07-16T00:00:00.000Z",
+  "rows": [
+    {
+      "row_number": 1,
+      "status": "ready",
+      "selected": true,
+      "slug": "transmission-line-theory-pcb-what-is-the-physical-difference-between-a-microstrip-and",
+      "source_fingerprint": "manual-microstrip-stripline-20260716",
+      "question": {
+        "category": "Transmission Line Theory, PCB",
+        "difficulty": "medium",
+        "question_text": "What is the physical difference between a Microstrip and a Stripline in PCB design?",
+        "answer_text": "{{image_1}}\nA Microstrip is routed on the outer surface layer of the PCB with a single reference plane below it. A Stripline is routed on an internal layer, completely sandwiched between two solid reference planes.",
+        "explanation_text": "Because a microstrip is on the surface, its electromagnetic fields travel partially through the air and partially through the PCB dielectric. A stripline is fully enclosed within the PCB material, meaning its fields are completely contained between the top and bottom reference planes.",
+        "bonus_question_text": "What are the main advantages and disadvantages of using a Stripline over a Microstrip?",
+        "bonus_answer_text": "Advantages: Striplines offer superior EMI shielding (since they are enclosed by planes) and significantly lower crosstalk. Disadvantages: They require more board layers (increasing cost), the trace routing is more complex, and physical debugging/probing is impossible without adding vias since the trace is buried inside the board.",
+        "tags": [
+          "pcb",
+          "transmission-line",
+          "microstrip",
+          "stripline"
+        ],
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null
+      },
+      "images": {
+        "image_1": {
+          "title": "Microstrip vs. Stripline PCB cross-section",
+          "prompt": "A cross-sectional diagram of a PCB comparing both geometries. Left side (Microstrip): A copper trace on the top surface, FR4 dielectric below, and a solid ground plane at the bottom. Right side (Stripline): A solid ground plane on top, FR4 dielectric, an internal copper trace in the middle, more FR4, and a solid ground plane at the bottom.",
+          "alt": "Cross-section comparing microstrip and stripline PCB transmission-line geometry.",
+          "render": {
+            "type": "pcb_microstrip_stripline"
+          },
+          "output_path": "/diagrams/imports/pcb-transmission-line-geometries-20260716/transmission-line-theory-pcb-what-is-the-physical-difference-between-a-microstrip-and-image_1.svg"
+        }
+      }
+    },
+    {
+      "row_number": 2,
+      "status": "ready",
+      "selected": true,
+      "slug": "transmission-line-theory-pcb-what-is-a-coplanar-waveguide-cpw-in-pcb-design",
+      "source_fingerprint": "manual-coplanar-waveguide-gcpw-20260716",
+      "question": {
+        "category": "Transmission Line Theory, PCB",
+        "difficulty": "medium",
+        "question_text": "What is a Coplanar Waveguide (CPW) in PCB design, and how does it physically differ from a standard Microstrip?",
+        "answer_text": "{{image_1}}\nA Coplanar Waveguide (CPW) is routed on the outer surface of the PCB, but unlike a standard Microstrip, it is flanked by ground planes on the exact same layer, running parallel to the signal trace.",
+        "explanation_text": "While a Microstrip relies solely on the ground plane beneath it to form the transmission line, a CPW uses adjacent surface ground pours to confine the electromagnetic fields. This keeps the trace physically accessible on the surface (like a Microstrip) while offering superior high-frequency isolation and shielding (similar to a Stripline). If a CPW also has a solid ground plane beneath it, it is called a Grounded CPW (GCPW).",
+        "bonus_question_text": "What is the main advantage of using a Grounded Coplanar Waveguide (GCPW) for high-frequency RF signals compared to a standard Microstrip?",
+        "bonus_answer_text": "GCPW significantly reduces radiation loss and crosstalk. By placing ground pours immediately adjacent to the signal trace (stitched to the bottom ground plane with vias), the electric fields are tightly confined locally rather than spreading out widely into the surrounding dielectric and air.",
+        "tags": [
+          "pcb",
+          "transmission-line",
+          "microstrip",
+          "cpw",
+          "gcpw"
+        ],
+        "main_video_youtube_id": null,
+        "resource_videos": [],
+        "ltspice_file_needed": null
+      },
+      "images": {
+        "image_1": {
+          "title": "Microstrip vs. Grounded CPW PCB cross-section",
+          "prompt": "A cross-sectional diagram of a PCB comparing a standard Microstrip and a Grounded CPW. Left (Microstrip): Trace on top, FR4 below, ground plane on bottom. Right (Grounded CPW): Trace on top flanked by two ground pours on the exact same top layer, FR4 below, and a solid ground plane on the bottom.",
+          "alt": "Cross-section comparing standard microstrip and grounded coplanar waveguide PCB geometry.",
+          "render": {
+            "type": "pcb_microstrip_gcpw"
+          },
+          "output_path": "/diagrams/imports/pcb-transmission-line-geometries-20260716/transmission-line-theory-pcb-what-is-a-coplanar-waveguide-cpw-in-pcb-design-image_1.svg"
+        }
+      }
+    }
+  ],
+  "rendered_at": "2026-07-16T18:21:35.779Z"
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "components-what-specification-dictates-an-op-amp-s-maximum-output-volt",
+  "category": "Components",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 17,
+  "source_fingerprint": "b9c1bb888cf074d3",
+  "source": {
+    "batch_id": "ee-flashcards-master-simplified-20260709",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_master_simplified.xlsx",
+    "row_number": 6
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-master-simplified-20260709/components-what-specification-dictates-an-op-amp-s-maximum-output-volt-image_1.svg"
+  },
+  "question_text": "<p>What specification dictates an op-amp's maximum output voltage rate of change, and what happens if you exceed it?</p>",
+  "answer_text": "<p>Slew Rate (SR), measured in V/μs. Exceeding it distorts the output, turning square waves into trapezoids or triangle waves.</p>",
+  "explanation_text": "<p>Slew rate is the physical speed limit of the op-amp charging its internal capacitors. While Gain-Bandwidth Product is for small signals, Slew Rate limits large signals.</p>\n<img src=\"{{image_1}}\" alt=\"Op-amp diagram. Left: a sharp square wave input. Right: distorted output showing a sloped ramp, labeled 'Slew Rate (ΔV/Δt)'.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>",
+  "bonus_question_text": "<p>What is the difference between Slew Rate and Bandwidth?</p>",
+  "bonus_answer_text": "<p>Bandwidth is a small-signal specification (gain drops by 3dB). Slew rate is a large-signal limit on how fast the voltage can physically swing.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:b9c1bb888cf074d3"
+  ],
+  "related_question_ids": []
+}

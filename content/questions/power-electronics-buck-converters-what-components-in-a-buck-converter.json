@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-buck-converters-what-components-in-a-buck-converter",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 61,
+  "source_fingerprint": "b2e3054ffa837d45",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 11
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-what-components-in-a-buck-converter-image_1.svg"
+  },
+  "question_text": "<p>What components in a buck converter are most responsible for power losses, and how exactly do these losses occur?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A graph showing the V-I crossover during a MOSFET turn-on event. The Voltage trace drops diagonally, the Current trace rises diagonally, and a shaded bell-curve spike in the middle is labeled 'P = V*I (Switching Loss)'.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>The main losses are in the MOSFETs (conduction and switching), Inductor (DCR and core), and Diode (forward voltage drop).</p>",
+  "explanation_text": "<p>1. Switching Losses (MOSFET): A MOSFET doesn't open or close instantly. As it transitions, voltage drops while current rises. For a split nanosecond, both voltage and current are high, creating a massive spike in wasted heat (P = V * I).<br/>2. Conduction Losses (MOSFET): When fully ON, the MOSFET acts like a tiny resistor (R_DS(on)), burning power steadily as heat (P = I^2 * R_DS(on)).<br/>3. DCR Losses (Inductor): The physical copper wire coiled in the inductor has DC Resistance (DCR), which burns power just like any other resistor (P = I^2 * R_DCR).<br/>4. Core Losses (Inductor): As the magnetic field constantly expands and collapses, energy is lost as heat inside the physical core material due to magnetic hysteresis and eddy currents.</p>",
+  "bonus_question_text": "<p>How is overall efficiency calculated?</p>",
+  "bonus_answer_text": "<p>Efficiency (%) = (Output Power / Input Power) * 100.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:b2e3054ffa837d45"
+  ],
+  "related_question_ids": []
+}

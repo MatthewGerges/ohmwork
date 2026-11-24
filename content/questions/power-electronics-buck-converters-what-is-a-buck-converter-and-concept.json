@@ -1,0 +1,29 @@
+{
+  "slug": "power-electronics-buck-converters-what-is-a-buck-converter-and-concept",
+  "category": "Power Electronics, Buck Converters",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 64,
+  "source_fingerprint": "8478d15d0e90abb0",
+  "source": {
+    "batch_id": "ee-flashcards-buck-converters-complete-20260903",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_buck_converters_complete.xlsx",
+    "row_number": 2
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-buck-converters-complete-20260903/power-electronics-buck-converters-what-is-a-buck-converter-and-concept-image_1.svg"
+  },
+  "question_text": "<p>What is a buck converter, and conceptually how does it step down DC voltage?</p>",
+  "answer_text": "<img src=\"{{image_1}}\" alt=\"A standard buck converter schematic. A DC source connects to a switch (FET), leading to a switching node. A diode connects from ground to the switching node (pointing up). An inductor connects the switching node to the output. A capacitor connects the output to ground, with a load resistor in parallel.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>A buck converter is a DC-DC step-down switching regulator. It uses a high-speed switch (MOSFET), an inductor, a capacitor, and a diode to step down voltage by stepping up the current.</p>",
+  "explanation_text": "<p>Think of the circuit in stages. A switch turns on and off very fast to create a choppy PWM square wave. The inductor smooths that choppy current by storing energy in its magnetic field, and the capacitor smooths the voltage. When the switch opens, the inductor releases its stored energy, and the diode provides a safe return path for that current to keep flowing to the load.</p>\n<p>Highly Recommended Videos for Visualization:<br/>https://www.youtube.com/watch?v=rfChSvb8FX0<br/>https://www.youtube.com/watch?v=W6NOV6b8kxs&amp;t=21s<br/>https://www.youtube.com/watch?v=cE2-g4QsKr0&amp;t=35s</p>",
+  "bonus_question_text": "<p>What happens if the load is removed (an open circuit)?</p>",
+  "bonus_answer_text": "<p>The output capacitor has nowhere to drain its energy. In a basic asynchronous buck, the voltage can slowly drift up to V_in due to leakage, or the converter enters Discontinuous Conduction Mode (DCM) to stop pumping energy.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:8478d15d0e90abb0"
+  ],
+  "related_question_ids": []
+}

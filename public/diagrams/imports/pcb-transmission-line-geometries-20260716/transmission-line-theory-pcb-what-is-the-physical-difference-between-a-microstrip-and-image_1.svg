@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400" role="img" aria-label="Microstrip vs. Stripline PCB cross-section">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"></path>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"></path>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"></path>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1d4ed8"></path>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0ea5a5"></path>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"></path>
+    </marker>
+    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#fbbf24"></path>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"></rect>
+  <text x="450" y="38" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">Microstrip vs. Stripline PCB cross-section</text>
+  
+    <rect x="46" y="82" width="376" height="286" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"></rect>
+    <text x="234" y="118" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">Microstrip</text>
+    <rect x="86" y="162" width="296" height="126" rx="0" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"></rect>
+    <text x="234" y="228" fill="#1e3a8a" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" transform="translate(-94.8 -25.5)">FR4 dielectric</text>
+    <rect x="156" y="144" width="156" height="20" rx="2" fill="#f97316" stroke="#9a3412" stroke-width="2"></rect>
+    <text x="234" y="139" fill="#9a3412" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">surface signal trace</text>
+    <rect x="106" y="288" width="256" height="24" rx="2" fill="#475569" stroke="#1f2937" stroke-width="2"></rect>
+    <text x="234" y="328" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">single reference plane below</text>
+    <path d="M184 166 C178 198 168 230 154 286" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5" transform="translate(17.7 0.8)"></path>
+    <path d="M234 166 C234 202 234 236 234 286" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5" transform="translate(0 3.7)"></path>
+    <path d="M284 166 C290 198 300 230 314 286" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5" transform="translate(-19.6 1.3)"></path>
+    <text x="234" y="358" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Fields partly in air, partly in dielectric</text>
+
+    <rect x="478" y="82" width="376" height="286" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"></rect>
+    <text x="666" y="118" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">Stripline</text>
+    <rect x="518" y="148" width="296" height="168" rx="0" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"></rect>
+    <rect x="538" y="140" width="256" height="22" rx="2" fill="#475569" stroke="#1f2937" stroke-width="2"></rect>
+    <rect x="538" y="302" width="256" height="22" rx="2" fill="#475569" stroke="#1f2937" stroke-width="2"></rect>
+    <rect x="602" y="222" width="128" height="20" rx="2" fill="#f97316" stroke="#9a3412" stroke-width="2"></rect>
+    <text x="666" y="215" fill="#9a3412" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" transform="translate(0.6 20.1)">buried signal trace</text>
+    <text x="666" y="176" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" transform="translate(-4.2 -40)">top reference plane</text>
+    <text x="666" y="346" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">bottom reference plane</text>
+    <path d="M628 220 C618 198 610 178 604 164" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"></path>
+    <path d="M666 220 C666 198 666 178 666 164" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"></path>
+    <path d="M704 220 C714 198 722 178 728 164" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"></path>
+    <path d="M628 244 C618 266 610 286 604 300" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"></path>
+    <path d="M666 244 C666 266 666 286 666 300" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"></path>
+    <path d="M704 244 C714 266 722 286 728 300" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"></path>
+    <text x="666" y="358" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Fields enclosed between two planes</text>
+  
+</svg>

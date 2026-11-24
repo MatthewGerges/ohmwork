@@ -1,0 +1,30 @@
+{
+  "slug": "thinking-protection-circuits-image-1-a-control-signal-coming-from-a-va",
+  "category": "Thinking, Protection Circuits",
+  "difficulty": "medium",
+  "uploaded": true,
+  "supabase_id": 97,
+  "source_fingerprint": "fe0629bed93f65b0",
+  "source": {
+    "batch_id": "ee-flashcards-semiconductors-v2-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_semiconductors_v2.xlsx",
+    "row_number": 8
+  },
+  "images": {
+    "image_1": "public/diagrams/imports/ee-flashcards-semiconductors-v2-20260912/thinking-protection-circuits-image-1-a-control-signal-coming-from-a-va-image_1.svg",
+    "image_2": "public/diagrams/imports/ee-flashcards-semiconductors-v2-20260912/thinking-protection-circuits-image-1-a-control-signal-coming-from-a-va-image_2.svg"
+  },
+  "question_text": "<img src=\"{{image_1}}\" alt=\"A schematic showing a '5V-12V Signal' entering a resistor (R1). After R1, the line splits: one path goes to a MOSFET gate, and the other path goes into a dashed 'Black Box' connected to ground.\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>A control signal coming from a varying upstream supply can swing anywhere from 5V to 12V. It connects to the gate of a sensitive MOSFET with an absolute maximum V_GS rating of 8V. What specific component goes in the &quot;Black Box&quot; to ensure the gate never exceeds 5.1V?</p>",
+  "answer_text": "<img src=\"{{image_2}}\" alt=\"The same schematic, but the Black Box is replaced with a Zener diode (the flat cathode bar faces up toward the gate line, and the triangle anode points down to ground).\" style=\"max-width:100%;margin:1rem 0;border-radius:6px;\"/>\n<p>A 5.1V Zener diode pointing upwards (cathode to the gate signal, anode to ground).</p>",
+  "explanation_text": "<p>The upstream signal goes through a series resistor (R_1) and then connects to the FET gate. We place a 5.1V Zener diode between the gate and ground, reverse-biased. If the signal is 5V, the Zener does nothing. If the signal spikes to 12V, the Zener hits its breakdown voltage and clamps the gate node at exactly 5.1V. The series resistor (R_1) limits the current so the Zener doesn't burn out while absorbing the excess voltage drop (12V - 5.1V = 6.9V across R_1).</p>",
+  "bonus_question_text": "<p>What would happen if we accidentally put the Zener diode in forward-bias (pointing down to ground)?</p>",
+  "bonus_answer_text": "<p>It would act like a normal diode and clamp the gate to ~0.7V, completely preventing the MOSFET from ever turning on!</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:fe0629bed93f65b0"
+  ],
+  "related_question_ids": []
+}

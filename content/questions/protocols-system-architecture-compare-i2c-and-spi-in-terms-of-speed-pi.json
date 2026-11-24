@@ -1,0 +1,27 @@
+{
+  "slug": "protocols-system-architecture-compare-i2c-and-spi-in-terms-of-speed-pi",
+  "category": "Protocols, System Architecture",
+  "difficulty": "easy",
+  "uploaded": true,
+  "supabase_id": 88,
+  "source_fingerprint": "ab755893f8acab6c",
+  "source": {
+    "batch_id": "ee-flashcards-passives-protocols-v3-20260912",
+    "source_file": "/Users/matthewgerges/Downloads/ee_flashcards_passives_protocols_v3.xlsx",
+    "row_number": 11
+  },
+  "images": {},
+  "question_text": "<p>Compare I2C and SPI in terms of speed, pin count, and communication type (duplex).</p>",
+  "answer_text": "<p>SPI is much faster and full-duplex but requires more pins. I2C is slower and half-duplex but uses only two pins for any number of devices.</p>",
+  "explanation_text": "<p>Speed: SPI frequently hits 10+ MHz. I2C is usually 100 kHz (Standard), 400 kHz (Fast), or 1 MHz (Fast+).<br/>Duplex: SPI is full-duplex (can send and receive at the exact same time via separate MOSI and MISO lines). I2C is half-duplex (SDA is shared, so it can only send OR receive at one time).<br/>Pins: I2C always uses 2 shared pins (SDA, SCL). SPI uses 3 shared pins (SCLK, MOSI, MISO) plus 1 dedicated CS pin per slave.</p>",
+  "bonus_question_text": "<p>Which protocol has built-in hardware acknowledgment to verify the device actually received the data?</p>",
+  "bonus_answer_text": "<p>I2C. The receiving device must pull the SDA line low (ACK) after every byte. SPI has no hardware acknowledgment; the master blindly clocks out data.</p>",
+  "main_video_youtube_id": null,
+  "resource_videos": [],
+  "ltspice_file_needed": null,
+  "tags": [
+    "source:excel",
+    "import:ab755893f8acab6c"
+  ],
+  "related_question_ids": []
+}

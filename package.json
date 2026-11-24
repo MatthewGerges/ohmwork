@@ -1,0 +1,37 @@
+{
+  "name": "ohmwork",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "questions:from-excel": "node scripts/excel-to-question-json.mjs",
+    "questions:render-images": "node scripts/render-question-images.mjs",
+    "questions:materialize": "node scripts/materialize-question-batch.mjs",
+    "questions:upload": "node scripts/upload-questions.mjs",
+    "questions:edit-diagrams": "node scripts/diagram-editor-server.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.105.4",
+    "fflate": "^0.8.3",
+    "framer-motion": "^12.38.0",
+    "katex": "^0.17.0",
+    "lucide-react": "^0.544.0",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "read-excel-file": "^9.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
